@@ -32,6 +32,7 @@ namespace WangPluginSav
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BWNPCForm));
             this.Load_BTN = new System.Windows.Forms.Button();
             this.Save_BTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -63,8 +64,11 @@ namespace WangPluginSav
             this.ClientSize = new System.Drawing.Size(608, 431);
             this.Controls.Add(this.Save_BTN);
             this.Controls.Add(this.Load_BTN);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BWNPCForm";
-            this.Text = "Wangplugin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Super Wang";
             this.ResumeLayout(false);
 
         }

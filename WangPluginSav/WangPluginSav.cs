@@ -1,56 +1,53 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using PKHeX.Core;
 
 namespace WangPluginSav
 {
-    public class WangPluginSav : IPlugin
+    public abstract class WangPluginSav : IPlugin
     {
-        public string Name => nameof(WangPluginSav);
-        public int Priority => 1; // Loading order, lowest is first.
+        private const string ParentMenuParent = "Menu_Tools";
+        public string Name => "超王插件SAV";
+        public int Priority => 1;
 
-        // Initialized on plugin load
+        private ToolStripMenuItem WangPlugin = new();
+
         public ISaveFileProvider SaveFileEditor { get; private set; } = null!;
         public IPKMView PKMEditor { get; private set; } = null!;
 
         public void Initialize(params object[] args)
         {
-            Console.WriteLine($"Loading {Name}...");
+          
             SaveFileEditor = (ISaveFileProvider)Array.Find(args, z => z is ISaveFileProvider);
             PKMEditor = (IPKMView)Array.Find(args, z => z is IPKMView);
             var menu = (ToolStrip)Array.Find(args, z => z is ToolStrip);
             LoadMenuStrip(menu);
         }
-       
-            private void LoadMenuStrip(ToolStrip menuStrip)
+
+        private void LoadMenuStrip(ToolStrip menuStrip)
         {
             var items = menuStrip.Items;
-            if (!(items.Find("Menu_Tools", false)[0] is ToolStripDropDownItem tools))
-                throw new ArgumentException(nameof(menuStrip));
-            AddPluginControl(tools);
+            if (items.Find(ParentMenuParent, false)[0] is not ToolStripDropDownItem tools)
+                return;
+            WangPlugin = new ToolStripMenuItem(Name) 
+            { 
+                Visible = true ,
+                Image = Properties.Resources.WangPluginSav
+                
+            };
+            WangPlugin.Click += (s, e) => Open();
+            tools.DropDownItems.Insert(1,WangPlugin);
         }
-
-        private void AddPluginControl(ToolStripDropDownItem tools)
-        {
-            var ctrl = new ToolStripMenuItem(Name);
-            tools.DropDownItems.Add(ctrl);
-            var c = new ToolStripMenuItem($"Form1");
-            c.Click +=  OpenForm;
-            ctrl.DropDownItems.Add(c);
-          
-        }
-
-        private void OpenForm(object sender, EventArgs e)
-        {
-            var form = new BWNPCForm(SaveFileEditor);
-            form.Show();
-        }
+        protected abstract void Open();
+        
 
         public void NotifySaveLoaded()
         {
             Console.WriteLine($"{Name} was notified that a Save File was just loaded.");
+            if (WangPlugin == null)
+                return;
         }
-
         public bool TryLoadFile(string filePath)
         {
             Console.WriteLine($"{Name} was provided with the file path, but chose to do nothing with it.");

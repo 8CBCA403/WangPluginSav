@@ -60,10 +60,13 @@ namespace WangPluginSav
             this.NPCComboBox[i].SelectedIndexChanged += (_, __) =>
             {
                 NPC[i] = (NPCName)this.NPCComboBox[i].SelectedItem;
+                if(SAV.SAV.Version==GameVersion.W)
                 NPCTextBox[i].Text = NPC[i].PKMName;
+                else if (SAV.SAV.Version == GameVersion.B)
+                NPCTextBox[i].Text = NPC[i].ItemName;
             };
         }
-        private void ReadFile()
+        private void ReadFileWhite()
         {
             var NPCList = new NPC[20];
             var sav = SAV.SAV;
@@ -92,7 +95,33 @@ namespace WangPluginSav
             }
            
         }
-        private void WriteFile()
+        private void ReadFileBlack()
+        {
+            var NPCList = new NPC[20];
+            var sav = SAV.SAV;
+            int p = 129544;
+            for (int j = 0; j < 20; j++) {
+                var exists = sav.GetData(p, 1);
+                p++;
+                var no = sav.GetData(p, 1);
+                p++;
+                var hp = sav.GetData(p, 1);
+                p++;
+                var op = sav.GetData(p, 1);
+                p++;
+                if (exists[0] == 17)
+                {
+                    NPCList[j] = new NPC(no[0], hp[0], op[0]);
+                }
+                p += 20;
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                NPCComboBox[i].SelectedIndex = NPCList[i].getNo() + 1;
+                FriendsTextBox[i].Text = $"{NPCList[i].getLp()}";
+            }
+        }
+        private void WriteFileWhite()
         {
             var sav = SAV.SAV;
             int hp;
@@ -119,7 +148,7 @@ namespace WangPluginSav
                         hp = Int16.Parse(FriendsTextBox[i].Text);
 
                     }
-                    catch (Exception e2)
+                    catch (Exception)
                     {
                         hp = 100;
                     }
@@ -155,15 +184,80 @@ namespace WangPluginSav
                 }
             }
         }
-
+        private void WriteFileBlack()
+        {
+            var sav = SAV.SAV;
+            int hp=0;
+            int p1 = 129544, p2 = 277000;
+            byte[] b = new byte[1];
+            byte[] c = new byte[1];
+            for (int i = 0; i < 10; i++)
+            {
+                if (NPCComboBox[i].SelectedIndex != 0) 
+                {
+                    b[0] = 17;
+                    c[0] = (byte)(NPCComboBox[i].SelectedIndex - 1);
+                    sav.SetData(b, p1);
+                    sav.SetData(b, p2);
+                    p1++;
+                    p2++;
+                    sav.SetData(c, p1);
+                    sav.SetData(c, p2);
+                    p1++;
+                    p2++;
+                try
+                {
+                    hp = Int16.Parse(FriendsTextBox[i].Text);
+                 }
+                catch (Exception)
+                {
+                    hp = 100;
+                }
+                    b[0] = (byte)hp;
+                    sav.SetData(b, p1);
+                    sav.SetData(b, p2);
+                    p1++;
+                    p2++;
+                    b[0] = 7;
+                    sav.SetData(b, p1);
+                    sav.SetData(b, p2);
+                    p1++;
+                    p2++;
+               for (int j = 0; j < 20; j++)
+                {
+                    b[0]= NPCName.BlackData[j];
+                    sav.SetData(b, p1);
+                    sav.SetData(b, p2);
+                    p1++;
+                    p2++;
+                }
+            } else
+            {
+                for (int j = 0; j < 24; j++)
+                {
+                    b[0] = 0;
+                    sav.SetData(b, p1);
+                    sav.SetData(b, p2);
+                    p1++;
+                    p2++;
+                }
+            }
+        }
+    }
         private void Load_Click(object sender, System.EventArgs e)
         {
-            ReadFile();
+            if(SAV.SAV.Version==GameVersion.W)
+            ReadFileWhite();
+            else if(SAV.SAV.Version==GameVersion.B)
+            ReadFileBlack();
         }
 
         private void Save_Click(object sender, System.EventArgs e)
         {
-            WriteFile();
+            if (SAV.SAV.Version == GameVersion.W)
+                WriteFileWhite();
+            else if (SAV.SAV.Version == GameVersion.B)
+                WriteFileBlack();
         }
     }
 }
