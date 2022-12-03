@@ -134,6 +134,9 @@ namespace WangPluginSav.GUI
                 Move3Box.Text = Raid.strings.Move[encounter.Move3];
                 Move4Box.Text = Raid.strings.Move[encounter.Move4];
                 IVBOX.Text = IVsString(ToSpeedLast(blank.IVs));
+                r = $"\nSeed:{Raidinfo.Seed:X8} 种类: {SpeciesTextBox.Text} IV:{IVsString(ToSpeedLast(blank.IVs))}" +
+             $" 太晶属性:{TeraBox.Text} 技能:{Move1Box.Text},{Move2Box.Text},{Move3Box.Text},{Move4Box.Text}";
+                ResultBox.Text += "\n" + r;
             }
           
             else
@@ -164,9 +167,7 @@ namespace WangPluginSav.GUI
             {
                 IVBOX.BackColor = Color.Gray;
             }
-            r = $"\nSeed:{Raidinfo.Seed:X8} 种类: {SpeciesTextBox.Text} IV:{IVsString(Raidinfo.GetIVs(Raidinfo.Seed, StarCount - 1))}" +
-                $" 太晶属性:{TeraBox.Text} 技能:{Move1Box.Text},{Move2Box.Text},{Move3Box.Text},{Move4Box.Text}";
-            ResultBox.Text += "\n" + r;
+         
         }
 
         private void Search_BTN_Click(object sender, EventArgs e)
@@ -175,6 +176,7 @@ namespace WangPluginSav.GUI
             tokenSource = new();
             var str = SeedBox.Text;
             var seed = Convert.ToUInt32(str, 16);
+            float i = 0;
             RaidFilters r = new()
             {
                 Species = (Species)SPcomboBox.SelectedIndex,
@@ -200,8 +202,9 @@ namespace WangPluginSav.GUI
             Task.Factory.StartNew(
                () =>
                {
-                   while (true)
+                   while (i< 4294967295)
                    {
+                       i++;
                        if (tokenSource.IsCancellationRequested)
                        {
                            return;
@@ -228,7 +231,10 @@ namespace WangPluginSav.GUI
                                displayRiad(seed);
                                
                            });
-                           break;
+                           if (StepcomboBox.SelectedIndex == 1)
+                           {
+                               break;
+                           }
                         }
                    }
             this.Invoke(() =>

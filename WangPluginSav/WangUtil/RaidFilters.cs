@@ -109,8 +109,17 @@ namespace WangPluginSav
         }
         public  bool IsIVsSatisfied(Raid raid, int StoryProgress)
         {
-            int StarCount = Raid.GetStarCount(raid.Difficulty, StoryProgress, raid.IsBlack);
-            var ivs = raid.GetIVs(raid.Seed, StarCount - 1);
+            ITeraRaid? encounter = TeraEncounter.GetEncounter(raid.Seed, StoryProgress, raid.IsBlack);
+            if (encounter == null)
+                return false;
+            var pi = PersonalTable.SV.GetFormEntry(encounter.Species, encounter.Form);
+            var StarCount = Raid.GetStarCount(raid.Difficulty, StoryProgress, raid.IsBlack);
+            var param = new GenerateParam9((byte)pi.Gender, (byte)(StarCount - 1), 1, 0, 0, 0, encounter.Ability, encounter.Shiny);
+            var blank = new PK9();
+            blank.Species = encounter.Species;
+            blank.Form = encounter.Form;
+            Encounter9RNG.GenerateData(blank, param, EncounterCriteria.Unrestricted, raid.Seed);
+            var ivs = ToSpeedLast(blank.IVs);
             if (ivs[0] < minHP || ivs[0] > maxHP)
                 return false;
             if (ivs[1] < minAtk || ivs[1] > maxAtk)
@@ -126,7 +135,17 @@ namespace WangPluginSav
 
             return true;
         }
-
+        private static int[] ToSpeedLast(int[] ivs)
+        {
+            var res = new int[6];
+            res[0] = ivs[0];
+            res[1] = ivs[1];
+            res[2] = ivs[2];
+            res[3] = ivs[4];
+            res[4] = ivs[5];
+            res[5] = ivs[3];
+            return res;
+        }
         public  bool FilterSatisfied(Raid raid, int StoryProgress) => IsSpeciesSatisfied(raid, StoryProgress) && IsStarsSatisfied(raid, StoryProgress) && IsIVsSatisfied(raid, StoryProgress) && IsShinySatisfied(raid) && IsNatureSatisfied(raid, StoryProgress) && IsGenderSatisfied(raid, StoryProgress)&& IsTeraSatisfied(raid);
         public  bool FilterSatisfied(List<Raid> Raids, int StoryProgress, int EventProgress)
         {
