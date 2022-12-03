@@ -8,10 +8,10 @@ using System.Windows.Forms;
 
 namespace WangPluginSav.Plugins
 {
-    internal class BWNPC_Plugin : WangPluginSav
+    internal class BWNPC_Plugin: WangPluginSav
     {
 
-       protected override void Open()
+       protected void Open()
         {
             var sav = SaveFileEditor.SAV;
             var game = (GameVersion)sav.Game;
@@ -21,11 +21,7 @@ namespace WangPluginSav.Plugins
             frm.Show();
         }
 
-       private void OpenForm(object sender, EventArgs e)
-        {
-            var form = new BWNPCForm(SaveFileEditor);
-            form.Show();
-        }
+      
     }
     
 }

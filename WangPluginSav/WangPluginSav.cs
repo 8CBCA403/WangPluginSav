@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using PKHeX.Core;
+using WangPluginSav.GUI;
 
 namespace WangPluginSav
 {
     public abstract class WangPluginSav : IPlugin
     {
-        private const string ParentMenuParent = "Menu_Tools";
         public string Name => "超王插件SAV";
         public int Priority => 1;
 
@@ -28,18 +28,35 @@ namespace WangPluginSav
         private void LoadMenuStrip(ToolStrip menuStrip)
         {
             var items = menuStrip.Items;
-            if (items.Find(ParentMenuParent, false)[0] is not ToolStripDropDownItem tools)
-                return;
-            WangPlugin = new ToolStripMenuItem(Name) 
-            { 
-                Visible = true ,
-                Image = Properties.Resources.WangPluginSav
-                
-            };
-            WangPlugin.Click += (s, e) => Open();
-            tools.DropDownItems.Insert(1,WangPlugin);
+            if (!(items.Find("Menu_Tools", false)[0] is ToolStripDropDownItem tools))
+                throw new ArgumentException(nameof(menuStrip));
+            AddPluginControl(tools);
         }
-        protected abstract void Open();
+
+        private void AddPluginControl(ToolStripDropDownItem tools)
+        {
+            var frm = new SVTeraRaidSeedCalcForm(SaveFileEditor);
+            var frm1 = new BWNPCForm(SaveFileEditor);
+            var ctrl = new ToolStripMenuItem(Name)
+            {
+                Image = Properties.Resources.WangPluginSav,
+                Name = "超王插件SAV",
+             };
+            tools.DropDownItems.Insert(1, ctrl);
+            var c2 = new ToolStripMenuItem($"朱紫太晶坑Seed生成器")
+            {
+                Image = Properties.Resources.Tera,
+             };
+            c2.Click += (s, e) => frm.Show();
+            var c3 = new ToolStripMenuItem($"黑白黑城白森NPC修改器")
+            {
+                Image = Properties.Resources.BW,
+             };
+            c3.Click += (s, e) => frm1.Show();
+            ctrl.DropDownItems.Add(c2);
+            ctrl.DropDownItems.Add(c3);
+        }
+      
         
 
         public void NotifySaveLoaded()
