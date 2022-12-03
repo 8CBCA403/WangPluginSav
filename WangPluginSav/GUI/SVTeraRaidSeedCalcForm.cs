@@ -1,6 +1,8 @@
 ﻿using PKHeX.Core;
+using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using WangPluginSav.WangDataBase;
 namespace WangPluginSav.GUI
 {
     public partial class SVTeraRaidSeedCalcForm : Form
@@ -18,44 +20,7 @@ namespace WangPluginSav.GUI
             InitializeComponent();
             BindingData();
         }
-        public enum NV
-        {
-            [Description("进度1")]
-            one,
-            [Description("进度2")]
-            two,
-            [Description("进度3")]
-            three,
-            [Description("进度4")]
-            four,
-            [Description("进度5")]
-            five,
-        }
-        public enum EV
-        {
-            [Description("进度1")]
-            one,
-            [Description("进度2")]
-            two,
-            [Description("进度3")]
-            three,
-            [Description("进度4")]
-            four,
-        }
-        public enum GameN
-        {
-            Scarlet,
-            Violet,
-        }
-        public enum star
-        {
-            one,
-            two,
-            three,
-            four,
-            five,
-            six,
-        }
+    
         public void BindingData()
         {
             SPcomboBox.DataSource = Enum.GetNames(typeof(Species));
@@ -69,7 +34,8 @@ namespace WangPluginSav.GUI
             Game.DisplayMember = "Name";
             StarcomboBox.DataSource = Enum.GetValues(typeof(star));
             StarcomboBox.SelectedIndex = 4;
-            GencomboBox.DataSource = Enum.GetValues(typeof(Gender)).Cast<Gender>().Where(z => z != Gender.Random).ToArray();
+            StepcomboBox.DataSource = Enum.GetValues(typeof(Step));
+            GencomboBox.DataSource = Enum.GetValues(typeof(Gend));
             GencomboBox.DisplayMember = "Name";
             ProgressBox.DisplayMember = "Description";
             ProgressBox.ValueMember = "Value";
@@ -130,13 +96,16 @@ namespace WangPluginSav.GUI
             PIDBox.Text = $"{Raidinfo.PID:X8}";
             Raidinfo.IsEvent = IsEvent.Checked;
             Raidinfo.IsC = IsC.Checked;
-            Raidinfo.IsBlack = IsBlackBox.Checked;
-            var progress = EventProgress.SelectedIndex ;
+            if(StarcomboBox.SelectedIndex==5)
+                Raidinfo.IsBlack =true;
+            else
+                Raidinfo.IsBlack = false;
+            var progress = Raidinfo.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
             ITeraRaid? encounter = Raidinfo.Encounter(progress);
             var teratype = GetTeraType(encounter, Raidinfo);
             TeraBox.Text = $"{Raid.strings.types[teratype]} ({teratype})";
-            StarCount =  encounter.Stars ;
-            DiffBox.Text =  string.Concat(Enumerable.Repeat("☆", StarCount)) ;
+            StarCount = encounter is TeraDistribution ? encounter.Stars : Raid.GetStarCount(Raidinfo.Difficulty, ProgressBox.SelectedIndex, Raidinfo.IsBlack);
+            DiffBox.Text = Raidinfo.IsEvent ? string.Concat(Enumerable.Repeat("☆", StarCount)) : string.Concat(Enumerable.Repeat("☆", StarCount)) + $" ({Raidinfo.Difficulty})";
             if (encounter != null)
             {
                 var param = GetParam(encounter);
@@ -145,15 +114,15 @@ namespace WangPluginSav.GUI
                 blank.Form = encounter.Form;
                 Encounter9RNG.GenerateData(blank, param, EncounterCriteria.Unrestricted, Raidinfo.Seed);
                 SpeciesTextBox.Text = $"{Raid.strings.Species[encounter.Species]} ({encounter.Species})";
-                switch ((Gender)blank.Gender)
+                switch ((Gend)blank.Gender)
                 {
-                    case Gender.Male:
+                    case Gend.Male:
                         GenderBox.Text = $"公";
                         break;
-                    case Gender.Female:
+                    case Gend.Female:
                         GenderBox.Text = "母";
                         break;
-                    case Gender.Genderless:
+                    case Gend.Genderless:
                         GenderBox.Text = "无性别";
                         break;
                 }
@@ -204,12 +173,13 @@ namespace WangPluginSav.GUI
         {
             GeneratorIsRunning(true);
             tokenSource = new();
-            uint seed =0;
+            var str = SeedBox.Text;
+            var seed = Convert.ToUInt32(str, 16);
             RaidFilters r = new()
             {
                 Species = (Species)SPcomboBox.SelectedIndex,
                 Nature = (Nature)NaturecomboBox.SelectedIndex,
-                Gender=(Gender)GencomboBox.SelectedIndex,
+                Gender=(Gend)GencomboBox.SelectedIndex,
                 Tera=(MoveType)TeracomboBox.SelectedIndex,
                 Shiny =ShinyBox.Checked,
                 Stars = StarcomboBox.SelectedIndex+1,
@@ -236,10 +206,20 @@ namespace WangPluginSav.GUI
                        {
                            return;
                        }
-                       seed = Util.Rand32();
+                       if(StepcomboBox.SelectedIndex==0)
+                       {
+                           seed++;
+                       }
+                       else
+                       {
+                           seed = Util.Rand32();
+                       }
                        SeedBox.Text = $"{seed:X}";
                        Raidinfo.Seed = seed;
-                       Raidinfo.IsBlack = IsBlackBox.Checked;
+                       if (StarcomboBox.SelectedIndex == 5)
+                           Raidinfo.IsBlack = true;
+                       else
+                           Raidinfo.IsBlack = false;
                        if (r.FilterSatisfied(Raidinfo, ProgressBox.SelectedIndex))
                        {
                            this.Invoke(() =>
@@ -310,5 +290,6 @@ namespace WangPluginSav.GUI
             return Raidinfo.TeranType;
         }
 
+       
     }
 }

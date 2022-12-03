@@ -14,14 +14,12 @@
   <ItemGroup>
     <None Remove="Properties\file\a0.bin" />
     <None Remove="Properties\file\a1.bin" />
-    <None Remove="Properties\file\a2.bin" />
     <None Remove="Properties\file\encounter_gem_paldea.pkl" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Properties\file\a0.bin" />
     <EmbeddedResource Include="Properties\file\a1.bin" />
-    <EmbeddedResource Include="Properties\file\a2.bin" />
     <EmbeddedResource Include="Properties\file\encounter_gem_paldea.pkl" />
   </ItemGroup>
 

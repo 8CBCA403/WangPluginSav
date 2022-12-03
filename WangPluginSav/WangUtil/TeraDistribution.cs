@@ -27,15 +27,8 @@ namespace WangPluginSav
 
         public static ITeraRaid[] GetAllEncounters()
         {
-            // var all = FlatbufferDumper.DumpDistributionRaids(r);
-            
-            FileStream fs = new FileStream(@"D:\Desktop\a", FileMode.Create);
-            
-            byte[] data = Utils.GetBinaryResource("a2.bin");
-            MessageBox.Show($"{data.Length}");
-           
             var type2 = EncounterDist9.GetArray(Utils.GetBinaryResource("a0.bin"));
-            var type3 = EncounterMight9.GetArray(Utils.GetBinaryResource("a2.bin"));
+            var type3 = EncounterMight9.GetArray(Utils.GetBinaryResource("a1.bin"));
             var result = new TeraDistribution[type2.Length + type3.Length];
             for (int i = 0; i < result.Length; i++)
                 result[i] = i < type2.Length ? new TeraDistribution(type2[i]) : new TeraDistribution(type3[i - type2.Length]);

@@ -1,6 +1,7 @@
 ﻿using PKHeX.Core;
 using System.Collections.Generic;
 using System.Runtime;
+using WangPluginSav.WangDataBase;
 
 namespace WangPluginSav
 {
@@ -10,7 +11,7 @@ namespace WangPluginSav
         public  int? Stars = null;
         public  bool Shiny;
         public  Nature? Nature =  null;
-        public Gender? Gender = null;
+        public Gend? Gender = null;
         public MoveType? Tera= null;
         public int minHP =0;
         public int maxHP= 31;
@@ -83,7 +84,7 @@ namespace WangPluginSav
         }
         public bool IsGenderSatisfied(Raid raid, int StoryProgress)
         {
-            if (Gender == PKHeX.Core.Gender.Random)
+            if (Gender == Gend.Random)
                 return true;
             if (Gender == null)
                 return true;
@@ -97,7 +98,7 @@ namespace WangPluginSav
             blank.Species = encounter.Species;
             blank.Form = encounter.Form;
             Encounter9RNG.GenerateData(blank, param, EncounterCriteria.Unrestricted, raid.Seed);
-            return (Gender)blank.Gender == Gender;
+            return (Gend)blank.Gender == Gender;
         }
         public bool IsTeraSatisfied(Raid raid)
         {

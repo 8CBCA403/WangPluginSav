@@ -49,7 +49,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.NatureBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.IsBlackBox = new System.Windows.Forms.CheckBox();
             this.Move1Box = new System.Windows.Forms.TextBox();
             this.Move2Box = new System.Windows.Forms.TextBox();
             this.Move3Box = new System.Windows.Forms.TextBox();
@@ -91,6 +90,8 @@
             this.EventProgress = new System.Windows.Forms.ComboBox();
             this.EVPLabel = new System.Windows.Forms.Label();
             this.IsC = new System.Windows.Forms.CheckBox();
+            this.StepcomboBox = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SeedBox
@@ -98,8 +99,9 @@
             this.SeedBox.Location = new System.Drawing.Point(73, 23);
             this.SeedBox.Multiline = true;
             this.SeedBox.Name = "SeedBox";
-            this.SeedBox.Size = new System.Drawing.Size(108, 25);
+            this.SeedBox.Size = new System.Drawing.Size(116, 25);
             this.SeedBox.TabIndex = 1;
+            this.SeedBox.Text = "0";
             // 
             // PIDBox
             // 
@@ -280,17 +282,6 @@
             this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 24;
             this.label5.Text = "Nature";
-            // 
-            // IsBlackBox
-            // 
-            this.IsBlackBox.AutoSize = true;
-            this.IsBlackBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsBlackBox.Location = new System.Drawing.Point(598, 146);
-            this.IsBlackBox.Name = "IsBlackBox";
-            this.IsBlackBox.Size = new System.Drawing.Size(76, 24);
-            this.IsBlackBox.TabIndex = 25;
-            this.IsBlackBox.Text = "IsBlack";
-            this.IsBlackBox.UseVisualStyleBackColor = true;
             // 
             // Move1Box
             // 
@@ -588,7 +579,7 @@
             // StarcomboBox
             // 
             this.StarcomboBox.FormattingEnabled = true;
-            this.StarcomboBox.Location = new System.Drawing.Point(585, 56);
+            this.StarcomboBox.Location = new System.Drawing.Point(585, 116);
             this.StarcomboBox.Name = "StarcomboBox";
             this.StarcomboBox.Size = new System.Drawing.Size(94, 24);
             this.StarcomboBox.TabIndex = 58;
@@ -597,11 +588,11 @@
             // 
             this.Starlabel.AutoSize = true;
             this.Starlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Starlabel.Location = new System.Drawing.Point(536, 60);
+            this.Starlabel.Location = new System.Drawing.Point(557, 117);
             this.Starlabel.Name = "Starlabel";
-            this.Starlabel.Size = new System.Drawing.Size(43, 20);
+            this.Starlabel.Size = new System.Drawing.Size(22, 20);
             this.Starlabel.TabIndex = 59;
-            this.Starlabel.Text = "STAR";
+            this.Starlabel.Text = "☆";
             // 
             // ShinyBox
             // 
@@ -638,7 +629,7 @@
             // 
             this.IsEvent.AutoSize = true;
             this.IsEvent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsEvent.Location = new System.Drawing.Point(687, 146);
+            this.IsEvent.Location = new System.Drawing.Point(687, 116);
             this.IsEvent.Name = "IsEvent";
             this.IsEvent.Size = new System.Drawing.Size(77, 24);
             this.IsEvent.TabIndex = 63;
@@ -648,7 +639,7 @@
             // EventProgress
             // 
             this.EventProgress.FormattingEnabled = true;
-            this.EventProgress.Location = new System.Drawing.Point(585, 116);
+            this.EventProgress.Location = new System.Drawing.Point(585, 54);
             this.EventProgress.Name = "EventProgress";
             this.EventProgress.Size = new System.Drawing.Size(94, 24);
             this.EventProgress.TabIndex = 64;
@@ -656,22 +647,41 @@
             // EVPLabel
             // 
             this.EVPLabel.AutoSize = true;
-            this.EVPLabel.Location = new System.Drawing.Point(550, 124);
+            this.EVPLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EVPLabel.Location = new System.Drawing.Point(534, 57);
             this.EVPLabel.Name = "EVPLabel";
-            this.EVPLabel.Size = new System.Drawing.Size(31, 16);
+            this.EVPLabel.Size = new System.Drawing.Size(45, 20);
             this.EVPLabel.TabIndex = 65;
-            this.EVPLabel.Text = "Evp";
+            this.EVPLabel.Text = "Event";
             // 
             // IsC
             // 
             this.IsC.AutoSize = true;
             this.IsC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsC.Location = new System.Drawing.Point(687, 116);
+            this.IsC.Location = new System.Drawing.Point(687, 146);
             this.IsC.Name = "IsC";
-            this.IsC.Size = new System.Drawing.Size(50, 24);
+            this.IsC.Size = new System.Drawing.Size(66, 24);
             this.IsC.TabIndex = 66;
-            this.IsC.Text = "IsC";
+            this.IsC.Text = "Fixed";
             this.IsC.UseVisualStyleBackColor = true;
+            // 
+            // StepcomboBox
+            // 
+            this.StepcomboBox.FormattingEnabled = true;
+            this.StepcomboBox.Location = new System.Drawing.Point(685, 223);
+            this.StepcomboBox.Name = "StepcomboBox";
+            this.StepcomboBox.Size = new System.Drawing.Size(96, 24);
+            this.StepcomboBox.TabIndex = 67;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(656, 227);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(25, 20);
+            this.label15.TabIndex = 68;
+            this.label15.Text = "ST";
             // 
             // SVTeraRaidSeedCalcForm
             // 
@@ -679,6 +689,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(809, 473);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.StepcomboBox);
             this.Controls.Add(this.IsC);
             this.Controls.Add(this.EVPLabel);
             this.Controls.Add(this.EventProgress);
@@ -720,7 +732,6 @@
             this.Controls.Add(this.Move3Box);
             this.Controls.Add(this.Move2Box);
             this.Controls.Add(this.Move1Box);
-            this.Controls.Add(this.IsBlackBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.NatureBox);
             this.Controls.Add(this.label3);
@@ -772,7 +783,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox NatureBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox IsBlackBox;
         private System.Windows.Forms.TextBox Move1Box;
         private System.Windows.Forms.TextBox Move2Box;
         private System.Windows.Forms.TextBox Move3Box;
@@ -814,5 +824,7 @@
         private System.Windows.Forms.ComboBox EventProgress;
         private System.Windows.Forms.Label EVPLabel;
         private System.Windows.Forms.CheckBox IsC;
+        private ComboBox StepcomboBox;
+        private Label label15;
     }
 }

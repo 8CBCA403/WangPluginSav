@@ -22,7 +22,7 @@ namespace WangPluginSav
         public virtual bool IsEvent { get; set; }
 
         public virtual bool IsC { get; set; }
-        public ITeraRaid? Encounter(int Stage) =>TeraDistribution.GetEncounter(Seed, Stage, true) ;
+        public ITeraRaid? Encounter(int Stage) => IsEvent ? TeraDistribution.GetEncounter(Seed, Stage, IsC) : TeraEncounter.GetEncounter(Seed, Stage, IsBlack);
         // Derived Values
         public virtual string? TeraType => GetTeraType(Seed);
         public virtual int TeranType => GetTeranType(Seed);
