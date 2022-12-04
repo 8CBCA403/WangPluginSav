@@ -226,7 +226,7 @@ namespace WangPluginSav.GUI
                            Raidinfo.IsBlack = true;
                        else
                            Raidinfo.IsBlack = false;
-                       if (r.FilterSatisfied(Raidinfo, ProgressBox.SelectedIndex))
+                       if (r.FilterSatisfied(Raidinfo, ProgressBox.SelectedIndex,EventProgress.SelectedIndex))
                        {
                            this.Invoke(() =>
                            {

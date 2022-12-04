@@ -107,19 +107,13 @@ namespace WangPluginSav
                 return true;
             return Teratype == Tera;
         }
-        public  bool IsIVsSatisfied(Raid raid, int StoryProgress)
+        public  bool IsIVsSatisfied(Raid raid, int StoryProgress, int EventProgress)
         {
-            ITeraRaid? encounter = TeraEncounter.GetEncounter(raid.Seed, StoryProgress, raid.IsBlack);
+            var progress = raid.IsEvent ? EventProgress : StoryProgress;
+            ITeraRaid? encounter = raid.Encounter(progress);
             if (encounter == null)
                 return false;
-            var pi = PersonalTable.SV.GetFormEntry(encounter.Species, encounter.Form);
-            var StarCount = Raid.GetStarCount(raid.Difficulty, StoryProgress, raid.IsBlack);
-            var param = new GenerateParam9((byte)pi.Gender, (byte)(StarCount - 1), 1, 0, 0, 0, encounter.Ability, encounter.Shiny);
-            var blank = new PK9();
-            blank.Species = encounter.Species;
-            blank.Form = encounter.Form;
-            Encounter9RNG.GenerateData(blank, param, EncounterCriteria.Unrestricted, raid.Seed);
-            var ivs = ToSpeedLast(blank.IVs);
+            var ivs = raid.GetIVs(raid.Seed, encounter.FlawlessIVCount);
             if (ivs[0] < minHP || ivs[0] > maxHP)
                 return false;
             if (ivs[1] < minAtk || ivs[1] > maxAtk)
@@ -146,12 +140,12 @@ namespace WangPluginSav
             res[5] = ivs[3];
             return res;
         }
-        public  bool FilterSatisfied(Raid raid, int StoryProgress) => IsSpeciesSatisfied(raid, StoryProgress) && IsStarsSatisfied(raid, StoryProgress) && IsIVsSatisfied(raid, StoryProgress) && IsShinySatisfied(raid) && IsNatureSatisfied(raid, StoryProgress) && IsGenderSatisfied(raid, StoryProgress)&& IsTeraSatisfied(raid);
+        public  bool FilterSatisfied(Raid raid, int StoryProgress, int EventProgress) => IsSpeciesSatisfied(raid, StoryProgress) && IsStarsSatisfied(raid, StoryProgress) && IsIVsSatisfied(raid, StoryProgress, EventProgress) && IsShinySatisfied(raid) && IsNatureSatisfied(raid, StoryProgress) && IsGenderSatisfied(raid, StoryProgress)&& IsTeraSatisfied(raid);
         public  bool FilterSatisfied(List<Raid> Raids, int StoryProgress, int EventProgress)
         {
             foreach (Raid raid in Raids)
             {
-                if (FilterSatisfied(raid, StoryProgress))
+                if (FilterSatisfied(raid, StoryProgress,  EventProgress))
                     return true;
             }
             return false;

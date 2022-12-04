@@ -29,7 +29,6 @@
       <IncludeAssets>runtime;compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FlatSharp" Version="6.3.5" />
-    <PackageReference Include="PKHeX.Core" Version="22.12.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +46,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Deps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="IndexRange">
+      <HintPath>Deps\IndexRange.dll</HintPath>
+    </Reference>
+    <Reference Include="PKHeX.Core">
+      <HintPath>Deps\PKHeX.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>Deps\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>Deps\System.Memory.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
