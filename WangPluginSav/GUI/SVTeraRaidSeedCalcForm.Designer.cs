@@ -92,6 +92,8 @@
             this.IsC = new System.Windows.Forms.CheckBox();
             this.StepcomboBox = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.FormBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SeedBox
@@ -184,7 +186,7 @@
             this.DiffBox.Multiline = true;
             this.DiffBox.Name = "DiffBox";
             this.DiffBox.ReadOnly = true;
-            this.DiffBox.Size = new System.Drawing.Size(145, 25);
+            this.DiffBox.Size = new System.Drawing.Size(108, 25);
             this.DiffBox.TabIndex = 10;
             // 
             // label1
@@ -683,12 +685,33 @@
             this.label15.TabIndex = 68;
             this.label15.Text = "ST";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(561, 164);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 20);
+            this.label16.TabIndex = 69;
+            this.label16.Text = "FORM";
+            // 
+            // FormBox
+            // 
+            this.FormBox.Location = new System.Drawing.Point(616, 159);
+            this.FormBox.Multiline = true;
+            this.FormBox.Name = "FormBox";
+            this.FormBox.ReadOnly = true;
+            this.FormBox.Size = new System.Drawing.Size(63, 25);
+            this.FormBox.TabIndex = 70;
+            // 
             // SVTeraRaidSeedCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(809, 473);
+            this.Controls.Add(this.FormBox);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.StepcomboBox);
             this.Controls.Add(this.IsC);
@@ -826,5 +849,7 @@
         private System.Windows.Forms.CheckBox IsC;
         private ComboBox StepcomboBox;
         private Label label15;
+        private Label label16;
+        private TextBox FormBox;
     }
 }

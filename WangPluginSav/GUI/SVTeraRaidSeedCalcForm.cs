@@ -23,7 +23,8 @@ namespace WangPluginSav.GUI
     
         public void BindingData()
         {
-            SPcomboBox.DataSource = Enum.GetNames(typeof(Species));
+            SPcomboBox.DataSource = Enum.GetValues(typeof(TeraSpecies));
+            SPcomboBox.DisplayMember = "Name";
             TeracomboBox.DataSource = Enum.GetValues(typeof(MoveType));
             TeracomboBox.SelectedIndex = 18;
             NaturecomboBox.DataSource=Enum.GetValues(typeof(Nature));
@@ -37,6 +38,7 @@ namespace WangPluginSav.GUI
             StepcomboBox.DataSource = Enum.GetValues(typeof(Step));
             GencomboBox.DataSource = Enum.GetValues(typeof(Gend));
             GencomboBox.DisplayMember = "Name";
+            GencomboBox.SelectedIndex = 3;
             ProgressBox.DisplayMember = "Description";
             ProgressBox.ValueMember = "Value";
             ProgressBox.DataSource = Enum.GetValues(typeof(NV))
@@ -127,6 +129,7 @@ namespace WangPluginSav.GUI
                         break;
                 }
                 var nature = blank.Nature;
+                FormBox.Text = $"{blank.Form}";
                 NatureBox.Text = $"{Raid.strings.Natures[nature]}";
                 AbilityBox.Text = $"{Raid.strings.Ability[blank.Ability]}";
                 Move1Box.Text = Raid.strings.Move[encounter.Move1];
@@ -179,7 +182,7 @@ namespace WangPluginSav.GUI
             float i = 0;
             RaidFilters r = new()
             {
-                Species = (Species)SPcomboBox.SelectedIndex,
+                Species =(Species)((int)SPcomboBox.SelectedValue),
                 Nature = (Nature)NaturecomboBox.SelectedIndex,
                 Gender=(Gend)GencomboBox.SelectedIndex,
                 Tera=(MoveType)TeracomboBox.SelectedIndex,
