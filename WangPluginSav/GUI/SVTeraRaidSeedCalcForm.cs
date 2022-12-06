@@ -8,12 +8,16 @@ namespace WangPluginSav.GUI
     public partial class SVTeraRaidSeedCalcForm : Form
     {
         private ISaveFileProvider SAV { get; }
+        public IPKMView PKMEditor { get; }
         private CancellationTokenSource tokenSource = new();
         private Raid Raidinfo = new();
      
-        public SVTeraRaidSeedCalcForm(ISaveFileProvider sav)
+        public SVTeraRaidSeedCalcForm(ISaveFileProvider sav, IPKMView edit)
         {
             SAV = sav;
+            PKMEditor = edit;
+           
+           
             Raid.GemTeraRaids = TeraEncounter.GetAllEncounters("encounter_gem_paldea.pkl");
             Raid.DistTeraRaids = TeraDistribution.GetAllEncounters();
             Raid.Game = "Violet";
@@ -23,6 +27,8 @@ namespace WangPluginSav.GUI
     
         public void BindingData()
         {
+            RaidTypeBox.DataSource = Enum.GetValues(typeof(TeraRaidContentType));
+            RaidTypeBox.SelectedIndex= 0;
             SPcomboBox.DataSource = Enum.GetValues(typeof(TeraSpecies));
             SPcomboBox.DisplayMember = "Name";
             TeracomboBox.DataSource = Enum.GetValues(typeof(MoveType));
@@ -52,9 +58,21 @@ namespace WangPluginSav.GUI
                 .ToList();
             ProgressBox.SelectedIndex = 4;
         }
+        public void SAV_Raid9(SaveFile sav, RaidSpawnList9 raid)
+        {
+            var R=raid.CountUsed;
+            for(int i = 0; i < R;i++)
+            {
+                var r1 = raid.GetRaid(i);
+                r1.IsEnabled = true;
+                r1.Seed = Convert.ToUInt32(ModSeedText.Text,16); ;
+                r1.Content =(TeraRaidContentType)RaidTypeBox.SelectedIndex;
+            }
+            MessageBox.Show($"{R}");
+            
+        }
 
-       
-        private void GeneratorIsRunning(bool running)
+            private void GeneratorIsRunning(bool running)
         {
             RUN_BTN.Enabled = false;
             //ConditionBox.Text = "正在找...";
@@ -88,6 +106,7 @@ namespace WangPluginSav.GUI
             }
             return s;
         }
+
         private void displayRiad(uint seed)
         {
             string r;
@@ -105,7 +124,7 @@ namespace WangPluginSav.GUI
             var progress = Raidinfo.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
             ITeraRaid? encounter = Raidinfo.Encounter(progress);
             var teratype = GetTeraType(encounter, Raidinfo);
-            TeraBox.Text = $"{Raid.strings.types[teratype]} ({teratype})";
+            TeraBox.Text = $"{Raid.strings.types[teratype]}";
             StarCount = encounter is TeraDistribution ? encounter.Stars : Raid.GetStarCount(Raidinfo.Difficulty, ProgressBox.SelectedIndex, Raidinfo.IsBlack);
             DiffBox.Text = Raidinfo.IsEvent ? string.Concat(Enumerable.Repeat("☆", StarCount)) : string.Concat(Enumerable.Repeat("☆", StarCount)) + $" ({Raidinfo.Difficulty})";
             if (encounter != null)
@@ -137,8 +156,8 @@ namespace WangPluginSav.GUI
                 Move3Box.Text = Raid.strings.Move[encounter.Move3];
                 Move4Box.Text = Raid.strings.Move[encounter.Move4];
                 IVBOX.Text = IVsString(ToSpeedLast(blank.IVs));
-                r = $"\nSeed:{Raidinfo.Seed:X8} 种类: {SpeciesTextBox.Text} IV:{IVsString(ToSpeedLast(blank.IVs))}" +
-             $" 太晶属性:{TeraBox.Text} 技能:{Move1Box.Text},{Move2Box.Text},{Move3Box.Text},{Move4Box.Text}";
+                r = $"\nSeed:{Raidinfo.Seed:X8} 种类: {SpeciesTextBox.Text} 性别: {GenderBox.Text} 性格:{NatureBox.Text} 特性:{AbilityBox.Text} IV:{IVsString(ToSpeedLast(blank.IVs))}" +
+             $" {TeraBox.Text}";
                 ResultBox.Text += "\n" + r;
             }
           
@@ -299,6 +318,26 @@ namespace WangPluginSav.GUI
             return Raidinfo.TeranType;
         }
 
-       
+        private void Shiny_Fix_BTN_Click(object sender, EventArgs e)
+        {
+            uint pid = Raidinfo.PID;
+            int tid = PKMEditor.Data.TID;
+            int sid = PKMEditor.Data.SID;
+            uint fixPId = GetShinyPID(tid, sid, pid);
+            PIDBox.Text = $"{fixPId:X8}";
+
+        }
+        private static uint GetShinyPID(in int tid, in int sid, in uint pid)
+        {
+            return (uint)(((tid ^ sid ^ (pid & 0xFFFF) ^ 1) << 16) | (pid & 0xFFFF));
+        }
+
+        private void ModifySav_Click(object sender, EventArgs e)
+        {
+            if (SAV.SAV is SAV9SV sv)
+            {
+                SAV_Raid9(sv, sv.Raid);
+            }
+        }
     }
 }

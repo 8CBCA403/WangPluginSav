@@ -35,7 +35,7 @@ namespace WangPluginSav
 
         private void AddPluginControl(ToolStripDropDownItem tools)
         {
-            var frm = new SVTeraRaidSeedCalcForm(SaveFileEditor);
+            var frm = new SVTeraRaidSeedCalcForm(SaveFileEditor, PKMEditor);
             var frm1 = new BWNPCForm(SaveFileEditor);
             var ctrl = new ToolStripMenuItem(Name)
             {

@@ -94,6 +94,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.FormBox = new System.Windows.Forms.TextBox();
+            this.Shiny_Fix_BTN = new System.Windows.Forms.Button();
+            this.ModifySav = new System.Windows.Forms.Button();
+            this.ModSeedText = new System.Windows.Forms.TextBox();
+            this.RaidTypeBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // SeedBox
@@ -214,7 +218,7 @@
             // 
             this.ResultBox.Location = new System.Drawing.Point(25, 253);
             this.ResultBox.Name = "ResultBox";
-            this.ResultBox.Size = new System.Drawing.Size(756, 208);
+            this.ResultBox.Size = new System.Drawing.Size(839, 208);
             this.ResultBox.TabIndex = 14;
             this.ResultBox.Text = "";
             // 
@@ -704,12 +708,53 @@
             this.FormBox.Size = new System.Drawing.Size(63, 25);
             this.FormBox.TabIndex = 70;
             // 
+            // Shiny_Fix_BTN
+            // 
+            this.Shiny_Fix_BTN.Location = new System.Drawing.Point(500, 55);
+            this.Shiny_Fix_BTN.Name = "Shiny_Fix_BTN";
+            this.Shiny_Fix_BTN.Size = new System.Drawing.Size(28, 27);
+            this.Shiny_Fix_BTN.TabIndex = 71;
+            this.Shiny_Fix_BTN.Text = "F";
+            this.Shiny_Fix_BTN.UseVisualStyleBackColor = true;
+            this.Shiny_Fix_BTN.Click += new System.EventHandler(this.Shiny_Fix_BTN_Click);
+            // 
+            // ModifySav
+            // 
+            this.ModifySav.Location = new System.Drawing.Point(787, 82);
+            this.ModifySav.Name = "ModifySav";
+            this.ModifySav.Size = new System.Drawing.Size(94, 27);
+            this.ModifySav.TabIndex = 72;
+            this.ModifySav.Text = "ModifySav";
+            this.ModifySav.UseVisualStyleBackColor = true;
+            this.ModifySav.Click += new System.EventHandler(this.ModifySav_Click);
+            // 
+            // ModSeedText
+            // 
+            this.ModSeedText.Location = new System.Drawing.Point(787, 23);
+            this.ModSeedText.Multiline = true;
+            this.ModSeedText.Name = "ModSeedText";
+            this.ModSeedText.Size = new System.Drawing.Size(94, 25);
+            this.ModSeedText.TabIndex = 73;
+            this.ModSeedText.Text = "0";
+            // 
+            // RaidTypeBox
+            // 
+            this.RaidTypeBox.FormattingEnabled = true;
+            this.RaidTypeBox.Location = new System.Drawing.Point(787, 54);
+            this.RaidTypeBox.Name = "RaidTypeBox";
+            this.RaidTypeBox.Size = new System.Drawing.Size(94, 24);
+            this.RaidTypeBox.TabIndex = 74;
+            // 
             // SVTeraRaidSeedCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(809, 473);
+            this.ClientSize = new System.Drawing.Size(889, 473);
+            this.Controls.Add(this.RaidTypeBox);
+            this.Controls.Add(this.ModSeedText);
+            this.Controls.Add(this.ModifySav);
+            this.Controls.Add(this.Shiny_Fix_BTN);
             this.Controls.Add(this.FormBox);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -851,5 +896,9 @@
         private Label label15;
         private Label label16;
         private TextBox FormBox;
+        private Button Shiny_Fix_BTN;
+        private Button ModifySav;
+        private TextBox ModSeedText;
+        private ComboBox RaidTypeBox;
     }
 }
