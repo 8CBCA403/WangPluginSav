@@ -1,27 +1,33 @@
-﻿using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using WangPluginSav.GUI;
 
 namespace WangPluginSav.Plugins
 {
     internal class BWNPC_Plugin: WangPluginSav
     {
 
-       protected void Open()
+        public override string Name => "黑城白森NPC修改器";
+        public override int Priority => 1;
+
+        protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {
-            var sav = SaveFileEditor.SAV;
-            var game = (GameVersion)sav.Game;
-            if ( !GameVersion.Gen5.Contains(game))
-                return;
-            var frm = new BWNPCForm(SaveFileEditor);
-            frm.Show();
+            var ctrl = new ToolStripMenuItem(Name)
+            {
+                Image = Properties.Resources.BW
+            };
+            ctrl.Click += OpenForm;
+            ctrl.Name = "黑城白森NPC修改器";
+            modmenu.DropDownItems.Add(ctrl);
+
         }
 
-      
+        private void OpenForm(object sender, EventArgs e)
+        {
+
+            var form = new BWNPCForm(SaveFileEditor);
+            form.Show();
+        }
+
+
     }
     
 }

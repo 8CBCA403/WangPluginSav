@@ -1,25 +1,32 @@
-﻿using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WangPluginSav.GUI;
+﻿using WangPluginSav.GUI;
 
 namespace WangPluginSav.Plugins
 {
-    internal class SVTeraRaidSeedCalcPlugin
+    internal class SVTeraRaidSeedCalcPlugin:WangPluginSav
     {
-      /*  protected  void Open()
-        {
-            var sav = SaveFileEditor.SAV;
-            var game = (GameVersion)sav.Game;
-            if (!GameVersion.Gen9.Contains(game))
-                return;
-            var frm = new SVTeraRaidSeedCalcForm(SaveFileEditor);
-            frm.Show();
-        }*/
+        public override string Name => "太晶坑修改器";
+        public override int Priority => 0;
 
-        
+        protected override void AddPluginControl(ToolStripDropDownItem modmenu)
+        {
+            var ctrl = new ToolStripMenuItem(Name)
+            {
+                Image = Properties.Resources.Tera
+            };
+            ctrl.Click += OpenForm;
+            ctrl.Name = "太晶坑修改器";
+            modmenu.DropDownItems.Add(ctrl);
+
+        }
+
+        private void OpenForm(object sender, EventArgs e)
+        {
+
+            var form = new SVTeraRaidSeedCalcForm(SaveFileEditor,PKMEditor);
+            form.Show();
+        }
+
+
+
     }
 }

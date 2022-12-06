@@ -8,7 +8,7 @@ namespace WangPluginSav.WangDataBase
 {
     public enum TeraSpecies
     {
-        Random,
+        Any,
         Pichu	=172,
         Igglybuff	=174,
         Venonat=	48,

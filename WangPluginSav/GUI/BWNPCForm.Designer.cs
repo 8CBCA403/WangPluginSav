@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-namespace WangPluginSav
+﻿namespace WangPluginSav.GUI
 {
     partial class BWNPCForm
     {

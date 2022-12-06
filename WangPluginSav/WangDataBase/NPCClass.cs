@@ -5,37 +5,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WangPluginSav
+namespace WangPluginSav.WangDataBase
 {
     internal class NPC
     {
-            private int No;
-            private int lifePoints;
-            private int operation;
-          
-            
-            public NPC(int no, int hp, int op)
-            {
-                No = no;
-                lifePoints = hp;
-                operation = op;
-            }
+        private int No;
+        private int lifePoints;
+        private int operation;
 
-            public int getNo()
-            {
-                return No;
-            }
 
-            public int getLp()
-            {
-                return lifePoints;
-            }
+        public NPC(int no, int hp, int op)
+        {
+            No = no;
+            lifePoints = hp;
+            operation = op;
+        }
 
-            public int getOp()
-            {
-                return operation;
-            }
-        
+        public int getNo()
+        {
+            return No;
+        }
+
+        public int getLp()
+        {
+            return lifePoints;
+        }
+
+        public int getOp()
+        {
+            return operation;
+        }
+
     }
     internal class NPCName
     {
@@ -47,7 +47,7 @@ namespace WangPluginSav
         public int ID { get; set; }
         public static string[] WhiteForestNPCPKM = { "波波", "刺尾虫", "鬼斯", "毽子草", "电击怪", "波克比", "腕力", "懒人翁", "小猫怪", "小鸭嘴龙", "小磁怪", "拉鲁拉丝", "姆克儿", "露力丽", "含羞苞", "走路草", "咩利羊", "可可多拉", "喇叭芽", "橡实果", "铁甲犀牛", "莲叶童子", "大颚蚁", "凯西", "尼多朗", "尼多兰", "咕妞妞", "3D龙", "好运蛋", "宝贝龙" };
         public static string[] BlackCityNPC = { "星之沙", "珍珠", "小蘑菇", "贵重骨头", "美味水", "金色喷雾器", "金珠", "叶之石", "红色碎片", "火之石", "绿色碎片", "太阳石", "圆石", "光之石", "豪华球", "心灵鳞片", "怪兽球", "大蘑菇", "星之碎片", "大珍珠", "树果汁", "水之石", "蓝色碎片", "黄色碎片", "雷之石", "皮皮玩偶", "月亮石", "暗之石", "向尾喵之尾", "觉醒石" };
-        public static byte[] BlackData = new byte[] {187, 48, 164, 48, 168, 48, 243, 48, 255, 255,134, 203, 250, 56,0,0,0,0,0,0,0 };
+        public static byte[] BlackData = new byte[] { 187, 48, 164, 48, 168, 48, 243, 48, 255, 255, 134, 203, 250, 56, 0, 0, 0, 0, 0, 0, 0 };
         public static List<NPCName> IDList(ISaveFileProvider sav)
         {
             var L = new List<NPCName>();
@@ -301,9 +301,9 @@ namespace WangPluginSav
             L.Add(Grace);
             return L;
         }
-        
+
     }
 
-    
-    
+
+
 }

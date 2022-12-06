@@ -1,69 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using PKHeX.Core;
+﻿using PKHeX.Core;
 using WangPluginSav.GUI;
 
 namespace WangPluginSav
 {
     public abstract class WangPluginSav : IPlugin
     {
-        public string Name => "超王插件SAV";
-        public int Priority => 1;
-
-        private ToolStripMenuItem WangPlugin = new();
-
+        private const string ParentMenuName = "SuperWangSav";
+        private const string ParentMenuText = "超王插件SAV";
+        private const string ParentMenuParent = "Menu_Tools";
+        public abstract string Name { get; }
+        public abstract int Priority { get; }
         public ISaveFileProvider SaveFileEditor { get; private set; } = null!;
         public IPKMView PKMEditor { get; private set; } = null!;
+        public object[] globalArgs;
 
         public void Initialize(params object[] args)
         {
-          
+            globalArgs = args;
             SaveFileEditor = (ISaveFileProvider)Array.Find(args, z => z is ISaveFileProvider);
             PKMEditor = (IPKMView)Array.Find(args, z => z is IPKMView);
             var menu = (ToolStrip)Array.Find(args, z => z is ToolStrip);
             LoadMenuStrip(menu);
-        }
 
+        }
         private void LoadMenuStrip(ToolStrip menuStrip)
         {
             var items = menuStrip.Items;
-            if (!(items.Find("Menu_Tools", false)[0] is ToolStripDropDownItem tools))
-                throw new ArgumentException(nameof(menuStrip));
-            AddPluginControl(tools);
+            if (items.Find(ParentMenuParent, false)[0] is not ToolStripDropDownItem tools)
+                return;
+            var toolsitems = tools.DropDownItems;
+            var modmenusearch = toolsitems.Find(ParentMenuName, false);
+            var modmenu = GetModMenu(tools, modmenusearch);
+          //  var form = tools.GetCurrentParent().FindForm();
+         //   if (form is not null)
+               // form.Icon = Properties.Resources.WangPluginSav;
+            AddPluginControl(modmenu);
+        }
+        private static ToolStripMenuItem GetModMenu(ToolStripDropDownItem tools, IReadOnlyList<ToolStripItem> search)
+        {
+            if (search.Count != 0)
+                return (ToolStripMenuItem)search[0];
+
+            var modmenu = CreateBaseGroupItem();
+            tools.DropDownItems.Insert(1, modmenu);
+            return modmenu;
         }
 
-        private void AddPluginControl(ToolStripDropDownItem tools)
+        private static ToolStripMenuItem CreateBaseGroupItem() => new(ParentMenuText)
         {
-            var frm = new SVTeraRaidSeedCalcForm(SaveFileEditor, PKMEditor);
-            var frm1 = new BWNPCForm(SaveFileEditor);
-            var ctrl = new ToolStripMenuItem(Name)
-            {
-                Image = Properties.Resources.WangPluginSav,
-                Name = "超王插件SAV",
-             };
-            tools.DropDownItems.Insert(1, ctrl);
-            var c2 = new ToolStripMenuItem($"朱紫太晶坑Seed生成器")
-            {
-                Image = Properties.Resources.Tera,
-             };
-            c2.Click += (s, e) => frm.Show();
-            var c3 = new ToolStripMenuItem($"黑白黑城白森NPC修改器")
-            {
-                Image = Properties.Resources.BW,
-             };
-            c3.Click += (s, e) => frm1.Show();
-            ctrl.DropDownItems.Add(c2);
-            ctrl.DropDownItems.Add(c3);
-        }
-      
-        
+            Image = Properties.Resources.WangPluginSav,
+            Name = ParentMenuName,
+        };
+        protected abstract void AddPluginControl(ToolStripDropDownItem modmenu);
+
+
 
         public void NotifySaveLoaded()
         {
             Console.WriteLine($"{Name} was notified that a Save File was just loaded.");
-            if (WangPlugin == null)
-                return;
+        //    if (WangPluginSav == null)
+          //      return;
         }
         public bool TryLoadFile(string filePath)
         {

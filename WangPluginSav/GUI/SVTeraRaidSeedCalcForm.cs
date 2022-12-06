@@ -1,7 +1,6 @@
 ﻿using PKHeX.Core;
 using System;
 using System.ComponentModel;
-using System.Windows.Forms;
 using WangPluginSav.WangDataBase;
 namespace WangPluginSav.GUI
 {
@@ -68,7 +67,7 @@ namespace WangPluginSav.GUI
                 r1.Seed = Convert.ToUInt32(ModSeedText.Text,16); ;
                 r1.Content =(TeraRaidContentType)RaidTypeBox.SelectedIndex;
             }
-            MessageBox.Show($"{R}");
+        //    MessageBox.Show($"{R}");
             
         }
 

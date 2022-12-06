@@ -826,6 +826,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SVTeraRaidSeedCalcForm";
             this.ResumeLayout(false);
+            
             this.PerformLayout();
 
         }

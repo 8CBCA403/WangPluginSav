@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
-namespace WangPluginSav
+using WangPluginSav.WangDataBase;
+namespace WangPluginSav.GUI
 {
     
     public partial class BWNPCForm : Form
