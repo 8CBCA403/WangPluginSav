@@ -1,6 +1,7 @@
 ﻿using PKHeX.Core;
 using System;
 using System.ComponentModel;
+using System.Linq;
 using WangPluginSav.WangDataBase;
 namespace WangPluginSav.GUI
 {
@@ -10,13 +11,12 @@ namespace WangPluginSav.GUI
         public IPKMView PKMEditor { get; }
         private CancellationTokenSource tokenSource = new();
         private Raid Raidinfo = new();
-     
+        private const string SeedFilter = "Trainer Info |*.txt|All Files|*.*";
+        private string[]? lines;
         public SVTeraRaidSeedCalcForm(ISaveFileProvider sav, IPKMView edit)
         {
             SAV = sav;
             PKMEditor = edit;
-           
-           
             Raid.GemTeraRaids = TeraEncounter.GetAllEncounters("encounter_gem_paldea.pkl");
             Raid.DistTeraRaids = TeraDistribution.GetAllEncounters();
             Raid.Game = "Violet";
@@ -337,6 +337,65 @@ namespace WangPluginSav.GUI
             {
                 SAV_Raid9(sv, sv.Raid);
             }
+        }
+
+        private void ImportSeed_BTN_Click(object sender, EventArgs e)
+        {
+            using var sfd = new OpenFileDialog
+            {
+                Filter = SeedFilter,
+                FilterIndex = 0,
+                RestoreDirectory = true,
+            };
+            if (sfd.ShowDialog() != DialogResult.OK)
+                return;
+            string path = sfd.FileName;
+            lines = File.ReadAllLines(path);
+            foreach (string line in lines)
+            {
+                MutiSeedBox.Text += line+'\n'; 
+            }
+        }
+
+        private void ModSav_BTN_Click(object sender, EventArgs e)
+        {
+            if (SAV.SAV is SAV9SV sv)
+            {
+                SetRaid9(sv.Raid);
+            }
+        }
+        public void SetRaid9(RaidSpawnList9 raid)
+        {
+            var n = lines.Count();
+            var r = 69 / n;
+            var s = 69 % n;
+            if (n != 0)
+            {
+                if (!LoopBox.Checked)
+                {
+                    for (int i = 0; i < n; i++)
+                    {
+                        var r1 = raid.GetRaid(i);
+                        r1.IsEnabled = true;
+                        r1.Seed = Convert.ToUInt32(lines[i], 16);
+                        r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
+                    }
+                }
+                else
+                {
+                    for(int i=0;i<r;i++)
+                    {
+                        for(int j=0;j<n;j++)
+                        {
+                            var r1 = raid.GetRaid(i*n+j);
+                            r1.IsEnabled = true;
+                            r1.Seed = Convert.ToUInt32(lines[j], 16);
+                            r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

@@ -95,9 +95,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.FormBox = new System.Windows.Forms.TextBox();
             this.Shiny_Fix_BTN = new System.Windows.Forms.Button();
-            this.ModifySav = new System.Windows.Forms.Button();
+            this.CopyAll_BTN = new System.Windows.Forms.Button();
             this.ModSeedText = new System.Windows.Forms.TextBox();
             this.RaidTypeBox = new System.Windows.Forms.ComboBox();
+            this.ImportSeed_BTN = new System.Windows.Forms.Button();
+            this.MutiSeedBox = new System.Windows.Forms.RichTextBox();
+            this.LoopBox = new System.Windows.Forms.CheckBox();
+            this.ModSav_BTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SeedBox
@@ -218,7 +222,7 @@
             // 
             this.ResultBox.Location = new System.Drawing.Point(25, 253);
             this.ResultBox.Name = "ResultBox";
-            this.ResultBox.Size = new System.Drawing.Size(839, 208);
+            this.ResultBox.Size = new System.Drawing.Size(956, 208);
             this.ResultBox.TabIndex = 14;
             this.ResultBox.Text = "";
             // 
@@ -664,7 +668,7 @@
             // 
             this.IsC.AutoSize = true;
             this.IsC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsC.Location = new System.Drawing.Point(687, 146);
+            this.IsC.Location = new System.Drawing.Point(687, 145);
             this.IsC.Name = "IsC";
             this.IsC.Size = new System.Drawing.Size(66, 24);
             this.IsC.TabIndex = 66;
@@ -718,15 +722,15 @@
             this.Shiny_Fix_BTN.UseVisualStyleBackColor = true;
             this.Shiny_Fix_BTN.Click += new System.EventHandler(this.Shiny_Fix_BTN_Click);
             // 
-            // ModifySav
+            // CopyAll_BTN
             // 
-            this.ModifySav.Location = new System.Drawing.Point(787, 82);
-            this.ModifySav.Name = "ModifySav";
-            this.ModifySav.Size = new System.Drawing.Size(94, 27);
-            this.ModifySav.TabIndex = 72;
-            this.ModifySav.Text = "ModifySav";
-            this.ModifySav.UseVisualStyleBackColor = true;
-            this.ModifySav.Click += new System.EventHandler(this.ModifySav_Click);
+            this.CopyAll_BTN.Location = new System.Drawing.Point(787, 53);
+            this.CopyAll_BTN.Name = "CopyAll_BTN";
+            this.CopyAll_BTN.Size = new System.Drawing.Size(94, 27);
+            this.CopyAll_BTN.TabIndex = 72;
+            this.CopyAll_BTN.Text = "CopyAll";
+            this.CopyAll_BTN.UseVisualStyleBackColor = true;
+            this.CopyAll_BTN.Click += new System.EventHandler(this.ModifySav_Click);
             // 
             // ModSeedText
             // 
@@ -740,20 +744,63 @@
             // RaidTypeBox
             // 
             this.RaidTypeBox.FormattingEnabled = true;
-            this.RaidTypeBox.Location = new System.Drawing.Point(787, 54);
+            this.RaidTypeBox.Location = new System.Drawing.Point(887, 22);
             this.RaidTypeBox.Name = "RaidTypeBox";
             this.RaidTypeBox.Size = new System.Drawing.Size(94, 24);
             this.RaidTypeBox.TabIndex = 74;
+            // 
+            // ImportSeed_BTN
+            // 
+            this.ImportSeed_BTN.Location = new System.Drawing.Point(887, 53);
+            this.ImportSeed_BTN.Name = "ImportSeed_BTN";
+            this.ImportSeed_BTN.Size = new System.Drawing.Size(94, 27);
+            this.ImportSeed_BTN.TabIndex = 75;
+            this.ImportSeed_BTN.Text = "ImportSeed";
+            this.ImportSeed_BTN.UseVisualStyleBackColor = true;
+            this.ImportSeed_BTN.Click += new System.EventHandler(this.ImportSeed_BTN_Click);
+            // 
+            // MutiSeedBox
+            // 
+            this.MutiSeedBox.Location = new System.Drawing.Point(787, 112);
+            this.MutiSeedBox.Name = "MutiSeedBox";
+            this.MutiSeedBox.Size = new System.Drawing.Size(194, 135);
+            this.MutiSeedBox.TabIndex = 76;
+            this.MutiSeedBox.Text = "";
+            // 
+            // LoopBox
+            // 
+            this.LoopBox.AutoSize = true;
+            this.LoopBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoopBox.Location = new System.Drawing.Point(787, 83);
+            this.LoopBox.Name = "LoopBox";
+            this.LoopBox.Size = new System.Drawing.Size(65, 24);
+            this.LoopBox.TabIndex = 77;
+            this.LoopBox.Text = "Loop";
+            this.LoopBox.UseVisualStyleBackColor = true;
+            // 
+            // ModSav_BTN
+            // 
+            this.ModSav_BTN.Location = new System.Drawing.Point(887, 82);
+            this.ModSav_BTN.Name = "ModSav_BTN";
+            this.ModSav_BTN.Size = new System.Drawing.Size(94, 27);
+            this.ModSav_BTN.TabIndex = 78;
+            this.ModSav_BTN.Text = "ModifySav";
+            this.ModSav_BTN.UseVisualStyleBackColor = true;
+            this.ModSav_BTN.Click += new System.EventHandler(this.ModSav_BTN_Click);
             // 
             // SVTeraRaidSeedCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(889, 473);
+            this.ClientSize = new System.Drawing.Size(1008, 473);
+            this.Controls.Add(this.ModSav_BTN);
+            this.Controls.Add(this.LoopBox);
+            this.Controls.Add(this.MutiSeedBox);
+            this.Controls.Add(this.ImportSeed_BTN);
             this.Controls.Add(this.RaidTypeBox);
             this.Controls.Add(this.ModSeedText);
-            this.Controls.Add(this.ModifySav);
+            this.Controls.Add(this.CopyAll_BTN);
             this.Controls.Add(this.Shiny_Fix_BTN);
             this.Controls.Add(this.FormBox);
             this.Controls.Add(this.label16);
@@ -826,7 +873,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SVTeraRaidSeedCalcForm";
             this.ResumeLayout(false);
-            
             this.PerformLayout();
 
         }
@@ -898,8 +944,12 @@
         private Label label16;
         private TextBox FormBox;
         private Button Shiny_Fix_BTN;
-        private Button ModifySav;
+        private Button CopyAll_BTN;
         private TextBox ModSeedText;
         private ComboBox RaidTypeBox;
+        private Button ImportSeed_BTN;
+        private RichTextBox MutiSeedBox;
+        private CheckBox LoopBox;
+        private Button ModSav_BTN;
     }
 }
