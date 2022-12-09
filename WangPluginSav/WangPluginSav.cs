@@ -12,7 +12,7 @@ namespace WangPluginSav
         public abstract int Priority { get; }
         public ISaveFileProvider SaveFileEditor { get; private set; } = null!;
         public IPKMView PKMEditor { get; private set; } = null!;
-        public object[] globalArgs;
+        public object[]? globalArgs;
 
         public void Initialize(params object[] args)
         {

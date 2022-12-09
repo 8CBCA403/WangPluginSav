@@ -14,12 +14,14 @@
   <ItemGroup>
     <None Remove="Properties\file\a0.bin" />
     <None Remove="Properties\file\a1.bin" />
+    <None Remove="Properties\file\encounter_dist_paldea.pkl" />
     <None Remove="Properties\file\encounter_gem_paldea.pkl" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Properties\file\a0.bin" />
     <EmbeddedResource Include="Properties\file\a1.bin" />
+    <EmbeddedResource Include="Properties\file\encounter_dist_paldea.pkl" />
     <EmbeddedResource Include="Properties\file\encounter_gem_paldea.pkl" />
   </ItemGroup>
 
@@ -29,6 +31,8 @@
       <IncludeAssets>runtime;compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FlatSharp" Version="6.3.5" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
+    <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>

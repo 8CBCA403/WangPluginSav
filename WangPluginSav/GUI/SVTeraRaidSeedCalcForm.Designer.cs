@@ -89,7 +89,6 @@
             this.IsEvent = new System.Windows.Forms.CheckBox();
             this.EventProgress = new System.Windows.Forms.ComboBox();
             this.EVPLabel = new System.Windows.Forms.Label();
-            this.IsC = new System.Windows.Forms.CheckBox();
             this.StepcomboBox = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -102,11 +101,32 @@
             this.MutiSeedBox = new System.Windows.Forms.RichTextBox();
             this.LoopBox = new System.Windows.Forms.CheckBox();
             this.ModSav_BTN = new System.Windows.Forms.Button();
+            this.CloseAll_BTN = new System.Windows.Forms.Button();
+            this.ImportDIS_BTN = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.OrderBTN = new System.Windows.Forms.Button();
+            this.ConnectBTN = new System.Windows.Forms.Button();
+            this.Progress5Box = new System.Windows.Forms.CheckBox();
+            this.Progress4Box = new System.Windows.Forms.CheckBox();
+            this.Progress3Box = new System.Windows.Forms.CheckBox();
+            this.Progress2Box = new System.Windows.Forms.CheckBox();
+            this.Progress1Box = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.SeedUrlBox = new System.Windows.Forms.TextBox();
+            this.OrderUrlBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.IDBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.KeyBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // SeedBox
             // 
-            this.SeedBox.Location = new System.Drawing.Point(73, 23);
+            this.SeedBox.Location = new System.Drawing.Point(59, 21);
             this.SeedBox.Multiline = true;
             this.SeedBox.Name = "SeedBox";
             this.SeedBox.Size = new System.Drawing.Size(116, 25);
@@ -115,7 +135,7 @@
             // 
             // PIDBox
             // 
-            this.PIDBox.Location = new System.Drawing.Point(391, 23);
+            this.PIDBox.Location = new System.Drawing.Point(377, 21);
             this.PIDBox.Multiline = true;
             this.PIDBox.Name = "PIDBox";
             this.PIDBox.ReadOnly = true;
@@ -124,7 +144,7 @@
             // 
             // ECBox
             // 
-            this.ECBox.Location = new System.Drawing.Point(230, 23);
+            this.ECBox.Location = new System.Drawing.Point(216, 21);
             this.ECBox.Multiline = true;
             this.ECBox.Name = "ECBox";
             this.ECBox.ReadOnly = true;
@@ -135,7 +155,7 @@
             // 
             this.EClabel.AutoSize = true;
             this.EClabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EClabel.Location = new System.Drawing.Point(195, 26);
+            this.EClabel.Location = new System.Drawing.Point(181, 24);
             this.EClabel.Name = "EClabel";
             this.EClabel.Size = new System.Drawing.Size(26, 20);
             this.EClabel.TabIndex = 4;
@@ -145,7 +165,7 @@
             // 
             this.PIDlabel.AutoSize = true;
             this.PIDlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PIDlabel.Location = new System.Drawing.Point(349, 26);
+            this.PIDlabel.Location = new System.Drawing.Point(335, 24);
             this.PIDlabel.Name = "PIDlabel";
             this.PIDlabel.Size = new System.Drawing.Size(32, 20);
             this.PIDlabel.TabIndex = 5;
@@ -155,7 +175,7 @@
             // 
             this.IVLabel.AutoSize = true;
             this.IVLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVLabel.Location = new System.Drawing.Point(205, 165);
+            this.IVLabel.Location = new System.Drawing.Point(191, 190);
             this.IVLabel.Name = "IVLabel";
             this.IVLabel.Size = new System.Drawing.Size(22, 20);
             this.IVLabel.TabIndex = 6;
@@ -163,7 +183,7 @@
             // 
             // IVBOX
             // 
-            this.IVBOX.Location = new System.Drawing.Point(236, 160);
+            this.IVBOX.Location = new System.Drawing.Point(222, 185);
             this.IVBOX.Multiline = true;
             this.IVBOX.Name = "IVBOX";
             this.IVBOX.ReadOnly = true;
@@ -172,7 +192,7 @@
             // 
             // RUN_BTN
             // 
-            this.RUN_BTN.Location = new System.Drawing.Point(687, 83);
+            this.RUN_BTN.Location = new System.Drawing.Point(673, 81);
             this.RUN_BTN.Name = "RUN_BTN";
             this.RUN_BTN.Size = new System.Drawing.Size(94, 27);
             this.RUN_BTN.TabIndex = 8;
@@ -183,14 +203,14 @@
             // ProgressBox
             // 
             this.ProgressBox.FormattingEnabled = true;
-            this.ProgressBox.Location = new System.Drawing.Point(585, 24);
+            this.ProgressBox.Location = new System.Drawing.Point(571, 22);
             this.ProgressBox.Name = "ProgressBox";
             this.ProgressBox.Size = new System.Drawing.Size(94, 24);
             this.ProgressBox.TabIndex = 9;
             // 
             // DiffBox
             // 
-            this.DiffBox.Location = new System.Drawing.Point(447, 160);
+            this.DiffBox.Location = new System.Drawing.Point(433, 185);
             this.DiffBox.Multiline = true;
             this.DiffBox.Name = "DiffBox";
             this.DiffBox.ReadOnly = true;
@@ -201,7 +221,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(393, 164);
+            this.label1.Location = new System.Drawing.Point(379, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 20);
             this.label1.TabIndex = 12;
@@ -211,7 +231,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(514, 26);
+            this.label2.Location = new System.Drawing.Point(500, 24);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(65, 20);
@@ -220,15 +240,15 @@
             // 
             // ResultBox
             // 
-            this.ResultBox.Location = new System.Drawing.Point(25, 253);
+            this.ResultBox.Location = new System.Drawing.Point(18, 362);
             this.ResultBox.Name = "ResultBox";
-            this.ResultBox.Size = new System.Drawing.Size(956, 208);
+            this.ResultBox.Size = new System.Drawing.Size(1016, 127);
             this.ResultBox.TabIndex = 14;
             this.ResultBox.Text = "";
             // 
             // SpeciesTextBox
             // 
-            this.SpeciesTextBox.Location = new System.Drawing.Point(90, 160);
+            this.SpeciesTextBox.Location = new System.Drawing.Point(76, 185);
             this.SpeciesTextBox.Multiline = true;
             this.SpeciesTextBox.Name = "SpeciesTextBox";
             this.SpeciesTextBox.ReadOnly = true;
@@ -239,7 +259,7 @@
             // 
             this.SpeciesBox.AutoSize = true;
             this.SpeciesBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpeciesBox.Location = new System.Drawing.Point(29, 165);
+            this.SpeciesBox.Location = new System.Drawing.Point(15, 190);
             this.SpeciesBox.Name = "SpeciesBox";
             this.SpeciesBox.Size = new System.Drawing.Size(59, 20);
             this.SpeciesBox.TabIndex = 19;
@@ -249,7 +269,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 26);
+            this.label4.Location = new System.Drawing.Point(9, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 20;
@@ -257,7 +277,7 @@
             // 
             // TeraBox
             // 
-            this.TeraBox.Location = new System.Drawing.Point(447, 191);
+            this.TeraBox.Location = new System.Drawing.Point(433, 216);
             this.TeraBox.Multiline = true;
             this.TeraBox.Name = "TeraBox";
             this.TeraBox.ReadOnly = true;
@@ -268,7 +288,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(393, 193);
+            this.label3.Location = new System.Drawing.Point(379, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 20);
             this.label3.TabIndex = 22;
@@ -276,7 +296,7 @@
             // 
             // NatureBox
             // 
-            this.NatureBox.Location = new System.Drawing.Point(90, 191);
+            this.NatureBox.Location = new System.Drawing.Point(76, 216);
             this.NatureBox.Multiline = true;
             this.NatureBox.Name = "NatureBox";
             this.NatureBox.ReadOnly = true;
@@ -287,7 +307,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 198);
+            this.label5.Location = new System.Drawing.Point(16, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 24;
@@ -295,7 +315,7 @@
             // 
             // Move1Box
             // 
-            this.Move1Box.Location = new System.Drawing.Point(81, 222);
+            this.Move1Box.Location = new System.Drawing.Point(67, 247);
             this.Move1Box.Multiline = true;
             this.Move1Box.Name = "Move1Box";
             this.Move1Box.ReadOnly = true;
@@ -304,7 +324,7 @@
             // 
             // Move2Box
             // 
-            this.Move2Box.Location = new System.Drawing.Point(223, 222);
+            this.Move2Box.Location = new System.Drawing.Point(209, 247);
             this.Move2Box.Multiline = true;
             this.Move2Box.Name = "Move2Box";
             this.Move2Box.ReadOnly = true;
@@ -313,7 +333,7 @@
             // 
             // Move3Box
             // 
-            this.Move3Box.Location = new System.Drawing.Point(365, 222);
+            this.Move3Box.Location = new System.Drawing.Point(351, 247);
             this.Move3Box.Multiline = true;
             this.Move3Box.Name = "Move3Box";
             this.Move3Box.ReadOnly = true;
@@ -322,7 +342,7 @@
             // 
             // Move4Box
             // 
-            this.Move4Box.Location = new System.Drawing.Point(507, 222);
+            this.Move4Box.Location = new System.Drawing.Point(493, 247);
             this.Move4Box.Multiline = true;
             this.Move4Box.Name = "Move4Box";
             this.Move4Box.ReadOnly = true;
@@ -333,7 +353,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(37, 227);
+            this.label6.Location = new System.Drawing.Point(23, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 20);
             this.label6.TabIndex = 30;
@@ -343,7 +363,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(205, 193);
+            this.label7.Location = new System.Drawing.Point(191, 218);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 20);
             this.label7.TabIndex = 31;
@@ -351,7 +371,7 @@
             // 
             // GenderBox
             // 
-            this.GenderBox.Location = new System.Drawing.Point(267, 191);
+            this.GenderBox.Location = new System.Drawing.Point(253, 216);
             this.GenderBox.Multiline = true;
             this.GenderBox.Name = "GenderBox";
             this.GenderBox.ReadOnly = true;
@@ -362,7 +382,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(581, 191);
+            this.label8.Location = new System.Drawing.Point(567, 216);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 20);
             this.label8.TabIndex = 33;
@@ -370,7 +390,7 @@
             // 
             // AbilityBox
             // 
-            this.AbilityBox.Location = new System.Drawing.Point(639, 188);
+            this.AbilityBox.Location = new System.Drawing.Point(625, 213);
             this.AbilityBox.Multiline = true;
             this.AbilityBox.Name = "AbilityBox";
             this.AbilityBox.ReadOnly = true;
@@ -379,7 +399,7 @@
             // 
             // Search_BTN
             // 
-            this.Search_BTN.Location = new System.Drawing.Point(687, 22);
+            this.Search_BTN.Location = new System.Drawing.Point(673, 20);
             this.Search_BTN.Name = "Search_BTN";
             this.Search_BTN.Size = new System.Drawing.Size(94, 27);
             this.Search_BTN.TabIndex = 35;
@@ -389,7 +409,7 @@
             // 
             // HP_MIN
             // 
-            this.HP_MIN.Location = new System.Drawing.Point(277, 89);
+            this.HP_MIN.Location = new System.Drawing.Point(263, 87);
             this.HP_MIN.Multiline = true;
             this.HP_MIN.Name = "HP_MIN";
             this.HP_MIN.Size = new System.Drawing.Size(40, 25);
@@ -398,7 +418,7 @@
             // 
             // ATK_MIN
             // 
-            this.ATK_MIN.Location = new System.Drawing.Point(323, 89);
+            this.ATK_MIN.Location = new System.Drawing.Point(309, 87);
             this.ATK_MIN.Multiline = true;
             this.ATK_MIN.Name = "ATK_MIN";
             this.ATK_MIN.Size = new System.Drawing.Size(40, 25);
@@ -407,7 +427,7 @@
             // 
             // DEF_MIN
             // 
-            this.DEF_MIN.Location = new System.Drawing.Point(369, 89);
+            this.DEF_MIN.Location = new System.Drawing.Point(355, 87);
             this.DEF_MIN.Multiline = true;
             this.DEF_MIN.Name = "DEF_MIN";
             this.DEF_MIN.Size = new System.Drawing.Size(40, 25);
@@ -416,7 +436,7 @@
             // 
             // SPA_MIN
             // 
-            this.SPA_MIN.Location = new System.Drawing.Point(415, 89);
+            this.SPA_MIN.Location = new System.Drawing.Point(401, 87);
             this.SPA_MIN.Multiline = true;
             this.SPA_MIN.Name = "SPA_MIN";
             this.SPA_MIN.Size = new System.Drawing.Size(40, 25);
@@ -425,7 +445,7 @@
             // 
             // SPD_MIN
             // 
-            this.SPD_MIN.Location = new System.Drawing.Point(461, 89);
+            this.SPD_MIN.Location = new System.Drawing.Point(447, 87);
             this.SPD_MIN.Multiline = true;
             this.SPD_MIN.Name = "SPD_MIN";
             this.SPD_MIN.Size = new System.Drawing.Size(40, 25);
@@ -434,7 +454,7 @@
             // 
             // SPE_MIN
             // 
-            this.SPE_MIN.Location = new System.Drawing.Point(507, 89);
+            this.SPE_MIN.Location = new System.Drawing.Point(493, 87);
             this.SPE_MIN.Multiline = true;
             this.SPE_MIN.Name = "SPE_MIN";
             this.SPE_MIN.Size = new System.Drawing.Size(40, 25);
@@ -443,7 +463,7 @@
             // 
             // SPE_MAX
             // 
-            this.SPE_MAX.Location = new System.Drawing.Point(507, 120);
+            this.SPE_MAX.Location = new System.Drawing.Point(493, 118);
             this.SPE_MAX.Multiline = true;
             this.SPE_MAX.Name = "SPE_MAX";
             this.SPE_MAX.Size = new System.Drawing.Size(40, 25);
@@ -452,7 +472,7 @@
             // 
             // SPD_MAX
             // 
-            this.SPD_MAX.Location = new System.Drawing.Point(461, 120);
+            this.SPD_MAX.Location = new System.Drawing.Point(447, 118);
             this.SPD_MAX.Multiline = true;
             this.SPD_MAX.Name = "SPD_MAX";
             this.SPD_MAX.Size = new System.Drawing.Size(40, 25);
@@ -461,7 +481,7 @@
             // 
             // SPA_MAX
             // 
-            this.SPA_MAX.Location = new System.Drawing.Point(415, 120);
+            this.SPA_MAX.Location = new System.Drawing.Point(401, 118);
             this.SPA_MAX.Multiline = true;
             this.SPA_MAX.Name = "SPA_MAX";
             this.SPA_MAX.Size = new System.Drawing.Size(40, 25);
@@ -470,7 +490,7 @@
             // 
             // DEF_MAX
             // 
-            this.DEF_MAX.Location = new System.Drawing.Point(369, 120);
+            this.DEF_MAX.Location = new System.Drawing.Point(355, 118);
             this.DEF_MAX.Multiline = true;
             this.DEF_MAX.Name = "DEF_MAX";
             this.DEF_MAX.Size = new System.Drawing.Size(40, 25);
@@ -479,7 +499,7 @@
             // 
             // ATK_MAX
             // 
-            this.ATK_MAX.Location = new System.Drawing.Point(323, 120);
+            this.ATK_MAX.Location = new System.Drawing.Point(309, 118);
             this.ATK_MAX.Multiline = true;
             this.ATK_MAX.Name = "ATK_MAX";
             this.ATK_MAX.Size = new System.Drawing.Size(40, 25);
@@ -488,7 +508,7 @@
             // 
             // HP_MAX
             // 
-            this.HP_MAX.Location = new System.Drawing.Point(277, 120);
+            this.HP_MAX.Location = new System.Drawing.Point(263, 118);
             this.HP_MAX.Multiline = true;
             this.HP_MAX.Name = "HP_MAX";
             this.HP_MAX.Size = new System.Drawing.Size(40, 25);
@@ -498,7 +518,7 @@
             // SPcomboBox
             // 
             this.SPcomboBox.FormattingEnabled = true;
-            this.SPcomboBox.Location = new System.Drawing.Point(87, 55);
+            this.SPcomboBox.Location = new System.Drawing.Point(73, 53);
             this.SPcomboBox.Name = "SPcomboBox";
             this.SPcomboBox.Size = new System.Drawing.Size(121, 24);
             this.SPcomboBox.TabIndex = 48;
@@ -507,7 +527,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 60);
+            this.label9.Location = new System.Drawing.Point(8, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 20);
             this.label9.TabIndex = 49;
@@ -517,7 +537,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(27, 93);
+            this.label10.Location = new System.Drawing.Point(13, 91);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 20);
             this.label10.TabIndex = 50;
@@ -526,7 +546,7 @@
             // NaturecomboBox
             // 
             this.NaturecomboBox.FormattingEnabled = true;
-            this.NaturecomboBox.Location = new System.Drawing.Point(87, 89);
+            this.NaturecomboBox.Location = new System.Drawing.Point(73, 87);
             this.NaturecomboBox.Name = "NaturecomboBox";
             this.NaturecomboBox.Size = new System.Drawing.Size(121, 24);
             this.NaturecomboBox.TabIndex = 51;
@@ -535,7 +555,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(214, 58);
+            this.label11.Location = new System.Drawing.Point(200, 56);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 20);
             this.label11.TabIndex = 52;
@@ -544,7 +564,7 @@
             // GencomboBox
             // 
             this.GencomboBox.FormattingEnabled = true;
-            this.GencomboBox.Location = new System.Drawing.Point(277, 56);
+            this.GencomboBox.Location = new System.Drawing.Point(263, 54);
             this.GencomboBox.Name = "GencomboBox";
             this.GencomboBox.Size = new System.Drawing.Size(121, 24);
             this.GencomboBox.TabIndex = 53;
@@ -553,7 +573,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(44, 124);
+            this.label12.Location = new System.Drawing.Point(30, 122);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(37, 20);
             this.label12.TabIndex = 54;
@@ -562,7 +582,7 @@
             // TeracomboBox
             // 
             this.TeracomboBox.FormattingEnabled = true;
-            this.TeracomboBox.Location = new System.Drawing.Point(87, 120);
+            this.TeracomboBox.Location = new System.Drawing.Point(73, 118);
             this.TeracomboBox.Name = "TeracomboBox";
             this.TeracomboBox.Size = new System.Drawing.Size(121, 24);
             this.TeracomboBox.TabIndex = 55;
@@ -571,7 +591,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(241, 93);
+            this.label13.Location = new System.Drawing.Point(227, 91);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(30, 20);
             this.label13.TabIndex = 56;
@@ -580,7 +600,7 @@
             // Game
             // 
             this.Game.FormattingEnabled = true;
-            this.Game.Location = new System.Drawing.Point(585, 86);
+            this.Game.Location = new System.Drawing.Point(571, 84);
             this.Game.Name = "Game";
             this.Game.Size = new System.Drawing.Size(94, 24);
             this.Game.TabIndex = 57;
@@ -589,7 +609,7 @@
             // StarcomboBox
             // 
             this.StarcomboBox.FormattingEnabled = true;
-            this.StarcomboBox.Location = new System.Drawing.Point(585, 116);
+            this.StarcomboBox.Location = new System.Drawing.Point(571, 114);
             this.StarcomboBox.Name = "StarcomboBox";
             this.StarcomboBox.Size = new System.Drawing.Size(94, 24);
             this.StarcomboBox.TabIndex = 58;
@@ -598,7 +618,7 @@
             // 
             this.Starlabel.AutoSize = true;
             this.Starlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Starlabel.Location = new System.Drawing.Point(557, 117);
+            this.Starlabel.Location = new System.Drawing.Point(543, 115);
             this.Starlabel.Name = "Starlabel";
             this.Starlabel.Size = new System.Drawing.Size(22, 20);
             this.Starlabel.TabIndex = 59;
@@ -608,7 +628,7 @@
             // 
             this.ShinyBox.AutoSize = true;
             this.ShinyBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShinyBox.Location = new System.Drawing.Point(423, 56);
+            this.ShinyBox.Location = new System.Drawing.Point(409, 54);
             this.ShinyBox.Name = "ShinyBox";
             this.ShinyBox.Size = new System.Drawing.Size(76, 24);
             this.ShinyBox.TabIndex = 60;
@@ -617,7 +637,7 @@
             // 
             // Stop_BTN
             // 
-            this.Stop_BTN.Location = new System.Drawing.Point(687, 53);
+            this.Stop_BTN.Location = new System.Drawing.Point(673, 51);
             this.Stop_BTN.Name = "Stop_BTN";
             this.Stop_BTN.Size = new System.Drawing.Size(94, 27);
             this.Stop_BTN.TabIndex = 61;
@@ -629,7 +649,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(549, 89);
+            this.label14.Location = new System.Drawing.Point(535, 87);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(30, 20);
             this.label14.TabIndex = 62;
@@ -639,7 +659,7 @@
             // 
             this.IsEvent.AutoSize = true;
             this.IsEvent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsEvent.Location = new System.Drawing.Point(687, 116);
+            this.IsEvent.Location = new System.Drawing.Point(673, 118);
             this.IsEvent.Name = "IsEvent";
             this.IsEvent.Size = new System.Drawing.Size(77, 24);
             this.IsEvent.TabIndex = 63;
@@ -649,7 +669,7 @@
             // EventProgress
             // 
             this.EventProgress.FormattingEnabled = true;
-            this.EventProgress.Location = new System.Drawing.Point(585, 54);
+            this.EventProgress.Location = new System.Drawing.Point(571, 52);
             this.EventProgress.Name = "EventProgress";
             this.EventProgress.Size = new System.Drawing.Size(94, 24);
             this.EventProgress.TabIndex = 64;
@@ -658,27 +678,16 @@
             // 
             this.EVPLabel.AutoSize = true;
             this.EVPLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EVPLabel.Location = new System.Drawing.Point(534, 57);
+            this.EVPLabel.Location = new System.Drawing.Point(520, 55);
             this.EVPLabel.Name = "EVPLabel";
             this.EVPLabel.Size = new System.Drawing.Size(45, 20);
             this.EVPLabel.TabIndex = 65;
             this.EVPLabel.Text = "Event";
             // 
-            // IsC
-            // 
-            this.IsC.AutoSize = true;
-            this.IsC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsC.Location = new System.Drawing.Point(687, 145);
-            this.IsC.Name = "IsC";
-            this.IsC.Size = new System.Drawing.Size(66, 24);
-            this.IsC.TabIndex = 66;
-            this.IsC.Text = "Fixed";
-            this.IsC.UseVisualStyleBackColor = true;
-            // 
             // StepcomboBox
             // 
             this.StepcomboBox.FormattingEnabled = true;
-            this.StepcomboBox.Location = new System.Drawing.Point(685, 223);
+            this.StepcomboBox.Location = new System.Drawing.Point(671, 248);
             this.StepcomboBox.Name = "StepcomboBox";
             this.StepcomboBox.Size = new System.Drawing.Size(96, 24);
             this.StepcomboBox.TabIndex = 67;
@@ -687,7 +696,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(656, 227);
+            this.label15.Location = new System.Drawing.Point(642, 252);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(25, 20);
             this.label15.TabIndex = 68;
@@ -697,7 +706,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(561, 164);
+            this.label16.Location = new System.Drawing.Point(547, 189);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(49, 20);
             this.label16.TabIndex = 69;
@@ -705,7 +714,7 @@
             // 
             // FormBox
             // 
-            this.FormBox.Location = new System.Drawing.Point(616, 159);
+            this.FormBox.Location = new System.Drawing.Point(602, 184);
             this.FormBox.Multiline = true;
             this.FormBox.Name = "FormBox";
             this.FormBox.ReadOnly = true;
@@ -714,7 +723,7 @@
             // 
             // Shiny_Fix_BTN
             // 
-            this.Shiny_Fix_BTN.Location = new System.Drawing.Point(500, 55);
+            this.Shiny_Fix_BTN.Location = new System.Drawing.Point(486, 53);
             this.Shiny_Fix_BTN.Name = "Shiny_Fix_BTN";
             this.Shiny_Fix_BTN.Size = new System.Drawing.Size(28, 27);
             this.Shiny_Fix_BTN.TabIndex = 71;
@@ -724,7 +733,7 @@
             // 
             // CopyAll_BTN
             // 
-            this.CopyAll_BTN.Location = new System.Drawing.Point(787, 53);
+            this.CopyAll_BTN.Location = new System.Drawing.Point(12, 55);
             this.CopyAll_BTN.Name = "CopyAll_BTN";
             this.CopyAll_BTN.Size = new System.Drawing.Size(94, 27);
             this.CopyAll_BTN.TabIndex = 72;
@@ -734,7 +743,7 @@
             // 
             // ModSeedText
             // 
-            this.ModSeedText.Location = new System.Drawing.Point(787, 23);
+            this.ModSeedText.Location = new System.Drawing.Point(12, 25);
             this.ModSeedText.Multiline = true;
             this.ModSeedText.Name = "ModSeedText";
             this.ModSeedText.Size = new System.Drawing.Size(94, 25);
@@ -744,16 +753,16 @@
             // RaidTypeBox
             // 
             this.RaidTypeBox.FormattingEnabled = true;
-            this.RaidTypeBox.Location = new System.Drawing.Point(887, 22);
+            this.RaidTypeBox.Location = new System.Drawing.Point(112, 24);
             this.RaidTypeBox.Name = "RaidTypeBox";
-            this.RaidTypeBox.Size = new System.Drawing.Size(94, 24);
+            this.RaidTypeBox.Size = new System.Drawing.Size(109, 24);
             this.RaidTypeBox.TabIndex = 74;
             // 
             // ImportSeed_BTN
             // 
-            this.ImportSeed_BTN.Location = new System.Drawing.Point(887, 53);
+            this.ImportSeed_BTN.Location = new System.Drawing.Point(112, 55);
             this.ImportSeed_BTN.Name = "ImportSeed_BTN";
-            this.ImportSeed_BTN.Size = new System.Drawing.Size(94, 27);
+            this.ImportSeed_BTN.Size = new System.Drawing.Size(109, 27);
             this.ImportSeed_BTN.TabIndex = 75;
             this.ImportSeed_BTN.Text = "ImportSeed";
             this.ImportSeed_BTN.UseVisualStyleBackColor = true;
@@ -761,9 +770,9 @@
             // 
             // MutiSeedBox
             // 
-            this.MutiSeedBox.Location = new System.Drawing.Point(787, 112);
+            this.MutiSeedBox.Location = new System.Drawing.Point(12, 145);
             this.MutiSeedBox.Name = "MutiSeedBox";
-            this.MutiSeedBox.Size = new System.Drawing.Size(194, 135);
+            this.MutiSeedBox.Size = new System.Drawing.Size(209, 131);
             this.MutiSeedBox.TabIndex = 76;
             this.MutiSeedBox.Text = "";
             // 
@@ -771,7 +780,7 @@
             // 
             this.LoopBox.AutoSize = true;
             this.LoopBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoopBox.Location = new System.Drawing.Point(787, 83);
+            this.LoopBox.Location = new System.Drawing.Point(12, 113);
             this.LoopBox.Name = "LoopBox";
             this.LoopBox.Size = new System.Drawing.Size(65, 24);
             this.LoopBox.TabIndex = 77;
@@ -780,98 +789,318 @@
             // 
             // ModSav_BTN
             // 
-            this.ModSav_BTN.Location = new System.Drawing.Point(887, 82);
+            this.ModSav_BTN.Location = new System.Drawing.Point(112, 112);
             this.ModSav_BTN.Name = "ModSav_BTN";
-            this.ModSav_BTN.Size = new System.Drawing.Size(94, 27);
+            this.ModSav_BTN.Size = new System.Drawing.Size(109, 27);
             this.ModSav_BTN.TabIndex = 78;
             this.ModSav_BTN.Text = "ModifySav";
             this.ModSav_BTN.UseVisualStyleBackColor = true;
             this.ModSav_BTN.Click += new System.EventHandler(this.ModSav_BTN_Click);
+            // 
+            // CloseAll_BTN
+            // 
+            this.CloseAll_BTN.Location = new System.Drawing.Point(12, 84);
+            this.CloseAll_BTN.Name = "CloseAll_BTN";
+            this.CloseAll_BTN.Size = new System.Drawing.Size(94, 27);
+            this.CloseAll_BTN.TabIndex = 79;
+            this.CloseAll_BTN.Text = "CloseAll";
+            this.CloseAll_BTN.UseVisualStyleBackColor = true;
+            this.CloseAll_BTN.Click += new System.EventHandler(this.CloseAll_BTN_Click);
+            // 
+            // ImportDIS_BTN
+            // 
+            this.ImportDIS_BTN.Location = new System.Drawing.Point(112, 84);
+            this.ImportDIS_BTN.Name = "ImportDIS_BTN";
+            this.ImportDIS_BTN.Size = new System.Drawing.Size(109, 27);
+            this.ImportDIS_BTN.TabIndex = 89;
+            this.ImportDIS_BTN.Text = "ImportDis";
+            this.ImportDIS_BTN.UseVisualStyleBackColor = true;
+            this.ImportDIS_BTN.Click += new System.EventHandler(this.ImportDIS_BTN_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.OrderBTN);
+            this.groupBox1.Controls.Add(this.ConnectBTN);
+            this.groupBox1.Controls.Add(this.Progress5Box);
+            this.groupBox1.Controls.Add(this.Progress4Box);
+            this.groupBox1.Controls.Add(this.Progress3Box);
+            this.groupBox1.Controls.Add(this.Progress2Box);
+            this.groupBox1.Controls.Add(this.Progress1Box);
+            this.groupBox1.Controls.Add(this.Shiny_Fix_BTN);
+            this.groupBox1.Controls.Add(this.FormBox);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.StepcomboBox);
+            this.groupBox1.Controls.Add(this.EVPLabel);
+            this.groupBox1.Controls.Add(this.EventProgress);
+            this.groupBox1.Controls.Add(this.IsEvent);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.Stop_BTN);
+            this.groupBox1.Controls.Add(this.ShinyBox);
+            this.groupBox1.Controls.Add(this.Starlabel);
+            this.groupBox1.Controls.Add(this.StarcomboBox);
+            this.groupBox1.Controls.Add(this.Game);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.TeracomboBox);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.GencomboBox);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.NaturecomboBox);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.SPcomboBox);
+            this.groupBox1.Controls.Add(this.SPE_MAX);
+            this.groupBox1.Controls.Add(this.SPD_MAX);
+            this.groupBox1.Controls.Add(this.SPA_MAX);
+            this.groupBox1.Controls.Add(this.DEF_MAX);
+            this.groupBox1.Controls.Add(this.ATK_MAX);
+            this.groupBox1.Controls.Add(this.HP_MAX);
+            this.groupBox1.Controls.Add(this.SPE_MIN);
+            this.groupBox1.Controls.Add(this.SPD_MIN);
+            this.groupBox1.Controls.Add(this.SPA_MIN);
+            this.groupBox1.Controls.Add(this.DEF_MIN);
+            this.groupBox1.Controls.Add(this.ATK_MIN);
+            this.groupBox1.Controls.Add(this.HP_MIN);
+            this.groupBox1.Controls.Add(this.Search_BTN);
+            this.groupBox1.Controls.Add(this.AbilityBox);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.GenderBox);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.Move4Box);
+            this.groupBox1.Controls.Add(this.Move3Box);
+            this.groupBox1.Controls.Add(this.Move2Box);
+            this.groupBox1.Controls.Add(this.Move1Box);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.NatureBox);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.TeraBox);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.SpeciesBox);
+            this.groupBox1.Controls.Add(this.SpeciesTextBox);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.DiffBox);
+            this.groupBox1.Controls.Add(this.ProgressBox);
+            this.groupBox1.Controls.Add(this.RUN_BTN);
+            this.groupBox1.Controls.Add(this.IVBOX);
+            this.groupBox1.Controls.Add(this.IVLabel);
+            this.groupBox1.Controls.Add(this.PIDlabel);
+            this.groupBox1.Controls.Add(this.EClabel);
+            this.groupBox1.Controls.Add(this.ECBox);
+            this.groupBox1.Controls.Add(this.PIDBox);
+            this.groupBox1.Controls.Add(this.SeedBox);
+            this.groupBox1.Location = new System.Drawing.Point(18, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(776, 282);
+            this.groupBox1.TabIndex = 90;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Calc";
+            // 
+            // OrderBTN
+            // 
+            this.OrderBTN.Location = new System.Drawing.Point(673, 182);
+            this.OrderBTN.Name = "OrderBTN";
+            this.OrderBTN.Size = new System.Drawing.Size(94, 27);
+            this.OrderBTN.TabIndex = 78;
+            this.OrderBTN.Text = "Order";
+            this.OrderBTN.UseVisualStyleBackColor = true;
+            this.OrderBTN.Click += new System.EventHandler(this.OrderBTN_Click);
+            // 
+            // ConnectBTN
+            // 
+            this.ConnectBTN.Location = new System.Drawing.Point(673, 148);
+            this.ConnectBTN.Name = "ConnectBTN";
+            this.ConnectBTN.Size = new System.Drawing.Size(94, 27);
+            this.ConnectBTN.TabIndex = 77;
+            this.ConnectBTN.Text = "Connect";
+            this.ConnectBTN.UseVisualStyleBackColor = true;
+            this.ConnectBTN.Click += new System.EventHandler(this.ConnectBTN_Click);
+            // 
+            // Progress5Box
+            // 
+            this.Progress5Box.AutoSize = true;
+            this.Progress5Box.Enabled = false;
+            this.Progress5Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Progress5Box.Location = new System.Drawing.Point(506, 148);
+            this.Progress5Box.Name = "Progress5Box";
+            this.Progress5Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress5Box.TabIndex = 76;
+            this.Progress5Box.Text = "Progress5";
+            this.Progress5Box.UseVisualStyleBackColor = true;
+            // 
+            // Progress4Box
+            // 
+            this.Progress4Box.AutoSize = true;
+            this.Progress4Box.Enabled = false;
+            this.Progress4Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Progress4Box.Location = new System.Drawing.Point(399, 148);
+            this.Progress4Box.Name = "Progress4Box";
+            this.Progress4Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress4Box.TabIndex = 75;
+            this.Progress4Box.Text = "Progress4";
+            this.Progress4Box.UseVisualStyleBackColor = true;
+            // 
+            // Progress3Box
+            // 
+            this.Progress3Box.AutoSize = true;
+            this.Progress3Box.Enabled = false;
+            this.Progress3Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Progress3Box.Location = new System.Drawing.Point(288, 148);
+            this.Progress3Box.Name = "Progress3Box";
+            this.Progress3Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress3Box.TabIndex = 74;
+            this.Progress3Box.Text = "Progress3";
+            this.Progress3Box.UseVisualStyleBackColor = true;
+            // 
+            // Progress2Box
+            // 
+            this.Progress2Box.AutoSize = true;
+            this.Progress2Box.Enabled = false;
+            this.Progress2Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Progress2Box.Location = new System.Drawing.Point(181, 148);
+            this.Progress2Box.Name = "Progress2Box";
+            this.Progress2Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress2Box.TabIndex = 73;
+            this.Progress2Box.Text = "Progress2";
+            this.Progress2Box.UseVisualStyleBackColor = true;
+            // 
+            // Progress1Box
+            // 
+            this.Progress1Box.AutoSize = true;
+            this.Progress1Box.Enabled = false;
+            this.Progress1Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Progress1Box.Location = new System.Drawing.Point(74, 148);
+            this.Progress1Box.Name = "Progress1Box";
+            this.Progress1Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress1Box.TabIndex = 72;
+            this.Progress1Box.Text = "Progress1";
+            this.Progress1Box.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.ImportDIS_BTN);
+            this.groupBox2.Controls.Add(this.CloseAll_BTN);
+            this.groupBox2.Controls.Add(this.ModSav_BTN);
+            this.groupBox2.Controls.Add(this.LoopBox);
+            this.groupBox2.Controls.Add(this.MutiSeedBox);
+            this.groupBox2.Controls.Add(this.ImportSeed_BTN);
+            this.groupBox2.Controls.Add(this.RaidTypeBox);
+            this.groupBox2.Controls.Add(this.ModSeedText);
+            this.groupBox2.Controls.Add(this.CopyAll_BTN);
+            this.groupBox2.Location = new System.Drawing.Point(801, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(233, 282);
+            this.groupBox2.TabIndex = 91;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Editor";
+            // 
+            // SeedUrlBox
+            // 
+            this.SeedUrlBox.Location = new System.Drawing.Point(85, 300);
+            this.SeedUrlBox.Multiline = true;
+            this.SeedUrlBox.Name = "SeedUrlBox";
+            this.SeedUrlBox.Size = new System.Drawing.Size(418, 25);
+            this.SeedUrlBox.TabIndex = 90;
+            this.SeedUrlBox.Text = "https://github.com/Wanghaoran86/WangPluginSav";
+            // 
+            // OrderUrlBox
+            // 
+            this.OrderUrlBox.Location = new System.Drawing.Point(85, 331);
+            this.OrderUrlBox.Multiline = true;
+            this.OrderUrlBox.Name = "OrderUrlBox";
+            this.OrderUrlBox.Size = new System.Drawing.Size(418, 25);
+            this.OrderUrlBox.TabIndex = 92;
+            this.OrderUrlBox.Text = "https://github.com/Wanghaoran86/WangPluginSav";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(18, 300);
+            this.label17.Name = "label17";
+            this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label17.Size = new System.Drawing.Size(61, 20);
+            this.label17.TabIndex = 79;
+            this.label17.Text = "SeedUrl";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(13, 331);
+            this.label18.Name = "label18";
+            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label18.Size = new System.Drawing.Size(66, 20);
+            this.label18.TabIndex = 93;
+            this.label18.Text = "OrderUrl";
+            // 
+            // IDBox
+            // 
+            this.IDBox.Location = new System.Drawing.Point(616, 300);
+            this.IDBox.Multiline = true;
+            this.IDBox.Name = "IDBox";
+            this.IDBox.Size = new System.Drawing.Size(418, 25);
+            this.IDBox.TabIndex = 94;
+            this.IDBox.Text = "https://github.com/Wanghaoran86/WangPluginPkm";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(561, 300);
+            this.label19.Name = "label19";
+            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label19.Size = new System.Drawing.Size(49, 20);
+            this.label19.TabIndex = 95;
+            this.label19.Text = "IDBox";
+            // 
+            // KeyBox
+            // 
+            this.KeyBox.Location = new System.Drawing.Point(616, 331);
+            this.KeyBox.Multiline = true;
+            this.KeyBox.Name = "KeyBox";
+            this.KeyBox.Size = new System.Drawing.Size(418, 25);
+            this.KeyBox.TabIndex = 96;
+            this.KeyBox.Text = "https://github.com/Wanghaoran86/WangPluginPkm";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(561, 331);
+            this.label20.Name = "label20";
+            this.label20.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label20.Size = new System.Drawing.Size(33, 20);
+            this.label20.TabIndex = 97;
+            this.label20.Text = "Key";
             // 
             // SVTeraRaidSeedCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1008, 473);
-            this.Controls.Add(this.ModSav_BTN);
-            this.Controls.Add(this.LoopBox);
-            this.Controls.Add(this.MutiSeedBox);
-            this.Controls.Add(this.ImportSeed_BTN);
-            this.Controls.Add(this.RaidTypeBox);
-            this.Controls.Add(this.ModSeedText);
-            this.Controls.Add(this.CopyAll_BTN);
-            this.Controls.Add(this.Shiny_Fix_BTN);
-            this.Controls.Add(this.FormBox);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.StepcomboBox);
-            this.Controls.Add(this.IsC);
-            this.Controls.Add(this.EVPLabel);
-            this.Controls.Add(this.EventProgress);
-            this.Controls.Add(this.IsEvent);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.Stop_BTN);
-            this.Controls.Add(this.ShinyBox);
-            this.Controls.Add(this.Starlabel);
-            this.Controls.Add(this.StarcomboBox);
-            this.Controls.Add(this.Game);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.TeracomboBox);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.GencomboBox);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.NaturecomboBox);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.SPcomboBox);
-            this.Controls.Add(this.SPE_MAX);
-            this.Controls.Add(this.SPD_MAX);
-            this.Controls.Add(this.SPA_MAX);
-            this.Controls.Add(this.DEF_MAX);
-            this.Controls.Add(this.ATK_MAX);
-            this.Controls.Add(this.HP_MAX);
-            this.Controls.Add(this.SPE_MIN);
-            this.Controls.Add(this.SPD_MIN);
-            this.Controls.Add(this.SPA_MIN);
-            this.Controls.Add(this.DEF_MIN);
-            this.Controls.Add(this.ATK_MIN);
-            this.Controls.Add(this.HP_MIN);
-            this.Controls.Add(this.Search_BTN);
-            this.Controls.Add(this.AbilityBox);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.GenderBox);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.Move4Box);
-            this.Controls.Add(this.Move3Box);
-            this.Controls.Add(this.Move2Box);
-            this.Controls.Add(this.Move1Box);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.NatureBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.TeraBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.SpeciesBox);
-            this.Controls.Add(this.SpeciesTextBox);
+            this.ClientSize = new System.Drawing.Size(1054, 501);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.KeyBox);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.IDBox);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.OrderUrlBox);
+            this.Controls.Add(this.SeedUrlBox);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ResultBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DiffBox);
-            this.Controls.Add(this.ProgressBox);
-            this.Controls.Add(this.RUN_BTN);
-            this.Controls.Add(this.IVBOX);
-            this.Controls.Add(this.IVLabel);
-            this.Controls.Add(this.PIDlabel);
-            this.Controls.Add(this.EClabel);
-            this.Controls.Add(this.ECBox);
-            this.Controls.Add(this.PIDBox);
-            this.Controls.Add(this.SeedBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SVTeraRaidSeedCalcForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SVTeraRaidSeedCalcForm";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -938,7 +1167,6 @@
         private System.Windows.Forms.CheckBox IsEvent;
         private System.Windows.Forms.ComboBox EventProgress;
         private System.Windows.Forms.Label EVPLabel;
-        private System.Windows.Forms.CheckBox IsC;
         private ComboBox StepcomboBox;
         private Label label15;
         private Label label16;
@@ -951,5 +1179,24 @@
         private RichTextBox MutiSeedBox;
         private CheckBox LoopBox;
         private Button ModSav_BTN;
+        private Button CloseAll_BTN;
+        private Button ImportDIS_BTN;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private CheckBox Progress5Box;
+        private CheckBox Progress4Box;
+        private CheckBox Progress3Box;
+        private CheckBox Progress2Box;
+        private CheckBox Progress1Box;
+        private Button ConnectBTN;
+        private Button OrderBTN;
+        private TextBox SeedUrlBox;
+        private TextBox OrderUrlBox;
+        private Label label17;
+        private Label label18;
+        private TextBox IDBox;
+        private Label label19;
+        private TextBox KeyBox;
+        private Label label20;
     }
 }

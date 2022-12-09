@@ -93,6 +93,16 @@ namespace WangPluginSav.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] encounter_dist_paldea {
+            get {
+                object obj = ResourceManager.GetObject("encounter_dist_paldea", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] encounter_gem_paldea {
             get {
                 object obj = ResourceManager.GetObject("encounter_gem_paldea", resourceCulture);
