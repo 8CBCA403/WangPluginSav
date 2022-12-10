@@ -312,10 +312,10 @@ namespace WangPluginSav.GUI
         private int GetTeraType(ITeraRaid? encounter, Raid raid)
         {
             if (encounter == null)
-                return Raidinfo.TeranType;
-            if (encounter is TeraDistribution td && td.Entity is EncounterMight9 em)
-                return (int)em.TeraType > 1 ? (int)em.TeraType - 2 : Raidinfo.TeranType;
-            return Raidinfo.TeranType;
+                return raid.TeranType;
+            if (encounter is TeraDistribution td && td.Entity is ITeraRaid9 gem)
+                return (int)gem.TeraType > 1 ? (int)gem.TeraType - 2 : raid.TeranType;
+            return raid.TeranType;
         }
 
         private void Shiny_Fix_BTN_Click(object sender, EventArgs e)
