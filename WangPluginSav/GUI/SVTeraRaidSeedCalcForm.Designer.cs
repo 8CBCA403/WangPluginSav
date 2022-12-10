@@ -93,7 +93,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.FormBox = new System.Windows.Forms.TextBox();
-            this.Shiny_Fix_BTN = new System.Windows.Forms.Button();
+            this.GetProgress_BTN = new System.Windows.Forms.Button();
             this.CopyAll_BTN = new System.Windows.Forms.Button();
             this.ModSeedText = new System.Windows.Forms.TextBox();
             this.RaidTypeBox = new System.Windows.Forms.ComboBox();
@@ -120,6 +120,18 @@
             this.label19 = new System.Windows.Forms.Label();
             this.KeyBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.HeightBox = new System.Windows.Forms.TextBox();
+            this.WeightBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.ScaleBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.TIDBox = new System.Windows.Forms.TextBox();
+            this.SIDBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.FixPID_BTN = new System.Windows.Forms.Button();
+            this.ToPKM_BTN = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -240,9 +252,9 @@
             // 
             // ResultBox
             // 
-            this.ResultBox.Location = new System.Drawing.Point(18, 362);
+            this.ResultBox.Location = new System.Drawing.Point(18, 394);
             this.ResultBox.Name = "ResultBox";
-            this.ResultBox.Size = new System.Drawing.Size(1016, 127);
+            this.ResultBox.Size = new System.Drawing.Size(1016, 95);
             this.ResultBox.TabIndex = 14;
             this.ResultBox.Text = "";
             // 
@@ -687,7 +699,7 @@
             // StepcomboBox
             // 
             this.StepcomboBox.FormattingEnabled = true;
-            this.StepcomboBox.Location = new System.Drawing.Point(671, 248);
+            this.StepcomboBox.Location = new System.Drawing.Point(671, 145);
             this.StepcomboBox.Name = "StepcomboBox";
             this.StepcomboBox.Size = new System.Drawing.Size(96, 24);
             this.StepcomboBox.TabIndex = 67;
@@ -696,7 +708,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(642, 252);
+            this.label15.Location = new System.Drawing.Point(640, 148);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(25, 20);
             this.label15.TabIndex = 68;
@@ -721,15 +733,15 @@
             this.FormBox.Size = new System.Drawing.Size(63, 25);
             this.FormBox.TabIndex = 70;
             // 
-            // Shiny_Fix_BTN
+            // GetProgress_BTN
             // 
-            this.Shiny_Fix_BTN.Location = new System.Drawing.Point(486, 53);
-            this.Shiny_Fix_BTN.Name = "Shiny_Fix_BTN";
-            this.Shiny_Fix_BTN.Size = new System.Drawing.Size(28, 27);
-            this.Shiny_Fix_BTN.TabIndex = 71;
-            this.Shiny_Fix_BTN.Text = "F";
-            this.Shiny_Fix_BTN.UseVisualStyleBackColor = true;
-            this.Shiny_Fix_BTN.Click += new System.EventHandler(this.Shiny_Fix_BTN_Click);
+            this.GetProgress_BTN.Location = new System.Drawing.Point(540, 146);
+            this.GetProgress_BTN.Name = "GetProgress_BTN";
+            this.GetProgress_BTN.Size = new System.Drawing.Size(94, 27);
+            this.GetProgress_BTN.TabIndex = 71;
+            this.GetProgress_BTN.Text = "GetProgress";
+            this.GetProgress_BTN.UseVisualStyleBackColor = true;
+            this.GetProgress_BTN.Click += new System.EventHandler(this.Shiny_Fix_BTN_Click);
             // 
             // CopyAll_BTN
             // 
@@ -772,7 +784,7 @@
             // 
             this.MutiSeedBox.Location = new System.Drawing.Point(12, 145);
             this.MutiSeedBox.Name = "MutiSeedBox";
-            this.MutiSeedBox.Size = new System.Drawing.Size(209, 131);
+            this.MutiSeedBox.Size = new System.Drawing.Size(209, 163);
             this.MutiSeedBox.TabIndex = 76;
             this.MutiSeedBox.Text = "";
             // 
@@ -819,14 +831,24 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.OrderBTN);
-            this.groupBox1.Controls.Add(this.ConnectBTN);
+            this.groupBox1.Controls.Add(this.ToPKM_BTN);
+            this.groupBox1.Controls.Add(this.FixPID_BTN);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.SIDBox);
+            this.groupBox1.Controls.Add(this.TIDBox);
+            this.groupBox1.Controls.Add(this.ScaleBox);
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.WeightBox);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.HeightBox);
+            this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.Progress5Box);
             this.groupBox1.Controls.Add(this.Progress4Box);
             this.groupBox1.Controls.Add(this.Progress3Box);
             this.groupBox1.Controls.Add(this.Progress2Box);
             this.groupBox1.Controls.Add(this.Progress1Box);
-            this.groupBox1.Controls.Add(this.Shiny_Fix_BTN);
+            this.groupBox1.Controls.Add(this.GetProgress_BTN);
             this.groupBox1.Controls.Add(this.FormBox);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
@@ -892,14 +914,14 @@
             this.groupBox1.Controls.Add(this.SeedBox);
             this.groupBox1.Location = new System.Drawing.Point(18, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 282);
+            this.groupBox1.Size = new System.Drawing.Size(776, 314);
             this.groupBox1.TabIndex = 90;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Calc";
             // 
             // OrderBTN
             // 
-            this.OrderBTN.Location = new System.Drawing.Point(673, 182);
+            this.OrderBTN.Location = new System.Drawing.Point(457, 365);
             this.OrderBTN.Name = "OrderBTN";
             this.OrderBTN.Size = new System.Drawing.Size(94, 27);
             this.OrderBTN.TabIndex = 78;
@@ -909,7 +931,7 @@
             // 
             // ConnectBTN
             // 
-            this.ConnectBTN.Location = new System.Drawing.Point(673, 148);
+            this.ConnectBTN.Location = new System.Drawing.Point(457, 332);
             this.ConnectBTN.Name = "ConnectBTN";
             this.ConnectBTN.Size = new System.Drawing.Size(94, 27);
             this.ConnectBTN.TabIndex = 77;
@@ -922,7 +944,7 @@
             this.Progress5Box.AutoSize = true;
             this.Progress5Box.Enabled = false;
             this.Progress5Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Progress5Box.Location = new System.Drawing.Point(506, 148);
+            this.Progress5Box.Location = new System.Drawing.Point(439, 149);
             this.Progress5Box.Name = "Progress5Box";
             this.Progress5Box.Size = new System.Drawing.Size(95, 24);
             this.Progress5Box.TabIndex = 76;
@@ -934,7 +956,7 @@
             this.Progress4Box.AutoSize = true;
             this.Progress4Box.Enabled = false;
             this.Progress4Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Progress4Box.Location = new System.Drawing.Point(399, 148);
+            this.Progress4Box.Location = new System.Drawing.Point(332, 149);
             this.Progress4Box.Name = "Progress4Box";
             this.Progress4Box.Size = new System.Drawing.Size(95, 24);
             this.Progress4Box.TabIndex = 75;
@@ -946,7 +968,7 @@
             this.Progress3Box.AutoSize = true;
             this.Progress3Box.Enabled = false;
             this.Progress3Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Progress3Box.Location = new System.Drawing.Point(288, 148);
+            this.Progress3Box.Location = new System.Drawing.Point(221, 149);
             this.Progress3Box.Name = "Progress3Box";
             this.Progress3Box.Size = new System.Drawing.Size(95, 24);
             this.Progress3Box.TabIndex = 74;
@@ -958,7 +980,7 @@
             this.Progress2Box.AutoSize = true;
             this.Progress2Box.Enabled = false;
             this.Progress2Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Progress2Box.Location = new System.Drawing.Point(181, 148);
+            this.Progress2Box.Location = new System.Drawing.Point(114, 149);
             this.Progress2Box.Name = "Progress2Box";
             this.Progress2Box.Size = new System.Drawing.Size(95, 24);
             this.Progress2Box.TabIndex = 73;
@@ -970,7 +992,7 @@
             this.Progress1Box.AutoSize = true;
             this.Progress1Box.Enabled = false;
             this.Progress1Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Progress1Box.Location = new System.Drawing.Point(74, 148);
+            this.Progress1Box.Location = new System.Drawing.Point(7, 149);
             this.Progress1Box.Name = "Progress1Box";
             this.Progress1Box.Size = new System.Drawing.Size(95, 24);
             this.Progress1Box.TabIndex = 72;
@@ -990,26 +1012,26 @@
             this.groupBox2.Controls.Add(this.CopyAll_BTN);
             this.groupBox2.Location = new System.Drawing.Point(801, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(233, 282);
+            this.groupBox2.Size = new System.Drawing.Size(233, 314);
             this.groupBox2.TabIndex = 91;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor";
             // 
             // SeedUrlBox
             // 
-            this.SeedUrlBox.Location = new System.Drawing.Point(85, 300);
+            this.SeedUrlBox.Location = new System.Drawing.Point(85, 332);
             this.SeedUrlBox.Multiline = true;
             this.SeedUrlBox.Name = "SeedUrlBox";
-            this.SeedUrlBox.Size = new System.Drawing.Size(418, 25);
+            this.SeedUrlBox.Size = new System.Drawing.Size(349, 25);
             this.SeedUrlBox.TabIndex = 90;
             this.SeedUrlBox.Text = "https://github.com/Wanghaoran86/WangPluginSav";
             // 
             // OrderUrlBox
             // 
-            this.OrderUrlBox.Location = new System.Drawing.Point(85, 331);
+            this.OrderUrlBox.Location = new System.Drawing.Point(85, 363);
             this.OrderUrlBox.Multiline = true;
             this.OrderUrlBox.Name = "OrderUrlBox";
-            this.OrderUrlBox.Size = new System.Drawing.Size(418, 25);
+            this.OrderUrlBox.Size = new System.Drawing.Size(349, 25);
             this.OrderUrlBox.TabIndex = 92;
             this.OrderUrlBox.Text = "https://github.com/Wanghaoran86/WangPluginSav";
             // 
@@ -1017,7 +1039,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(18, 300);
+            this.label17.Location = new System.Drawing.Point(18, 332);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label17.Size = new System.Drawing.Size(61, 20);
@@ -1028,7 +1050,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(13, 331);
+            this.label18.Location = new System.Drawing.Point(13, 363);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label18.Size = new System.Drawing.Size(66, 20);
@@ -1037,10 +1059,10 @@
             // 
             // IDBox
             // 
-            this.IDBox.Location = new System.Drawing.Point(616, 300);
+            this.IDBox.Location = new System.Drawing.Point(647, 332);
             this.IDBox.Multiline = true;
             this.IDBox.Name = "IDBox";
-            this.IDBox.Size = new System.Drawing.Size(418, 25);
+            this.IDBox.Size = new System.Drawing.Size(387, 25);
             this.IDBox.TabIndex = 94;
             this.IDBox.Text = "https://github.com/Wanghaoran86/WangPluginPkm";
             // 
@@ -1048,7 +1070,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(561, 300);
+            this.label19.Location = new System.Drawing.Point(584, 334);
             this.label19.Name = "label19";
             this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label19.Size = new System.Drawing.Size(49, 20);
@@ -1057,10 +1079,10 @@
             // 
             // KeyBox
             // 
-            this.KeyBox.Location = new System.Drawing.Point(616, 331);
+            this.KeyBox.Location = new System.Drawing.Point(647, 363);
             this.KeyBox.Multiline = true;
             this.KeyBox.Name = "KeyBox";
-            this.KeyBox.Size = new System.Drawing.Size(418, 25);
+            this.KeyBox.Size = new System.Drawing.Size(387, 25);
             this.KeyBox.TabIndex = 96;
             this.KeyBox.Text = "https://github.com/Wanghaoran86/WangPluginPkm";
             // 
@@ -1068,12 +1090,127 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(561, 331);
+            this.label20.Location = new System.Drawing.Point(592, 363);
             this.label20.Name = "label20";
             this.label20.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label20.Size = new System.Drawing.Size(33, 20);
             this.label20.TabIndex = 97;
             this.label20.Text = "Key";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(16, 283);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(94, 20);
+            this.label21.TabIndex = 79;
+            this.label21.Text = "HeightScalar";
+            // 
+            // HeightBox
+            // 
+            this.HeightBox.Location = new System.Drawing.Point(116, 278);
+            this.HeightBox.Multiline = true;
+            this.HeightBox.Name = "HeightBox";
+            this.HeightBox.ReadOnly = true;
+            this.HeightBox.Size = new System.Drawing.Size(108, 25);
+            this.HeightBox.TabIndex = 80;
+            // 
+            // WeightBox
+            // 
+            this.WeightBox.Location = new System.Drawing.Point(339, 278);
+            this.WeightBox.Multiline = true;
+            this.WeightBox.Name = "WeightBox";
+            this.WeightBox.ReadOnly = true;
+            this.WeightBox.Size = new System.Drawing.Size(108, 25);
+            this.WeightBox.TabIndex = 82;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(237, 283);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(96, 20);
+            this.label22.TabIndex = 81;
+            this.label22.Text = "WeightScalar";
+            // 
+            // ScaleBox
+            // 
+            this.ScaleBox.Location = new System.Drawing.Point(503, 278);
+            this.ScaleBox.Multiline = true;
+            this.ScaleBox.Name = "ScaleBox";
+            this.ScaleBox.ReadOnly = true;
+            this.ScaleBox.Size = new System.Drawing.Size(108, 25);
+            this.ScaleBox.TabIndex = 84;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(453, 283);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 20);
+            this.label23.TabIndex = 83;
+            this.label23.Text = "Scale";
+            // 
+            // TIDBox
+            // 
+            this.TIDBox.Location = new System.Drawing.Point(671, 247);
+            this.TIDBox.Multiline = true;
+            this.TIDBox.Name = "TIDBox";
+            this.TIDBox.Size = new System.Drawing.Size(94, 25);
+            this.TIDBox.TabIndex = 90;
+            this.TIDBox.Text = "0";
+            // 
+            // SIDBox
+            // 
+            this.SIDBox.Location = new System.Drawing.Point(671, 278);
+            this.SIDBox.Multiline = true;
+            this.SIDBox.Name = "SIDBox";
+            this.SIDBox.Size = new System.Drawing.Size(94, 25);
+            this.SIDBox.TabIndex = 91;
+            this.SIDBox.Text = "0";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(635, 252);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(30, 20);
+            this.label24.TabIndex = 92;
+            this.label24.Text = "Tid";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(635, 283);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(30, 20);
+            this.label25.TabIndex = 93;
+            this.label25.Text = "Sid";
+            // 
+            // FixPID_BTN
+            // 
+            this.FixPID_BTN.Location = new System.Drawing.Point(486, 52);
+            this.FixPID_BTN.Name = "FixPID_BTN";
+            this.FixPID_BTN.Size = new System.Drawing.Size(28, 27);
+            this.FixPID_BTN.TabIndex = 94;
+            this.FixPID_BTN.Text = "F";
+            this.FixPID_BTN.UseVisualStyleBackColor = true;
+            this.FixPID_BTN.Click += new System.EventHandler(this.FixPID_BTN_Click);
+            // 
+            // ToPKM_BTN
+            // 
+            this.ToPKM_BTN.Location = new System.Drawing.Point(671, 182);
+            this.ToPKM_BTN.Name = "ToPKM_BTN";
+            this.ToPKM_BTN.Size = new System.Drawing.Size(94, 27);
+            this.ToPKM_BTN.TabIndex = 95;
+            this.ToPKM_BTN.Text = "ToPKM";
+            this.ToPKM_BTN.UseVisualStyleBackColor = true;
+            this.ToPKM_BTN.Click += new System.EventHandler(this.ToPKM_BTN_Click);
             // 
             // SVTeraRaidSeedCalcForm
             // 
@@ -1087,7 +1224,9 @@
             this.Controls.Add(this.IDBox);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
+            this.Controls.Add(this.OrderBTN);
             this.Controls.Add(this.OrderUrlBox);
+            this.Controls.Add(this.ConnectBTN);
             this.Controls.Add(this.SeedUrlBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1171,7 +1310,7 @@
         private Label label15;
         private Label label16;
         private TextBox FormBox;
-        private Button Shiny_Fix_BTN;
+        private Button GetProgress_BTN;
         private Button CopyAll_BTN;
         private TextBox ModSeedText;
         private ComboBox RaidTypeBox;
@@ -1198,5 +1337,17 @@
         private Label label19;
         private TextBox KeyBox;
         private Label label20;
+        private TextBox ScaleBox;
+        private Label label23;
+        private TextBox WeightBox;
+        private Label label22;
+        private TextBox HeightBox;
+        private Label label21;
+        private Button FixPID_BTN;
+        private Label label25;
+        private Label label24;
+        private TextBox SIDBox;
+        private TextBox TIDBox;
+        private Button ToPKM_BTN;
     }
 }

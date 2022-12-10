@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using WangPluginSav.WangDataBase;
 using System.Security.Cryptography;
 using System;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace WangPluginSav.GUI
 {
@@ -99,8 +100,9 @@ namespace WangPluginSav.GUI
             return s;
         }
 
-        private void displayRiad(uint seed)
+        private PKM displayRiad(uint seed)
         {
+            var rand = new Xoroshiro128Plus(seed);
             string r;
             int StarCount;
             Raidinfo.Seed = seed;
@@ -125,6 +127,7 @@ namespace WangPluginSav.GUI
                 var blank = new PK9();
                 blank.Species = encounter.Species;
                 blank.Form = encounter.Form;
+                blank.TeraTypeOriginal =(MoveType)teratype;
                 Encounter9RNG.GenerateData(blank, param, EncounterCriteria.Unrestricted, Raidinfo.Seed);
                 SpeciesTextBox.Text = $"{Raid.strings.Species[encounter.Species]} ({encounter.Species})";
                 switch ((Gend)blank.Gender)
@@ -148,9 +151,13 @@ namespace WangPluginSav.GUI
                 Move3Box.Text = Raid.strings.Move[encounter.Move3];
                 Move4Box.Text = Raid.strings.Move[encounter.Move4];
                 IVBOX.Text = IVsString(ToSpeedLast(blank.IVs));
+                HeightBox.Text = $"{blank.HeightScalar}";
+                WeightBox.Text = $"{blank.WeightScalar}";
+                ScaleBox.Text = $"{blank.Scale}";
                 r = $"\nSeed:{Raidinfo.Seed:X8} 星级：{DiffBox.Text} 种类: {SpeciesTextBox.Text} 性别: {GenderBox.Text} 性格:{NatureBox.Text} 特性:{AbilityBox.Text} IV:{IVsString(ToSpeedLast(blank.IVs))}" +
              $" 太晶: {Raid.strings.types[teratype]} ({teratype})";
                 ResultBox.Text += "\n" + r;
+                return blank;
             }
           
             else
@@ -166,7 +173,7 @@ namespace WangPluginSav.GUI
             if (Raidinfo.IsShiny)
             {
                 PIDBox.BackColor = Color.Gold;
-                PIDBox.Text += " (☆)";
+            
             }
             else
             {
@@ -181,7 +188,7 @@ namespace WangPluginSav.GUI
             {
                 IVBOX.BackColor = Color.Gray;
             }
-         
+            return PKMEditor.Data;
         }
 
         private void Search_BTN_Click(object sender, EventArgs e)
@@ -348,7 +355,7 @@ namespace WangPluginSav.GUI
             }         
             
         }
-        private static uint GetShinyPID(in int tid, in int sid, in uint pid)
+        private static uint GetShinyPID( int tid,  int sid,  uint pid)
         {
             return (uint)(((tid ^ sid ^ (pid & 0xFFFF) ^ 1) << 16) | (pid & 0xFFFF));
         }
@@ -527,25 +534,43 @@ namespace WangPluginSav.GUI
             string result = "";
             req.Method = "POST";   
             req.ContentType = "application/json";
-             using (var streamWriter = new StreamWriter(req.GetRequestStream()))
+            string shp = null;
+            string satk = null;
+            string sdef = null;
+            string sspa = null;
+            string sspd = null;
+            string sspe = null;
+            if (HP_MAX.Text != "0")
+                shp = HP_MIN.Text;
+            if (ATK_MAX.Text != "0")
+                satk = ATK_MIN.Text;
+            if (DEF_MAX.Text != "0")
+                sdef = DEF_MIN.Text;
+            if (SPA_MAX.Text != "0")
+                sspa = SPA_MIN.Text;
+            if (SPD_MAX.Text != "0")
+                sspd = SPD_MIN.Text;
+            if (SPE_MAX.Text != "0")
+                sspe = SPE_MIN.Text;
+            using (var streamWriter = new StreamWriter(req.GetRequestStream()))
               {
 
                   string json = JsonConvert.SerializeObject(
                   new { 
-                      version="紫",
+                      version="朱",
                       speciesNumber= $"{(int)SPcomboBox.SelectedValue}",
                       sex=$"{GanderCN()}",
-                      nature=$"{strings.Natures[NaturecomboBox.SelectedIndex]}",
+                    //  nature=$"{strings.Natures[NaturecomboBox.SelectedIndex]}",
                       page=1,limit=1,
                       level="5",
-                      hp=$"{HP_MIN.Text}",
-                      atk=$"{ATK_MIN.Text}",
-                      def=$"{DEF_MIN.Text}",
-                      spa=$"{SPA_MIN.Text}",
-                      spd=$"{SPD_MIN.Text}",
-                      spe=$"{SPE_MIN.Text}",
-                      difficulty="☆☆☆☆☆",
-                      remark = $"紫5{(int)SPcomboBox.SelectedValue}{GanderCN()}{strings.Natures[NaturecomboBox.SelectedIndex]}11"
+                      hp=shp,
+                      atk=satk,
+                      def=sdef,
+                      spa=sspa,
+                      spd=sspd,
+                      spe=sspe,
+                      difficulty="☆☆☆☆",
+                      remark = $"朱5{(int)SPcomboBox.SelectedValue}{GanderCN()}11"
                   });
 
                   streamWriter.Write(json);
@@ -581,7 +606,7 @@ namespace WangPluginSav.GUI
                 string json = "[{\"order\":\""+$"{KeyBox.Text}" +"\"," +
                               "\"seedid\":\""+$"{IDBox.Text}"+"\"," +
                               "\"level\":\"5\"," +
-                              "\"version\":\"紫\"}]";
+                              "\"version\":\"朱\"}]";
 
                 streamWriter.Write(json);
             }
@@ -609,6 +634,35 @@ namespace WangPluginSav.GUI
                     break;
             }
             return r;
+        }
+
+        private void FixPID_BTN_Click(object sender, EventArgs e)
+        {
+            var p = GetShinyPID(Convert.ToInt16(TIDBox.Text), Convert.ToInt16(SIDBox.Text), Convert.ToUInt32(PIDBox.Text, 16));
+            PIDBox.Text = $"{p:X}";
+        }
+
+        private void ToPKM_BTN_Click(object sender, EventArgs e)
+        {
+            var pk= (PK9)displayRiad(Convert.ToUInt32(SeedBox.Text, 16));
+            var p=(PK9)PKMEditor.Data;
+            p.Species = pk.Species;
+            p.Gender = pk.Gender;
+            p.Ability = pk.Ability;
+            p.AbilityNumber = pk.AbilityNumber;
+            p.HeightScalar = pk.HeightScalar;
+            p.Scale = pk.Scale;
+            p.WeightScalar = pk.WeightScalar;
+            p.Nature = pk.Nature;
+            p.TeraTypeOriginal = pk.GetTeraType();
+            p.IVs = pk.IVs;
+            p.EncryptionConstant = pk.EncryptionConstant;
+            p.TID = pk.TID;
+            p.SID = pk.SID;
+            p.PID = pk.PID;
+            p.Form = pk.Form;
+            PKMEditor.PopulateFields(p);
+            
         }
     }
 }
