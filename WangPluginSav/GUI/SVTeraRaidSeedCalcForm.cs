@@ -157,6 +157,24 @@ namespace WangPluginSav.GUI
                 r = $"\nSeed:{Raidinfo.Seed:X8} 星级：{DiffBox.Text} 种类: {SpeciesTextBox.Text} 性别: {GenderBox.Text} 性格:{NatureBox.Text} 特性:{AbilityBox.Text} IV:{IVsString(ToSpeedLast(blank.IVs))}" +
              $" 太晶: {Raid.strings.types[teratype]} ({teratype})";
                 ResultBox.Text += "\n" + r;
+                if (Raidinfo.IsShiny)
+                {
+                    PIDBox.BackColor = Color.Gold;
+
+                }
+                else
+                {
+                    PIDBox.BackColor = Color.Gray;
+                }
+
+                if (IVBOX.Text is "31/31/31/31/31/31")
+                {
+                    IVBOX.BackColor = Color.YellowGreen;
+                }
+                else
+                {
+                    IVBOX.BackColor = Color.Gray;
+                }
                 return blank;
             }
           
@@ -170,24 +188,7 @@ namespace WangPluginSav.GUI
                 Move3Box.Text = string.Empty;
                 Move4Box.Text = string.Empty;
             }
-            if (Raidinfo.IsShiny)
-            {
-                PIDBox.BackColor = Color.Gold;
-            
-            }
-            else
-            {
-                PIDBox.BackColor = Color.Gray;
-            }
-
-            if (IVBOX.Text is "31/31/31/31/31/31")
-            {
-                IVBOX.BackColor = Color.YellowGreen;
-            }
-            else
-            {
-                IVBOX.BackColor = Color.Gray;
-            }
+           
             return PKMEditor.Data;
         }
 
@@ -638,7 +639,7 @@ namespace WangPluginSav.GUI
 
         private void FixPID_BTN_Click(object sender, EventArgs e)
         {
-            var p = GetShinyPID(Convert.ToInt16(TIDBox.Text), Convert.ToInt16(SIDBox.Text), Convert.ToUInt32(PIDBox.Text, 16));
+            var p = GetShinyPID(Convert.ToInt32(TIDBox.Text), Convert.ToInt32(SIDBox.Text), Convert.ToUInt32(PIDBox.Text, 16));
             PIDBox.Text = $"{p:X}";
         }
 
