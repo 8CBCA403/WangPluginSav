@@ -1,61 +1,76 @@
 ﻿using FlatSharp;
 using System;
 using System.Buffers.Binary;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using PKHeX.Core;
+using WangPluginSav.WangUtil;
+using static System.Buffers.Binary.BinaryPrimitives;
 
 namespace WangPluginSav
 {
 
     public static class FlatbufferDumper
     {
-        public static byte[][] DumpDistributionRaids(byte[] r)
-        {
-            var type2 = new List<byte[]>();
-            var type3 = new List<byte[]>();
-
-            var encounters = r;
-            if (encounters.Length == 0)
-                return new byte[0][];
-            var tableEncounters = FlatBufferSerializer.Default.Parse<DeliveryRaidEnemyTableArray>(encounters);
-            var byGroupID = tableEncounters.Table
-            .Where(z => z.RaidEnemyInfo.Rate != 0)
-            .GroupBy(z => z.RaidEnemyInfo.DeliveryGroupID);
-
-            foreach (var group in byGroupID)
+         public static byte[][] DumpDistributionRaids(string path)
             {
-                var items = group.ToArray();
-                if (items.Any(z => z.RaidEnemyInfo.Difficulty > 7))
-                    continue;
-                if (items.All(z => z.RaidEnemyInfo.Difficulty == 7))
-                    AddToList(items, type3, RaidSerializationFormat.Type3);
-                else if (items.Any(z => z.RaidEnemyInfo.Difficulty == 7))
-                    throw new Exception($"Mixed difficulty {items.First(z => z.RaidEnemyInfo.Difficulty > 7).RaidEnemyInfo.Difficulty}");
-                else AddToList(items, type2, RaidSerializationFormat.Type2);
+                var type2 = new List<byte[]>();
+                var type3 = new List<byte[]>();
+
+                var encounters = Utils.GetBinaryResource(path);
+                if (encounters.Length == 0)
+                    return new byte[0][];
+                var tableEncounters = FlatBufferSerializer.Default.Parse<DeliveryRaidEnemyTableArray>(encounters);
+                var byGroupID = tableEncounters.Table
+                .Where(z => z.RaidEnemyInfo.Rate != 0)
+                .GroupBy(z => z.RaidEnemyInfo.DeliveryGroupID);
+
+                foreach (var group in byGroupID)
+                {
+                    var items = group.ToArray();
+                    if (items.Any(z => z.RaidEnemyInfo.Difficulty > 7))
+                        continue;
+                    if (items.All(z => z.RaidEnemyInfo.Difficulty == 7))
+                        AddToList(items, type3, RaidSerializationFormat.Type3);
+                    else if (items.Any(z => z.RaidEnemyInfo.Difficulty == 7))
+                        throw new Exception($"Mixed difficulty {items.First(z => z.RaidEnemyInfo.Difficulty > 7).RaidEnemyInfo.Difficulty}");
+                    else AddToList(items, type2, RaidSerializationFormat.Type2);
+                }
+
+                var ordered2 = type2
+                        .OrderBy(z => BinaryPrimitives.ReadUInt16LittleEndian(z)) // Species
+                        .ThenBy(z => z[2]) // Form
+                        .ThenBy(z => z[3]) // Level
+                        .ThenBy(z => z[0x11]) // Distribution Index
+                    ;
+                var ordered3 = type3
+                    .OrderBy(z => BinaryPrimitives.ReadUInt16LittleEndian(z)) // Species
+                        .ThenBy(z => z[2]) // Form
+                        .ThenBy(z => z[3]) // Level
+                        .ThenBy(z => z[0x11]) // Distribution Index
+                    ;
+                return new[] { ordered2.SelectMany(z => z.SkipLast(16)).ToArray(), ordered3.SelectMany(z => z.SkipLast(16)).ToArray(),
+                           ordered2.SelectMany(z => z.TakeLast(16)).ToArray(), ordered3.SelectMany(z => z.TakeLast(16)).ToArray() };
             }
 
-            var ordered2 = type2
-                    .OrderBy(z => BinaryPrimitives.ReadUInt16LittleEndian(z)) // Species
-                    .ThenBy(z => z[2]) // Form
-                    .ThenBy(z => z[3]) // Level
-                    .ThenBy(z => z[0x11]) // Distribution Index
-                ;
-            var ordered3 = type3
-                .OrderBy(z => BinaryPrimitives.ReadUInt16LittleEndian(z)) // Species
-                    .ThenBy(z => z[2]) // Form
-                    .ThenBy(z => z[3]) // Level
-                    .ThenBy(z => z[0x11]) // Distribution Index
-                ;
-            return new[] { ordered2.SelectMany(z => z).ToArray(), ordered3.SelectMany(z => z).ToArray() };
-        }
+            public static List<DeliveryRaidLotteryRewardItem> DumpLotteryRewards()
+            {
+                var rewards = Utils.GetBinaryResource("r0.bin");
+                var tableRewards = FlatBufferSerializer.Default.Parse<DeliveryRaidLotteryRewardItemArray>(rewards);
+                return tableRewards.Table.ToList();
+            }
+
+            public static List<DeliveryRaidFixedRewardItem> DumpFixedRewards()
+            {
+                var rewards = Utils.GetBinaryResource("r1.bin");
+                var tableRewards = FlatBufferSerializer.Default.Parse<DeliveryRaidFixedRewardItemArray>(rewards);
+                return tableRewards.Table.ToList();
+            }
 
         private static readonly int[][] StageStars =
         {
             new [] { 1, 2 },
             new [] { 1, 2, 3 },
             new [] { 1, 2, 3, 4 },
-            new [] { 3, 4, 5 },
+            new [] { 3, 4, 5, 6, 7 },
         };
 
         private static void AddToList(IReadOnlyCollection<DeliveryRaidEnemyTable> table, List<byte[]> list, RaidSerializationFormat format)
@@ -114,11 +129,15 @@ namespace WangPluginSav
                 ushort mV = minV[stage];
                 bw.Write(noTotal ? (ushort)0 : mS);
                 bw.Write(noTotal ? (ushort)0 : mV);
-                bw.Write(noTotal ? (ushort)0 : totalS[stage]);
-                bw.Write(noTotal ? (ushort)0 : totalV[stage]);
+                bw.Write(noTotal || enc.RomVer == RaidRomType.TYPE_B ? (ushort)0 : totalS[stage]);
+                bw.Write(noTotal || enc.RomVer == RaidRomType.TYPE_A ? (ushort)0 : totalV[stage]);
             }
             if (format == RaidSerializationFormat.Type3)
                 enc.SerializeType3(bw);
+
+            // drop table reference
+            bw.Write(enc.DropTableFix);
+            bw.Write(enc.DropTableRandom);
 
             var bin = ms.ToArray();
             if (!list.Any(z => z.SequenceEqual(bin)))

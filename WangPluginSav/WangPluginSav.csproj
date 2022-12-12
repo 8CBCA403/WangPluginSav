@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net48</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <OutputType>Library</OutputType>
     <LangVersion>10</LangVersion>
     <UseWindowsForms>true</UseWindowsForms>
@@ -9,30 +9,45 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyVersion>1.0.5</AssemblyVersion>
     <FileVersion>1.0.5</FileVersion>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\file\1.txt" />
     <None Remove="Properties\file\a0.bin" />
     <None Remove="Properties\file\a1.bin" />
+    <None Remove="Properties\file\Delivery\fixed_reward_item_array" />
+    <None Remove="Properties\file\Delivery\lottery_reward_item_array" />
+    <None Remove="Properties\file\Delivery\raid_enemy_array" />
     <None Remove="Properties\file\encounter_dist_paldea.pkl" />
     <None Remove="Properties\file\encounter_gem_paldea.pkl" />
+    <None Remove="Properties\file\r0.bin" />
+    <None Remove="Properties\file\r1.bin" />
+    <None Remove="Properties\file\raid_fixed_reward_item_array.json" />
+    <None Remove="Properties\file\raid_lottery_reward_item_array.json" />
+    <None Remove="Properties\file\reward_map" />
+    <None Remove="Properties\img\material.png" />
+    <None Remove="Properties\img\paldea.png" />
+    <None Remove="Properties\img\shard.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Properties\file\1.txt" />
     <EmbeddedResource Include="Properties\file\a0.bin" />
     <EmbeddedResource Include="Properties\file\a1.bin" />
+    <EmbeddedResource Include="Properties\file\Delivery\fixed_reward_item_array" />
+    <EmbeddedResource Include="Properties\file\Delivery\lottery_reward_item_array" />
+    <EmbeddedResource Include="Properties\file\Delivery\raid_enemy_array" />
     <EmbeddedResource Include="Properties\file\encounter_dist_paldea.pkl" />
     <EmbeddedResource Include="Properties\file\encounter_gem_paldea.pkl" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Costura.Fody" Version="5.7.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime;compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="FlatSharp" Version="6.3.5" />
-    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
-    <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
+    <EmbeddedResource Include="Properties\file\r0.bin" />
+    <EmbeddedResource Include="Properties\file\r1.bin" />
+    <EmbeddedResource Include="Properties\file\raid_fixed_reward_item_array.json" />
+    <EmbeddedResource Include="Properties\file\raid_lottery_reward_item_array.json" />
+    <EmbeddedResource Include="Properties\file\reward_map" />
+    <EmbeddedResource Include="Properties\img\material.png" />
+    <EmbeddedResource Include="Properties\img\paldea.png" />
+    <EmbeddedResource Include="Properties\img\shard.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,17 +67,65 @@
     <Folder Include="Deps\" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FlatSharp">
+      <HintPath>Deps\FlatSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FlatSharp.Runtime">
+      <HintPath>Deps\FlatSharp.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer">
+      <HintPath>Deps\Humanizer.dll</HintPath>
+    </Reference>
     <Reference Include="IndexRange">
       <HintPath>Deps\IndexRange.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>Deps\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Deps\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Deps\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
+      <HintPath>Deps\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces">
+      <HintPath>Deps\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Deps\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>Deps\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PKHeX.Core">
       <HintPath>Deps\PKHeX.Core.dll</HintPath>
     </Reference>
-    <Reference Include="System.Buffers">
-      <HintPath>Deps\System.Buffers.dll</HintPath>
+    <Reference Include="PKHeX.Drawing">
+      <HintPath>Deps\PKHeX.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="System.Memory">
-      <HintPath>Deps\System.Memory.dll</HintPath>
+    <Reference Include="PKHeX.Drawing.Misc">
+      <HintPath>Deps\PKHeX.Drawing.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="PKHeX.Drawing.PokeSprite">
+      <HintPath>Deps\PKHeX.Drawing.PokeSprite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.AttributedModel">
+      <HintPath>Deps\System.Composition.AttributedModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Convention">
+      <HintPath>Deps\System.Composition.Convention.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Hosting">
+      <HintPath>Deps\System.Composition.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Runtime">
+      <HintPath>Deps\System.Composition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts">
+      <HintPath>Deps\System.Composition.TypedParts.dll</HintPath>
     </Reference>
   </ItemGroup>
 

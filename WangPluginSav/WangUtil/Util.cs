@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Windows.Forms;
 namespace WangPluginSav
 {
     public static partial class Utils
@@ -24,7 +25,7 @@ namespace WangPluginSav
             var start = period + 1;
             System.Diagnostics.Debug.Assert(start != 0);
 
-            // text file fetch excludes ".txt" (mixed case...); other extensions are used (all lowercase).
+            // text file fetch excludesa.Add(".txt" (mixed case...); other extensions are used (all lowercase).
             return resName.EndsWith(".txt", StringComparison.Ordinal) ? resName[start..^4].ToLowerInvariant() : resName[start..];
         }
 
@@ -40,6 +41,23 @@ namespace WangPluginSav
             var buffer = new byte[resource.Length];
             _ = resource.Read(buffer, 0, (int)resource.Length);
             return buffer;
+        }
+        public static string? GetStringResource(string name)
+        {
+            if (!resourceNameMap.TryGetValue(name.ToLowerInvariant(), out var resourceName))
+            {
+                MessageBox.Show("1");
+                return null;
+            }
+
+            using var resource = thisAssembly.GetManifestResourceStream(resourceName);
+            if (resource is null)
+            {
+                MessageBox.Show("2");
+                return null;
+            }
+            using var reader = new StreamReader(resource);
+            return reader.ReadToEnd();
         }
     }
 }

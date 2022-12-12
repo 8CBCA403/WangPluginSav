@@ -1,12 +1,12 @@
 ﻿using PKHeX.Core;
 using System.ComponentModel;
 using System.Net;
-using System.Text;
 using Newtonsoft.Json;
 using WangPluginSav.WangDataBase;
-using System.Security.Cryptography;
+using PKHeX.Drawing;
+using PKHeX.Drawing.PokeSprite;
 using System;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using WangPluginSav.WangUtil;
 
 namespace WangPluginSav.GUI
 {
@@ -16,8 +16,10 @@ namespace WangPluginSav.GUI
         public IPKMView PKMEditor { get; }
         private CancellationTokenSource tokenSource = new();
         private Raid Raidinfo = new();
+        private Raid Raidinfo1 = new();
         private const string SeedFilter = "Trainer Info |*.txt|All Files|*.*";
         private const string DisFilter = "Trainer Info |*.DIS|All Files|*.*";
+        private static Image map = Image.FromStream(new MemoryStream(Utils.GetBinaryResource("paldea.png")));
         private string[]? lines;
         private TeraRaidDisplayType[] a = new TeraRaidDisplayType[72];
         private byte[] b = new byte[72];
@@ -26,7 +28,12 @@ namespace WangPluginSav.GUI
         private const uint KUnlockedRaidDifficulty5 = 0x9535F471; // FSYS_RAID_DIFFICTLTY5_RELEASE
         private const uint KUnlockedRaidDifficulty6 = 0x6E7F8220; // FSYS_RAID_DIFFICTLTY6_RELEASE
         private const uint KUnlockedTeraRaidBattles = 0x27025EBF; // FSYS_RAID_SCENARIO_00
+        private static Dictionary<string, double[]>? den_locations= Area.A();
         public static readonly GameStrings strings = GameInfo.GetStrings("zh");
+        private List<RaidFixedRewards>? BaseFixedRewards = new();
+        private List<RaidLotteryRewards>? BaseLotteryRewards = new();
+        private static List<DeliveryRaidFixedRewardItem>? DeliveryRaidFixedRewards = new();
+        private static List<DeliveryRaidLotteryRewardItem>? DeliveryRaidLotteryRewards = new();
         public SVTeraRaidSeedCalcForm(ISaveFileProvider sav, IPKMView edit)
         {
             SAV = sav;
@@ -34,9 +41,20 @@ namespace WangPluginSav.GUI
             Raid.GemTeraRaids = TeraEncounter.GetAllEncounters("encounter_gem_paldea.pkl");
             Raid.DistTeraRaids = TeraDistribution.GetAllEncounters();
             Raid.Game = "Violet";
+            string text2 = System.IO.File.ReadAllText("1.txt");
+            string text1 = System.IO.File.ReadAllText("2.txt");
+            BaseFixedRewards = JsonConvert.DeserializeObject<List<RaidFixedRewards>>(text1 ?? "[]");
+            BaseLotteryRewards = JsonConvert.DeserializeObject<List<RaidLotteryRewards>>(text2 ?? "[]");
+            DeliveryRaidFixedRewards = FlatbufferDumper.DumpFixedRewards();
+            DeliveryRaidLotteryRewards = FlatbufferDumper.DumpLotteryRewards();
+
+            SpriteBuilder.ShowTeraThicknessStripe = 0x4;
+            SpriteBuilder.ShowTeraOpacityStripe = 0xAF;
+            SpriteBuilder.ShowTeraOpacityBackground = 0xFF;
             InitializeComponent();
             BindingData();
         }
+      
         public void BindingData()
         {
             RaidTypeBox.DataSource = Enum.GetValues(typeof(TeraRaidContentType));
@@ -664,6 +682,74 @@ namespace WangPluginSav.GUI
             p.Form = pk.Form;
             PKMEditor.PopulateFields(p);
             
+        }
+        private static Image? GenerateMap(Image map1,int teratype,TeraRaidDetail r1)
+        {
+            var original = PKHeX.Drawing.Misc.TypeSpriteUtil.GetTypeSpriteGem((byte)teratype);
+            var gem = (Image)new Bitmap(original, new Size(30, 30));
+            if (den_locations.Count == 0)
+                MessageBox.Show("1");
+            var x = (den_locations[$"{r1.AreaID}-{r1.SpawnPointID}"][0] + 2.072021484) * 512 / 5000;
+            var y = (den_locations[$"{r1.AreaID}-{r1.SpawnPointID}"][2] + 5255.240018) * 512 / 5000;
+            return ImageUtil.LayerImage(map1, gem, (int)x, (int)y);
+        }
+        private void DisplayMap_BTN_Click(object sender, EventArgs e)
+        {
+            if (SAV.SAV is SAV9SV sv)
+            {
+                var raid = sv.Raid;
+                var a = raid.GetRaid(0);
+                Raidinfo1.Seed = a.Seed;
+                var progress = Raidinfo1.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
+                ITeraRaid? encounter = Raidinfo1.Encounter(progress);
+                var teratype = GetTeraType(encounter, Raidinfo1);
+                map = GenerateMap(map, teratype, a);
+                for (int i = 1; i < 69; i++)
+                {
+                    a = raid.GetRaid(i);
+                    Raidinfo1.Seed = a.Seed;
+                    progress = Raidinfo1.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
+                    encounter = Raidinfo1.Encounter(progress);
+                    teratype = GetTeraType(encounter, Raidinfo1);
+                    map = GenerateMap(map, teratype, a);
+                   
+                }
+                if (map == null)
+                {
+                    MessageBox.Show("Error generating map.");
+                    return;
+                }
+                var form = new TeraMapView(map);
+                form.Show();
+            }
+        }
+
+        private void Show_Rewards_Click(object sender, EventArgs e)
+        {
+            if (SAV.SAV is SAV9SV sv)
+            {
+                var raid = sv.Raid;
+                var a = raid.GetRaid((int)RaidIndex.Value);
+                Raidinfo1.Seed = a.Seed;
+                var progress = Raidinfo1.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
+                ITeraRaid? encounter = Raidinfo1.Encounter(progress);
+
+                var rewards = encounter switch
+                {
+                    TeraDistribution => TeraDistribution.GetRewards((TeraDistribution)encounter,a.Seed, DeliveryRaidFixedRewards, DeliveryRaidLotteryRewards, 2),
+                    TeraEncounter => TeraEncounter.GetRewards((TeraEncounter)encounter, a.Seed, BaseFixedRewards, BaseLotteryRewards, 2),
+                    _ => null,
+                };
+
+                if (rewards == null)
+                {
+                    MessageBox.Show("Error while displaying rewards.");
+                    return;
+                }
+
+                var form = new RewardsView(rewards);
+                form.Show();
+            }
         }
     }
 }

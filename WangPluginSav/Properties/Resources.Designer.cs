@@ -61,26 +61,6 @@ namespace WangPluginSav.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] a0 {
-            get {
-                object obj = ResourceManager.GetObject("a0", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] a1 {
-            get {
-                object obj = ResourceManager.GetObject("a1", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap BW {
@@ -91,22 +71,32 @@ namespace WangPluginSav.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] encounter_dist_paldea {
+        internal static System.Drawing.Bitmap material {
             get {
-                object obj = ResourceManager.GetObject("encounter_dist_paldea", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("material", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] encounter_gem_paldea {
+        internal static System.Drawing.Bitmap paldea {
             get {
-                object obj = ResourceManager.GetObject("encounter_gem_paldea", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("paldea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shard {
+            get {
+                object obj = ResourceManager.GetObject("shard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

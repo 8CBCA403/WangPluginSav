@@ -1,11 +1,13 @@
 ﻿using PKHeX.Core;
-
+using WangPluginSav.WangUtil;
+using static System.Buffers.Binary.BinaryPrimitives;
 namespace WangPluginSav
 {
     public class TeraDistribution : ITeraRaid
     {
         public readonly EncounterStatic Entity; // Raw data
-
+        public readonly ulong DropTableFix;
+        public readonly ulong DropTableRandom;
         public ushort Species => Entity.Species;
         public byte Form => Entity.Form;
         public sbyte Gender => Entity.Gender;
@@ -34,7 +36,66 @@ namespace WangPluginSav
                 result[i] = i < type2.Length ? new TeraDistribution(type2[i]) : new TeraDistribution(type3[i - type2.Length]);
             return result;
         }
+        public static (ulong, ulong)[] GetRewardTables(byte[] rewards)
+        {
+            var count = rewards.Length / 0x10;
+            var result = new (ulong, ulong)[count];
+            for (int i = 0; i < result.Length; i++)
+                result[i] = (ReadUInt64LittleEndian(rewards[(0x10 * i)..]), ReadUInt64LittleEndian(rewards[(0x10 * i + 0x8)..]));
+            return result;
+        }
 
+        public static List<(int, int, int)>? GetRewards(TeraDistribution enc, uint seed, List<DeliveryRaidFixedRewardItem>? fixed_rewards, List<DeliveryRaidLotteryRewardItem>? lottery_rewards, int boost)
+        {
+            if (lottery_rewards == null)
+                return null;
+            if (fixed_rewards == null)
+                return null;
+
+            var fixed_table = fixed_rewards.Where(z => z.TableName == enc.DropTableFix).First();
+            if (fixed_table == null)
+                return null;
+
+            var lottery_table = lottery_rewards.Where(z => z.TableName == enc.DropTableRandom).First();
+            if (lottery_table == null)
+                return null;
+
+            List<(int, int, int)> result = new();
+
+            // fixed reward
+            for (int i = 0; i < DeliveryRaidFixedRewardItem.Count; i++)
+            {
+                var item = fixed_table.GetReward(i);
+                if (item.Category == 0 && item.ItemID == 0)
+                    continue;
+                result.Add((item.ItemID == 0 ? item.Category * 10000 : item.ItemID, item.Num, item.SubjectType));
+            }
+
+            // lottery reward
+            var total = 0;
+            for (int i = 0; i < DeliveryRaidLotteryRewardItem.RewardItemCount; i++)
+                total += lottery_table.GetRewardItem(i).Rate;
+            var rand = new Xoroshiro128Plus(seed);
+            var count = (int)rand.NextInt(100); // sandwich = extra rolls? how does this work? is this even 100?
+            count = Rewards.GetRewardCount(count, enc.Stars) + boost;
+            for (int i = 0; i < count; i++)
+            {
+                var roll = (int)rand.NextInt((ulong)total);
+                for (int j = 0; j < DeliveryRaidLotteryRewardItem.RewardItemCount; j++)
+                {
+                    var item = lottery_table.GetRewardItem(j);
+                    if (roll < item.Rate)
+                    {
+                        if (item.Category == 0) result.Add((item.ItemID, item.Num, 0));
+                        else if (item.Category == 1) result.Add(item.ItemID == 0 ? (10000, item.Num, 0) : (item.ItemID, item.Num, 0));
+                        else result.Add(item.ItemID == 0 ? (20000, item.Num, 0) : (item.ItemID, item.Num, 0));
+                        break;
+                    }
+                    roll -= item.Rate;
+                }
+            }
+            return result;
+        }
         public static ITeraRaid? GetEncounter(uint Seed, int stage, bool isFixed)
         {
             if (stage < 0)
