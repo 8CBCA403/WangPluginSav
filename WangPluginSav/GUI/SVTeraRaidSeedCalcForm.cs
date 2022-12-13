@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using WangPluginSav.WangDataBase;
 using PKHeX.Drawing;
 using PKHeX.Drawing.PokeSprite;
-using System;
+using System.Reflection;
 using WangPluginSav.WangUtil;
 
 namespace WangPluginSav.GUI
@@ -16,7 +16,6 @@ namespace WangPluginSav.GUI
         public IPKMView PKMEditor { get; }
         private CancellationTokenSource tokenSource = new();
         private Raid Raidinfo = new();
-        private Raid Raidinfo1 = new();
         private const string SeedFilter = "Trainer Info |*.txt|All Files|*.*";
         private const string DisFilter = "Trainer Info |*.DIS|All Files|*.*";
         private static Image map = Image.FromStream(new MemoryStream(Utils.GetBinaryResource("paldea.png")));
@@ -39,14 +38,17 @@ namespace WangPluginSav.GUI
             SAV = sav;
             PKMEditor = edit;
             Raid.GemTeraRaids = TeraEncounter.GetAllEncounters("encounter_gem_paldea.pkl");
-            Raid.DistTeraRaids = TeraDistribution.GetAllEncounters();
+            Raid.DistTeraRaids = TeraDistribution.GetAllEncounters("raid_enemy_array");
             Raid.Game = "Violet";
-            string text2 = System.IO.File.ReadAllText("1.txt");
-            string text1 = System.IO.File.ReadAllText("2.txt");
-            BaseFixedRewards = JsonConvert.DeserializeObject<List<RaidFixedRewards>>(text1 ?? "[]");
-            BaseLotteryRewards = JsonConvert.DeserializeObject<List<RaidLotteryRewards>>(text2 ?? "[]");
-            DeliveryRaidFixedRewards = FlatbufferDumper.DumpFixedRewards();
-            DeliveryRaidLotteryRewards = FlatbufferDumper.DumpLotteryRewards();
+            var assembly = Assembly.GetExecutingAssembly();
+            string resourceName1 = assembly.GetManifestResourceNames().Single(str => str.EndsWith("1.txt"));
+            string resourceName2 = assembly.GetManifestResourceNames().Single(str => str.EndsWith("2.txt"));
+            var text1 = GetFromResources(resourceName1);
+            var text2= GetFromResources(resourceName2);
+            BaseLotteryRewards = JsonConvert.DeserializeObject<List<RaidLotteryRewards>>(text1 ?? "[]");
+            BaseFixedRewards = JsonConvert.DeserializeObject<List<RaidFixedRewards>>(text2 ?? "[]");
+            DeliveryRaidFixedRewards = FlatbufferDumper.DumpFixedRewards("fixed_reward_item_array");
+            DeliveryRaidLotteryRewards = FlatbufferDumper.DumpLotteryRewards("lottery_reward_item_array");
 
             SpriteBuilder.ShowTeraThicknessStripe = 0x4;
             SpriteBuilder.ShowTeraOpacityStripe = 0xAF;
@@ -54,7 +56,16 @@ namespace WangPluginSav.GUI
             InitializeComponent();
             BindingData();
         }
-      
+        static string GetFromResources(string resourceName)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                string result = reader.ReadToEnd();
+                return result;
+            }
+        }
         public void BindingData()
         {
             RaidTypeBox.DataSource = Enum.GetValues(typeof(TeraRaidContentType));
@@ -72,6 +83,8 @@ namespace WangPluginSav.GUI
             StarcomboBox.DataSource = Enum.GetValues(typeof(star));
             StarcomboBox.SelectedIndex = 4;
             StepcomboBox.DataSource = Enum.GetValues(typeof(Step));
+            RewardBoostBox.DataSource= Enum.GetValues(typeof(Boost));
+            RewardBoostBox.SelectedIndex = 0;
             GencomboBox.DataSource = Enum.GetValues(typeof(Gend));
             GencomboBox.DisplayMember = "Name";
             GencomboBox.SelectedIndex = 3;
@@ -699,18 +712,18 @@ namespace WangPluginSav.GUI
             {
                 var raid = sv.Raid;
                 var a = raid.GetRaid(0);
-                Raidinfo1.Seed = a.Seed;
-                var progress = Raidinfo1.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
-                ITeraRaid? encounter = Raidinfo1.Encounter(progress);
-                var teratype = GetTeraType(encounter, Raidinfo1);
+                Raidinfo.Seed = a.Seed;
+                var progress = Raidinfo.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
+                ITeraRaid? encounter = Raidinfo.Encounter(progress);
+                var teratype = GetTeraType(encounter, Raidinfo);
                 map = GenerateMap(map, teratype, a);
                 for (int i = 1; i < 69; i++)
                 {
                     a = raid.GetRaid(i);
-                    Raidinfo1.Seed = a.Seed;
-                    progress = Raidinfo1.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
-                    encounter = Raidinfo1.Encounter(progress);
-                    teratype = GetTeraType(encounter, Raidinfo1);
+                    Raidinfo.Seed = a.Seed;
+                    progress = Raidinfo.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
+                    encounter = Raidinfo.Encounter(progress);
+                    teratype = GetTeraType(encounter, Raidinfo);
                     map = GenerateMap(map, teratype, a);
                    
                 }
@@ -726,18 +739,15 @@ namespace WangPluginSav.GUI
 
         private void Show_Rewards_Click(object sender, EventArgs e)
         {
-            if (SAV.SAV is SAV9SV sv)
-            {
-                var raid = sv.Raid;
-                var a = raid.GetRaid((int)RaidIndex.Value);
-                Raidinfo1.Seed = a.Seed;
-                var progress = Raidinfo1.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
-                ITeraRaid? encounter = Raidinfo1.Encounter(progress);
+           
+                Raidinfo.Seed = Convert.ToUInt32(SeedBox.Text, 16);
+                var progress = Raidinfo.IsEvent ? EventProgress.SelectedIndex : ProgressBox.SelectedIndex;
+                ITeraRaid? encounter = Raidinfo.Encounter(progress);
 
                 var rewards = encounter switch
                 {
-                    TeraDistribution => TeraDistribution.GetRewards((TeraDistribution)encounter,a.Seed, DeliveryRaidFixedRewards, DeliveryRaidLotteryRewards, 2),
-                    TeraEncounter => TeraEncounter.GetRewards((TeraEncounter)encounter, a.Seed, BaseFixedRewards, BaseLotteryRewards, 2),
+                    TeraDistribution => TeraDistribution.GetRewards((TeraDistribution)encounter, Raidinfo.Seed, DeliveryRaidFixedRewards, DeliveryRaidLotteryRewards, RewardBoostBox.SelectedIndex),
+                    TeraEncounter => TeraEncounter.GetRewards((TeraEncounter)encounter, Raidinfo.Seed, BaseFixedRewards, BaseLotteryRewards, RewardBoostBox.SelectedIndex),
                     _ => null,
                 };
 
@@ -749,7 +759,7 @@ namespace WangPluginSav.GUI
 
                 var form = new RewardsView(rewards);
                 form.Show();
-            }
+            
         }
     }
 }

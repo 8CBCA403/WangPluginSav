@@ -22,18 +22,24 @@ namespace WangPluginSav
         public byte Stars => Entity is ITeraRaid9 t9 ? t9.Stars : (byte)0;
         public byte RandRate => Entity is ITeraRaid9 t9 ? t9.RandRate : (byte)0;
 
-        public TeraDistribution(EncounterStatic enc)
+        public TeraDistribution(EncounterStatic enc, ulong fixedrewards, ulong lotteryrewards)
         {
             Entity = enc;
+            DropTableFix = fixedrewards;
+            DropTableRandom = lotteryrewards;
         }
 
-        public static ITeraRaid[] GetAllEncounters()
+        public static ITeraRaid[] GetAllEncounters(string resource)
         {
-            var type2 = EncounterDist9.GetArray(Utils.GetBinaryResource("a0.bin"));
-            var type3 = EncounterMight9.GetArray(Utils.GetBinaryResource("a1.bin"));
+            var all = FlatbufferDumper.DumpDistributionRaids(resource);
+            var type2 = EncounterDist9.GetArray(all[0]);
+            var type3 = EncounterMight9.GetArray(all[1]);
+            var rewards2 = GetRewardTables(all[2]);
+            var rewards3 = GetRewardTables(all[3]);
             var result = new TeraDistribution[type2.Length + type3.Length];
             for (int i = 0; i < result.Length; i++)
-                result[i] = i < type2.Length ? new TeraDistribution(type2[i]) : new TeraDistribution(type3[i - type2.Length]);
+                result[i] = i < type2.Length ? new TeraDistribution(type2[i], rewards2[i].Item1, rewards2[i].Item2)
+                                             : new TeraDistribution(type3[i - type2.Length], rewards3[i].Item1, rewards3[i].Item2);
             return result;
         }
         public static (ulong, ulong)[] GetRewardTables(byte[] rewards)

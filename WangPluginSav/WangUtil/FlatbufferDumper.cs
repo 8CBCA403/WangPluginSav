@@ -51,19 +51,20 @@ namespace WangPluginSav
                            ordered2.SelectMany(z => z.TakeLast(16)).ToArray(), ordered3.SelectMany(z => z.TakeLast(16)).ToArray() };
             }
 
-            public static List<DeliveryRaidLotteryRewardItem> DumpLotteryRewards()
-            {
-                var rewards = Utils.GetBinaryResource("r0.bin");
-                var tableRewards = FlatBufferSerializer.Default.Parse<DeliveryRaidLotteryRewardItemArray>(rewards);
-                return tableRewards.Table.ToList();
-            }
+        public static List<DeliveryRaidLotteryRewardItem> DumpLotteryRewards(string path)
+        {
+            var rewards = Utils.GetBinaryResource(path);
+            var tableRewards = FlatBufferSerializer.Default.Parse<DeliveryRaidLotteryRewardItemArray>(rewards);
+            return tableRewards.Table.ToList();
+        }
 
-            public static List<DeliveryRaidFixedRewardItem> DumpFixedRewards()
-            {
-                var rewards = Utils.GetBinaryResource("r1.bin");
-                var tableRewards = FlatBufferSerializer.Default.Parse<DeliveryRaidFixedRewardItemArray>(rewards);
-                return tableRewards.Table.ToList();
-            }
+        public static List<DeliveryRaidFixedRewardItem> DumpFixedRewards(string path)
+        {
+            var rewards = Utils.GetBinaryResource(path);
+            var tableRewards = FlatBufferSerializer.Default.Parse<DeliveryRaidFixedRewardItemArray>(rewards);
+            return tableRewards.Table.ToList();
+        }
+
 
         private static readonly int[][] StageStars =
         {

@@ -124,7 +124,6 @@
             this.OrderBTN = new System.Windows.Forms.Button();
             this.ConnectBTN = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RaidIndex = new System.Windows.Forms.NumericUpDown();
             this.SeedUrlBox = new System.Windows.Forms.TextBox();
             this.OrderUrlBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -135,9 +134,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.DisplayMap_BTN = new System.Windows.Forms.Button();
             this.Show_Rewards = new System.Windows.Forms.Button();
+            this.RewardBoostBox = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RaidIndex)).BeginInit();
             this.SuspendLayout();
             // 
             // SeedBox
@@ -743,17 +743,17 @@
             // StepcomboBox
             // 
             this.StepcomboBox.FormattingEnabled = true;
-            this.StepcomboBox.Location = new System.Drawing.Point(671, 181);
+            this.StepcomboBox.Location = new System.Drawing.Point(73, 184);
             this.StepcomboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StepcomboBox.Name = "StepcomboBox";
-            this.StepcomboBox.Size = new System.Drawing.Size(96, 28);
+            this.StepcomboBox.Size = new System.Drawing.Size(121, 28);
             this.StepcomboBox.TabIndex = 67;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(640, 185);
+            this.label15.Location = new System.Drawing.Point(37, 187);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(25, 20);
             this.label15.TabIndex = 68;
@@ -781,10 +781,10 @@
             // 
             // GetProgress_BTN
             // 
-            this.GetProgress_BTN.Location = new System.Drawing.Point(540, 182);
+            this.GetProgress_BTN.Location = new System.Drawing.Point(486, 184);
             this.GetProgress_BTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GetProgress_BTN.Name = "GetProgress_BTN";
-            this.GetProgress_BTN.Size = new System.Drawing.Size(94, 34);
+            this.GetProgress_BTN.Size = new System.Drawing.Size(101, 34);
             this.GetProgress_BTN.TabIndex = 71;
             this.GetProgress_BTN.Text = "GetProgress";
             this.GetProgress_BTN.UseVisualStyleBackColor = true;
@@ -887,7 +887,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ToPKM_BTN);
+            this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.RewardBoostBox);
+            this.groupBox1.Controls.Add(this.Show_Rewards);
             this.groupBox1.Controls.Add(this.FixPID_BTN);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label24);
@@ -979,10 +981,10 @@
             // 
             // ToPKM_BTN
             // 
-            this.ToPKM_BTN.Location = new System.Drawing.Point(671, 228);
+            this.ToPKM_BTN.Location = new System.Drawing.Point(950, 447);
             this.ToPKM_BTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ToPKM_BTN.Name = "ToPKM_BTN";
-            this.ToPKM_BTN.Size = new System.Drawing.Size(94, 34);
+            this.ToPKM_BTN.Size = new System.Drawing.Size(84, 34);
             this.ToPKM_BTN.TabIndex = 95;
             this.ToPKM_BTN.Text = "ToPKM";
             this.ToPKM_BTN.UseVisualStyleBackColor = true;
@@ -1104,12 +1106,12 @@
             this.Progress5Box.AutoSize = true;
             this.Progress5Box.Enabled = false;
             this.Progress5Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Progress5Box.Location = new System.Drawing.Point(439, 186);
+            this.Progress5Box.Location = new System.Drawing.Point(433, 188);
             this.Progress5Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Progress5Box.Name = "Progress5Box";
-            this.Progress5Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress5Box.Size = new System.Drawing.Size(47, 24);
             this.Progress5Box.TabIndex = 76;
-            this.Progress5Box.Text = "Progress5";
+            this.Progress5Box.Text = "P5";
             this.Progress5Box.UseVisualStyleBackColor = true;
             // 
             // Progress4Box
@@ -1117,12 +1119,12 @@
             this.Progress4Box.AutoSize = true;
             this.Progress4Box.Enabled = false;
             this.Progress4Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Progress4Box.Location = new System.Drawing.Point(332, 186);
+            this.Progress4Box.Location = new System.Drawing.Point(380, 188);
             this.Progress4Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Progress4Box.Name = "Progress4Box";
-            this.Progress4Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress4Box.Size = new System.Drawing.Size(47, 24);
             this.Progress4Box.TabIndex = 75;
-            this.Progress4Box.Text = "Progress4";
+            this.Progress4Box.Text = "P4";
             this.Progress4Box.UseVisualStyleBackColor = true;
             // 
             // Progress3Box
@@ -1130,12 +1132,12 @@
             this.Progress3Box.AutoSize = true;
             this.Progress3Box.Enabled = false;
             this.Progress3Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Progress3Box.Location = new System.Drawing.Point(221, 186);
+            this.Progress3Box.Location = new System.Drawing.Point(323, 188);
             this.Progress3Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Progress3Box.Name = "Progress3Box";
-            this.Progress3Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress3Box.Size = new System.Drawing.Size(47, 24);
             this.Progress3Box.TabIndex = 74;
-            this.Progress3Box.Text = "Progress3";
+            this.Progress3Box.Text = "P3";
             this.Progress3Box.UseVisualStyleBackColor = true;
             // 
             // Progress2Box
@@ -1143,12 +1145,12 @@
             this.Progress2Box.AutoSize = true;
             this.Progress2Box.Enabled = false;
             this.Progress2Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Progress2Box.Location = new System.Drawing.Point(114, 186);
+            this.Progress2Box.Location = new System.Drawing.Point(263, 188);
             this.Progress2Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Progress2Box.Name = "Progress2Box";
-            this.Progress2Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress2Box.Size = new System.Drawing.Size(47, 24);
             this.Progress2Box.TabIndex = 73;
-            this.Progress2Box.Text = "Progress2";
+            this.Progress2Box.Text = "P2";
             this.Progress2Box.UseVisualStyleBackColor = true;
             // 
             // Progress1Box
@@ -1156,12 +1158,12 @@
             this.Progress1Box.AutoSize = true;
             this.Progress1Box.Enabled = false;
             this.Progress1Box.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Progress1Box.Location = new System.Drawing.Point(7, 186);
+            this.Progress1Box.Location = new System.Drawing.Point(209, 188);
             this.Progress1Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Progress1Box.Name = "Progress1Box";
-            this.Progress1Box.Size = new System.Drawing.Size(95, 24);
+            this.Progress1Box.Size = new System.Drawing.Size(47, 24);
             this.Progress1Box.TabIndex = 72;
-            this.Progress1Box.Text = "Progress1";
+            this.Progress1Box.Text = "P1";
             this.Progress1Box.UseVisualStyleBackColor = true;
             // 
             // OrderBTN
@@ -1205,19 +1207,6 @@
             this.groupBox2.TabIndex = 91;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor";
-            // 
-            // RaidIndex
-            // 
-            this.RaidIndex.Location = new System.Drawing.Point(950, 452);
-            this.RaidIndex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RaidIndex.Maximum = new decimal(new int[] {
-            69,
-            0,
-            0,
-            0});
-            this.RaidIndex.Name = "RaidIndex";
-            this.RaidIndex.Size = new System.Drawing.Size(44, 27);
-            this.RaidIndex.TabIndex = 90;
             // 
             // SeedUrlBox
             // 
@@ -1316,14 +1305,33 @@
             // 
             // Show_Rewards
             // 
-            this.Show_Rewards.Location = new System.Drawing.Point(1000, 450);
+            this.Show_Rewards.Location = new System.Drawing.Point(676, 229);
             this.Show_Rewards.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Show_Rewards.Name = "Show_Rewards";
-            this.Show_Rewards.Size = new System.Drawing.Size(34, 34);
+            this.Show_Rewards.Size = new System.Drawing.Size(94, 32);
             this.Show_Rewards.TabIndex = 99;
-            this.Show_Rewards.Text = "R";
+            this.Show_Rewards.Text = "Rewards";
             this.Show_Rewards.UseVisualStyleBackColor = true;
             this.Show_Rewards.Click += new System.EventHandler(this.Show_Rewards_Click);
+            // 
+            // RewardBoostBox
+            // 
+            this.RewardBoostBox.FormattingEnabled = true;
+            this.RewardBoostBox.Location = new System.Drawing.Point(702, 188);
+            this.RewardBoostBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RewardBoostBox.Name = "RewardBoostBox";
+            this.RewardBoostBox.Size = new System.Drawing.Size(63, 28);
+            this.RewardBoostBox.TabIndex = 100;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label26.Location = new System.Drawing.Point(593, 191);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(103, 20);
+            this.label26.TabIndex = 101;
+            this.label26.Text = "RewardsBoost";
             // 
             // SVTeraRaidSeedCalcForm
             // 
@@ -1331,9 +1339,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1054, 626);
-            this.Controls.Add(this.Show_Rewards);
-            this.Controls.Add(this.RaidIndex);
             this.Controls.Add(this.DisplayMap_BTN);
+            this.Controls.Add(this.ToPKM_BTN);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.KeyBox);
             this.Controls.Add(this.label19);
@@ -1357,7 +1364,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RaidIndex)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1468,7 +1474,8 @@
         private TextBox TIDBox;
         private Button ToPKM_BTN;
         private Button DisplayMap_BTN;
-        private NumericUpDown RaidIndex;
         private Button Show_Rewards;
+        private Label label26;
+        private ComboBox RewardBoostBox;
     }
 }

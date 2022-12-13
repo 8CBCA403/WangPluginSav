@@ -57,4 +57,11 @@ namespace WangPluginSav.WangDataBase
         Genderless = 2,
         Random = 3
     }
+    public enum Boost
+    { b0=  0,
+      b1=  1,
+      b2=  2,
+      b3=  3,
+        
+    }
 }

@@ -46,14 +46,12 @@ namespace WangPluginSav
         {
             if (!resourceNameMap.TryGetValue(name.ToLowerInvariant(), out var resourceName))
             {
-                MessageBox.Show("1");
                 return null;
             }
 
             using var resource = thisAssembly.GetManifestResourceStream(resourceName);
             if (resource is null)
             {
-                MessageBox.Show("2");
                 return null;
             }
             using var reader = new StreamReader(resource);
