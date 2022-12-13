@@ -58,10 +58,23 @@ namespace WangPluginSav.WangDataBase
         Random = 3
     }
     public enum Boost
-    { b0=  0,
+    { 
+      b0=  0,
       b1=  1,
       b2=  2,
       b3=  3,
-        
+    }
+    public enum MinItem
+    {
+        zero,
+        one,
+        two,
+        three,
+        four,
+        five,
+        six,
+        seven,
+        eight,
+        nine
     }
 }

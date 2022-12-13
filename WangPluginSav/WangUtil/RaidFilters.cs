@@ -16,6 +16,7 @@ namespace WangPluginSav
         public bool Bitter;
         public bool Spicy;
         public bool Salty;
+        public int ItemsNumber;
         public  Nature? Nature =  null;
         public Gend? Gender = null;
         public MoveType? Tera= null;
@@ -144,7 +145,7 @@ namespace WangPluginSav
             bool bSour = false;
             bool bBitter = false;
             bool bSpicy = false;
-
+            int n = 0;
             var rewards = encounter switch
             {
                 TeraDistribution => TeraDistribution.GetRewards((TeraDistribution)encounter, raid.Seed, fixed_rewards, lottery_rewards, boost),
@@ -155,20 +156,26 @@ namespace WangPluginSav
                 return false;
             for(int i=0;i<rewards.Count;i++)
             {
-                if ((Sweet==true&&rewards[i].Item1 == 1904)||Sweet==false)
+                if ((Sweet == true && rewards[i].Item1 == 1904) || Sweet == false)
+                    n++;
                     bSweet=true;
-                if ((Salty == true && rewards[i].Item1 == 1905 )|| Salty == false)
+                if ((Salty == true && rewards[i].Item1 == 1905) || Salty == false)
+                    n++;
                     bSalty = true;
                 if ((Sour == true && rewards[i].Item1 == 1906) || Sour == false)
+                    n++;
                     bSour = true;
-                if ((Bitter == true && rewards[i].Item1 == 1907) || Bitter == false )
+                if ((Bitter == true && rewards[i].Item1 == 1907) || Bitter == false)
+                    n++;
                     bBitter = true;
                 if ((Spicy == true && rewards[i].Item1 == 1908) || Spicy == false)
+                    n++;
                     bSpicy = true;
             }
             if (bSweet == false||bSalty==false||bSour==false||bBitter==false||bSpicy==false)
                 return false;
-         
+            if (n < ItemsNumber)
+                return false;
             return true;
         }
        

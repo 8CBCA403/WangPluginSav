@@ -85,6 +85,8 @@ namespace WangPluginSav.GUI
             StepcomboBox.DataSource = Enum.GetValues(typeof(Step));
             RewardBoostBox.DataSource= Enum.GetValues(typeof(Boost));
             RewardBoostBox.SelectedIndex = 0;
+            MinItemBox.DataSource = Enum.GetValues(typeof(MinItem));
+            MinItemBox.SelectedIndex = 0;
             GencomboBox.DataSource = Enum.GetValues(typeof(Gend));
             GencomboBox.DisplayMember = "Name";
             GencomboBox.SelectedIndex = 3;
@@ -286,6 +288,7 @@ namespace WangPluginSav.GUI
                 Bitter=BitterBox.Checked,
                 Spicy=SpicyBox.Checked,
                 Salty=SaltyBox.Checked,
+                ItemsNumber=MinItemBox.SelectedIndex,
              };
  
             Task.Factory.StartNew(

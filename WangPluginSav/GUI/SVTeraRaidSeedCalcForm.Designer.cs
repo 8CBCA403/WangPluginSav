@@ -141,6 +141,8 @@
             this.KeyBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.DisplayMap_BTN = new System.Windows.Forms.Button();
+            this.MinItemBox = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -892,6 +894,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.MinItemBox);
             this.groupBox1.Controls.Add(this.SaltyBox);
             this.groupBox1.Controls.Add(this.SpicyBox);
             this.groupBox1.Controls.Add(this.BitterBox);
@@ -1403,6 +1407,25 @@
             this.DisplayMap_BTN.UseVisualStyleBackColor = true;
             this.DisplayMap_BTN.Click += new System.EventHandler(this.DisplayMap_BTN_Click);
             // 
+            // MinItemBox
+            // 
+            this.MinItemBox.FormattingEnabled = true;
+            this.MinItemBox.Location = new System.Drawing.Point(602, 221);
+            this.MinItemBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinItemBox.Name = "MinItemBox";
+            this.MinItemBox.Size = new System.Drawing.Size(63, 28);
+            this.MinItemBox.TabIndex = 107;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label27.Location = new System.Drawing.Point(531, 224);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(70, 20);
+            this.label27.TabIndex = 108;
+            this.label27.Text = "最小总量";
+            // 
             // SVTeraRaidSeedCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1552,5 +1575,7 @@
         private CheckBox BitterBox;
         private CheckBox SourBox;
         private CheckBox SweetBox;
+        private Label label27;
+        private ComboBox MinItemBox;
     }
 }
