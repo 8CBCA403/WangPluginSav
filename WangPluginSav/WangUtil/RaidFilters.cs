@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime;
 using WangPluginSav.WangDataBase;
+using WangPluginSav.WangUtil;
 
 namespace WangPluginSav
 {
@@ -10,6 +11,11 @@ namespace WangPluginSav
         public  Species? Species =null;
         public  int? Stars = null;
         public  bool Shiny;
+        public bool Sour;
+        public bool Sweet;
+        public bool Bitter;
+        public bool Spicy;
+        public bool Salty;
         public  Nature? Nature =  null;
         public Gend? Gender = null;
         public MoveType? Tera= null;
@@ -129,19 +135,51 @@ namespace WangPluginSav
 
             return true;
         }
-        private static int[] ToSpeedLast(int[] ivs)
+        public bool IsItemsSatisfied(Raid raid, int StoryProgress, int EventProgress, List<DeliveryRaidFixedRewardItem>? fixed_rewards, List<DeliveryRaidLotteryRewardItem>? lottery_rewards, List<RaidFixedRewards>? Rfixed_rewards, List<RaidLotteryRewards>? Rlottery_rewards,int boost)
         {
-            var res = new int[6];
-            res[0] = ivs[0];
-            res[1] = ivs[1];
-            res[2] = ivs[2];
-            res[3] = ivs[4];
-            res[4] = ivs[5];
-            res[5] = ivs[3];
-            return res;
+            var progress = raid.IsEvent ? EventProgress : StoryProgress;
+            ITeraRaid? encounter = raid.Encounter(progress);
+            bool bSweet = false;
+            bool bSalty = false;
+            bool bSour = false;
+            bool bBitter = false;
+            bool bSpicy = false;
+
+            var rewards = encounter switch
+            {
+                TeraDistribution => TeraDistribution.GetRewards((TeraDistribution)encounter, raid.Seed, fixed_rewards, lottery_rewards, boost),
+                TeraEncounter => TeraEncounter.GetRewards((TeraEncounter)encounter, raid.Seed, Rfixed_rewards, Rlottery_rewards,boost),
+                _ => null,
+            };
+            if (rewards == null)
+                return false;
+            for(int i=0;i<rewards.Count;i++)
+            {
+                if ((Sweet==true&&rewards[i].Item1 == 1904)||Sweet==false)
+                    bSweet=true;
+                if ((Salty == true && rewards[i].Item1 == 1905 )|| Salty == false)
+                    bSalty = true;
+                if ((Sour == true && rewards[i].Item1 == 1906) || Sour == false)
+                    bSour = true;
+                if ((Bitter == true && rewards[i].Item1 == 1907) || Bitter == false )
+                    bBitter = true;
+                if ((Spicy == true && rewards[i].Item1 == 1908) || Spicy == false)
+                    bSpicy = true;
+            }
+            if (bSweet == false||bSalty==false||bSour==false||bBitter==false||bSpicy==false)
+                return false;
+         
+            return true;
         }
-        public  bool FilterSatisfied(Raid raid, int StoryProgress, int EventProgress) => IsSpeciesSatisfied(raid, StoryProgress) && IsStarsSatisfied(raid, StoryProgress) && IsIVsSatisfied(raid, StoryProgress, EventProgress) && IsShinySatisfied(raid) && IsNatureSatisfied(raid, StoryProgress) && IsGenderSatisfied(raid, StoryProgress)&& IsTeraSatisfied(raid);
-        public  bool FilterSatisfied(List<Raid> Raids, int StoryProgress, int EventProgress)
+       
+        public  bool FilterSatisfied(Raid raid, int StoryProgress, int EventProgress,List<DeliveryRaidFixedRewardItem>? fixed_rewards, List<DeliveryRaidLotteryRewardItem>? lottery_rewards, List<RaidFixedRewards>? Rfixed_rewards, List<RaidLotteryRewards>? Rlottery_rewards, int boost) 
+            => IsSpeciesSatisfied(raid, StoryProgress) && 
+            IsStarsSatisfied(raid, StoryProgress) && 
+            IsIVsSatisfied(raid, StoryProgress, EventProgress) && 
+            IsShinySatisfied(raid) && IsNatureSatisfied(raid, StoryProgress) && 
+            IsGenderSatisfied(raid, StoryProgress)&& IsTeraSatisfied(raid)&& 
+            IsItemsSatisfied(raid, StoryProgress, EventProgress, fixed_rewards, lottery_rewards, Rfixed_rewards, Rlottery_rewards, boost);
+      /*  public  bool FilterSatisfied(List<Raid> Raids, int StoryProgress, int EventProgress)
         {
             foreach (Raid raid in Raids)
             {
@@ -149,6 +187,6 @@ namespace WangPluginSav
                     return true;
             }
             return false;
-        }
+        }*/
     }
 }

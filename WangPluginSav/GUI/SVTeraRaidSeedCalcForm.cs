@@ -185,8 +185,38 @@ namespace WangPluginSav.GUI
                 HeightBox.Text = $"{blank.HeightScalar}";
                 WeightBox.Text = $"{blank.WeightScalar}";
                 ScaleBox.Text = $"{blank.Scale}";
-                r = $"\nSeed:{Raidinfo.Seed:X8} 星级：{DiffBox.Text} 种类: {SpeciesTextBox.Text} 性别: {GenderBox.Text} 性格:{NatureBox.Text} 特性:{AbilityBox.Text} IV:{IVsString(ToSpeedLast(blank.IVs))}" +
-             $" 太晶: {Raid.strings.types[teratype]} ({teratype})";
+                string items = "";
+                var rewards = encounter switch
+                {
+                    TeraDistribution => TeraDistribution.GetRewards((TeraDistribution)encounter, Raidinfo.Seed, DeliveryRaidFixedRewards, DeliveryRaidLotteryRewards, RewardBoostBox.SelectedIndex),
+                    TeraEncounter => TeraEncounter.GetRewards((TeraEncounter)encounter, Raidinfo.Seed, BaseFixedRewards, BaseLotteryRewards, RewardBoostBox.SelectedIndex),
+                    _ => null,
+                };
+                for (int i = 0; i < rewards.Count; i++)
+                {
+                    var item = rewards[i].Item1 switch
+                    {
+                        1904=> "秘传：甜味料",
+                        1905=> "秘传：咸味料",
+                        1906=> "秘传：酸味料",
+                        1907=> "秘传：苦味料",
+                        1908=> "秘传：辣味料",
+                        _=> string.Empty
+                    };
+                    var subject = rewards[i].Item3 switch
+                    {
+                        1 => "(Host)",
+                        2 => "(Client)",
+                        3 => "(Once)",
+                        _ => string.Empty
+                    };
+                   items+=$"\n{item}".TrimEnd();
+
+                }
+
+
+                    r = $"\nSeed:{Raidinfo.Seed:X8} 星级：{DiffBox.Text} 种类: {SpeciesTextBox.Text} 性别: {GenderBox.Text} 性格:{NatureBox.Text} 特性:{AbilityBox.Text} IV:{IVsString(ToSpeedLast(blank.IVs))}" +
+             $" 太晶: {Raid.strings.types[teratype]} ({teratype}){items}";
                 ResultBox.Text += "\n" + r;
                 if (Raidinfo.IsShiny)
                 {
@@ -230,27 +260,32 @@ namespace WangPluginSav.GUI
             var str = SeedBox.Text;
             var seed = Convert.ToUInt32(str, 16);
             float i = 0;
-            
+
             RaidFilters r = new()
             {
-                Species =(Species)((int)SPcomboBox.SelectedValue),
+                Species = (Species)((int)SPcomboBox.SelectedValue),
                 Nature = (Nature)NaturecomboBox.SelectedIndex,
-                Gender=(Gend)GencomboBox.SelectedIndex,
-                Tera=(MoveType)TeracomboBox.SelectedIndex,
-                Shiny =ShinyBox.Checked,
-                Stars = StarcomboBox.SelectedIndex+1,
-                minHP=Convert.ToInt16(HP_MIN.Text),
-                maxHP= Convert.ToInt16(HP_MAX.Text),
-                minAtk= Convert.ToInt16(ATK_MIN.Text),
-                maxAtk= Convert.ToInt16(ATK_MAX.Text),
-                minDef= Convert.ToInt16(DEF_MIN.Text),
-                maxDef= Convert.ToInt16(DEF_MAX.Text),
-                minSpA= Convert.ToInt16(SPA_MIN.Text),
-                maxSpA= Convert.ToInt16(SPA_MAX.Text),
-                minSpD= Convert.ToInt16(SPD_MIN.Text),
-                maxSpD= Convert.ToInt16(SPD_MAX.Text),
-                minSpe= Convert.ToInt16(SPE_MIN.Text),
-                maxSpe= Convert.ToInt16(SPE_MAX.Text),
+                Gender = (Gend)GencomboBox.SelectedIndex,
+                Tera = (MoveType)TeracomboBox.SelectedIndex,
+                Shiny = ShinyBox.Checked,
+                Stars = StarcomboBox.SelectedIndex + 1,
+                minHP = Convert.ToInt16(HP_MIN.Text),
+                maxHP = Convert.ToInt16(HP_MAX.Text),
+                minAtk = Convert.ToInt16(ATK_MIN.Text),
+                maxAtk = Convert.ToInt16(ATK_MAX.Text),
+                minDef = Convert.ToInt16(DEF_MIN.Text),
+                maxDef = Convert.ToInt16(DEF_MAX.Text),
+                minSpA = Convert.ToInt16(SPA_MIN.Text),
+                maxSpA = Convert.ToInt16(SPA_MAX.Text),
+                minSpD = Convert.ToInt16(SPD_MIN.Text),
+                maxSpD = Convert.ToInt16(SPD_MAX.Text),
+                minSpe = Convert.ToInt16(SPE_MIN.Text),
+                maxSpe = Convert.ToInt16(SPE_MAX.Text),
+                Sour = SourBox.Checked,
+                Sweet=SweetBox.Checked,
+                Bitter=BitterBox.Checked,
+                Spicy=SpicyBox.Checked,
+                Salty=SaltyBox.Checked,
              };
  
             Task.Factory.StartNew(
@@ -277,7 +312,7 @@ namespace WangPluginSav.GUI
                            Raidinfo.IsBlack = true;
                        else
                            Raidinfo.IsBlack = false;
-                       if (r.FilterSatisfied(Raidinfo, ProgressBox.SelectedIndex,EventProgress.SelectedIndex))
+                       if (r.FilterSatisfied(Raidinfo, ProgressBox.SelectedIndex,EventProgress.SelectedIndex, DeliveryRaidFixedRewards, DeliveryRaidLotteryRewards, BaseFixedRewards, BaseLotteryRewards,RewardBoostBox.SelectedIndex))
                        {
                            this.Invoke(() =>
                            {
@@ -725,7 +760,6 @@ namespace WangPluginSav.GUI
                     encounter = Raidinfo.Encounter(progress);
                     teratype = GetTeraType(encounter, Raidinfo);
                     map = GenerateMap(map, teratype, a);
-                   
                 }
                 if (map == null)
                 {
