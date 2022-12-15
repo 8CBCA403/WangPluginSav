@@ -40,6 +40,8 @@ namespace WangPluginSav.GUI
             Raid.GemTeraRaids = TeraEncounter.GetAllEncounters("encounter_gem_paldea.pkl");
             Raid.DistTeraRaids = TeraDistribution.GetAllEncounters("raid_enemy_array");
             Raid.Game = "Violet";
+          //  BaseFixedRewards = JsonConvert.DeserializeObject<List<RaidFixedRewards>>(Utils.GetStringResource("raid_fixed_reward_item_array.json") ?? "[]");
+          //  BaseLotteryRewards = JsonConvert.DeserializeObject<List<RaidLotteryRewards>>(Utils.GetStringResource("raid_lottery_reward_item_array.json") ?? "[]");
             var assembly = Assembly.GetExecutingAssembly();
             string resourceName1 = assembly.GetManifestResourceNames().Single(str => str.EndsWith("1.txt"));
             string resourceName2 = assembly.GetManifestResourceNames().Single(str => str.EndsWith("2.txt"));
@@ -85,8 +87,6 @@ namespace WangPluginSav.GUI
             StepcomboBox.DataSource = Enum.GetValues(typeof(Step));
             RewardBoostBox.DataSource= Enum.GetValues(typeof(Boost));
             RewardBoostBox.SelectedIndex = 0;
-            MinItemBox.DataSource = Enum.GetValues(typeof(MinItem));
-            MinItemBox.SelectedIndex = 0;
             GencomboBox.DataSource = Enum.GetValues(typeof(Gend));
             GencomboBox.DisplayMember = "Name";
             GencomboBox.SelectedIndex = 3;
@@ -283,12 +283,11 @@ namespace WangPluginSav.GUI
                 maxSpD = Convert.ToInt16(SPD_MAX.Text),
                 minSpe = Convert.ToInt16(SPE_MIN.Text),
                 maxSpe = Convert.ToInt16(SPE_MAX.Text),
-                Sour = SourBox.Checked,
-                Sweet=SweetBox.Checked,
-                Bitter=BitterBox.Checked,
-                Spicy=SpicyBox.Checked,
-                Salty=SaltyBox.Checked,
-                ItemsNumber=MinItemBox.SelectedIndex,
+                NSour=(int)numericUpDown1.Value,
+                NSweet=(int)numericUpDown2.Value,
+                NBitter=(int)numericUpDown3.Value,
+                NSpicy=(int)numericUpDown4.Value,
+                NSalty=(int)numericUpDown5.Value,
              };
  
             Task.Factory.StartNew(

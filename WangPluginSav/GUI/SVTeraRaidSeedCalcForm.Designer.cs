@@ -104,11 +104,16 @@
             this.CloseAll_BTN = new System.Windows.Forms.Button();
             this.ImportDIS_BTN = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.SaltyBox = new System.Windows.Forms.CheckBox();
-            this.SpicyBox = new System.Windows.Forms.CheckBox();
-            this.BitterBox = new System.Windows.Forms.CheckBox();
-            this.SourBox = new System.Windows.Forms.CheckBox();
-            this.SweetBox = new System.Windows.Forms.CheckBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
             this.RewardBoostBox = new System.Windows.Forms.ComboBox();
             this.Show_Rewards = new System.Windows.Forms.Button();
@@ -141,9 +146,12 @@
             this.KeyBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.DisplayMap_BTN = new System.Windows.Forms.Button();
-            this.MinItemBox = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -434,7 +442,7 @@
             this.AbilityBox.Multiline = true;
             this.AbilityBox.Name = "AbilityBox";
             this.AbilityBox.ReadOnly = true;
-            this.AbilityBox.Size = new System.Drawing.Size(108, 30);
+            this.AbilityBox.Size = new System.Drawing.Size(136, 30);
             this.AbilityBox.TabIndex = 34;
             // 
             // Search_BTN
@@ -783,7 +791,7 @@
             this.FormBox.Multiline = true;
             this.FormBox.Name = "FormBox";
             this.FormBox.ReadOnly = true;
-            this.FormBox.Size = new System.Drawing.Size(63, 30);
+            this.FormBox.Size = new System.Drawing.Size(159, 30);
             this.FormBox.TabIndex = 70;
             // 
             // GetProgress_BTN
@@ -894,13 +902,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label31);
+            this.groupBox1.Controls.Add(this.label30);
+            this.groupBox1.Controls.Add(this.label29);
+            this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.MinItemBox);
-            this.groupBox1.Controls.Add(this.SaltyBox);
-            this.groupBox1.Controls.Add(this.SpicyBox);
-            this.groupBox1.Controls.Add(this.BitterBox);
-            this.groupBox1.Controls.Add(this.SourBox);
-            this.groupBox1.Controls.Add(this.SweetBox);
+            this.groupBox1.Controls.Add(this.numericUpDown5);
+            this.groupBox1.Controls.Add(this.numericUpDown4);
+            this.groupBox1.Controls.Add(this.numericUpDown3);
+            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.RewardBoostBox);
             this.groupBox1.Controls.Add(this.Show_Rewards);
@@ -993,91 +1004,136 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Calc";
             // 
-            // SaltyBox
+            // label31
             // 
-            this.SaltyBox.AutoSize = true;
-            this.SaltyBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaltyBox.Location = new System.Drawing.Point(480, 225);
-            this.SaltyBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SaltyBox.Name = "SaltyBox";
-            this.SaltyBox.Size = new System.Drawing.Size(46, 24);
-            this.SaltyBox.TabIndex = 106;
-            this.SaltyBox.Text = "咸";
-            this.SaltyBox.UseVisualStyleBackColor = true;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(426, 226);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(41, 20);
+            this.label31.TabIndex = 118;
+            this.label31.Text = "Salty";
             // 
-            // SpicyBox
+            // label30
             // 
-            this.SpicyBox.AutoSize = true;
-            this.SpicyBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SpicyBox.Location = new System.Drawing.Point(425, 225);
-            this.SpicyBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SpicyBox.Name = "SpicyBox";
-            this.SpicyBox.Size = new System.Drawing.Size(46, 24);
-            this.SpicyBox.TabIndex = 105;
-            this.SpicyBox.Text = "辣";
-            this.SpicyBox.UseVisualStyleBackColor = true;
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(325, 226);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(44, 20);
+            this.label30.TabIndex = 117;
+            this.label30.Text = "Spicy";
             // 
-            // BitterBox
+            // label29
             // 
-            this.BitterBox.AutoSize = true;
-            this.BitterBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BitterBox.Location = new System.Drawing.Point(370, 225);
-            this.BitterBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BitterBox.Name = "BitterBox";
-            this.BitterBox.Size = new System.Drawing.Size(46, 24);
-            this.BitterBox.TabIndex = 104;
-            this.BitterBox.Text = "苦";
-            this.BitterBox.UseVisualStyleBackColor = true;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(225, 226);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(45, 20);
+            this.label29.TabIndex = 116;
+            this.label29.Text = "Bitter";
             // 
-            // SourBox
+            // label28
             // 
-            this.SourBox.AutoSize = true;
-            this.SourBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SourBox.Location = new System.Drawing.Point(262, 225);
-            this.SourBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SourBox.Name = "SourBox";
-            this.SourBox.Size = new System.Drawing.Size(46, 24);
-            this.SourBox.TabIndex = 102;
-            this.SourBox.Text = "酸";
-            this.SourBox.UseVisualStyleBackColor = true;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(122, 226);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(49, 20);
+            this.label28.TabIndex = 115;
+            this.label28.Text = "Sweet";
             // 
-            // SweetBox
+            // label27
             // 
-            this.SweetBox.AutoSize = true;
-            this.SweetBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SweetBox.Location = new System.Drawing.Point(315, 225);
-            this.SweetBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SweetBox.Name = "SweetBox";
-            this.SweetBox.Size = new System.Drawing.Size(46, 24);
-            this.SweetBox.TabIndex = 103;
-            this.SweetBox.Text = "甜";
-            this.SweetBox.UseVisualStyleBackColor = true;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(28, 226);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(39, 20);
+            this.label27.TabIndex = 114;
+            this.label27.Text = "Sour";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(473, 224);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(43, 27);
+            this.numericUpDown5.TabIndex = 113;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(375, 224);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(43, 27);
+            this.numericUpDown4.TabIndex = 112;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(276, 224);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(43, 27);
+            this.numericUpDown3.TabIndex = 111;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(176, 224);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(43, 27);
+            this.numericUpDown2.TabIndex = 110;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(73, 224);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(43, 27);
+            this.numericUpDown1.TabIndex = 109;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(593, 191);
+            this.label26.Location = new System.Drawing.Point(522, 226);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(103, 20);
+            this.label26.Size = new System.Drawing.Size(47, 20);
             this.label26.TabIndex = 101;
-            this.label26.Text = "RewardsBoost";
+            this.label26.Text = "Boost";
             // 
             // RewardBoostBox
             // 
             this.RewardBoostBox.FormattingEnabled = true;
-            this.RewardBoostBox.Location = new System.Drawing.Point(702, 188);
+            this.RewardBoostBox.Location = new System.Drawing.Point(571, 220);
             this.RewardBoostBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RewardBoostBox.Name = "RewardBoostBox";
-            this.RewardBoostBox.Size = new System.Drawing.Size(63, 28);
+            this.RewardBoostBox.Size = new System.Drawing.Size(73, 28);
             this.RewardBoostBox.TabIndex = 100;
             // 
             // Show_Rewards
             // 
-            this.Show_Rewards.Location = new System.Drawing.Point(682, 261);
+            this.Show_Rewards.Location = new System.Drawing.Point(670, 217);
             this.Show_Rewards.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Show_Rewards.Name = "Show_Rewards";
-            this.Show_Rewards.Size = new System.Drawing.Size(94, 32);
+            this.Show_Rewards.Size = new System.Drawing.Size(97, 32);
             this.Show_Rewards.TabIndex = 99;
             this.Show_Rewards.Text = "Rewards";
             this.Show_Rewards.UseVisualStyleBackColor = true;
@@ -1098,7 +1154,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(641, 386);
+            this.label25.Location = new System.Drawing.Point(650, 182);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(30, 20);
             this.label25.TabIndex = 93;
@@ -1108,7 +1164,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(641, 347);
+            this.label24.Location = new System.Drawing.Point(535, 182);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(30, 20);
             this.label24.TabIndex = 92;
@@ -1116,39 +1172,39 @@
             // 
             // SIDBox
             // 
-            this.SIDBox.Location = new System.Drawing.Point(677, 380);
+            this.SIDBox.Location = new System.Drawing.Point(686, 177);
             this.SIDBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SIDBox.Multiline = true;
             this.SIDBox.Name = "SIDBox";
-            this.SIDBox.Size = new System.Drawing.Size(94, 30);
+            this.SIDBox.Size = new System.Drawing.Size(81, 30);
             this.SIDBox.TabIndex = 91;
             this.SIDBox.Text = "0";
             // 
             // TIDBox
             // 
-            this.TIDBox.Location = new System.Drawing.Point(677, 341);
+            this.TIDBox.Location = new System.Drawing.Point(571, 177);
             this.TIDBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TIDBox.Multiline = true;
             this.TIDBox.Name = "TIDBox";
-            this.TIDBox.Size = new System.Drawing.Size(94, 30);
+            this.TIDBox.Size = new System.Drawing.Size(73, 30);
             this.TIDBox.TabIndex = 90;
             this.TIDBox.Text = "0";
             // 
             // ScaleBox
             // 
-            this.ScaleBox.Location = new System.Drawing.Point(509, 380);
+            this.ScaleBox.Location = new System.Drawing.Point(691, 341);
             this.ScaleBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ScaleBox.Multiline = true;
             this.ScaleBox.Name = "ScaleBox";
             this.ScaleBox.ReadOnly = true;
-            this.ScaleBox.Size = new System.Drawing.Size(108, 30);
+            this.ScaleBox.Size = new System.Drawing.Size(76, 30);
             this.ScaleBox.TabIndex = 84;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(459, 386);
+            this.label23.Location = new System.Drawing.Point(641, 344);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(44, 20);
             this.label23.TabIndex = 83;
@@ -1407,25 +1463,6 @@
             this.DisplayMap_BTN.UseVisualStyleBackColor = true;
             this.DisplayMap_BTN.Click += new System.EventHandler(this.DisplayMap_BTN_Click);
             // 
-            // MinItemBox
-            // 
-            this.MinItemBox.FormattingEnabled = true;
-            this.MinItemBox.Location = new System.Drawing.Point(602, 221);
-            this.MinItemBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinItemBox.Name = "MinItemBox";
-            this.MinItemBox.Size = new System.Drawing.Size(63, 28);
-            this.MinItemBox.TabIndex = 107;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(531, 224);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(70, 20);
-            this.label27.TabIndex = 108;
-            this.label27.Text = "最小总量";
-            // 
             // SVTeraRaidSeedCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1455,6 +1492,11 @@
             this.Text = "SVTeraRaidSeedCalcForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -1570,12 +1612,15 @@
         private Button Show_Rewards;
         private Label label26;
         private ComboBox RewardBoostBox;
-        private CheckBox SaltyBox;
-        private CheckBox SpicyBox;
-        private CheckBox BitterBox;
-        private CheckBox SourBox;
-        private CheckBox SweetBox;
+        private NumericUpDown numericUpDown5;
+        private NumericUpDown numericUpDown4;
+        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown1;
+        private Label label31;
+        private Label label30;
+        private Label label29;
+        private Label label28;
         private Label label27;
-        private ComboBox MinItemBox;
     }
 }

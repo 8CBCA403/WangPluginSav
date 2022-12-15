@@ -46,6 +46,8 @@ namespace WangPluginSav
         {
             if (!resourceNameMap.TryGetValue(name.ToLowerInvariant(), out var resourceName))
             {
+                MessageBox.Show($"resourceName: {resourceName}");
+                MessageBox.Show($"name: {name}");
                 return null;
             }
 

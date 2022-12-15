@@ -16,6 +16,11 @@ namespace WangPluginSav
         public bool Bitter;
         public bool Spicy;
         public bool Salty;
+        public int NSour;
+        public int NSweet;
+        public int NBitter;
+        public int NSpicy;
+        public int NSalty;
         public int ItemsNumber;
         public  Nature? Nature =  null;
         public Gend? Gender = null;
@@ -140,11 +145,11 @@ namespace WangPluginSav
         {
             var progress = raid.IsEvent ? EventProgress : StoryProgress;
             ITeraRaid? encounter = raid.Encounter(progress);
-            bool bSweet = false;
-            bool bSalty = false;
-            bool bSour = false;
-            bool bBitter = false;
-            bool bSpicy = false;
+            int bSweet = 0;
+            int bSalty = 0;
+            int bSour = 0;
+            int bBitter = 0;
+            int bSpicy = 0;
             int n = 0;
             var rewards = encounter switch
             {
@@ -156,26 +161,36 @@ namespace WangPluginSav
                 return false;
             for(int i=0;i<rewards.Count;i++)
             {
-                if ((Sweet == true && rewards[i].Item1 == 1904) || Sweet == false)
+                if (rewards[i].Item1 == 1904)
+                {
                     n++;
-                    bSweet=true;
-                if ((Salty == true && rewards[i].Item1 == 1905) || Salty == false)
+                    bSweet++;
+                }
+                if (rewards[i].Item1 == 1905)
+                {
                     n++;
-                    bSalty = true;
-                if ((Sour == true && rewards[i].Item1 == 1906) || Sour == false)
+                    bSalty++;
+                }
+                if (rewards[i].Item1 == 1906)
+                {
                     n++;
-                    bSour = true;
-                if ((Bitter == true && rewards[i].Item1 == 1907) || Bitter == false)
+                    bSour++;
+                }
+                if ( rewards[i].Item1 == 1907)
+                {
                     n++;
-                    bBitter = true;
-                if ((Spicy == true && rewards[i].Item1 == 1908) || Spicy == false)
+                    bBitter++;
+                }
+                if (rewards[i].Item1 == 1908)
+                {
                     n++;
-                    bSpicy = true;
+                    bSpicy++;
+                }
             }
-            if (bSweet == false||bSalty==false||bSour==false||bBitter==false||bSpicy==false)
+            if (((bSweet <NSweet))|| ((bSalty < NSalty)) || ((bSour < NSour) ) || ((bBitter < NBitter) ) || ((bSpicy < NSpicy)))
                 return false;
-            if (n < ItemsNumber)
-                return false;
+        //    if (n < ItemsNumber)
+          //      return false;
             return true;
         }
        

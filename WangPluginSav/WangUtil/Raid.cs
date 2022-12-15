@@ -10,7 +10,7 @@ namespace WangPluginSav
         const int IV_MAX = 31;
 
         public static string? Game;
-        public static readonly GameStrings strings = GameInfo.GetStrings("zh");
+        public static readonly GameStrings strings = GameInfo.GetStrings("en");
 
         public static ITeraRaid[]? GemTeraRaids;
         public static ITeraRaid[]? DistTeraRaids;
