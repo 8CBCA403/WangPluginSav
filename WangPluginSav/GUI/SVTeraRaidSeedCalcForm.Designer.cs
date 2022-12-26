@@ -146,6 +146,7 @@
             this.KeyBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.DisplayMap_BTN = new System.Windows.Forms.Button();
+            this.ShinyCar_BTN = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -848,10 +849,10 @@
             // 
             // MutiSeedBox
             // 
-            this.MutiSeedBox.Location = new System.Drawing.Point(12, 184);
+            this.MutiSeedBox.Location = new System.Drawing.Point(12, 220);
             this.MutiSeedBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MutiSeedBox.Name = "MutiSeedBox";
-            this.MutiSeedBox.Size = new System.Drawing.Size(209, 246);
+            this.MutiSeedBox.Size = new System.Drawing.Size(209, 210);
             this.MutiSeedBox.TabIndex = 76;
             this.MutiSeedBox.Text = "";
             // 
@@ -1350,6 +1351,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.ShinyCar_BTN);
             this.groupBox2.Controls.Add(this.ImportDIS_BTN);
             this.groupBox2.Controls.Add(this.CloseAll_BTN);
             this.groupBox2.Controls.Add(this.ModSav_BTN);
@@ -1462,6 +1464,17 @@
             this.DisplayMap_BTN.Text = "Map";
             this.DisplayMap_BTN.UseVisualStyleBackColor = true;
             this.DisplayMap_BTN.Click += new System.EventHandler(this.DisplayMap_BTN_Click);
+            // 
+            // ShinyCar_BTN
+            // 
+            this.ShinyCar_BTN.Location = new System.Drawing.Point(12, 182);
+            this.ShinyCar_BTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ShinyCar_BTN.Name = "ShinyCar_BTN";
+            this.ShinyCar_BTN.Size = new System.Drawing.Size(209, 34);
+            this.ShinyCar_BTN.TabIndex = 90;
+            this.ShinyCar_BTN.Text = "一键随机闪车";
+            this.ShinyCar_BTN.UseVisualStyleBackColor = true;
+            this.ShinyCar_BTN.Click += new System.EventHandler(this.ShinyCar_BTN_Click);
             // 
             // SVTeraRaidSeedCalcForm
             // 
@@ -1622,5 +1635,6 @@
         private Label label29;
         private Label label28;
         private Label label27;
+        private Button ShinyCar_BTN;
     }
 }

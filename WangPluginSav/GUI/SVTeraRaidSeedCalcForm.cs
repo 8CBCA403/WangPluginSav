@@ -7,6 +7,8 @@ using PKHeX.Drawing;
 using PKHeX.Drawing.PokeSprite;
 using System.Reflection;
 using WangPluginSav.WangUtil;
+using System.Media;
+using System;
 
 namespace WangPluginSav.GUI
 {
@@ -22,6 +24,7 @@ namespace WangPluginSav.GUI
         private string[]? lines;
         private TeraRaidDisplayType[] a = new TeraRaidDisplayType[72];
         private byte[] b = new byte[72];
+        private static Random random = new Random();
         private const uint KUnlockedRaidDifficulty3 = 0xEC95D8EF; // FSYS_RAID_DIFFICTLTY3_RELEASE
         private const uint KUnlockedRaidDifficulty4 = 0xA9428DFE; // FSYS_RAID_DIFFICTLTY4_RELEASE
         private const uint KUnlockedRaidDifficulty5 = 0x9535F471; // FSYS_RAID_DIFFICTLTY5_RELEASE
@@ -796,6 +799,39 @@ namespace WangPluginSav.GUI
                 var form = new RewardsView(rewards);
                 form.Show();
             
+        }
+        private static int Raidshiny(uint Seed)
+        {
+            Xoroshiro128Plus xoroshiro128Plus = new Xoroshiro128Plus(Seed);
+            uint num = (uint)xoroshiro128Plus.NextInt(4294967295uL);
+            uint num2 = (uint)xoroshiro128Plus.NextInt(4294967295uL);
+            uint num3 = (uint)xoroshiro128Plus.NextInt(4294967295uL);
+            return (((num3 >> 16) ^ (num3 & 0xFFFF)) >> 4 == ((num2 >> 16) ^ (num2 & 0xFFFF)) >> 4) ? 1 : 0;
+        }
+        private void ShinyCar_BTN_Click(object sender, EventArgs e)
+        {
+            if (SAV.SAV is SAV9SV sv)
+            {
+                TeraRaidDetail[] allRaids =sv.Raid.GetAllRaids();
+
+                foreach (TeraRaidDetail teraRaidDetail in allRaids)
+                {
+                    if (teraRaidDetail.AreaID != 0 && (teraRaidDetail.Content == TeraRaidContentType.Base05 || teraRaidDetail.Content == TeraRaidContentType.Black6))
+                    {
+                        teraRaidDetail.IsEnabled = true;
+                        uint seed;
+                        do
+                        {
+                            seed = (uint)random.Next();
+                        }
+                        while (Raidshiny(seed) == 0);
+                        teraRaidDetail.Seed = seed;
+                        teraRaidDetail.IsClaimedLeaguePoints = false;
+                    }
+                }
+                MessageBox.Show("全地图非活动坑随机闪车已生成");
+                SystemSounds.Asterisk.Play();
+            }
         }
     }
 }
