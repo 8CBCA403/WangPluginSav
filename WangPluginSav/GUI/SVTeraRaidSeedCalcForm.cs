@@ -729,8 +729,8 @@ namespace WangPluginSav.GUI
             p.TeraTypeOriginal = pk.GetTeraType();
             p.IVs = pk.IVs;
             p.EncryptionConstant = pk.EncryptionConstant;
-            p.TID = pk.TID;
-            p.SID = pk.SID;
+            p.TID16 = pk.TID16;
+            p.SID16 = pk.SID16;
             p.PID = pk.PID;
             p.Form = pk.Form;
             PKMEditor.PopulateFields(p);
