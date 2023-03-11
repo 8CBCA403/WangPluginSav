@@ -17,10 +17,14 @@ namespace WangPluginSav
         public void Initialize(params object[] args)
         {
             globalArgs = args;
+#pragma warning disable CS8601 // Converting null literal or possible null value to non-nullable type.
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             SaveFileEditor = (ISaveFileProvider)Array.Find(args, z => z is ISaveFileProvider);
             PKMEditor = (IPKMView)Array.Find(args, z => z is IPKMView);
             var menu = (ToolStrip)Array.Find(args, z => z is ToolStrip);
             LoadMenuStrip(menu);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+#pragma warning restore CS8601 // Converting null literal or possible null value to non-nullable type.
 
         }
         private void LoadMenuStrip(ToolStrip menuStrip)
@@ -31,7 +35,7 @@ namespace WangPluginSav
             var toolsitems = tools.DropDownItems;
             var modmenusearch = toolsitems.Find(ParentMenuName, false);
             var modmenu = GetModMenu(tools, modmenusearch);
-          //  var form = tools.GetCurrentParent().FindForm();
+            var form = tools.GetCurrentParent().FindForm();
          //   if (form is not null)
                // form.Icon = Properties.Resources.WangPluginSav;
             AddPluginControl(modmenu);
@@ -58,8 +62,6 @@ namespace WangPluginSav
         public void NotifySaveLoaded()
         {
             Console.WriteLine($"{Name} was notified that a Save File was just loaded.");
-        //    if (WangPluginSav == null)
-          //      return;
         }
         public bool TryLoadFile(string filePath)
         {

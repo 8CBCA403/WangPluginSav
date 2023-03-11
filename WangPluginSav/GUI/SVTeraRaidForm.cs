@@ -3,7 +3,7 @@ using System.Media;
 
 namespace WangPluginSav.GUI
 {
-    public partial class SVTeraRaidSeedCalcForm : Form
+    public partial class SVTeraRaidForm : Form
     {
         private ISaveFileProvider SAV { get; }
         public IPKMView PKMEditor { get; }
@@ -17,7 +17,7 @@ namespace WangPluginSav.GUI
 
         public static readonly GameStrings strings = GameInfo.GetStrings("zh");
        
-        public SVTeraRaidSeedCalcForm(ISaveFileProvider sav, IPKMView edit)
+        public SVTeraRaidForm(ISaveFileProvider sav, IPKMView edit)
         {
             SAV = sav;
             PKMEditor = edit;

@@ -1,6 +1,6 @@
 ﻿namespace WangPluginSav.GUI
 {
-    partial class SVTeraRaidSeedCalcForm
+    partial class SVTeraRaidForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SVTeraRaidSeedCalcForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SVTeraRaidForm));
             CopyAll_BTN = new Button();
             ModSeedText = new TextBox();
             RaidTypeBox = new ComboBox();

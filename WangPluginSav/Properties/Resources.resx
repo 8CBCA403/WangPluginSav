@@ -118,16 +118,232 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\Program\about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball_champion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\ball_champion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball_fresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\ball_fresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball_mirror" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\ball_mirror.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball_soothe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\ball_soothe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball_Tympole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\ball_Tympole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball_weighted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\ball_weighted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\BW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BWShield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\BWShield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BWSword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\BWSword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_133" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_133-gmax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_144" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_144-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_144-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_145" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_145-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_145-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_145.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_146" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_146-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_146-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_146.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_25-gmax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_442" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_442.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_486" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_486.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_772" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_772.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_789" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_789.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_803" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_803.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_848" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_848.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\b_unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clipboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\clipboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clothes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Clothes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\crown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dyna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\dyna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dyna1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\dyna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\hint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\party1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\party2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\party3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\party4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\party5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\party6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\pp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Raid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Raid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\Program\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slotDrag68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\slotDrag68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slotHover68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\slotHover68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slotView68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\slotView68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SWSH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Tera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\Tera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_icon_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\type_icon_09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="valid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\valid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\Wang.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WangPluginSav" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\Wang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\warn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_ball4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\_ball4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

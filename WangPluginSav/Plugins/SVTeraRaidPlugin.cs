@@ -2,7 +2,7 @@
 
 namespace WangPluginSav.Plugins
 {
-    internal class SVTeraRaidSeedCalcPlugin:WangPluginSav
+    internal class SVTeraRaidPlugin:WangPluginSav
     {
         public override string Name => "太晶坑修改器";
         public override int Priority => 0;
@@ -22,7 +22,7 @@ namespace WangPluginSav.Plugins
         private void OpenForm(object sender, EventArgs e)
         {
 
-            var form = new SVTeraRaidSeedCalcForm(SaveFileEditor,PKMEditor);
+            var form = new SVTeraRaidForm(SaveFileEditor,PKMEditor);
             form.Show();
         }
 
