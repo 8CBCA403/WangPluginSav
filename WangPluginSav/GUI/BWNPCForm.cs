@@ -5,14 +5,14 @@ using System.Windows.Forms;
 using WangPluginSav.WangDataBase;
 namespace WangPluginSav.GUI
 {
-    
+
     public partial class BWNPCForm : Form
     {
         private ISaveFileProvider SAV { get; }
         private List<NPCName>[] L = new List<NPCName>[10];
-      
+
         private NPCName[] NPC = new NPCName[10];
-       
+
         public BWNPCForm(ISaveFileProvider sav)
         {
             SAV = sav;
@@ -22,17 +22,17 @@ namespace WangPluginSav.GUI
         }
         private void BindingData()
         {
-           
-            for(int i=0;i<10;i++)
+
+            for (int i = 0; i < 10; i++)
             {
                 NPC[i] = new NPCName()
                 {
                     Name = "None",
                     ID = -1,
                     PKMName = "None"
-                 };
+                };
             }
-            for(int i=0;i<10;i++)
+            for (int i = 0; i < 10; i++)
             {
                 L[i] = NPCName.IDList(SAV);
                 var bindingSource = new BindingSource
@@ -42,7 +42,7 @@ namespace WangPluginSav.GUI
                 NPCComboBox[i].DataSource = bindingSource.DataSource;
                 NPCComboBox[i].DisplayMember = "Name";
                 NPCComboBox[i].ValueMember = "ID";
-             
+
             }
             Check(0);
             Check(1);
@@ -60,10 +60,10 @@ namespace WangPluginSav.GUI
             this.NPCComboBox[i].SelectedIndexChanged += (_, __) =>
             {
                 NPC[i] = (NPCName)this.NPCComboBox[i].SelectedItem;
-                if(SAV.SAV.Version==GameVersion.W)
-                NPCTextBox[i].Text = NPC[i].PKMName;
+                if (SAV.SAV.Version == GameVersion.W)
+                    NPCTextBox[i].Text = NPC[i].PKMName;
                 else if (SAV.SAV.Version == GameVersion.B)
-                NPCTextBox[i].Text = NPC[i].ItemName;
+                    NPCTextBox[i].Text = NPC[i].ItemName;
             };
         }
         private void ReadFileWhite()
@@ -71,11 +71,23 @@ namespace WangPluginSav.GUI
             var NPCList = new NPC[20];
             var sav = SAV.SAV;
             int p = 129544;
-           
-            for (int i = 0; i < 20; i++) {
-                var b = sav.GetData(p, 1);
+            byte[] b;
+            byte[] b2;
+            for (int i = 0; i < 20; i++)
+            {
+                if (sav.GetData(p, 1) != null)
+                {
+                    b = sav.GetData(p, 1);
+                }
+                else
+                    return;
                 int p2 = p + 1;
-                var b2 = sav.GetData(p2, 1);
+                if (sav.GetData(p2, 1) != null)
+                {
+                    b2 = sav.GetData(p2, 1);
+                }
+                else
+                    return;
                 int p3 = p2 + 1;
                 var b3 = sav.GetData(p3, 1);
                 int p4 = p3 + 1;
@@ -85,22 +97,23 @@ namespace WangPluginSav.GUI
                 {
                     NPCList[i] = new NPC(b2[0], b3[0], b4[0]);
                 }
-               
+
                 p = p5 + 20;
             }
-            for(int i=0;i<10;i++)
+            for (int i = 0; i < 10; i++)
             {
-                NPCComboBox[i].SelectedIndex= NPCList[i].getNo()+1;
+                NPCComboBox[i].SelectedIndex = NPCList[i].getNo() + 1;
                 FriendsTextBox[i].Text = $"{NPCList[i].getLp()}";
             }
-           
+
         }
         private void ReadFileBlack()
         {
             var NPCList = new NPC[20];
             var sav = SAV.SAV;
             int p = 129544;
-            for (int j = 0; j < 20; j++) {
+            for (int j = 0; j < 20; j++)
+            {
                 var exists = sav.GetData(p, 1);
                 p++;
                 var no = sav.GetData(p, 1);
@@ -187,13 +200,13 @@ namespace WangPluginSav.GUI
         private void WriteFileBlack()
         {
             var sav = SAV.SAV;
-            int hp=0;
+            int hp = 0;
             int p1 = 129544, p2 = 277000;
             byte[] b = new byte[1];
             byte[] c = new byte[1];
             for (int i = 0; i < 10; i++)
             {
-                if (NPCComboBox[i].SelectedIndex != 0) 
+                if (NPCComboBox[i].SelectedIndex != 0)
                 {
                     b[0] = 17;
                     c[0] = (byte)(NPCComboBox[i].SelectedIndex - 1);
@@ -205,14 +218,14 @@ namespace WangPluginSav.GUI
                     sav.SetData(c, p2);
                     p1++;
                     p2++;
-                try
-                {
-                    hp = Int16.Parse(FriendsTextBox[i].Text);
-                 }
-                catch (Exception)
-                {
-                    hp = 100;
-                }
+                    try
+                    {
+                        hp = Int16.Parse(FriendsTextBox[i].Text);
+                    }
+                    catch (Exception)
+                    {
+                        hp = 100;
+                    }
                     b[0] = (byte)hp;
                     sav.SetData(b, p1);
                     sav.SetData(b, p2);
@@ -223,33 +236,34 @@ namespace WangPluginSav.GUI
                     sav.SetData(b, p2);
                     p1++;
                     p2++;
-               for (int j = 0; j < 20; j++)
-                {
-                    b[0]= NPCName.BlackData[j];
-                    sav.SetData(b, p1);
-                    sav.SetData(b, p2);
-                    p1++;
-                    p2++;
+                    for (int j = 0; j < 20; j++)
+                    {
+                        b[0] = NPCName.BlackData[j];
+                        sav.SetData(b, p1);
+                        sav.SetData(b, p2);
+                        p1++;
+                        p2++;
+                    }
                 }
-            } else
-            {
-                for (int j = 0; j < 24; j++)
+                else
                 {
-                    b[0] = 0;
-                    sav.SetData(b, p1);
-                    sav.SetData(b, p2);
-                    p1++;
-                    p2++;
+                    for (int j = 0; j < 24; j++)
+                    {
+                        b[0] = 0;
+                        sav.SetData(b, p1);
+                        sav.SetData(b, p2);
+                        p1++;
+                        p2++;
+                    }
                 }
             }
         }
-    }
         private void Load_Click(object sender, System.EventArgs e)
         {
-            if(SAV.SAV.Version==GameVersion.W)
-            ReadFileWhite();
-            else if(SAV.SAV.Version==GameVersion.B)
-            ReadFileBlack();
+            if (SAV.SAV.Version == GameVersion.W)
+                ReadFileWhite();
+            else if (SAV.SAV.Version == GameVersion.B)
+                ReadFileBlack();
         }
 
         private void Save_Click(object sender, System.EventArgs e)

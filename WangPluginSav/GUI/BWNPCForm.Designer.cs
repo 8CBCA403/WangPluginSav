@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private ComboBox[] NPCComboBox =new ComboBox[10];
+        private ComboBox[] NPCComboBox = new ComboBox[10];
         private TextBox[] NPCTextBox = new TextBox[10];
         private TextBox[] FriendsTextBox = new TextBox[10];
 
@@ -32,44 +32,46 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BWNPCForm));
-            this.Load_BTN = new System.Windows.Forms.Button();
-            this.Save_BTN = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            Load_BTN = new Button();
+            Save_BTN = new Button();
+            SuspendLayout();
             // 
             // Load_BTN
             // 
-            this.Load_BTN.Location = new System.Drawing.Point(105, 386);
-            this.Load_BTN.Name = "Load_BTN";
-            this.Load_BTN.Size = new System.Drawing.Size(121, 23);
-            this.Load_BTN.TabIndex = 0;
-            this.Load_BTN.Text = "Load";
-            this.Load_BTN.UseVisualStyleBackColor = true;
-            this.Load_BTN.Click += new System.EventHandler(this.Load_Click);
+            Load_BTN.Location = new Point(65, 515);
+            Load_BTN.Margin = new Padding(3, 4, 3, 4);
+            Load_BTN.Name = "Load_BTN";
+            Load_BTN.Size = new Size(121, 31);
+            Load_BTN.TabIndex = 0;
+            Load_BTN.Text = "Load";
+            Load_BTN.UseVisualStyleBackColor = true;
+            Load_BTN.Click += Load_Click;
             // 
             // Save_BTN
             // 
-            this.Save_BTN.Location = new System.Drawing.Point(361, 386);
-            this.Save_BTN.Name = "Save_BTN";
-            this.Save_BTN.Size = new System.Drawing.Size(121, 23);
-            this.Save_BTN.TabIndex = 1;
-            this.Save_BTN.Text = "Save";
-            this.Save_BTN.UseVisualStyleBackColor = true;
-            this.Save_BTN.Click += new System.EventHandler(this.Save_Click);
+            Save_BTN.Location = new Point(361, 515);
+            Save_BTN.Margin = new Padding(3, 4, 3, 4);
+            Save_BTN.Name = "Save_BTN";
+            Save_BTN.Size = new Size(121, 31);
+            Save_BTN.TabIndex = 1;
+            Save_BTN.Text = "Save";
+            Save_BTN.UseVisualStyleBackColor = true;
+            Save_BTN.Click += Save_Click;
             // 
             // BWNPCForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 431);
-            this.Controls.Add(this.Save_BTN);
-            this.Controls.Add(this.Load_BTN);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "BWNPCForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Super Wang";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(556, 575);
+            Controls.Add(Save_BTN);
+            Controls.Add(Load_BTN);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "BWNPCForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Super Wang";
+            ResumeLayout(false);
         }
 
         #endregion
@@ -118,7 +120,7 @@
         }
         private System.Windows.Forms.Button Load_BTN;
         private System.Windows.Forms.Button Save_BTN;
-      
-       
+
+
     }
 }

@@ -121,30 +121,6 @@
   <data name="BW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\BW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="item_1904" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\item_1904.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="item_1905" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\item_1905.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="item_1906" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\item_1906.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="item_1907" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\item_1907.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="item_1908" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\item_1908.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="material" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\material.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paldea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\paldea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\shard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Tera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\Tera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
