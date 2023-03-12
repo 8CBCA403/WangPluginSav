@@ -20,6 +20,7 @@ namespace WangPluginSav
         public WorldEventsForm(Pages StartingPage, ISaveFileProvider Save)
         {
             SaveFileEditor = Save;
+            SAV = (SAV8SWSH)Save.SAV;
             InitializeComponent();
             switch (StartingPage)
             {
@@ -343,25 +344,22 @@ namespace WangPluginSav
 
         private void CurryDex_BTN_Click(object sender, EventArgs e)
         {
-            using (Forms.PokeCampCurrydexForm form = new Forms.PokeCampCurrydexForm())
-            {
-                form.SAV = (SAV8SWSH)SaveFileEditor.SAV;
-                form.ShowDialog();
-            }
+            var form = new Forms.PokeCampCurrydexForm(SaveFileEditor);
+            form.Show();
         }
 
         private void WonderCard_BTN_Click(object sender, EventArgs e)
         {
-            using (Wonder2FashionForm form = new Wonder2FashionForm())
-            {
-                form.SAV = (SAV8SWSH)SaveFileEditor.SAV;
-                form.ShowDialog();
-            }
+            var form = new Wonder2FashionForm(SaveFileEditor);
+
+
+            form.Show();
+
         }
 
         private void Dynamax_BTN_Click(object sender, EventArgs e)
         {
-            using (DynamaxResetForm form = new DynamaxResetForm())
+            var form = new DynamaxResetForm(SaveFileEditor);
             {
                 if (SaveFileEditor.SAV.Version != GameVersion.SW && SaveFileEditor.SAV.Version != GameVersion.SH)
                 {
@@ -371,14 +369,14 @@ namespace WangPluginSav
                         MessageBoxButtons.YesNo);
                     if (result == DialogResult.No) return;
                 }
-                form.SAV = (SAV8SWSH)SaveFileEditor.SAV;
-                form.ShowDialog();
+
+                form.Show();
             }
         }
 
         private void RegiForm_BTN_Click(object sender, EventArgs e)
         {
-            using (RegiForm form = new RegiForm())
+            var form = new RegiForm(SaveFileEditor);
             {
                 if (SaveFileEditor.SAV.Version != GameVersion.SW && SaveFileEditor.SAV.Version != GameVersion.SH || !SaveFileEditor.SAV.State.Exportable)
                 {
@@ -388,14 +386,14 @@ namespace WangPluginSav
                         MessageBoxButtons.YesNo);
                     if (result == DialogResult.No) return;
                 }
-                form.SAV = (SAV8SWSH)SaveFileEditor.SAV;
-                form.ShowDialog();
+
+                form.Show();
             }
         }
 
         private void SOJForm_BTN_Click(object sender, EventArgs e)
         {
-            using (SOJForm form = new SOJForm())
+            var form = new SOJForm(SaveFileEditor);
             {
                 if (SaveFileEditor.SAV.Version != GameVersion.SW && SaveFileEditor.SAV.Version != GameVersion.SH || !SaveFileEditor.SAV.State.Exportable)
                 {
@@ -405,8 +403,8 @@ namespace WangPluginSav
                         MessageBoxButtons.YesNo);
                     if (result == DialogResult.No) return;
                 }
-                form.SAV = (SAV8SWSH)SaveFileEditor.SAV;
-                form.ShowDialog();
+
+                form.Show();
             }
         }
     }

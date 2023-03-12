@@ -73,6 +73,36 @@ namespace WangPluginSav.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a_145 {
+            get {
+                object obj = ResourceManager.GetObject("a_145", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a_146 {
+            get {
+                object obj = ResourceManager.GetObject("a_146", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a_egg {
+            get {
+                object obj = ResourceManager.GetObject("a_egg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap about {
             get {
                 object obj = ResourceManager.GetObject("about", resourceCulture);
@@ -123,29 +153,9 @@ namespace WangPluginSav.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap b_144_2 {
-            get {
-                object obj = ResourceManager.GetObject("b_144-2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap b_145 {
             get {
                 object obj = ResourceManager.GetObject("b_145", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap b_145_2 {
-            get {
-                object obj = ResourceManager.GetObject("b_145-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +173,9 @@ namespace WangPluginSav.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap b_146_2 {
+        internal static System.Drawing.Bitmap b_150 {
             get {
-                object obj = ResourceManager.GetObject("b_146-2", resourceCulture);
+                object obj = ResourceManager.GetObject("b_150", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

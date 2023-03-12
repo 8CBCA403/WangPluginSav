@@ -16,12 +16,15 @@ namespace WangPluginSav
 {
     public partial class DynamaxResetForm : Form
     {
-        public DynamaxResetForm()
+        public SAV8SWSH SAV;
+#pragma warning disable CS8618
+        public DynamaxResetForm(ISaveFileProvider Save)
         {
+            SAV = (SAV8SWSH)Save.SAV;
             InitializeComponent();
         }
 
-        public SAV8SWSH SAV;
+       
 
 
 
@@ -404,19 +407,19 @@ namespace WangPluginSav
 
         private void glFA_BTN_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Are you sure you want to check everything?", "Alert", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("你确定要设置所有内容吗?", "警报", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes) for (int i = 0; i < (int)Generations.Gen7_UB + 1; i++) SetValue((Generations)i, true);
         }
 
         private void glRA_BTN_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Are you sure you want to un-check everything?", "Alert", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("您确定要取消选中所有内容吗?", "警报", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes) for (int i = 0; i < (int)Generations.Gen7_UB + 1; i++) SetValue((Generations)i, false);
         }
 
         private void report_BTN_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("For help or to report issues and/or bugs, please contact \"Reshiquori#8124\" and/or \"Darthfiggy#9205\" on Discord.", "Help");
+            MessageBox.Show("如需帮助或报告问题和/或错误，请联系 \"Reshiquori#8124\" 和/或 \"Darthfiggy#9205\" 上 Discord.", "帮助");
         }
 
         #region Notes
@@ -449,7 +452,7 @@ namespace WangPluginSav
                 //then it simply makes sure that there aren't any duplicates
                 if ((((mlspecies1_CMB.SelectedIndex == mlspecies3_CMB.SelectedIndex) && mlspecies3_CMB.SelectedIndex > 0) || (mlspecies1_CMB.SelectedIndex == mlspecies2_CMB.SelectedIndex) && mlspecies2_CMB.SelectedIndex > 0))
                 {
-                    if (DialogResult.Yes == MessageBox.Show("Notes Value 1 is already set, would you like to disable auto-legality?", "Error", MessageBoxButtons.YesNo))
+                    if (DialogResult.Yes == MessageBox.Show("检测到值 1 已设置，您想禁用自动合法性吗?", "错误", MessageBoxButtons.YesNo))
                     {
                         ml_legality_CB.Checked = false;
                         return false;
@@ -468,7 +471,7 @@ namespace WangPluginSav
             {
                 if ((((mlspecies2_CMB.SelectedIndex == mlspecies3_CMB.SelectedIndex) && mlspecies3_CMB.SelectedIndex > 0) || (mlspecies2_CMB.SelectedIndex == mlspecies1_CMB.SelectedIndex) && mlspecies1_CMB.SelectedIndex > 0))
                 {
-                    if (DialogResult.Yes == MessageBox.Show("Notes Value 2 is already set, would you like to disable auto-legality?", "Error", MessageBoxButtons.YesNo))
+                    if (DialogResult.Yes == MessageBox.Show("检测到值 2 已设置，您想禁用自动合法性吗?", "错误", MessageBoxButtons.YesNo))
                     {
                         ml_legality_CB.Checked = false;
                         return false;
@@ -486,7 +489,7 @@ namespace WangPluginSav
             {
                 if ((((mlspecies3_CMB.SelectedIndex == mlspecies2_CMB.SelectedIndex) && mlspecies2_CMB.SelectedIndex > 0) || (mlspecies3_CMB.SelectedIndex == mlspecies1_CMB.SelectedIndex) && mlspecies1_CMB.SelectedIndex > 0))
                 {
-                    if (DialogResult.Yes == MessageBox.Show("Notes Value 3 is already set, would you like to disable auto-legality?", "Error", MessageBoxButtons.YesNo))
+                    if (DialogResult.Yes == MessageBox.Show("检测到值 3 已设置，您想禁用自动合法性吗?", "错误", MessageBoxButtons.YesNo))
                     {
                         ml_legality_CB.Checked = false;
                         return false;
@@ -500,7 +503,7 @@ namespace WangPluginSav
 
         bool CheckPeoniaNotes()
         {
-            if (mlhint_CMB.SelectedItem == "None")
+            if (mlhint_CMB.SelectedItem == "无")
                 return false;
 
             if (!ml_legality_CB.Checked)
@@ -546,8 +549,8 @@ namespace WangPluginSav
 
         void CheckLegality()
         {
-            if (CheckSpeciesNotes1() && CheckSpeciesNotes2() && CheckSpeciesNotes3()) mlnotes_legal_LBL.Text = "Legal Status: Legal";
-            else mlnotes_legal_LBL.Text = "Legal Status: Potentially Illegal";
+            if (CheckSpeciesNotes1() && CheckSpeciesNotes2() && CheckSpeciesNotes3()) mlnotes_legal_LBL.Text = "合法性:合法";
+            else mlnotes_legal_LBL.Text = "合法性:可能非法";
         }
 
         #endregion
@@ -561,7 +564,7 @@ namespace WangPluginSav
 
         DialogResult ShowWrongGameMSG()
         {
-            return MessageBox.Show("You have chosen a legendary that you cannot have notes for! Would you like to correct this to the legendary for your game?", "Error", MessageBoxButtons.YesNo);
+            return MessageBox.Show("您选择了一个您无法添加的神兽！（错误的版本）您想将此更正为您的游戏的神兽吗 ? ", "错误", MessageBoxButtons.YesNo);
         }
 
         private void mlnotes_legal_LBL_Click(object sender, EventArgs e)
@@ -569,6 +572,10 @@ namespace WangPluginSav
 
         }
 
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

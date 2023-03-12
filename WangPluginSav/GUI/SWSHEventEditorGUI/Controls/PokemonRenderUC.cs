@@ -12,6 +12,7 @@ namespace WangPluginSav.GUI.SWSHEventEditorGUI.Controls
 {
     public partial class PokemonRenderUC : UserControl
     {
+#pragma warning disable CS8618
         public PokemonRenderUC()
         {
             InitializeComponent();
@@ -74,7 +75,7 @@ namespace WangPluginSav.GUI.SWSHEventEditorGUI.Controls
         public bool Caught
         {
             get { return caught; }
-            set 
+            set
             {
                 caught = value;
                 this.Invalidate();
@@ -100,7 +101,7 @@ namespace WangPluginSav.GUI.SWSHEventEditorGUI.Controls
 
             pokemon = (Bitmap)Properties.Resources.ResourceManager.GetObject(pokemonstr)!;
             if (pokemon == null)
-                pokemon = (Bitmap)Properties.Resources.ResourceManager.GetObject("0")!;
+                pokemon = (Bitmap)Properties.Resources.ResourceManager.GetObject("a_egg")!;
             this.Invalidate();
 
         }
@@ -139,7 +140,7 @@ namespace WangPluginSav.GUI.SWSHEventEditorGUI.Controls
                 e.Graphics.DrawImage(Properties.Resources.hint, 0, this.Height - 16);
 
             if (legalstatus == LegalStatus.Illegal)
-                e.Graphics.DrawImage(Properties.Resources.warn, 0,0 );
+                e.Graphics.DrawImage(Properties.Resources.warn, 0, 0);
             else
                 e.Graphics.DrawImage(Properties.Resources.valid, 0, 0);
             if (drawDyna)
@@ -175,7 +176,7 @@ namespace WangPluginSav.GUI.SWSHEventEditorGUI.Controls
                 if ((e.X >= 0 && e.X <= 16) && (e.Y >= 0 && e.Y <= 16))
                     LegaliltyCheck_OnClick?.Invoke(sender, e);
             }
-            else if(e.Button == MouseButtons.Left && shift)
+            else if (e.Button == MouseButtons.Left && shift)
             {
                 LegaliltyCheck_OnClick?.Invoke(sender, e);
             }

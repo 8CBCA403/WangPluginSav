@@ -14,8 +14,10 @@ namespace WangPluginSav.Forms
     public partial class PokeCampCurrydexForm : Form
     {
         public SAV8SWSH SAV;
-        public PokeCampCurrydexForm()
+#pragma warning disable CS8618
+        public PokeCampCurrydexForm(ISaveFileProvider Save)
         {
+            SAV = (SAV8SWSH)Save.SAV;
             InitializeComponent();
         }
 

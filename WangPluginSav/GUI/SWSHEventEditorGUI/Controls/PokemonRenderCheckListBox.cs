@@ -29,12 +29,14 @@ namespace WangPluginSav.GUI.SWSHEventEditorGUI.Controls
             get => this._pokemonArray;
             set
             {
+#pragma warning disable CS8622
                 this._pokemonArray.CollectionChanged -= _pokemonArray_CollectionChanged;
 
                 this._pokemonArray = value;
 
                 this._pokemonArray.CollectionChanged -= _pokemonArray_CollectionChanged;
                 this._pokemonArray.CollectionChanged += _pokemonArray_CollectionChanged;
+
             }
         }
 

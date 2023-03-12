@@ -13,6 +13,7 @@ namespace WangPluginSav.Plugins
             {
                 Image = Properties.Resources.Tera
             };
+#pragma warning disable CS8622
             ctrl.Click += OpenForm;
             ctrl.Name = "太晶坑修改器";
             modmenu.DropDownItems.Add(ctrl);

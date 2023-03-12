@@ -19,6 +19,7 @@ namespace WangPluginSav.Plugins
             {
                 Image = Properties.Resources.SWSH
             };
+#pragma warning disable CS8622
             ctrl.Click += OpenForm;
             ctrl.Name = "剑盾事件修改器";
             modmenu.DropDownItems.Add(ctrl);
@@ -28,11 +29,8 @@ namespace WangPluginSav.Plugins
         private void OpenForm(object sender, EventArgs e)
         {
 
-            using (WorldEventsForm form = new WorldEventsForm(WorldEventsForm.Pages.Main,SaveFileEditor))
-            {
-                form.SAV = (SAV8SWSH)SaveFileEditor.SAV;
-                form.ShowDialog();
-            }
+            var form = new WorldEventsForm(WorldEventsForm.Pages.Main, SaveFileEditor);
+            form.Show();
         }
 
     }

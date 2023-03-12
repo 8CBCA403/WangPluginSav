@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            toolTip1 = new ToolTip(components);
+            SuspendLayout();
             // 
             // PokemonRenderUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.DoubleBuffered = true;
-            this.MaximumSize = new System.Drawing.Size(68, 56);
-            this.MinimumSize = new System.Drawing.Size(68, 56);
-            this.Name = "PokemonRenderUC";
-            this.Size = new System.Drawing.Size(68, 56);
-            this.Load += new System.EventHandler(this.PokemonRenderUC_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.PokemonRenderUC_Paint);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PokemonRenderUC_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PokemonRenderUC_KeyUp);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PokemonRenderUC_MouseDown);
-            this.MouseEnter += new System.EventHandler(this.PokemonRenderUC_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.PokemonRenderUC_MouseLeave);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PokemonRenderUC_MouseMove);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            DoubleBuffered = true;
+            Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4, 4, 4, 4);
+            MaximumSize = new Size(95, 95);
+            MinimumSize = new Size(95, 95);
+            Name = "PokemonRenderUC";
+            Size = new Size(95, 95);
+            Load += PokemonRenderUC_Load;
+            Paint += PokemonRenderUC_Paint;
+            KeyDown += PokemonRenderUC_KeyDown;
+            KeyUp += PokemonRenderUC_KeyUp;
+            MouseDown += PokemonRenderUC_MouseDown;
+            MouseEnter += PokemonRenderUC_MouseEnter;
+            MouseLeave += PokemonRenderUC_MouseLeave;
+            MouseMove += PokemonRenderUC_MouseMove;
+            ResumeLayout(false);
         }
 
         #endregion

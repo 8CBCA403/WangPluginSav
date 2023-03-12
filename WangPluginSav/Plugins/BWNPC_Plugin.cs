@@ -14,6 +14,7 @@ namespace WangPluginSav.Plugins
             {
                 Image = Properties.Resources.BW
             };
+#pragma warning disable CS8622
             ctrl.Click += OpenForm;
             ctrl.Name = "黑城白森NPC修改器";
             modmenu.DropDownItems.Add(ctrl);

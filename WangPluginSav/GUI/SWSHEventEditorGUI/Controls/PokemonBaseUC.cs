@@ -12,6 +12,7 @@ namespace WangPluginSav.GUI.SWSHEventEditorGUI.Controls
 {
     public partial class PokemonBaseUC : UserControl
     {
+#pragma warning disable CS8618
         public PokemonBaseUC()
         {
             InitializeComponent();

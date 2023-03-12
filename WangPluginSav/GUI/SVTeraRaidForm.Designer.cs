@@ -45,10 +45,9 @@
             // 
             // CopyAll_BTN
             // 
-            CopyAll_BTN.Location = new Point(12, 69);
-            CopyAll_BTN.Margin = new Padding(3, 4, 3, 4);
+            CopyAll_BTN.Location = new Point(12, 52);
             CopyAll_BTN.Name = "CopyAll_BTN";
-            CopyAll_BTN.Size = new Size(94, 34);
+            CopyAll_BTN.Size = new Size(94, 26);
             CopyAll_BTN.TabIndex = 72;
             CopyAll_BTN.Text = "CopyAll";
             CopyAll_BTN.UseVisualStyleBackColor = true;
@@ -56,29 +55,26 @@
             // 
             // ModSeedText
             // 
-            ModSeedText.Location = new Point(12, 31);
-            ModSeedText.Margin = new Padding(3, 4, 3, 4);
+            ModSeedText.Location = new Point(12, 23);
             ModSeedText.Multiline = true;
             ModSeedText.Name = "ModSeedText";
-            ModSeedText.Size = new Size(94, 30);
+            ModSeedText.Size = new Size(94, 24);
             ModSeedText.TabIndex = 73;
             ModSeedText.Text = "0";
             // 
             // RaidTypeBox
             // 
             RaidTypeBox.FormattingEnabled = true;
-            RaidTypeBox.Location = new Point(112, 30);
-            RaidTypeBox.Margin = new Padding(3, 4, 3, 4);
+            RaidTypeBox.Location = new Point(112, 22);
             RaidTypeBox.Name = "RaidTypeBox";
-            RaidTypeBox.Size = new Size(109, 28);
+            RaidTypeBox.Size = new Size(109, 23);
             RaidTypeBox.TabIndex = 74;
             // 
             // ImportSeed_BTN
             // 
-            ImportSeed_BTN.Location = new Point(112, 69);
-            ImportSeed_BTN.Margin = new Padding(3, 4, 3, 4);
+            ImportSeed_BTN.Location = new Point(112, 52);
             ImportSeed_BTN.Name = "ImportSeed_BTN";
-            ImportSeed_BTN.Size = new Size(109, 34);
+            ImportSeed_BTN.Size = new Size(109, 26);
             ImportSeed_BTN.TabIndex = 75;
             ImportSeed_BTN.Text = "ImportSeed";
             ImportSeed_BTN.UseVisualStyleBackColor = true;
@@ -86,10 +82,9 @@
             // 
             // MutiSeedBox
             // 
-            MutiSeedBox.Location = new Point(12, 220);
-            MutiSeedBox.Margin = new Padding(3, 4, 3, 4);
+            MutiSeedBox.Location = new Point(12, 165);
             MutiSeedBox.Name = "MutiSeedBox";
-            MutiSeedBox.Size = new Size(209, 210);
+            MutiSeedBox.Size = new Size(209, 158);
             MutiSeedBox.TabIndex = 76;
             MutiSeedBox.Text = "";
             // 
@@ -97,8 +92,7 @@
             // 
             LoopBox.AutoSize = true;
             LoopBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            LoopBox.Location = new Point(12, 141);
-            LoopBox.Margin = new Padding(3, 4, 3, 4);
+            LoopBox.Location = new Point(12, 106);
             LoopBox.Name = "LoopBox";
             LoopBox.Size = new Size(65, 24);
             LoopBox.TabIndex = 77;
@@ -107,10 +101,9 @@
             // 
             // ModSav_BTN
             // 
-            ModSav_BTN.Location = new Point(112, 140);
-            ModSav_BTN.Margin = new Padding(3, 4, 3, 4);
+            ModSav_BTN.Location = new Point(112, 105);
             ModSav_BTN.Name = "ModSav_BTN";
-            ModSav_BTN.Size = new Size(109, 34);
+            ModSav_BTN.Size = new Size(109, 26);
             ModSav_BTN.TabIndex = 78;
             ModSav_BTN.Text = "ModifySav";
             ModSav_BTN.UseVisualStyleBackColor = true;
@@ -118,10 +111,9 @@
             // 
             // CloseAll_BTN
             // 
-            CloseAll_BTN.Location = new Point(12, 105);
-            CloseAll_BTN.Margin = new Padding(3, 4, 3, 4);
+            CloseAll_BTN.Location = new Point(12, 79);
             CloseAll_BTN.Name = "CloseAll_BTN";
-            CloseAll_BTN.Size = new Size(94, 34);
+            CloseAll_BTN.Size = new Size(94, 26);
             CloseAll_BTN.TabIndex = 79;
             CloseAll_BTN.Text = "CloseAll";
             CloseAll_BTN.UseVisualStyleBackColor = true;
@@ -129,10 +121,9 @@
             // 
             // ImportDIS_BTN
             // 
-            ImportDIS_BTN.Location = new Point(112, 105);
-            ImportDIS_BTN.Margin = new Padding(3, 4, 3, 4);
+            ImportDIS_BTN.Location = new Point(112, 79);
             ImportDIS_BTN.Name = "ImportDIS_BTN";
-            ImportDIS_BTN.Size = new Size(109, 34);
+            ImportDIS_BTN.Size = new Size(109, 26);
             ImportDIS_BTN.TabIndex = 89;
             ImportDIS_BTN.Text = "ImportDis";
             ImportDIS_BTN.UseVisualStyleBackColor = true;
@@ -150,37 +141,34 @@
             groupBox2.Controls.Add(RaidTypeBox);
             groupBox2.Controls.Add(ModSeedText);
             groupBox2.Controls.Add(CopyAll_BTN);
-            groupBox2.Location = new Point(12, 13);
-            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Location = new Point(12, 10);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 4, 3, 4);
-            groupBox2.Size = new Size(233, 438);
+            groupBox2.Size = new Size(233, 328);
             groupBox2.TabIndex = 91;
             groupBox2.TabStop = false;
             groupBox2.Text = "Editor";
             // 
             // ShinyCar_BTN
             // 
-            ShinyCar_BTN.Location = new Point(12, 182);
-            ShinyCar_BTN.Margin = new Padding(3, 4, 3, 4);
+            ShinyCar_BTN.Location = new Point(12, 136);
             ShinyCar_BTN.Name = "ShinyCar_BTN";
-            ShinyCar_BTN.Size = new Size(209, 34);
+            ShinyCar_BTN.Size = new Size(209, 26);
             ShinyCar_BTN.TabIndex = 90;
             ShinyCar_BTN.Text = "一键随机闪车";
             ShinyCar_BTN.UseVisualStyleBackColor = true;
             ShinyCar_BTN.Click += ShinyCar_BTN_Click;
             // 
-            // SVTeraRaidSeedCalcForm
+            // SVTeraRaidForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(256, 464);
+            ClientSize = new Size(256, 348);
             Controls.Add(groupBox2);
+            Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
-            Name = "SVTeraRaidSeedCalcForm";
+            Name = "SVTeraRaidForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SVTeraRaidSeedCalcForm";
             groupBox2.ResumeLayout(false);

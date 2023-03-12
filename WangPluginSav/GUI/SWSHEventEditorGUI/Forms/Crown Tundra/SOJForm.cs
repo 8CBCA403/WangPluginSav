@@ -13,12 +13,14 @@ namespace WangPluginSav
 {
     public partial class SOJForm : Form
     {
-        public SOJForm()
+        public SAV8SWSH? SAV;
+        public SOJForm(ISaveFileProvider Save)
         {
+            SAV = (SAV8SWSH)Save.SAV;
             InitializeComponent();
         }
 
-        public SAV8SWSH? SAV;
+       
 
         private void SOJForm_Load(object sender, EventArgs e)
         {
@@ -35,7 +37,7 @@ namespace WangPluginSav
 
             if (b_cobalion?.Type == SCTypeCode.Bool2 && Convert.ToInt32(b_cobalionf?.GetValue()) != 100 || Convert.ToInt32(b_cobalionf?.GetValue()) % 2 != 0) //illegal!
             {
-                if (MessageBox.Show("Data in your save file shows potentially illegal Cobalion encounter data, would you like to fix it?\nIf you believe this to be an error, please click \'No\' and report it.", "Illegal Cobalion Encounter", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("您保存的文件中的数据显示潜在的非法勾帕路翁遭遇数据，您要修复它吗?\n如果您认为这是一个错误，请点击 '否' 并报告它.", "非法勾帕路翁遭遇", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     cobalion_CB.Checked = false;
                 else
                 {
@@ -48,7 +50,7 @@ namespace WangPluginSav
 
             if (b_terrakion?.Type == SCTypeCode.Bool2 && Convert.ToInt32(b_terrakionf?.GetValue()) != 100 || Convert.ToInt32(b_terrakionf?.GetValue()) % 2 != 0) //illegal!
             {
-                if (MessageBox.Show("Data in your save file shows potentially illegal Terrakion encounter data, would you like to fix it?\nIf you believe this to be an error, please click \'No\' and report it.", "Illegal Terrakion Encounter", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("您保存的文件中的数据显示潜在的非法代拉基翁遭遇数据，您要修复它吗?\n如果您认为这是一个错误，请点击 '否' 并报告它.", "非法代拉基翁遭遇", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     terrakion_CB.Checked = false;
                 else
                 {
@@ -61,7 +63,7 @@ namespace WangPluginSav
 
             if (b_virizion?.Type == SCTypeCode.Bool2 && Convert.ToInt32(b_virizionf?.GetValue()) != 100 || Convert.ToInt32(b_virizionf?.GetValue()) % 2 != 0) //illegal!
             {
-                if (MessageBox.Show("Data in your save file shows potentially illegal Virizion encounter data, would you like to fix it?\nIf you believe this to be an error, please click \'No\' and report it.", "Illegal Virizion Encounter", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("您保存的文件中的数据显示潜在的非法毕力吉翁遭遇数据，您要修复它吗?\n如果您认为这是一个错误，请点击 '否' 并报告它.", "非法毕力吉翁遭遇", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     virizion_CB.Checked = false;
                 else
                 {
@@ -75,7 +77,7 @@ namespace WangPluginSav
 
             if ((b_virizion?.Type == SCTypeCode.Bool1 && b_cobalion?.Type == SCTypeCode.Bool1 && b_terrakion?.Type == SCTypeCode.Bool1) && b_keldeo?.Type == SCTypeCode.Bool2)
             {
-                if (MessageBox.Show("Data in your save file shows potentially illegal Keldeo encounter data, would you like to fix it?\nIf you believe this to be an error, please click \'No\' and report it.", "Illegal Keldeo Encounter", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("您保存的文件中的数据显示潜在的非法凯路迪欧遭遇数据，您要修复它吗?\n如果您认为这是一个错误，请点击 '否' 并报告它.", "非法凯路迪欧遭遇战", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     keldeo_CB.Checked = false;
                 else
                 {
@@ -133,7 +135,7 @@ namespace WangPluginSav
         {
             if (cfootper_NUD.Value % 2 != 0)
             {
-                MessageBox.Show("Value must be a multiple of 2!", "Error");
+                MessageBox.Show("值必须是2的倍数!", "错误");
                 cfootper_NUD.Value = ((int)(cfootper_NUD.Value / 2)) * 2;
             }
 
@@ -149,7 +151,7 @@ namespace WangPluginSav
         {
             if (tfootper_NUD.Value % 2 != 0)
             {
-                MessageBox.Show("Value must be a multiple of 2!", "Error");
+                MessageBox.Show("值必须是2的倍数!", "错误");
                 tfootper_NUD.Value = ((int)(tfootper_NUD.Value / 2)) * 2;
             }
 
@@ -165,7 +167,7 @@ namespace WangPluginSav
         {
             if (vfootper_NUD.Value % 2 != 0)
             {
-                MessageBox.Show("Value must be a multiple of 2!", "Error");
+                MessageBox.Show("值必须是2的倍数!", "错误");
                 vfootper_NUD.Value = ((int)(vfootper_NUD.Value / 2)) * 2;
             }
 
@@ -185,10 +187,10 @@ namespace WangPluginSav
 
         void CheckLegality()
         {
-            if (CheckCobalionLegality() && CheckTerrakionLegality() && CheckVirizionLegality() && CheckKeldeoLegality()) legality_LBL.Text = "Legal Status: Legal!";
+            if (CheckCobalionLegality() && CheckTerrakionLegality() && CheckVirizionLegality() && CheckKeldeoLegality()) legality_LBL.Text = "合法性:合法!";
             else
             {
-                legality_LBL.Text = "Legal Status: Potentially Illegal!";
+                legality_LBL.Text = "合法性:可能非法!";
             }
         }
 

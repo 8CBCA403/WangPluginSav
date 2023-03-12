@@ -43,12 +43,13 @@
             // caught_CB
             // 
             caught_CB.AutoSize = true;
-            caught_CB.Location = new Point(99, 25);
+            caught_CB.Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            caught_CB.Location = new Point(103, 25);
             caught_CB.Margin = new Padding(4, 5, 4, 5);
             caught_CB.Name = "caught_CB";
-            caught_CB.Size = new Size(78, 24);
+            caught_CB.Size = new Size(61, 19);
             caught_CB.TabIndex = 1;
-            caught_CB.Text = "Caught";
+            caught_CB.Text = "捕获";
             caught_CB.UseVisualStyleBackColor = true;
             caught_CB.CheckedChanged += caught_CB_CheckedChanged;
             // 
@@ -104,16 +105,17 @@
             pokemonRenderUC1.Caught = false;
             pokemonRenderUC1.ContextMenuStrip = contextMenuStrip1;
             pokemonRenderUC1.DrawDynaxMaxIcon = false;
+            pokemonRenderUC1.Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
             pokemonRenderUC1.Legalility = PokemonRenderUC.LegalStatus.Illegal;
-            pokemonRenderUC1.Location = new Point(0, 25);
-            pokemonRenderUC1.Margin = new Padding(5, 8, 5, 8);
-            pokemonRenderUC1.MaximumSize = new Size(91, 86);
-            pokemonRenderUC1.MinimumSize = new Size(91, 86);
+            pokemonRenderUC1.Location = new Point(-1, 19);
+            pokemonRenderUC1.Margin = new Padding(5, 6, 5, 6);
+            pokemonRenderUC1.MaximumSize = new Size(95, 95);
+            pokemonRenderUC1.MinimumSize = new Size(95, 95);
             pokemonRenderUC1.Name = "pokemonRenderUC1";
             pokemonRenderUC1.Pokemon = 0;
             pokemonRenderUC1.PokemonSubForm = "0";
             pokemonRenderUC1.ShowMessageIcon = false;
-            pokemonRenderUC1.Size = new Size(91, 86);
+            pokemonRenderUC1.Size = new Size(95, 95);
             pokemonRenderUC1.TabIndex = 0;
             pokemonRenderUC1.ToolTip = "";
             pokemonRenderUC1.LegaliltyCheck_OnClick += pokemonRenderUC1_LegaliltyCheck_OnClick;
@@ -127,10 +129,10 @@
             Controls.Add(caught_CB);
             Controls.Add(pokemonRenderUC1);
             Margin = new Padding(4, 5, 4, 5);
-            MaximumSize = new Size(213, 111);
-            MinimumSize = new Size(213, 111);
+            MaximumSize = new Size(214, 122);
+            MinimumSize = new Size(214, 122);
             Name = "PokemonBaseUC";
-            Size = new Size(213, 111);
+            Size = new Size(214, 122);
             Load += PokemonBaseUC_Load;
             contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);

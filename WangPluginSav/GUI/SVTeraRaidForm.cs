@@ -13,10 +13,10 @@ namespace WangPluginSav.GUI
         private TeraRaidDisplayType[] a = new TeraRaidDisplayType[72];
         private byte[] b = new byte[72];
         private static Random random = new Random();
-  
+
 
         public static readonly GameStrings strings = GameInfo.GetStrings("zh");
-       
+
         public SVTeraRaidForm(ISaveFileProvider sav, IPKMView edit)
         {
             SAV = sav;
@@ -24,15 +24,15 @@ namespace WangPluginSav.GUI
             InitializeComponent();
             BindingData();
         }
-       
+
         public void BindingData()
         {
             RaidTypeBox.DataSource = Enum.GetValues(typeof(TeraRaidContentType));
             RaidTypeBox.SelectedIndex = 0;
-           
+
         }
-       
-      
+
+
 
         private void ModifySav_Click(object sender, EventArgs e)
         {
@@ -211,7 +211,7 @@ namespace WangPluginSav.GUI
             b = File.ReadAllBytes(path);
         }
 
-       
+
         private static int Raidshiny(uint Seed)
         {
             Xoroshiro128Plus xoroshiro128Plus = new Xoroshiro128Plus(Seed);

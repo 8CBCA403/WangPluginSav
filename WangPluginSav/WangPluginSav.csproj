@@ -86,12 +86,6 @@
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\BWSword.png" />
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_1.png" />
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_133-gmax.png" />
-    <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_144-1.png" />
-    <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_144.png" />
-    <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_145-1.png" />
-    <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_145.png" />
-    <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_146-1.png" />
-    <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_146.png" />
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_25-gmax.png" />
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_4.png" />
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\b_442.png" />

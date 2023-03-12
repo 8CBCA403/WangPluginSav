@@ -17,9 +17,10 @@ namespace WangPluginSav
     {
         public SAV8SWSH SAV;
         string[] fashionItems;
-
-        public Wonder2FashionForm()
+#pragma warning disable CS8618
+        public Wonder2FashionForm(ISaveFileProvider Save)
         {
+            SAV = (SAV8SWSH)Save.SAV;
             InitializeComponent();
             fashionItems = Array.Empty<string>();
         }
@@ -30,8 +31,8 @@ namespace WangPluginSav
             using (OpenFileDialog dlg = new OpenFileDialog())
             {
                 dlg.Multiselect = true;
-                dlg.Title = $"Please Select Wondercard {type} File";
-                dlg.Filter = "Gen 8 Wondercard file (*.wc8)|*.wc8";
+                dlg.Title = $"请选择 Wondercard {type} 文件";
+                dlg.Filter = "Gen 8 Wondercard 文件 (*.wc8)|*.wc8";
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     temp = dlg.FileNames;
@@ -45,9 +46,10 @@ namespace WangPluginSav
         private void fash_openwc8_BTN_Click(object sender, EventArgs e)
         {
             fashionItems = OpenWonderCardDLG("Fasion");
-            foreach (var str in fashionItems)
+            string[] array = fashionItems;
+            for (int i = 0; i < array.Length; i++)
             {
-                // fash_files_LB.Items.Add(Path.GetFileName(str));
+                _ = array[i];
             }
         }
 
@@ -57,44 +59,33 @@ namespace WangPluginSav
 
         }
 
-        void fashion_Convert()
+        private void fashion_Convert()
         {
-            List<KeyValuePair<int, int>> pairs = new List<KeyValuePair<int, int>>();
-            byte blocksize = 0x80;
-            int startingpos = 0x20;
-
-            if (SAV.Gender == 1) //female
-                startingpos += 0x30;
-
-            foreach (var item in fashionItems)
+            List<KeyValuePair<int, int>> list = new List<KeyValuePair<int, int>>();
+            int num = 32;
+            if (SAV.Gender == 1)
             {
-                using (BinaryReader br = new BinaryReader(File.Open(item, FileMode.Open)))
+                num += 48;
+            }
+            string[] array = fashionItems;
+            for (int i = 0; i < array.Length; i++)
+            {
+                using (BinaryReader binaryReader = new BinaryReader(File.Open(array[i], FileMode.Open)))
                 {
-                    br.BaseStream.Position = startingpos;
-                    for (int i = 0; i < 6; i++) //we only need 12 read operations
+                    binaryReader.BaseStream.Position = num;
+                    for (int j = 0; j < 6; j++)
                     {
-                        int key = br.ReadInt32(); //index
-                        int value = br.ReadInt32(); //Binary spot
-                        pairs.Add(new KeyValuePair<int, int>(key, value));
+                        int key = binaryReader.ReadInt32();
+                        int value = binaryReader.ReadInt32();
+                        list.Add(new KeyValuePair<int, int>(key, value));
                     }
-                    br.Close();
+                    binaryReader.Close();
                 }
-
-                //now we apply the actual data
-
-                for (int i = 0; i < 6; i++)
+                for (int k = 0; k < 6; k++)
                 {
-                    if (pairs[i].Value != -1)
-                    {
-                        //TODO: FIX ME!!!
-                        //bool[] arr = SAV.Blocks.Fashion.GetArrayOwned(pairs[i].Key);
-
-                        //arr[pairs[i].Value] = true;
-
-                        //SAV.Blocks.Fashion.SetArrayOwned(9, arr);
-                    }
+                    _ = list[k].Value;
+                    _ = -1;
                 }
-
             }
         }
 

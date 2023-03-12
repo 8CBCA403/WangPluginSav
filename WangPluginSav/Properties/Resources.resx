@@ -124,6 +124,15 @@
   <data name="armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="a_145" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\a_145.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a_146" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\a_146.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a_egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\a_egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ball_champion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\ball_champion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -158,22 +167,16 @@
     <value>img\SWSHEventEditor\b_133-gmax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b_144" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\SWSHEventEditor\b_144-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="b_144-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\SWSHEventEditor\b_144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>img\SWSHEventEditor\a_144-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b_145" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\SWSHEventEditor\b_145-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="b_145-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\SWSHEventEditor\b_145.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>img\SWSHEventEditor\a_145-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b_146" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\SWSHEventEditor\b_146-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>img\SWSHEventEditor\a_146-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="b_146-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\SWSHEventEditor\b_146.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="b_150" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\SWSHEventEditor\Images\PokeSprites\b_150.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\b_25-gmax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

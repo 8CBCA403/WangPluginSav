@@ -13,12 +13,14 @@ namespace WangPluginSav
 {
     public partial class RegiForm : Form
     {
-        public RegiForm()
+        public SAV8SWSH? SAV;
+        public RegiForm(ISaveFileProvider Save)
         {
+            SAV = (SAV8SWSH)Save.SAV;
             InitializeComponent();
         }
 
-        public SAV8SWSH? SAV;
+        
 
         private void RegiForm_Load(object sender, EventArgs e)
         {
@@ -69,8 +71,8 @@ namespace WangPluginSav
         void CheckLegality()
         {
             if (CheckElekiLegal() || CheckDragoLegal() || CheckNeitherLegal())
-                legalLBL.Text = "Legal Status: Legal";
-            else legalLBL.Text = "Legal Status: Potentially Illegal";
+                legalLBL.Text = "合法性:合法";
+            else legalLBL.Text = "合法性:可能非法";
         }
 
         bool CheckNeitherLegal()
@@ -119,7 +121,7 @@ namespace WangPluginSav
 
         DialogResult ShowPatternMisMatchMSG()
         {
-            return MessageBox.Show($"Discrepancy detected with the Regi received and the pattern required for it.\nDo you wish to autocorrect this?", "Error", MessageBoxButtons.YesNo);
+            return MessageBox.Show($"检测到与收到的雷吉及其所需模式的差异.\n你想自动更正吗?", "错误", MessageBoxButtons.YesNo);
         }
 
         private void regiother_patrBTN_CheckedChanged(object sender, EventArgs e)
