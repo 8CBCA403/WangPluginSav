@@ -21,6 +21,18 @@ namespace WangPluginSav.Plugins
             };
             ctrl.Click += delegate
             {
+                if (SaveFileEditor.SAV.Version != GameVersion.PLA
+              && SaveFileEditor.SAV.Version != GameVersion.VL
+              && SaveFileEditor.SAV.Version != GameVersion.SL && SaveFileEditor.SAV.Version != GameVersion.SV)
+                {
+                    MessageBox.Show("此工具只适用于朱紫，阿尔宙斯！");
+                    return;
+                }
+                if (SaveFileEditor.SAV.OT == "PKHeX")
+                {
+                    MessageBox.Show("检测到空档，请导入有效存档");
+                    return;
+                }
                 ImportClothes();
             };
             ctrl.Name = "服装导入器";

@@ -28,8 +28,19 @@ namespace WangPluginSav.Plugins
 
         private void OpenForm(object sender, EventArgs e)
         {
-
+            if (SaveFileEditor.SAV.Version != GameVersion.SH
+               && SaveFileEditor.SAV.Version != GameVersion.SW && SaveFileEditor.SAV.Version != GameVersion.SWSH)
+            {
+                MessageBox.Show("此工具只适用于剑盾！");
+                return;
+            }
+            if(SaveFileEditor.SAV.OT=="PKHeX")
+            {
+                MessageBox.Show("检测到空档，请导入有效存档");
+                return;
+            }
             var form = new WorldEventsForm(WorldEventsForm.Pages.Main, SaveFileEditor);
+            
             form.Show();
         }
 
