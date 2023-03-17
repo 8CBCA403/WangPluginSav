@@ -38,10 +38,9 @@
             // 
             // Load_BTN
             // 
-            Load_BTN.Location = new Point(65, 515);
-            Load_BTN.Margin = new Padding(3, 4, 3, 4);
+            Load_BTN.Location = new Point(65, 386);
             Load_BTN.Name = "Load_BTN";
-            Load_BTN.Size = new Size(121, 31);
+            Load_BTN.Size = new Size(121, 23);
             Load_BTN.TabIndex = 0;
             Load_BTN.Text = "Load";
             Load_BTN.UseVisualStyleBackColor = true;
@@ -49,10 +48,9 @@
             // 
             // Save_BTN
             // 
-            Save_BTN.Location = new Point(361, 515);
-            Save_BTN.Margin = new Padding(3, 4, 3, 4);
+            Save_BTN.Location = new Point(361, 386);
             Save_BTN.Name = "Save_BTN";
-            Save_BTN.Size = new Size(121, 31);
+            Save_BTN.Size = new Size(121, 23);
             Save_BTN.TabIndex = 1;
             Save_BTN.Text = "Save";
             Save_BTN.UseVisualStyleBackColor = true;
@@ -60,14 +58,14 @@
             // 
             // BWNPCForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(556, 575);
+            ClientSize = new Size(556, 431);
             Controls.Add(Save_BTN);
             Controls.Add(Load_BTN);
+            Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "BWNPCForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Super Wang";

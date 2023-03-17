@@ -6,7 +6,7 @@ namespace WangPluginSav.Plugins
     internal class SVTeraRaidPlugin:WangPluginSav
     {
         public override string Name => "太晶坑修改器";
-        public override int Priority => 0;
+        public override int Priority => 6;
 
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {

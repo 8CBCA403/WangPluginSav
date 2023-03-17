@@ -11,7 +11,7 @@ namespace WangPluginSav.Plugins
     internal class SWSHEventPlugin : WangPluginSav
     {
         public override string Name => "剑盾事件修改器";
-        public override int Priority => 4;
+        public override int Priority => 5;
 
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {

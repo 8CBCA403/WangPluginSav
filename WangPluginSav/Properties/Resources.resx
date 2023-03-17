@@ -152,13 +152,16 @@
     <value>img\SWSHEventEditor\ball_weighted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\BW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>img\Gen5Event\BW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BWShield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\BWShield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BWSword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\BWSword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BWTool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Gen5Event\BWTool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\b_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,6 +226,15 @@
   <data name="dyna1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\dyna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Feebas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Feebas\Feebas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gen3SAV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Gen3Event\Gen3SAV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gen5SAV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Gen5Event\Gen5SAV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -231,6 +243,18 @@
   </data>
   <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Feebas\marker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MirageIsland" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Gen3Event\MirageIsland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mtcoronet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Feebas\mtcoronet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MysteryGift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Gen3Event\MysteryGift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="party1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\Images\PokeSprites\Overlays\party1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -258,6 +282,9 @@
   </data>
   <data name="redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\Images\Program\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="route119" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Feebas\route119.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\SWSHEventEditor\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
