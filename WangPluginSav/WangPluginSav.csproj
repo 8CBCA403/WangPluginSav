@@ -158,6 +158,14 @@
     <Reference Include="PKHeX.Core">
       <HintPath>Deps\PKHeX.Core.dll</HintPath>
     </Reference>
+
+    <Reference Include="PKHeX.Drawing">
+      <HintPath>Deps\PKHeX.Drawing.dll</HintPath>
+    </Reference>
+
+    <Reference Include="PKHeX.Drawing.PokeSprite">
+      <HintPath>Deps\PKHeX.Drawing.PokeSprite.dll</HintPath>
+    </Reference>
   
   </ItemGroup>
 

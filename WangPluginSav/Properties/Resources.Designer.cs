@@ -1013,6 +1013,16 @@ namespace WangPluginSav.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Arceus {
+            get {
+                object obj = ResourceManager.GetObject("Arceus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap armor {
             get {
                 object obj = ResourceManager.GetObject("armor", resourceCulture);
@@ -1366,6 +1376,26 @@ namespace WangPluginSav.Properties {
         internal static System.Drawing.Bitmap Gen5SAV {
             get {
                 object obj = ResourceManager.GetObject("Gen5SAV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gen8Editor {
+            get {
+                object obj = ResourceManager.GetObject("Gen8Editor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gen8Gift {
+            get {
+                object obj = ResourceManager.GetObject("Gen8Gift", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
