@@ -185,7 +185,7 @@ namespace BW_tool
             label6.Location = new Point(16, 122);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(101, 26);
+            label6.Size = new Size(123, 26);
             label6.TabIndex = 5;
             label6.Text = "训练家类型";
             // 
@@ -194,7 +194,7 @@ namespace BW_tool
             label7.Location = new Point(16, 154);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(115, 26);
+            label7.Size = new Size(136, 26);
             label7.TabIndex = 6;
             label7.Text = "训练家性格";
             // 
@@ -216,9 +216,9 @@ namespace BW_tool
             groupBox1.Controls.Add(label10);
             groupBox1.Controls.Add(label9);
             groupBox1.Location = new Point(16, 182);
-            groupBox1.Margin = new Padding(4, 4, 4, 4);
+            groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 4, 4, 4);
+            groupBox1.Padding = new Padding(4);
             groupBox1.Size = new Size(279, 107);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
@@ -227,7 +227,7 @@ namespace BW_tool
             // seconds
             // 
             seconds.Location = new Point(111, 75);
-            seconds.Margin = new Padding(4, 4, 4, 4);
+            seconds.Margin = new Padding(4);
             seconds.Maximum = new decimal(new int[] { 59, 0, 0, 0 });
             seconds.Name = "seconds";
             seconds.Size = new Size(160, 25);
@@ -236,7 +236,7 @@ namespace BW_tool
             // minutes
             // 
             minutes.Location = new Point(111, 49);
-            minutes.Margin = new Padding(4, 4, 4, 4);
+            minutes.Margin = new Padding(4);
             minutes.Maximum = new decimal(new int[] { 59, 0, 0, 0 });
             minutes.Name = "minutes";
             minutes.Size = new Size(160, 25);
@@ -245,7 +245,7 @@ namespace BW_tool
             // hours
             // 
             hours.Location = new Point(111, 22);
-            hours.Margin = new Padding(4, 4, 4, 4);
+            hours.Margin = new Padding(4);
             hours.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
             hours.Name = "hours";
             hours.Size = new Size(160, 25);
@@ -281,7 +281,7 @@ namespace BW_tool
             // tid
             // 
             tid.Location = new Point(127, 58);
-            tid.Margin = new Padding(4, 4, 4, 4);
+            tid.Margin = new Padding(4);
             tid.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
             tid.Name = "tid";
             tid.Size = new Size(160, 25);
@@ -290,7 +290,7 @@ namespace BW_tool
             // sid
             // 
             sid.Location = new Point(127, 88);
-            sid.Margin = new Padding(4, 4, 4, 4);
+            sid.Margin = new Padding(4);
             sid.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
             sid.Name = "sid";
             sid.Size = new Size(160, 25);
@@ -301,7 +301,7 @@ namespace BW_tool
             tnr_class.FormattingEnabled = true;
             tnr_class.Items.AddRange(new object[] { "短裤小子", "精英训练家", "宝可梦巡护员", "宝可梦培育家", "研究员", "登山男", "光头男", "幼儿园小朋友" });
             tnr_class.Location = new Point(125, 118);
-            tnr_class.Margin = new Padding(4, 4, 4, 4);
+            tnr_class.Margin = new Padding(4);
             tnr_class.Name = "tnr_class";
             tnr_class.Size = new Size(160, 23);
             tnr_class.TabIndex = 11;
@@ -311,7 +311,7 @@ namespace BW_tool
             tnr_nature.FormattingEnabled = true;
             tnr_nature.Items.AddRange(new object[] { "勤奋", "怕寂寞", "勇勇", "固执", "顽皮", "大胆", "坦率", "悠哉", "淘气", "乐天", "胆小", "急躁", "认真", "爽朗", "天真", "内敛", "慢吞吞", "冷静", "害羞", "马虎", "温和", "温顺", "自大", "慎重", "浮躁" });
             tnr_nature.Location = new Point(125, 150);
-            tnr_nature.Margin = new Padding(4, 4, 4, 4);
+            tnr_nature.Margin = new Padding(4);
             tnr_nature.Name = "tnr_nature";
             tnr_nature.Size = new Size(160, 23);
             tnr_nature.TabIndex = 12;
@@ -319,7 +319,7 @@ namespace BW_tool
             // name
             // 
             name.Location = new Point(125, 28);
-            name.Margin = new Padding(4, 4, 4, 4);
+            name.Margin = new Padding(4);
             name.MaxLength = 8;
             name.Name = "name";
             name.Size = new Size(159, 25);
@@ -328,7 +328,7 @@ namespace BW_tool
             // rival_name
             // 
             rival_name.Location = new Point(125, 306);
-            rival_name.Margin = new Padding(4, 4, 4, 4);
+            rival_name.Margin = new Padding(4);
             rival_name.MaxLength = 8;
             rival_name.Name = "rival_name";
             rival_name.Size = new Size(159, 25);
@@ -337,7 +337,7 @@ namespace BW_tool
             // money
             // 
             money.Location = new Point(440, 30);
-            money.Margin = new Padding(4, 4, 4, 4);
+            money.Margin = new Padding(4);
             money.Maximum = new decimal(new int[] { 0, 0, 0, 0 });
             money.Name = "money";
             money.Size = new Size(160, 25);
@@ -346,7 +346,7 @@ namespace BW_tool
             // bp
             // 
             bp.Location = new Point(440, 62);
-            bp.Margin = new Padding(4, 4, 4, 4);
+            bp.Margin = new Padding(4);
             bp.Maximum = new decimal(new int[] { 0, 0, 0, 0 });
             bp.Name = "bp";
             bp.Size = new Size(160, 25);
@@ -366,7 +366,7 @@ namespace BW_tool
             gender.FormattingEnabled = true;
             gender.Items.AddRange(new object[] { "男", "女" });
             gender.Location = new Point(440, 90);
-            gender.Margin = new Padding(4, 4, 4, 4);
+            gender.Margin = new Padding(4);
             gender.Name = "gender";
             gender.Size = new Size(160, 23);
             gender.TabIndex = 17;
@@ -374,7 +374,7 @@ namespace BW_tool
             // Exit_but
             // 
             Exit_but.Location = new Point(16, 358);
-            Exit_but.Margin = new Padding(4, 4, 4, 4);
+            Exit_but.Margin = new Padding(4);
             Exit_but.Name = "Exit_but";
             Exit_but.Size = new Size(136, 26);
             Exit_but.TabIndex = 19;
@@ -385,7 +385,7 @@ namespace BW_tool
             // Saveexit_but
             // 
             Saveexit_but.Location = new Point(159, 358);
-            Saveexit_but.Margin = new Padding(4, 4, 4, 4);
+            Saveexit_but.Margin = new Padding(4);
             Saveexit_but.Name = "Saveexit_but";
             Saveexit_but.Size = new Size(136, 26);
             Saveexit_but.TabIndex = 18;
@@ -396,7 +396,7 @@ namespace BW_tool
             // badge1
             // 
             badge1.Location = new Point(333, 145);
-            badge1.Margin = new Padding(4, 4, 4, 4);
+            badge1.Margin = new Padding(4);
             badge1.Name = "badge1";
             badge1.Size = new Size(167, 34);
             badge1.TabIndex = 20;
@@ -406,7 +406,7 @@ namespace BW_tool
             // badge1_date
             // 
             badge1_date.Location = new Point(423, 146);
-            badge1_date.Margin = new Padding(4, 4, 4, 4);
+            badge1_date.Margin = new Padding(4);
             badge1_date.Name = "badge1_date";
             badge1_date.Size = new Size(265, 25);
             badge1_date.TabIndex = 21;
@@ -414,7 +414,7 @@ namespace BW_tool
             // badge2_date
             // 
             badge2_date.Location = new Point(423, 176);
-            badge2_date.Margin = new Padding(4, 4, 4, 4);
+            badge2_date.Margin = new Padding(4);
             badge2_date.Name = "badge2_date";
             badge2_date.Size = new Size(265, 25);
             badge2_date.TabIndex = 23;
@@ -422,7 +422,7 @@ namespace BW_tool
             // badge2
             // 
             badge2.Location = new Point(333, 175);
-            badge2.Margin = new Padding(4, 4, 4, 4);
+            badge2.Margin = new Padding(4);
             badge2.Name = "badge2";
             badge2.Size = new Size(167, 34);
             badge2.TabIndex = 22;
@@ -432,7 +432,7 @@ namespace BW_tool
             // badge3_date
             // 
             badge3_date.Location = new Point(423, 206);
-            badge3_date.Margin = new Padding(4, 4, 4, 4);
+            badge3_date.Margin = new Padding(4);
             badge3_date.Name = "badge3_date";
             badge3_date.Size = new Size(265, 25);
             badge3_date.TabIndex = 25;
@@ -440,7 +440,7 @@ namespace BW_tool
             // badge3
             // 
             badge3.Location = new Point(333, 205);
-            badge3.Margin = new Padding(4, 4, 4, 4);
+            badge3.Margin = new Padding(4);
             badge3.Name = "badge3";
             badge3.Size = new Size(167, 34);
             badge3.TabIndex = 24;
@@ -450,7 +450,7 @@ namespace BW_tool
             // badge4_date
             // 
             badge4_date.Location = new Point(423, 236);
-            badge4_date.Margin = new Padding(4, 4, 4, 4);
+            badge4_date.Margin = new Padding(4);
             badge4_date.Name = "badge4_date";
             badge4_date.Size = new Size(265, 25);
             badge4_date.TabIndex = 27;
@@ -458,7 +458,7 @@ namespace BW_tool
             // badge4
             // 
             badge4.Location = new Point(333, 235);
-            badge4.Margin = new Padding(4, 4, 4, 4);
+            badge4.Margin = new Padding(4);
             badge4.Name = "badge4";
             badge4.Size = new Size(167, 34);
             badge4.TabIndex = 26;
@@ -468,7 +468,7 @@ namespace BW_tool
             // badge5_date
             // 
             badge5_date.Location = new Point(423, 266);
-            badge5_date.Margin = new Padding(4, 4, 4, 4);
+            badge5_date.Margin = new Padding(4);
             badge5_date.Name = "badge5_date";
             badge5_date.Size = new Size(265, 25);
             badge5_date.TabIndex = 29;
@@ -476,7 +476,7 @@ namespace BW_tool
             // badge5
             // 
             badge5.Location = new Point(333, 265);
-            badge5.Margin = new Padding(4, 4, 4, 4);
+            badge5.Margin = new Padding(4);
             badge5.Name = "badge5";
             badge5.Size = new Size(167, 34);
             badge5.TabIndex = 28;
@@ -486,7 +486,7 @@ namespace BW_tool
             // badge6_date
             // 
             badge6_date.Location = new Point(423, 296);
-            badge6_date.Margin = new Padding(4, 4, 4, 4);
+            badge6_date.Margin = new Padding(4);
             badge6_date.Name = "badge6_date";
             badge6_date.Size = new Size(265, 25);
             badge6_date.TabIndex = 31;
@@ -494,7 +494,7 @@ namespace BW_tool
             // badge6
             // 
             badge6.Location = new Point(333, 295);
-            badge6.Margin = new Padding(4, 4, 4, 4);
+            badge6.Margin = new Padding(4);
             badge6.Name = "badge6";
             badge6.Size = new Size(167, 34);
             badge6.TabIndex = 30;
@@ -504,7 +504,7 @@ namespace BW_tool
             // badge7_date
             // 
             badge7_date.Location = new Point(423, 326);
-            badge7_date.Margin = new Padding(4, 4, 4, 4);
+            badge7_date.Margin = new Padding(4);
             badge7_date.Name = "badge7_date";
             badge7_date.Size = new Size(265, 25);
             badge7_date.TabIndex = 33;
@@ -512,7 +512,7 @@ namespace BW_tool
             // badge7
             // 
             badge7.Location = new Point(333, 325);
-            badge7.Margin = new Padding(4, 4, 4, 4);
+            badge7.Margin = new Padding(4);
             badge7.Name = "badge7";
             badge7.Size = new Size(167, 34);
             badge7.TabIndex = 32;
@@ -522,7 +522,7 @@ namespace BW_tool
             // badge8_date
             // 
             badge8_date.Location = new Point(423, 356);
-            badge8_date.Margin = new Padding(4, 4, 4, 4);
+            badge8_date.Margin = new Padding(4);
             badge8_date.Name = "badge8_date";
             badge8_date.Size = new Size(265, 25);
             badge8_date.TabIndex = 35;
@@ -530,7 +530,7 @@ namespace BW_tool
             // badge8
             // 
             badge8.Location = new Point(333, 355);
-            badge8.Margin = new Padding(4, 4, 4, 4);
+            badge8.Margin = new Padding(4);
             badge8.Name = "badge8";
             badge8.Size = new Size(167, 34);
             badge8.TabIndex = 34;
@@ -582,7 +582,7 @@ namespace BW_tool
             Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "TrainerInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "训练家信息";

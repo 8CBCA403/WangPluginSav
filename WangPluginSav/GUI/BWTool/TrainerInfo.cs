@@ -104,7 +104,7 @@ namespace BW_tool
                     "阳伞姐姐",
                     "护士",
                     "幼儿园小朋友"});
-                tnr_class.SelectedIndex = ash.trainer_class - 8;
+                tnr_class.SelectedIndex = ash.trainer_class;
             }
             gender.SelectedIndex = ash.gender;
 

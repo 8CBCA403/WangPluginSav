@@ -445,7 +445,7 @@ namespace BW_tool
 				else
 					MessageBox.Show(badblocks);
 			} else
-				MessageBox.Show("All checksums OK in MAIN save");
+				MessageBox.Show("主存档所有校验值合法");
 
 			//Backup save checksums
 			badcheck = false;
@@ -489,7 +489,7 @@ namespace BW_tool
 				else
 					MessageBox.Show(badblocks);
 			} else
-				MessageBox.Show("All checksums OK in BACKUP save");
+				MessageBox.Show("备份存档所有校验值合法");
         		
 			return;
         }

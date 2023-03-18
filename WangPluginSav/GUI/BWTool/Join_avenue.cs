@@ -1553,5 +1553,10 @@ namespace BW_tool
                 return index < 0 ? input : input.Substring(0, index);
             }
         }
+
+        private void visitor_apply_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
