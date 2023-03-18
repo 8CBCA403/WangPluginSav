@@ -347,7 +347,7 @@ public class BerryPlotForm : Form
         BerryTypeLabel.Name = "BerryTypeLabel";
         BerryTypeLabel.Size = new Size(78, 20);
         BerryTypeLabel.TabIndex = 2;
-        BerryTypeLabel.Text = "树果类型";
+        BerryTypeLabel.Text = "Berry Type";
         // 
         // SaveButton
         // 
@@ -356,7 +356,7 @@ public class BerryPlotForm : Form
         SaveButton.Name = "SaveButton";
         SaveButton.Size = new Size(100, 40);
         SaveButton.TabIndex = 12;
-        SaveButton.Text = "编辑此图";
+        SaveButton.Text = "Edit this plot";
         SaveButton.UseVisualStyleBackColor = true;
         SaveButton.Click += SaveButton_Click;
         // 
@@ -368,14 +368,14 @@ public class BerryPlotForm : Form
         GrowthStageLabel.Name = "GrowthStageLabel";
         GrowthStageLabel.Size = new Size(99, 20);
         GrowthStageLabel.TabIndex = 7;
-        GrowthStageLabel.Text = "生长阶段";
+        GrowthStageLabel.Text = "Growth Stage";
         // 
         // BerryTypeBox
         // 
         BerryTypeBox.AllowDrop = true;
         BerryTypeBox.DropDownStyle = ComboBoxStyle.DropDownList;
         BerryTypeBox.FormattingEnabled = true;
-        BerryTypeBox.Items.AddRange(new object[] { "无", "樱子果", "零余果", "桃桃果", "莓莓果", "利木果", "苹野果", "橙橙果", "柿仔果", "木子果", "文柚果", "勿花果", "异奇果", "芒芒果", "乐芭果", "芭亚果", "蔓莓果", "墨莓果", "蕉香果", "西梨果", "凰梨果", "榴石果", "藻根果", "比巴果", "哈密果", "萄葡果", "茄番果", "玉黍果", "岳竹果", "茸丹果", "檬柠果", "刺角果", "椰木果", "瓜西果", "金枕果", "靛莓果", "枝荔果", "龙睛果", "沙鳞果", "龙火果", "杏仔果", "兰萨果", "星桃果", "谜芝果" });
+        BerryTypeBox.Items.AddRange(new object[] { "None", "Cheri Berry", "Chesto Berry", "Pecha Berry", "Rawst Berry", "Aspear Berry", "Leppa Berry", "Oran Berry", "Persim Berry", "Lum Berry", "Sitrus Berry", "Figy Berry", "Wiki Berry", "Mago Berry", "Aguav Berry", "Iapapa Berry", "Razz Berry", "Bluk Berry", "Nanab Berry", "Wepear Berry", "Pinap Berry", "Pomeg Berry", "Kelpsy Berry", "Qualot Berry", "Hondew Berry", "Grepa Berry", "Tamato Berry", "Cornn Berry", "Magost Berry", "Rabuta Berry", "Nomel Berry", "Spelon Berry", "Pamtre Berry", "Watmel Berry", "Durin Berry", "Belue Berry", "Liechi Berry", "Ganlon Berry", "Salac Berry", "Petaya Berry", "Apicot Berry", "Lansat Berry", "Starf Berry", "Enigma Berry" });
         BerryTypeBox.Location = new Point(439, 63);
         BerryTypeBox.Margin = new Padding(4, 5, 4, 5);
         BerryTypeBox.Name = "BerryTypeBox";
@@ -387,7 +387,7 @@ public class BerryPlotForm : Form
         GrowthStageBox.AllowDrop = true;
         GrowthStageBox.DropDownStyle = ComboBoxStyle.DropDownList;
         GrowthStageBox.FormattingEnabled = true;
-        GrowthStageBox.Items.AddRange(new object[] { "未种植", "果树种植", "果树发芽", "果树长高", "果树开花", "树果成熟", "未知的" });
+        GrowthStageBox.Items.AddRange(new object[] { "None Planted", "Berry Planted", "Berry Sprouted", "Berry Taller", "Berry Flowering", "Berries Ready", "Unknown" });
         GrowthStageBox.Location = new Point(439, 106);
         GrowthStageBox.Margin = new Padding(4, 5, 4, 5);
         GrowthStageBox.Name = "GrowthStageBox";
@@ -402,7 +402,7 @@ public class BerryPlotForm : Form
         BerryAmoutLabel.Name = "BerryAmoutLabel";
         BerryAmoutLabel.Size = new Size(62, 20);
         BerryAmoutLabel.TabIndex = 15;
-        BerryAmoutLabel.Text = "数量";
+        BerryAmoutLabel.Text = "Amount";
         // 
         // BerryAmountBox
         // 
@@ -419,7 +419,7 @@ public class BerryPlotForm : Form
         BerryPlotLocale.AllowDrop = true;
         BerryPlotLocale.DropDownStyle = ComboBoxStyle.DropDownList;
         BerryPlotLocale.FormattingEnabled = true;
-        BerryPlotLocale.Items.AddRange(new object[] { "102道路_桃桃果", "102道路_橙橙果", "104道路_松软土壤_1", "104道路_橙橙果_1", "103道路_樱子果_1", "103道路_苹野果", "103道路_樱子果_2", "104道路_樱子果_1", "104道路_松软土壤_2", "104道路_苹野果", "104道路_橙橙果_2", "104道路_松软土壤_3", "104道路_桃桃果", "123道路_比巴果_1", "123道路_榴石果_1", "110道路_蕉香果_1", "110道路_蕉香果_2", "110道路_蕉香果_3", "111道路_蔓莓果_1", "111道路_蔓莓果_2", "112道路_莓莓果_1", "112道路_桃桃果_1", "112道路_桃桃果_2", "112道路_莓莓果_2", "116道路_凰梨果_1", "116道路_零余果_1", "117道路_西梨果_1", "117道路_西梨果_2", "117道路_西梨果_3", "123道路_榴石果_2", "118道路_文柚果_1", "118道路_松软土壤", "118道路_文柚果_2", "119道路_榴石果_1", "119道路_榴石果_2", "119道路_榴石果_3", "120道路_利木果_1", "120道路_利木果_2", "120道路_利木果_3", "120道路_桃桃果_1", "120道路_桃桃果_2", "120道路_桃桃果_3", "120道路_蔓莓果", "120道路_蕉香果", "120道路_凰梨果", "120道路_西梨果", "121道路_柿仔果", "121道路_利木果", "121道路_莓莓果", "121道路_零余果", "121道路_松软土壤_1", "121道路_蕉香果_1", "121道路_蕉香果_2", "121道路_松软土壤_2", "115道路_墨莓果_1", "115道路_墨莓果_2", "空", "123道路_榴石果_3", "123道路_榴石果_4", "123道路_萄葡果_1", "123道路_萄葡果_2", "123道路_苹野果_1", "123道路_松软土壤", "123道路_苹野果_2", "123道路_萄葡果_3", "116道路_零余果_2", "116道路_凰梨果_2", "114道路_柿仔果_1", "115道路_藻根果_1", "115道路_藻根果_2", "115道路_藻根果_3", "123道路_萄葡果_4", "123道路_比巴果_2", "123道路_比巴果_3", "104道路_松软土壤_4", "104道路_樱子果_2", "114道路_柿仔果_2", "114道路_柿仔果_3", "123道路_比巴果_4", "111道路_橙橙果_1", "111道路_橙橙果_2", "幻影岛_枝荔果", "119道路_哈密果_1", "119道路_哈密果_2", "119道路_文柚果", "119道路_苹野果", "123道路_桃桃果", "123道路_文柚果", "123道路_莓莓果" });
+        BerryPlotLocale.Items.AddRange(new object[] { "ROUTE_102_PECHA", "ROUTE_102_ORAN", "ROUTE_104_SOIL_1", "ROUTE_104_ORAN_1", "ROUTE_103_CHERI_1", "ROUTE_103_LEPPA", "ROUTE_103_CHERI_2", "ROUTE_104_CHERI_1", "ROUTE_104_SOIL_2", "ROUTE_104_LEPPA", "ROUTE_104_ORAN_2", "ROUTE_104_SOIL_3", "ROUTE_104_PECHA", "ROUTE_123_QUALOT_1", "ROUTE_123_POMEG_1", "ROUTE_110_NANAB_1", "ROUTE_110_NANAB_2", "ROUTE_110_NANAB_3", "ROUTE_111_RAZZ_1", "ROUTE_111_RAZZ_2", "ROUTE_112_RAWST_1", "ROUTE_112_PECHA_1", "ROUTE_112_PECHA_2", "ROUTE_112_RAWST_2", "ROUTE_116_PINAP_1", "ROUTE_116_CHESTO_1", "ROUTE_117_WEPEAR_1", "ROUTE_117_WEPEAR_2", "ROUTE_117_WEPEAR_3", "ROUTE_123_POMEG_2", "ROUTE_118_SITRUS_1", "ROUTE_118_SOIL", "ROUTE_118_SITRUS_2", "ROUTE_119_POMEG_1", "ROUTE_119_POMEG_2", "ROUTE_119_POMEG_3", "ROUTE_120_ASPEAR_1", "ROUTE_120_ASPEAR_2", "ROUTE_120_ASPEAR_3", "ROUTE_120_PECHA_1", "ROUTE_120_PECHA_2", "ROUTE_120_PECHA_3", "ROUTE_120_RAZZ", "ROUTE_120_NANAB", "ROUTE_120_PINAP", "ROUTE_120_WEPEAR", "ROUTE_121_PERSIM", "ROUTE_121_ASPEAR", "ROUTE_121_RAWST", "ROUTE_121_CHESTO", "ROUTE_121_SOIL_1", "ROUTE_121_NANAB_1", "ROUTE_121_NANAB_2", "ROUTE_121_SOIL_2", "ROUTE_115_BLUK_1", "ROUTE_115_BLUK_2", "UNUSED", "ROUTE_123_POMEG_3", "ROUTE_123_POMEG_4", "ROUTE_123_GREPA_1", "ROUTE_123_GREPA_2", "ROUTE_123_LEPPA_1", "ROUTE_123_SOIL", "ROUTE_123_LEPPA_2", "ROUTE_123_GREPA_3", "ROUTE_116_CHESTO_2", "ROUTE_116_PINAP_2", "ROUTE_114_PERSIM_1", "ROUTE_115_KELPSY_1", "ROUTE_115_KELPSY_2", "ROUTE_115_KELPSY_3", "ROUTE_123_GREPA_4", "ROUTE_123_QUALOT_2", "ROUTE_123_QUALOT_3", "ROUTE_104_SOIL_4", "ROUTE_104_CHERI_2", "ROUTE_114_PERSIM_2", "ROUTE_114_PERSIM_3", "ROUTE_123_QUALOT_4", "ROUTE_111_ORAN_1", "ROUTE_111_ORAN_2", "ROUTE_130_LIECHI", "ROUTE_119_HONDEW_1", "ROUTE_119_HONDEW_2", "ROUTE_119_SITRUS", "ROUTE_119_LEPPA", "ROUTE_123_PECHA", "ROUTE_123_SITRUS", "ROUTE_123_RAWST" });
         BerryPlotLocale.Location = new Point(351, 14);
         BerryPlotLocale.Margin = new Padding(4, 5, 4, 5);
         BerryPlotLocale.Name = "BerryPlotLocale";
@@ -436,7 +436,7 @@ public class BerryPlotForm : Form
         SparklingCheck.Name = "SparklingCheck";
         SparklingCheck.Size = new Size(100, 24);
         SparklingCheck.TabIndex = 7;
-        SparklingCheck.Text = "闪亮的?";
+        SparklingCheck.Text = "Sparkling?";
         SparklingCheck.UseVisualStyleBackColor = true;
         // 
         // MinutesToNextStageLabel
@@ -447,7 +447,7 @@ public class BerryPlotForm : Form
         MinutesToNextStageLabel.Name = "MinutesToNextStageLabel";
         MinutesToNextStageLabel.Size = new Size(82, 40);
         MinutesToNextStageLabel.TabIndex = 19;
-        MinutesToNextStageLabel.Text = "几分钟后\r\n下一阶段";
+        MinutesToNextStageLabel.Text = "Minutes to\r\nNext Stage";
         // 
         // MinutesToNextStageBox
         // 
@@ -477,7 +477,7 @@ public class BerryPlotForm : Form
         RegrowthLabel.Name = "RegrowthLabel";
         RegrowthLabel.Size = new Size(73, 40);
         RegrowthLabel.TabIndex = 22;
-        RegrowthLabel.Text = "树果再生\r\n计数";
+        RegrowthLabel.Text = "Regrowth\r\nCount";
         // 
         // Watered1Check
         // 
@@ -487,7 +487,7 @@ public class BerryPlotForm : Form
         Watered1Check.Name = "Watered1Check";
         Watered1Check.Size = new Size(119, 24);
         Watered1Check.TabIndex = 8;
-        Watered1Check.Text = "果树种植";
+        Watered1Check.Text = "Berry Planted";
         Watered1Check.UseVisualStyleBackColor = true;
         // 
         // Watered2Check
@@ -498,7 +498,7 @@ public class BerryPlotForm : Form
         Watered2Check.Name = "Watered2Check";
         Watered2Check.Size = new Size(130, 24);
         Watered2Check.TabIndex = 9;
-        Watered2Check.Text = "果树发芽";
+        Watered2Check.Text = "Berry Sprouted";
         Watered2Check.UseVisualStyleBackColor = true;
         // 
         // Watered3Check
@@ -509,7 +509,7 @@ public class BerryPlotForm : Form
         Watered3Check.Name = "Watered3Check";
         Watered3Check.Size = new Size(104, 24);
         Watered3Check.TabIndex = 10;
-        Watered3Check.Text = "果树长高";
+        Watered3Check.Text = "Berry Taller";
         Watered3Check.UseVisualStyleBackColor = true;
         // 
         // Watered4Check
@@ -520,7 +520,7 @@ public class BerryPlotForm : Form
         Watered4Check.Name = "Watered4Check";
         Watered4Check.Size = new Size(134, 24);
         Watered4Check.TabIndex = 11;
-        Watered4Check.Text = "果树开花";
+        Watered4Check.Text = "Berry Flowering";
         Watered4Check.UseVisualStyleBackColor = true;
         // 
         // label1
@@ -531,7 +531,7 @@ public class BerryPlotForm : Form
         label1.Name = "label1";
         label1.Size = new Size(68, 20);
         label1.TabIndex = 24;
-        label1.Text = "浇水:";
+        label1.Text = "Watered:";
         // 
         // protagbox
         // 
@@ -588,7 +588,7 @@ public class BerryPlotForm : Form
         Name = "BerryPlotForm";
         ShowIcon = false;
         StartPosition = FormStartPosition.CenterScreen;
-        Text = "树果地图";
+        Text = "Berry Plots";
         Load += BerryPlotForm_Load;
         ((ISupportInitialize)protagbox).EndInit();
         ((ISupportInitialize)BerryPicture).EndInit();
