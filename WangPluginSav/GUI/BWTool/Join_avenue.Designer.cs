@@ -324,7 +324,7 @@ namespace BW_tool
             // Exit_but
             // 
             Exit_but.Location = new Point(31, 377);
-            Exit_but.Margin = new Padding(4, 4, 4, 4);
+            Exit_but.Margin = new Padding(4);
             Exit_but.Name = "Exit_but";
             Exit_but.Size = new Size(136, 26);
             Exit_but.TabIndex = 8;
@@ -335,7 +335,7 @@ namespace BW_tool
             // Saveexit_but
             // 
             Saveexit_but.Location = new Point(235, 377);
-            Saveexit_but.Margin = new Padding(4, 4, 4, 4);
+            Saveexit_but.Margin = new Padding(4);
             Saveexit_but.Name = "Saveexit_but";
             Saveexit_but.Size = new Size(136, 26);
             Saveexit_but.TabIndex = 7;
@@ -346,7 +346,7 @@ namespace BW_tool
             // rank
             // 
             rank.Location = new Point(143, 52);
-            rank.Margin = new Padding(4, 4, 4, 4);
+            rank.Margin = new Padding(4);
             rank.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             rank.Name = "rank";
             rank.Size = new Size(209, 25);
@@ -357,7 +357,7 @@ namespace BW_tool
             color.FormattingEnabled = true;
             color.Items.AddRange(new object[] { "橙色", "紫色", "蓝色", "绿色" });
             color.Location = new Point(143, 82);
-            color.Margin = new Padding(4, 4, 4, 4);
+            color.Margin = new Padding(4);
             color.Name = "color";
             color.Size = new Size(208, 23);
             color.TabIndex = 10;
@@ -383,7 +383,7 @@ namespace BW_tool
             // favorite
             // 
             favorite.Location = new Point(143, 143);
-            favorite.Margin = new Padding(4, 4, 4, 4);
+            favorite.Margin = new Padding(4);
             favorite.Name = "favorite";
             favorite.Size = new Size(208, 25);
             favorite.TabIndex = 13;
@@ -391,7 +391,7 @@ namespace BW_tool
             // Impressed
             // 
             Impressed.Location = new Point(143, 173);
-            Impressed.Margin = new Padding(4, 4, 4, 4);
+            Impressed.Margin = new Padding(4);
             Impressed.Name = "Impressed";
             Impressed.Size = new Size(208, 25);
             Impressed.TabIndex = 14;
@@ -399,7 +399,7 @@ namespace BW_tool
             // name
             // 
             name.Location = new Point(143, 22);
-            name.Margin = new Padding(4, 4, 4, 4);
+            name.Margin = new Padding(4);
             name.Name = "name";
             name.Size = new Size(208, 25);
             name.TabIndex = 15;
@@ -407,7 +407,7 @@ namespace BW_tool
             // title
             // 
             title.Location = new Point(143, 113);
-            title.Margin = new Padding(4, 4, 4, 4);
+            title.Margin = new Padding(4);
             title.Name = "title";
             title.Size = new Size(208, 25);
             title.TabIndex = 16;
@@ -451,7 +451,7 @@ namespace BW_tool
             // npc
             // 
             npc.Location = new Point(103, 17);
-            npc.Margin = new Padding(4, 4, 4, 4);
+            npc.Margin = new Padding(4);
             npc.Maximum = new decimal(new int[] { 11, 0, 0, 0 });
             npc.Name = "npc";
             npc.Size = new Size(71, 25);
@@ -461,7 +461,7 @@ namespace BW_tool
             // shop
             // 
             shop.Location = new Point(103, 17);
-            shop.Margin = new Padding(4, 4, 4, 4);
+            shop.Margin = new Padding(4);
             shop.Maximum = new decimal(new int[] { 7, 0, 0, 0 });
             shop.Name = "shop";
             shop.Size = new Size(71, 25);
@@ -471,7 +471,7 @@ namespace BW_tool
             // visitor
             // 
             visitor.Location = new Point(103, 17);
-            visitor.Margin = new Padding(4, 4, 4, 4);
+            visitor.Margin = new Padding(4);
             visitor.Maximum = new decimal(new int[] { 7, 0, 0, 0 });
             visitor.Name = "visitor";
             visitor.Size = new Size(71, 25);
@@ -485,7 +485,7 @@ namespace BW_tool
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Location = new Point(409, 14);
-            tabControl1.Margin = new Padding(4, 4, 4, 4);
+            tabControl1.Margin = new Padding(4);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(681, 390);
@@ -529,9 +529,9 @@ namespace BW_tool
             tabPage1.Controls.Add(shop);
             tabPage1.Controls.Add(shop_name);
             tabPage1.Location = new Point(4, 25);
-            tabPage1.Margin = new Padding(4, 4, 4, 4);
+            tabPage1.Margin = new Padding(4);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(4, 4, 4, 4);
+            tabPage1.Padding = new Padding(4);
             tabPage1.Size = new Size(673, 361);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "商店";
@@ -540,7 +540,7 @@ namespace BW_tool
             // shop_pic
             // 
             shop_pic.Location = new Point(461, 101);
-            shop_pic.Margin = new Padding(4, 4, 4, 4);
+            shop_pic.Margin = new Padding(4);
             shop_pic.Name = "shop_pic";
             shop_pic.Size = new Size(43, 37);
             shop_pic.TabIndex = 115;
@@ -549,7 +549,7 @@ namespace BW_tool
             // shop_debug
             // 
             shop_debug.Location = new Point(103, 200);
-            shop_debug.Margin = new Padding(4, 4, 4, 4);
+            shop_debug.Margin = new Padding(4);
             shop_debug.Name = "shop_debug";
             shop_debug.Size = new Size(80, 25);
             shop_debug.TabIndex = 114;
@@ -558,7 +558,7 @@ namespace BW_tool
             // shop_exp
             // 
             shop_exp.Location = new Point(103, 324);
-            shop_exp.Margin = new Padding(4, 4, 4, 4);
+            shop_exp.Margin = new Padding(4);
             shop_exp.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
             shop_exp.Name = "shop_exp";
             shop_exp.Size = new Size(180, 25);
@@ -576,7 +576,7 @@ namespace BW_tool
             // shop_inventory
             // 
             shop_inventory.Location = new Point(296, 259);
-            shop_inventory.Margin = new Padding(4, 4, 4, 4);
+            shop_inventory.Margin = new Padding(4);
             shop_inventory.Name = "shop_inventory";
             shop_inventory.Size = new Size(173, 28);
             shop_inventory.TabIndex = 110;
@@ -597,7 +597,7 @@ namespace BW_tool
             shop_store.FormattingEnabled = true;
             shop_store.Items.AddRange(new object[] { "抽签店", "美容院", "超市", "花店", "道场", "保育所", "旧货店", "餐厅" });
             shop_store.Location = new Point(103, 261);
-            shop_store.Margin = new Padding(4, 4, 4, 4);
+            shop_store.Margin = new Padding(4);
             shop_store.Name = "shop_store";
             shop_store.Size = new Size(179, 23);
             shop_store.TabIndex = 108;
@@ -616,7 +616,7 @@ namespace BW_tool
             shop_type.FormattingEnabled = true;
             shop_type.Items.AddRange(new object[] { "黑", "白", "黑2", "白2" });
             shop_type.Location = new Point(103, 230);
-            shop_type.Margin = new Padding(4, 4, 4, 4);
+            shop_type.Margin = new Padding(4);
             shop_type.Name = "shop_type";
             shop_type.Size = new Size(179, 23);
             shop_type.TabIndex = 106;
@@ -635,7 +635,7 @@ namespace BW_tool
             shop_rank.FormattingEnabled = true;
             shop_rank.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
             shop_rank.Location = new Point(103, 292);
-            shop_rank.Margin = new Padding(4, 4, 4, 4);
+            shop_rank.Margin = new Padding(4);
             shop_rank.Name = "shop_rank";
             shop_rank.Size = new Size(179, 23);
             shop_rank.TabIndex = 104;
@@ -643,7 +643,7 @@ namespace BW_tool
             // shop_ishuman
             // 
             shop_ishuman.Location = new Point(296, 227);
-            shop_ishuman.Margin = new Padding(4, 4, 4, 4);
+            shop_ishuman.Margin = new Padding(4);
             shop_ishuman.Name = "shop_ishuman";
             shop_ishuman.Size = new Size(139, 28);
             shop_ishuman.TabIndex = 103;
@@ -662,7 +662,7 @@ namespace BW_tool
             // shop_recruit
             // 
             shop_recruit.Location = new Point(391, 167);
-            shop_recruit.Margin = new Padding(4, 4, 4, 4);
+            shop_recruit.Margin = new Padding(4);
             shop_recruit.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             shop_recruit.Name = "shop_recruit";
             shop_recruit.Size = new Size(63, 25);
@@ -682,7 +682,7 @@ namespace BW_tool
             shop_gender.FormattingEnabled = true;
             shop_gender.Items.AddRange(new object[] { "男", "女" });
             shop_gender.Location = new Point(103, 167);
-            shop_gender.Margin = new Padding(4, 4, 4, 4);
+            shop_gender.Margin = new Padding(4);
             shop_gender.Name = "shop_gender";
             shop_gender.Size = new Size(179, 23);
             shop_gender.TabIndex = 99;
@@ -699,7 +699,7 @@ namespace BW_tool
             // shop_date
             // 
             shop_date.Location = new Point(391, 137);
-            shop_date.Margin = new Padding(4, 4, 4, 4);
+            shop_date.Margin = new Padding(4);
             shop_date.MinDate = new DateTime(2000, 1, 1, 0, 0, 0, 0);
             shop_date.Name = "shop_date";
             shop_date.Size = new Size(262, 25);
@@ -710,7 +710,7 @@ namespace BW_tool
             shop_subregion.FormattingEnabled = true;
             shop_subregion.Items.AddRange(new object[] { "0 无" });
             shop_subregion.Location = new Point(391, 79);
-            shop_subregion.Margin = new Padding(4, 4, 4, 4);
+            shop_subregion.Margin = new Padding(4);
             shop_subregion.Name = "shop_subregion";
             shop_subregion.Size = new Size(262, 23);
             shop_subregion.TabIndex = 96;
@@ -727,7 +727,7 @@ namespace BW_tool
             // shop_sprite
             // 
             shop_sprite.Location = new Point(391, 110);
-            shop_sprite.Margin = new Padding(4, 4, 4, 4);
+            shop_sprite.Margin = new Padding(4);
             shop_sprite.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             shop_sprite.Name = "shop_sprite";
             shop_sprite.Size = new Size(63, 25);
@@ -746,7 +746,7 @@ namespace BW_tool
             // shop_shout
             // 
             shop_shout.Location = new Point(103, 77);
-            shop_shout.Margin = new Padding(4, 4, 4, 4);
+            shop_shout.Margin = new Padding(4);
             shop_shout.MaxLength = 14;
             shop_shout.Name = "shop_shout";
             shop_shout.Size = new Size(179, 25);
@@ -764,7 +764,7 @@ namespace BW_tool
             // shop_apply
             // 
             shop_apply.Location = new Point(391, 326);
-            shop_apply.Margin = new Padding(4, 4, 4, 4);
+            shop_apply.Margin = new Padding(4);
             shop_apply.Name = "shop_apply";
             shop_apply.Size = new Size(89, 26);
             shop_apply.TabIndex = 90;
@@ -784,7 +784,7 @@ namespace BW_tool
             // shop_farewell
             // 
             shop_farewell.Location = new Point(103, 137);
-            shop_farewell.Margin = new Padding(4, 4, 4, 4);
+            shop_farewell.Margin = new Padding(4);
             shop_farewell.MaxLength = 14;
             shop_farewell.Name = "shop_farewell";
             shop_farewell.Size = new Size(179, 25);
@@ -793,7 +793,7 @@ namespace BW_tool
             // shop_greeting
             // 
             shop_greeting.Location = new Point(103, 107);
-            shop_greeting.Margin = new Padding(4, 4, 4, 4);
+            shop_greeting.Margin = new Padding(4);
             shop_greeting.MaxLength = 14;
             shop_greeting.Name = "shop_greeting";
             shop_greeting.Size = new Size(179, 25);
@@ -840,7 +840,7 @@ namespace BW_tool
             shop_country.FormattingEnabled = true;
             shop_country.Items.AddRange(new object[] { "0 无", "1 阿富汗", "2 阿尔巴尼亚", "3 阿尔及利亚", "4 美属萨摩亚", "5 安道尔", "6 安哥拉", "7 安圭拉", "8 安提瓜和巴布达", "9 阿根廷", "10 亚美尼亚", "11 阿鲁巴岛", "12 澳大利亚", "13 奥地利", "14 阿塞拜疆", "15 巴哈马", "16 巴林", "17 孟加拉国", "18 巴巴多斯", "19 白俄罗斯", "20 比利时", "21 伯利兹", "22 贝宁", "23 百慕大", "24 不丹", "25 玻利维亚", "26 波斯尼亚和黑塞哥维那", "27 博茨瓦纳", "28 巴西", "29 英属维尔京群岛", "30 文莱达鲁萨兰国", "31 保加利亚", "32 布基纳法索", "33 布隆迪", "34 柬埔寨", "35 喀麦隆", "36 加拿大", "37 佛得角", "38 开曼群岛", "39 中非共和国", "40 乍得", "41 海峡群岛", "42 智利", "43 中国", "44 圣诞岛", "45 哥伦比亚", "46 科摩罗", "47 刚果", "48 库克群岛", "49 哥斯达黎加", "50 科特迪瓦", "51 克罗地亚", "52 古巴", "53 塞浦路斯", "54 捷克共和国", "55 北朝鲜", "56 刚果民主共和国", "57 东帝汶", "58 丹麦", "59 吉布提", "60 多米尼克", "61 多明尼加共和国", "62 厄瓜多尔", "63 埃及", "64 萨尔瓦多", "65 赤道几内亚", "66 厄立特里亚", "67 爱沙尼亚", "68 埃塞俄比亚", "69 福克兰群岛", "70 法罗群岛", "71 斐济", "72 芬兰", "73 法国", "74 法属圭亚那", "75 法属波利尼西亚", "76 加蓬", "77 冈比亚", "78 乔治亚州", "79 德国", "80 加纳", "81 直布罗陀", "82 希腊", "83 格陵兰", "84 格林纳达", "85 瓜德罗普", "86 关岛", "87 危地马拉", "88 几内亚", "89 几内亚比绍", "90 圭亚那", "91 海地", "92 洪都拉斯", "93 匈牙利", "94 冰岛", "95 印度", "96 印度尼西亚", "97 伊朗", "98 伊拉克", "99 爱尔兰", "100 马恩岛", "101 以色列", "102 意大利", "103 牙买加", "104 扬马延岛", "105 日本", "106 约旦", "107 克什米尔", "108 哈萨克斯坦", "109 肯尼亚", "110 基里巴斯", "111 科威特", "112 吉尔吉斯斯坦", "113 老挝", "114 拉脱维亚", "115 黎巴嫩", "116 莱索托", "117 利比里亚", "118 利比亚", "119 列支敦士登", "120 立陶宛", "121 卢森堡", "122 马其顿 (FYROM)", "123 马达加斯加", "124 马拉维", "125 马来西亚", "126 马尔代夫", "127 马里", "128 马耳他", "129 马绍尔群岛", "130 马提尼克岛", "131 毛里塔尼亚", "132 毛里求斯", "133 马约特岛", "134 墨西哥", "135 密克罗尼西亚", "136 摩纳哥", "137 蒙古", "138 黑山", "139 摩洛哥", "140 莫桑比克", "141 缅甸", "142 纳米比亚", "143 瑙鲁", "144 尼泊尔", "145 荷兰", "146 荷属安的列斯", "147 新喀里多尼亚", "148 新西兰", "149 尼加拉瓜", "150 尼日尔", "151 尼日利亚", "152 纽埃", "153 诺福克岛", "154 北马里亚纳群岛", "155 挪威", "156 阿曼", "157 巴基斯坦", "158 帕劳", "159 巴勒斯坦", "160 巴拿马", "161 巴布亚新几内亚", "162 巴拉圭", "163 秘鲁", "164 菲律宾", "165 皮特凯恩群岛", "166 波兰", "167 葡萄牙", "168 波多黎各", "169 卡塔尔", "170 韩国", "171 摩尔多瓦", "172 团圆", "173 罗马尼亚", "174 俄罗斯联邦", "175 卢旺达", "176 圣赫勒拿", "177 圣基茨和尼维斯", "178 圣卢西亚", "179 圣文森特和格林纳丁斯", "180 圣皮埃尔和密克隆", "181 萨摩亚", "182 圣马力诺", "183 圣多美和普林西比", "184 沙特阿拉伯", "185 塞内加尔", "186 塞尔维亚", "187 塞舌尔", "188 塞拉利昂", "189 新加坡", "190 斯洛伐克", "191 斯洛文尼亚", "192 所罗门群岛", "193 索马里", "194 南非", "195 西班牙", "196 斯里兰卡", "197 苏丹", "198 苏里南", "199 斯威士兰", "200 瑞典", "201 瑞士", "202 叙利亚", "203 台湾地区", "204 塔吉克斯坦", "205 泰国", "206 多哥", "207 托克劳", "208 汤加", "209 特立尼达和多巴哥", "210 突尼斯", "211 火鸡", "212 土库曼斯坦", "213 特克斯和凯科斯群岛", "214 图瓦卢", "215 乌干达", "216 乌克兰", "217 阿拉伯联合酋长国", "218 英国", "219 坦桑尼亚", "220 美国", "221 美属维尔京群岛", "222 乌拉圭", "223 乌兹别克斯坦", "224 瓦努阿图", "225 圣座（梵蒂冈城邦）", "226 委内瑞拉", "227 越南", "228 瓦利斯和富图纳", "229 西撒哈拉", "230 也门", "231 赞比亚", "232 津巴布韦" });
             shop_country.Location = new Point(391, 47);
-            shop_country.Margin = new Padding(4, 4, 4, 4);
+            shop_country.Margin = new Padding(4);
             shop_country.Name = "shop_country";
             shop_country.Size = new Size(262, 23);
             shop_country.TabIndex = 82;
@@ -849,7 +849,7 @@ namespace BW_tool
             // shop_name
             // 
             shop_name.Location = new Point(103, 47);
-            shop_name.Margin = new Padding(4, 4, 4, 4);
+            shop_name.Margin = new Padding(4);
             shop_name.MaxLength = 14;
             shop_name.Name = "shop_name";
             shop_name.Size = new Size(179, 25);
@@ -884,11 +884,11 @@ namespace BW_tool
             tabPage2.Controls.Add(visitor_country);
             tabPage2.Controls.Add(visitor_name);
             tabPage2.Controls.Add(visitor);
-            tabPage2.Location = new Point(4, 25);
-            tabPage2.Margin = new Padding(4, 4, 4, 4);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Margin = new Padding(4);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(4, 4, 4, 4);
-            tabPage2.Size = new Size(673, 361);
+            tabPage2.Padding = new Padding(4);
+            tabPage2.Size = new Size(673, 357);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "顾客";
             tabPage2.UseVisualStyleBackColor = true;
@@ -896,7 +896,7 @@ namespace BW_tool
             // visitor_pic
             // 
             visitor_pic.Location = new Point(461, 101);
-            visitor_pic.Margin = new Padding(4, 4, 4, 4);
+            visitor_pic.Margin = new Padding(4);
             visitor_pic.Name = "visitor_pic";
             visitor_pic.Size = new Size(43, 37);
             visitor_pic.TabIndex = 151;
@@ -905,7 +905,7 @@ namespace BW_tool
             // visitor_import
             // 
             visitor_import.Location = new Point(391, 248);
-            visitor_import.Margin = new Padding(4, 4, 4, 4);
+            visitor_import.Margin = new Padding(4);
             visitor_import.Name = "visitor_import";
             visitor_import.Size = new Size(100, 26);
             visitor_import.TabIndex = 150;
@@ -916,7 +916,7 @@ namespace BW_tool
             // visitor_export
             // 
             visitor_export.Location = new Point(499, 248);
-            visitor_export.Margin = new Padding(4, 4, 4, 4);
+            visitor_export.Margin = new Padding(4);
             visitor_export.Name = "visitor_export";
             visitor_export.Size = new Size(100, 26);
             visitor_export.TabIndex = 149;
@@ -927,7 +927,7 @@ namespace BW_tool
             // visitor_ishuman
             // 
             visitor_ishuman.Location = new Point(103, 199);
-            visitor_ishuman.Margin = new Padding(4, 4, 4, 4);
+            visitor_ishuman.Margin = new Padding(4);
             visitor_ishuman.Name = "visitor_ishuman";
             visitor_ishuman.Size = new Size(139, 28);
             visitor_ishuman.TabIndex = 138;
@@ -946,7 +946,7 @@ namespace BW_tool
             // visitor_recruit
             // 
             visitor_recruit.Location = new Point(391, 167);
-            visitor_recruit.Margin = new Padding(4, 4, 4, 4);
+            visitor_recruit.Margin = new Padding(4);
             visitor_recruit.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             visitor_recruit.Name = "visitor_recruit";
             visitor_recruit.Size = new Size(63, 25);
@@ -966,7 +966,7 @@ namespace BW_tool
             visitor_gender.FormattingEnabled = true;
             visitor_gender.Items.AddRange(new object[] { "男", "女" });
             visitor_gender.Location = new Point(103, 167);
-            visitor_gender.Margin = new Padding(4, 4, 4, 4);
+            visitor_gender.Margin = new Padding(4);
             visitor_gender.Name = "visitor_gender";
             visitor_gender.Size = new Size(179, 23);
             visitor_gender.TabIndex = 134;
@@ -983,7 +983,7 @@ namespace BW_tool
             // visitor_date
             // 
             visitor_date.Location = new Point(391, 137);
-            visitor_date.Margin = new Padding(4, 4, 4, 4);
+            visitor_date.Margin = new Padding(4);
             visitor_date.MinDate = new DateTime(2000, 1, 1, 0, 0, 0, 0);
             visitor_date.Name = "visitor_date";
             visitor_date.Size = new Size(262, 25);
@@ -994,7 +994,7 @@ namespace BW_tool
             visitor_subregion.FormattingEnabled = true;
             visitor_subregion.Items.AddRange(new object[] { "0 无" });
             visitor_subregion.Location = new Point(391, 79);
-            visitor_subregion.Margin = new Padding(4, 4, 4, 4);
+            visitor_subregion.Margin = new Padding(4);
             visitor_subregion.Name = "visitor_subregion";
             visitor_subregion.Size = new Size(262, 23);
             visitor_subregion.TabIndex = 131;
@@ -1011,7 +1011,7 @@ namespace BW_tool
             // visitor_sprite
             // 
             visitor_sprite.Location = new Point(391, 110);
-            visitor_sprite.Margin = new Padding(4, 4, 4, 4);
+            visitor_sprite.Margin = new Padding(4);
             visitor_sprite.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             visitor_sprite.Name = "visitor_sprite";
             visitor_sprite.Size = new Size(63, 25);
@@ -1029,7 +1029,7 @@ namespace BW_tool
             // visitor_shout
             // 
             visitor_shout.Location = new Point(103, 77);
-            visitor_shout.Margin = new Padding(4, 4, 4, 4);
+            visitor_shout.Margin = new Padding(4);
             visitor_shout.MaxLength = 14;
             visitor_shout.Name = "visitor_shout";
             visitor_shout.Size = new Size(179, 25);
@@ -1047,7 +1047,7 @@ namespace BW_tool
             // visitor_apply
             // 
             visitor_apply.Location = new Point(103, 248);
-            visitor_apply.Margin = new Padding(4, 4, 4, 4);
+            visitor_apply.Margin = new Padding(4);
             visitor_apply.Name = "visitor_apply";
             visitor_apply.Size = new Size(89, 26);
             visitor_apply.TabIndex = 125;
@@ -1066,7 +1066,7 @@ namespace BW_tool
             // visitor_farewell
             // 
             visitor_farewell.Location = new Point(103, 137);
-            visitor_farewell.Margin = new Padding(4, 4, 4, 4);
+            visitor_farewell.Margin = new Padding(4);
             visitor_farewell.MaxLength = 14;
             visitor_farewell.Name = "visitor_farewell";
             visitor_farewell.Size = new Size(179, 25);
@@ -1075,7 +1075,7 @@ namespace BW_tool
             // visitor_greeting
             // 
             visitor_greeting.Location = new Point(103, 107);
-            visitor_greeting.Margin = new Padding(4, 4, 4, 4);
+            visitor_greeting.Margin = new Padding(4);
             visitor_greeting.MaxLength = 14;
             visitor_greeting.Name = "visitor_greeting";
             visitor_greeting.Size = new Size(179, 25);
@@ -1122,7 +1122,7 @@ namespace BW_tool
             visitor_country.FormattingEnabled = true;
             visitor_country.Items.AddRange(new object[] { "0 无", "1 阿富汗", "2 阿尔巴尼亚", "3 阿尔及利亚", "4 美属萨摩亚", "5 安道尔", "6 安哥拉", "7 安圭拉", "8 安提瓜和巴布达", "9 阿根廷", "10 亚美尼亚", "11 阿鲁巴岛", "12 澳大利亚", "13 奥地利", "14 阿塞拜疆", "15 巴哈马", "16 巴林", "17 孟加拉国", "18 巴巴多斯", "19 白俄罗斯", "20 比利时", "21 伯利兹", "22 贝宁", "23 百慕大", "24 不丹", "25 玻利维亚", "26 波斯尼亚和黑塞哥维那", "27 博茨瓦纳", "28 巴西", "29 英属维尔京群岛", "30 文莱达鲁萨兰国", "31 保加利亚", "32 布基纳法索", "33 布隆迪", "34 柬埔寨", "35 喀麦隆", "36 加拿大", "37 佛得角", "38 开曼群岛", "39 中非共和国", "40 乍得", "41 海峡群岛", "42 智利", "43 中国", "44 圣诞岛", "45 哥伦比亚", "46 科摩罗", "47 刚果", "48 库克群岛", "49 哥斯达黎加", "50 科特迪瓦", "51 克罗地亚", "52 古巴", "53 塞浦路斯", "54 捷克共和国", "55 北朝鲜", "56 刚果民主共和国", "57 东帝汶", "58 丹麦", "59 吉布提", "60 多米尼克", "61 多明尼加共和国", "62 厄瓜多尔", "63 埃及", "64 萨尔瓦多", "65 赤道几内亚", "66 厄立特里亚", "67 爱沙尼亚", "68 埃塞俄比亚", "69 福克兰群岛", "70 法罗群岛", "71 斐济", "72 芬兰", "73 法国", "74 法属圭亚那", "75 法属波利尼西亚", "76 加蓬", "77 冈比亚", "78 乔治亚州", "79 德国", "80 加纳", "81 直布罗陀", "82 希腊", "83 格陵兰", "84 格林纳达", "85 瓜德罗普", "86 关岛", "87 危地马拉", "88 几内亚", "89 几内亚比绍", "90 圭亚那", "91 海地", "92 洪都拉斯", "93 匈牙利", "94 冰岛", "95 印度", "96 印度尼西亚", "97 伊朗", "98 伊拉克", "99 爱尔兰", "100 马恩岛", "101 以色列", "102 意大利", "103 牙买加", "104 扬马延岛", "105 日本", "106 约旦", "107 克什米尔", "108 哈萨克斯坦", "109 肯尼亚", "110 基里巴斯", "111 科威特", "112 吉尔吉斯斯坦", "113 老挝", "114 拉脱维亚", "115 黎巴嫩", "116 莱索托", "117 利比里亚", "118 利比亚", "119 列支敦士登", "120 立陶宛", "121 卢森堡", "122 马其顿 (FYROM)", "123 马达加斯加", "124 马拉维", "125 马来西亚", "126 马尔代夫", "127 马里", "128 马耳他", "129 马绍尔群岛", "130 马提尼克岛", "131 毛里塔尼亚", "132 毛里求斯", "133 马约特岛", "134 墨西哥", "135 密克罗尼西亚", "136 摩纳哥", "137 蒙古", "138 黑山", "139 摩洛哥", "140 莫桑比克", "141 缅甸", "142 纳米比亚", "143 瑙鲁", "144 尼泊尔", "145 荷兰", "146 荷属安的列斯", "147 新喀里多尼亚", "148 新西兰", "149 尼加拉瓜", "150 尼日尔", "151 尼日利亚", "152 纽埃", "153 诺福克岛", "154 北马里亚纳群岛", "155 挪威", "156 阿曼", "157 巴基斯坦", "158 帕劳", "159 巴勒斯坦", "160 巴拿马", "161 巴布亚新几内亚", "162 巴拉圭", "163 秘鲁", "164 菲律宾", "165 皮特凯恩群岛", "166 波兰", "167 葡萄牙", "168 波多黎各", "169 卡塔尔", "170 韩国", "171 摩尔多瓦", "172 团圆", "173 罗马尼亚", "174 俄罗斯联邦", "175 卢旺达", "176 圣赫勒拿", "177 圣基茨和尼维斯", "178 圣卢西亚", "179 圣文森特和格林纳丁斯", "180 圣皮埃尔和密克隆", "181 萨摩亚", "182 圣马力诺", "183 圣多美和普林西比", "184 沙特阿拉伯", "185 塞内加尔", "186 塞尔维亚", "187 塞舌尔", "188 塞拉利昂", "189 新加坡", "190 斯洛伐克", "191 斯洛文尼亚", "192 所罗门群岛", "193 索马里", "194 南非", "195 西班牙", "196 斯里兰卡", "197 苏丹", "198 苏里南", "199 斯威士兰", "200 瑞典", "201 瑞士", "202 叙利亚", "203 台湾地区", "204 塔吉克斯坦", "205 泰国", "206 多哥", "207 托克劳", "208 汤加", "209 特立尼达和多巴哥", "210 突尼斯", "211 火鸡", "212 土库曼斯坦", "213 特克斯和凯科斯群岛", "214 图瓦卢", "215 乌干达", "216 乌克兰", "217 阿拉伯联合酋长国", "218 英国", "219 坦桑尼亚", "220 美国", "221 美属维尔京群岛", "222 乌拉圭", "223 乌兹别克斯坦", "224 瓦努阿图", "225 圣座（梵蒂冈城邦）", "226 委内瑞拉", "227 越南", "228 瓦利斯和富图纳", "229 西撒哈拉", "230 也门", "231 赞比亚", "232 津巴布韦" });
             visitor_country.Location = new Point(391, 47);
-            visitor_country.Margin = new Padding(4, 4, 4, 4);
+            visitor_country.Margin = new Padding(4);
             visitor_country.Name = "visitor_country";
             visitor_country.Size = new Size(262, 23);
             visitor_country.TabIndex = 117;
@@ -1131,7 +1131,7 @@ namespace BW_tool
             // visitor_name
             // 
             visitor_name.Location = new Point(103, 47);
-            visitor_name.Margin = new Padding(4, 4, 4, 4);
+            visitor_name.Margin = new Padding(4);
             visitor_name.MaxLength = 14;
             visitor_name.Name = "visitor_name";
             visitor_name.Size = new Size(179, 25);
@@ -1151,11 +1151,11 @@ namespace BW_tool
             tabPage3.Controls.Add(npc_gender);
             tabPage3.Controls.Add(npc_name);
             tabPage3.Controls.Add(npc);
-            tabPage3.Location = new Point(4, 25);
-            tabPage3.Margin = new Padding(4, 4, 4, 4);
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Margin = new Padding(4);
             tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(4, 4, 4, 4);
-            tabPage3.Size = new Size(673, 361);
+            tabPage3.Padding = new Padding(4);
+            tabPage3.Size = new Size(673, 357);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "NPC";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1163,7 +1163,7 @@ namespace BW_tool
             // npc_apply
             // 
             npc_apply.Location = new Point(8, 200);
-            npc_apply.Margin = new Padding(4, 4, 4, 4);
+            npc_apply.Margin = new Padding(4);
             npc_apply.Name = "npc_apply";
             npc_apply.Size = new Size(89, 26);
             npc_apply.TabIndex = 42;
@@ -1183,7 +1183,7 @@ namespace BW_tool
             // npc_text2
             // 
             npc_text2.Location = new Point(103, 135);
-            npc_text2.Margin = new Padding(4, 4, 4, 4);
+            npc_text2.Margin = new Padding(4);
             npc_text2.MaxLength = 14;
             npc_text2.Name = "npc_text2";
             npc_text2.Size = new Size(160, 25);
@@ -1192,7 +1192,7 @@ namespace BW_tool
             // npc_text1
             // 
             npc_text1.Location = new Point(103, 105);
-            npc_text1.Margin = new Padding(4, 4, 4, 4);
+            npc_text1.Margin = new Padding(4);
             npc_text1.MaxLength = 14;
             npc_text1.Name = "npc_text1";
             npc_text1.Size = new Size(160, 25);
@@ -1201,7 +1201,7 @@ namespace BW_tool
             // npc_spoken
             // 
             npc_spoken.Location = new Point(103, 165);
-            npc_spoken.Margin = new Padding(4, 4, 4, 4);
+            npc_spoken.Margin = new Padding(4);
             npc_spoken.Name = "npc_spoken";
             npc_spoken.Size = new Size(139, 28);
             npc_spoken.TabIndex = 37;
@@ -1249,7 +1249,7 @@ namespace BW_tool
             npc_gender.FormattingEnabled = true;
             npc_gender.Items.AddRange(new object[] { "男", "女" });
             npc_gender.Location = new Point(103, 74);
-            npc_gender.Margin = new Padding(4, 4, 4, 4);
+            npc_gender.Margin = new Padding(4);
             npc_gender.Name = "npc_gender";
             npc_gender.Size = new Size(160, 23);
             npc_gender.TabIndex = 31;
@@ -1257,7 +1257,7 @@ namespace BW_tool
             // npc_name
             // 
             npc_name.Location = new Point(103, 47);
-            npc_name.Margin = new Padding(4, 4, 4, 4);
+            npc_name.Margin = new Padding(4);
             npc_name.MaxLength = 14;
             npc_name.Name = "npc_name";
             npc_name.Size = new Size(160, 25);
@@ -1302,11 +1302,11 @@ namespace BW_tool
             tabPage4.Controls.Add(label16);
             tabPage4.Controls.Add(helper_country);
             tabPage4.Controls.Add(helper_name);
-            tabPage4.Location = new Point(4, 25);
-            tabPage4.Margin = new Padding(4, 4, 4, 4);
+            tabPage4.Location = new Point(4, 29);
+            tabPage4.Margin = new Padding(4);
             tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(4, 4, 4, 4);
-            tabPage4.Size = new Size(673, 361);
+            tabPage4.Padding = new Padding(4);
+            tabPage4.Size = new Size(673, 357);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "助手";
             tabPage4.UseVisualStyleBackColor = true;
@@ -1316,7 +1316,7 @@ namespace BW_tool
             helper.FormattingEnabled = true;
             helper.Items.AddRange(new object[] { "第一助手 (注册登记)", "第二助手 (商店管理)", "第三助手 (组织)", "第四助手 (治愈)" });
             helper.Location = new Point(103, 16);
-            helper.Margin = new Padding(4, 4, 4, 4);
+            helper.Margin = new Padding(4);
             helper.Name = "helper";
             helper.Size = new Size(179, 23);
             helper.TabIndex = 81;
@@ -1334,7 +1334,7 @@ namespace BW_tool
             // helper_date
             // 
             helper_date.Location = new Point(391, 137);
-            helper_date.Margin = new Padding(4, 4, 4, 4);
+            helper_date.Margin = new Padding(4);
             helper_date.MinDate = new DateTime(2000, 1, 1, 0, 0, 0, 0);
             helper_date.Name = "helper_date";
             helper_date.Size = new Size(265, 25);
@@ -1345,7 +1345,7 @@ namespace BW_tool
             helper_subregion.FormattingEnabled = true;
             helper_subregion.Items.AddRange(new object[] { "0 无" });
             helper_subregion.Location = new Point(391, 79);
-            helper_subregion.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion.Margin = new Padding(4);
             helper_subregion.Name = "helper_subregion";
             helper_subregion.Size = new Size(253, 23);
             helper_subregion.TabIndex = 78;
@@ -1355,7 +1355,7 @@ namespace BW_tool
             helper_subregion_argentina.FormattingEnabled = true;
             helper_subregion_argentina.Items.AddRange(new object[] { "0 无", "1 布宜诺斯艾利斯", "2 布宜诺斯艾利斯自治城", "3 卡塔马卡", "4 查科", "5 丘布特", "6 科尔多瓦", "7 科连特斯", "8 恩特雷里奥斯", "9 福尔摩沙", "10 胡胡伊", "11 拉潘帕", "12 拉里奥哈", "13 门多萨", "14 米西奥内斯", "15 内乌肯", "16 里奥内格罗", "17 萨尔塔", "18 圣胡安", "19 圣路易斯", "20 圣诞老人", "21 圣达菲", "22 圣地亚哥德尔埃斯特罗", "23 火地岛", "24 图库曼" });
             helper_subregion_argentina.Location = new Point(601, 222);
-            helper_subregion_argentina.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_argentina.Margin = new Padding(4);
             helper_subregion_argentina.Name = "helper_subregion_argentina";
             helper_subregion_argentina.Size = new Size(55, 23);
             helper_subregion_argentina.TabIndex = 77;
@@ -1366,7 +1366,7 @@ namespace BW_tool
             helper_subregion_australia.FormattingEnabled = true;
             helper_subregion_australia.Items.AddRange(new object[] { "0 无", "1 澳大利亚首都领地", "2 新南威尔士州", "3 北方领土", "4 昆士兰", "5 南澳大利亚", "6 塔斯马尼亚", "7 维多利亚", "8 澳洲西部" });
             helper_subregion_australia.Location = new Point(537, 222);
-            helper_subregion_australia.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_australia.Margin = new Padding(4);
             helper_subregion_australia.Name = "helper_subregion_australia";
             helper_subregion_australia.Size = new Size(55, 23);
             helper_subregion_australia.TabIndex = 76;
@@ -1377,7 +1377,7 @@ namespace BW_tool
             helper_subregion_brazil.FormattingEnabled = true;
             helper_subregion_brazil.Items.AddRange(new object[] { "0 无", "1 英亩", "2 朗多尼亚", "3 阿拉戈斯", "4 阿马帕", "5 亚马孙", "6 巴伊亚", "7 塞阿拉", "8 联邦区", "9 圣埃斯皮里图", "10 戈亚斯", "11 马拉尼昂", "12 马托格罗索", "13 南马托格罗索州", "14 米纳斯吉拉斯州", "15 帕拉", "16 帕拉伊巴", "17 巴拉那", "18 伯南布哥", "19 皮奥伊", "20 里约热内卢", "21 南里奥格兰德", "22 北里奥格兰德", "23 罗赖马", "24 圣卡塔琳娜", "25 圣保罗", "26 塞尔希佩", "27 托坎廷斯" });
             helper_subregion_brazil.Location = new Point(473, 222);
-            helper_subregion_brazil.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_brazil.Margin = new Padding(4);
             helper_subregion_brazil.Name = "helper_subregion_brazil";
             helper_subregion_brazil.Size = new Size(55, 23);
             helper_subregion_brazil.TabIndex = 75;
@@ -1388,7 +1388,7 @@ namespace BW_tool
             helper_subregion_canada.FormattingEnabled = true;
             helper_subregion_canada.Items.AddRange(new object[] { "0 无", "1 阿尔伯塔", "2 不列颠哥伦比亚省", "3 马尼托巴", "4 新不伦瑞克", "5 纽芬兰和拉布拉多", "6 西北地区", "7 新斯科舍省", "8 努纳武特", "9 安大略省", "10 爱德华王子岛", "11 魁北克", "12 萨斯喀彻温省", "13 育空地区" });
             helper_subregion_canada.Location = new Point(409, 222);
-            helper_subregion_canada.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_canada.Margin = new Padding(4);
             helper_subregion_canada.Name = "helper_subregion_canada";
             helper_subregion_canada.Size = new Size(55, 23);
             helper_subregion_canada.TabIndex = 74;
@@ -1399,7 +1399,7 @@ namespace BW_tool
             helper_subregion_china.FormattingEnabled = true;
             helper_subregion_china.Items.AddRange(new object[] { "0 无", "1 安徽", "2 北京", "3 重庆", "4 福建", "5 甘肃", "6 广东", "7 广西", "8 贵州", "9 海南", "10 河北", "11 黑龙江", "12 河南", "13 湖北", "14 湖南", "15 江苏", "16 江西", "17 吉林", "18 辽宁", "19 内蒙古", "20 宁夏", "21 青海", "22 陕西", "23 山东", "24 上海", "25 山西", "26 四川", "27 天津", "28 新疆", "29 西藏", "30 云南", "31 浙江", "32 香港", "33 澳门" });
             helper_subregion_china.Location = new Point(345, 222);
-            helper_subregion_china.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_china.Margin = new Padding(4);
             helper_subregion_china.Name = "helper_subregion_china";
             helper_subregion_china.Size = new Size(55, 23);
             helper_subregion_china.TabIndex = 73;
@@ -1410,7 +1410,7 @@ namespace BW_tool
             helper_subregion_germany.FormattingEnabled = true;
             helper_subregion_germany.Items.AddRange(new object[] { "0 无", "1 巴登-符腾堡州", "2 拜仁", "3 柏林", "4 勃兰登堡", "5 不来梅", "6 汉堡", "7 黑森州", "8 梅克伦堡-西波美拉尼亚", "9 下萨克森", "10 北莱茵-威斯特法伦", "11 莱茵兰-普法尔茨", "12 萨尔州", "13 萨克森", "14 萨克森-安哈尔特", "15 石勒苏益格-荷尔斯泰因", "16 图林根" });
             helper_subregion_germany.Location = new Point(281, 222);
-            helper_subregion_germany.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_germany.Margin = new Padding(4);
             helper_subregion_germany.Name = "helper_subregion_germany";
             helper_subregion_germany.Size = new Size(55, 23);
             helper_subregion_germany.TabIndex = 72;
@@ -1421,7 +1421,7 @@ namespace BW_tool
             helper_subregion_spain.FormattingEnabled = true;
             helper_subregion_spain.Items.AddRange(new object[] { "0 无", "1 安达卢西亚", "2 阿拉贡", "3 阿斯图里亚斯", "4 巴利阿里群岛", "5 巴斯克地区", "6 加那利群岛", "7 坎塔布里亚", "8 卡斯蒂利亚-拉曼恰", "9 卡斯蒂利亚和莱昂", "10 加泰罗尼亚", "11 埃斯特雷马杜拉", "12 加利西亚", "13 马德里", "14 穆尔西亚", "15 纳瓦拉", "16 拉里奥哈", "17 瓦伦西亚" });
             helper_subregion_spain.Location = new Point(217, 222);
-            helper_subregion_spain.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_spain.Margin = new Padding(4);
             helper_subregion_spain.Name = "helper_subregion_spain";
             helper_subregion_spain.Size = new Size(55, 23);
             helper_subregion_spain.TabIndex = 71;
@@ -1432,7 +1432,7 @@ namespace BW_tool
             helper_subregion_finland.FormattingEnabled = true;
             helper_subregion_finland.Items.AddRange(new object[] { "0 无", "1 奥兰群岛", "2 拉普兰", "3 东芬兰", "4 南芬兰", "5 奥卢", "6 西芬兰" });
             helper_subregion_finland.Location = new Point(153, 222);
-            helper_subregion_finland.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_finland.Margin = new Padding(4);
             helper_subregion_finland.Name = "helper_subregion_finland";
             helper_subregion_finland.Size = new Size(55, 23);
             helper_subregion_finland.TabIndex = 70;
@@ -1443,7 +1443,7 @@ namespace BW_tool
             helper_subregion_france.FormattingEnabled = true;
             helper_subregion_france.Items.AddRange(new object[] { "0 无", "1 阿基坦", "2 阿尔萨斯", "3 法兰西岛", "4 奥弗涅", "5 科西嘉", "6 香槟-阿登", "7 北加来海峡", "8 下诺曼底", "9 上诺曼底", "10 皮卡第", "11 弗朗什孔泰", "12 勃艮第", "13 布列塔尼", "14 普罗旺斯-阿尔卑斯-蔚蓝海岸", "15 卢瓦尔河地区", "16 普瓦图-夏朗德", "17 南比利牛斯山脉", "18 朗格多克-鲁西永", "19 豪华轿车", "20 罗纳-阿尔卑斯", "21 洛林", "22 中心" });
             helper_subregion_france.Location = new Point(89, 222);
-            helper_subregion_france.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_france.Margin = new Padding(4);
             helper_subregion_france.Name = "helper_subregion_france";
             helper_subregion_france.Size = new Size(55, 23);
             helper_subregion_france.TabIndex = 69;
@@ -1454,7 +1454,7 @@ namespace BW_tool
             helper_subregion_england.FormattingEnabled = true;
             helper_subregion_england.Items.AddRange(new object[] { "0 无", "1 英格兰东部", "2 东米德兰兹", "3 大伦敦", "4 英格兰东北部", "5 英格兰西北部", "6 北爱尔兰", "7 苏格兰", "8 英格兰东南部", "9 英格兰西南部", "10 威尔士", "11 西米德兰兹郡", "12 约克郡和亨伯" });
             helper_subregion_england.Location = new Point(601, 190);
-            helper_subregion_england.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_england.Margin = new Padding(4);
             helper_subregion_england.Name = "helper_subregion_england";
             helper_subregion_england.Size = new Size(55, 23);
             helper_subregion_england.TabIndex = 68;
@@ -1465,7 +1465,7 @@ namespace BW_tool
             helper_subregion_india.FormattingEnabled = true;
             helper_subregion_india.Items.AddRange(new object[] { "0 无", "1 安达曼和尼科巴群岛", "2 安德拉邦", "3 阿鲁纳恰尔邦", "4 阿萨姆邦", "5 比哈尔邦", "6 昌迪加尔", "7 恰蒂斯加尔邦", "8 达德拉和纳加尔哈维利", "9 达曼和迪乌", "10 德里", "11 果阿", "12 古吉拉特邦", "13 哈里亚纳邦", "14 喜马偕尔邦", "15 查谟和克什米尔", "16 恰尔肯德邦", "17 卡纳塔克邦", "18 喀拉拉邦", "19 拉克沙威普", "20 中央邦", "21 马哈拉施特拉邦", "22 梅加拉亚邦", "23 米佐拉姆", "24 曼尼普尔邦", "25 那加兰邦", "26 奥里萨邦", "27 本地治里", "28 旁遮普", "29 拉贾斯坦邦", "30 锡金", "31 泰米尔纳德邦", "32 特里普拉", "33 北方邦", "34 北阿坎德邦", "35 西孟加拉邦" });
             helper_subregion_india.Location = new Point(537, 190);
-            helper_subregion_india.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_india.Margin = new Padding(4);
             helper_subregion_india.Name = "helper_subregion_india";
             helper_subregion_india.Size = new Size(55, 23);
             helper_subregion_india.TabIndex = 67;
@@ -1476,7 +1476,7 @@ namespace BW_tool
             helper_subregion_italy.FormattingEnabled = true;
             helper_subregion_italy.Items.AddRange(new object[] { "0 无", "1 阿布鲁佐", "2 巴西利卡塔", "3 卡拉布里亚", "4 坎帕尼亚", "5 艾米利亚-罗马涅", "6 弗留利-威尼斯朱利亚", "7 拉齐奥", "8 利古里亚", "9 伦巴第", "10 马尔凯", "11 莫利斯", "12 皮埃蒙特", "13 普利亚", "14 撒丁岛", "15 西西里", "16 托斯卡纳", "17 特伦蒂诺-上阿迪杰", "18 翁布里亚", "19 瓦莱达奥斯塔", "20 威尼托" });
             helper_subregion_italy.Location = new Point(473, 190);
-            helper_subregion_italy.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_italy.Margin = new Padding(4);
             helper_subregion_italy.Name = "helper_subregion_italy";
             helper_subregion_italy.Size = new Size(55, 23);
             helper_subregion_italy.TabIndex = 66;
@@ -1487,7 +1487,7 @@ namespace BW_tool
             helper_subregion_japan.FormattingEnabled = true;
             helper_subregion_japan.Items.AddRange(new object[] { "0 无", "1 北海道（札幌）", "2 北海道（函馆）", "3 北海道（稚内）", "4 北海道（钏路）", "5 青森", "6 岩手", "7 宫城", "8 秋田", "9 山形", "10 福岛", "11 茨城县", "12 栃木", "13 群马", "14 埼玉", "15 千叶", "16 东京", "17 神奈川", "18 新泻", "19 富山", "20 石川", "21 福井", "22 山梨", "23 长野", "24 岐阜", "25 静冈", "26 爱知县", "27 三重", "28 滋贺", "29 京都", "30 大阪", "31 兵库", "32 奈良", "33 和歌山", "34 鸟取", "35 岛根", "36 冈山", "37 广岛", "38 山口", "39 德岛", "40 香川", "41 爱媛", "42 高知", "43 福冈", "44 佐贺", "45 长崎", "46 熊本", "47 大分", "48 宫崎骏", "49 鹿儿岛", "50 冲绳" });
             helper_subregion_japan.Location = new Point(409, 190);
-            helper_subregion_japan.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_japan.Margin = new Padding(4);
             helper_subregion_japan.Name = "helper_subregion_japan";
             helper_subregion_japan.Size = new Size(55, 23);
             helper_subregion_japan.TabIndex = 65;
@@ -1498,7 +1498,7 @@ namespace BW_tool
             helper_subregion_norway.FormattingEnabled = true;
             helper_subregion_norway.Items.AddRange(new object[] { "0 无", "1 阿克斯胡斯", "2 奥斯特-阿格德尔", "3 布斯克鲁德", "4 芬马克", "5 海德马克", "6 霍达兰", "7 扬马延岛", "8 罗弗敦", "9 莫罗和罗姆斯达尔", "10 诺德兰", "11 北特伦德拉格", "12 奥普兰", "13 奥斯陆", "14 罗加兰", "15 松和峡湾", "16 南特伦德拉格", "17 斯瓦尔巴群岛", "18 泰勒马克", "19 特罗姆斯", "20 西阿格德尔", "21 西福尔", "22 东福尔" });
             helper_subregion_norway.Location = new Point(345, 190);
-            helper_subregion_norway.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_norway.Margin = new Padding(4);
             helper_subregion_norway.Name = "helper_subregion_norway";
             helper_subregion_norway.Size = new Size(55, 23);
             helper_subregion_norway.TabIndex = 64;
@@ -1509,7 +1509,7 @@ namespace BW_tool
             helper_subregion_poland.FormattingEnabled = true;
             helper_subregion_poland.Items.AddRange(new object[] { "0 无", "1 下西里西亚", "2 库亚维亚-波美拉尼亚", "3 卢布林", "4 卢布斯", "5 罗兹", "6 小波兰", "7 马索维亚", "8 奥波莱", "9 喀尔巴阡山下", "10 波德拉基亚", "11 波美拉尼亚", "12 西里西亚", "13 圣十字", "14 瓦尔米亚-马祖里亚", "15 大波兰", "16 西波美拉尼亚" });
             helper_subregion_poland.Location = new Point(281, 190);
-            helper_subregion_poland.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_poland.Margin = new Padding(4);
             helper_subregion_poland.Name = "helper_subregion_poland";
             helper_subregion_poland.Size = new Size(55, 23);
             helper_subregion_poland.TabIndex = 63;
@@ -1520,7 +1520,7 @@ namespace BW_tool
             helper_subregion_russia.FormattingEnabled = true;
             helper_subregion_russia.Items.AddRange(new object[] { "0 无", "1 中央联邦区", "2 远东联邦区", "3 西北联邦区", "4 伏尔加联邦管区", "5 西伯利亚联邦区", "6 南部联邦区", "7 乌拉尔联邦区", "8 北高加索联邦区" });
             helper_subregion_russia.Location = new Point(217, 190);
-            helper_subregion_russia.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_russia.Margin = new Padding(4);
             helper_subregion_russia.Name = "helper_subregion_russia";
             helper_subregion_russia.Size = new Size(55, 23);
             helper_subregion_russia.TabIndex = 62;
@@ -1531,7 +1531,7 @@ namespace BW_tool
             helper_subregion_sweeden.FormattingEnabled = true;
             helper_subregion_sweeden.Items.AddRange(new object[] { "0 无", "1 布莱金厄", "2 达拉纳", "3 耶夫勒堡", "4 哥特兰", "5 哈兰德", "6 沙姆特兰", "7 延雪平", "8 卡尔马", "9 克罗诺贝格", "10 北博滕", "11 奥兰", "12 厄勒布鲁", "13 东约特兰", "14 斯科讷", "15 南曼兰", "16 斯德哥尔摩", "17 乌普萨拉", "18 农田", "19 西博滕", "20 西诺兰", "21 大曼兰", "22 西约塔兰" });
             helper_subregion_sweeden.Location = new Point(153, 190);
-            helper_subregion_sweeden.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_sweeden.Margin = new Padding(4);
             helper_subregion_sweeden.Name = "helper_subregion_sweeden";
             helper_subregion_sweeden.Size = new Size(55, 23);
             helper_subregion_sweeden.TabIndex = 61;
@@ -1549,7 +1549,7 @@ namespace BW_tool
             // helper_sprite
             // 
             helper_sprite.Location = new Point(391, 110);
-            helper_sprite.Margin = new Padding(4, 4, 4, 4);
+            helper_sprite.Margin = new Padding(4);
             helper_sprite.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             helper_sprite.Name = "helper_sprite";
             helper_sprite.Size = new Size(63, 25);
@@ -1569,7 +1569,7 @@ namespace BW_tool
             helper_subregion_USA.FormattingEnabled = true;
             helper_subregion_USA.Items.AddRange(new object[] { "0 无", "1 阿拉巴马州", "2 阿拉斯加州", "3 亚利桑那", "4 阿肯色州", "5 加利福尼亚", "6 科罗拉多州", "7 康涅狄格", "8 特拉华州", "9 佛罗里达", "10 乔治亚州", "11 夏威夷", "12 爱达荷州", "13 伊利诺伊州", "14 印第安纳州", "15 爱荷华州", "16 堪萨斯", "17 肯塔基州", "18 路易斯安那州", "19 缅因州", "20 马里兰", "21 马萨诸塞州", "22 密歇根州", "23 明尼苏达", "24 密西西比州", "25 密苏里州", "26 蒙大拿", "27 内布拉斯加州", "28 内华达州", "29 新罕布什尔", "30 新泽西州", "31 新墨西哥", "32 纽约", "33 北卡罗来纳", "34 北达科他州", "35 俄亥俄州", "36 俄克拉荷马州", "37 俄勒冈", "38 宾夕法尼亚州", "39 罗德岛", "40 南卡罗来纳", "41 南达科他州", "42 田纳西州", "43 德克萨斯州", "44 犹他州", "45 佛蒙特", "46 弗吉尼亚", "47 华盛顿", "48 华盛顿特区", "49 西弗吉尼亚", "50 威斯康星州", "51 怀俄明州" });
             helper_subregion_USA.Location = new Point(89, 190);
-            helper_subregion_USA.Margin = new Padding(4, 4, 4, 4);
+            helper_subregion_USA.Margin = new Padding(4);
             helper_subregion_USA.Name = "helper_subregion_USA";
             helper_subregion_USA.Size = new Size(55, 23);
             helper_subregion_USA.TabIndex = 57;
@@ -1578,7 +1578,7 @@ namespace BW_tool
             // helper_met
             // 
             helper_met.Location = new Point(103, 77);
-            helper_met.Margin = new Padding(4, 4, 4, 4);
+            helper_met.Margin = new Padding(4);
             helper_met.MaxLength = 14;
             helper_met.Name = "helper_met";
             helper_met.Size = new Size(179, 25);
@@ -1596,7 +1596,7 @@ namespace BW_tool
             // helper_apply
             // 
             helper_apply.Location = new Point(8, 200);
-            helper_apply.Margin = new Padding(4, 4, 4, 4);
+            helper_apply.Margin = new Padding(4);
             helper_apply.Name = "helper_apply";
             helper_apply.Size = new Size(73, 26);
             helper_apply.TabIndex = 54;
@@ -1616,7 +1616,7 @@ namespace BW_tool
             // helper_greet2
             // 
             helper_greet2.Location = new Point(103, 137);
-            helper_greet2.Margin = new Padding(4, 4, 4, 4);
+            helper_greet2.Margin = new Padding(4);
             helper_greet2.MaxLength = 14;
             helper_greet2.Name = "helper_greet2";
             helper_greet2.Size = new Size(179, 25);
@@ -1625,7 +1625,7 @@ namespace BW_tool
             // helper_greet1
             // 
             helper_greet1.Location = new Point(103, 107);
-            helper_greet1.Margin = new Padding(4, 4, 4, 4);
+            helper_greet1.Margin = new Padding(4);
             helper_greet1.MaxLength = 14;
             helper_greet1.Name = "helper_greet1";
             helper_greet1.Size = new Size(179, 25);
@@ -1672,7 +1672,7 @@ namespace BW_tool
             helper_country.FormattingEnabled = true;
             helper_country.Items.AddRange(new object[] { "0 无", "1 阿富汗", "2 阿尔巴尼亚", "3 阿尔及利亚", "4 美属萨摩亚", "5 安道尔", "6 安哥拉", "7 安圭拉", "8 安提瓜和巴布达", "9 阿根廷", "10 亚美尼亚", "11 阿鲁巴岛", "12 澳大利亚", "13 奥地利", "14 阿塞拜疆", "15 巴哈马", "16 巴林", "17 孟加拉国", "18 巴巴多斯", "19 白俄罗斯", "20 比利时", "21 伯利兹", "22 贝宁", "23 百慕大", "24 不丹", "25 玻利维亚", "26 波斯尼亚和黑塞哥维那", "27 博茨瓦纳", "28 巴西", "29 英属维尔京群岛", "30 文莱达鲁萨兰国", "31 保加利亚", "32 布基纳法索", "33 布隆迪", "34 柬埔寨", "35 喀麦隆", "36 加拿大", "37 佛得角", "38 开曼群岛", "39 中非共和国", "40 乍得", "41 海峡群岛", "42 智利", "43 中国", "44 圣诞岛", "45 哥伦比亚", "46 科摩罗", "47 刚果", "48 库克群岛", "49 哥斯达黎加", "50 科特迪瓦", "51 克罗地亚", "52 古巴", "53 塞浦路斯", "54 捷克共和国", "55 北朝鲜", "56 刚果民主共和国", "57 东帝汶", "58 丹麦", "59 吉布提", "60 多米尼克", "61 多明尼加共和国", "62 厄瓜多尔", "63 埃及", "64 萨尔瓦多", "65 赤道几内亚", "66 厄立特里亚", "67 爱沙尼亚", "68 埃塞俄比亚", "69 福克兰群岛", "70 法罗群岛", "71 斐济", "72 芬兰", "73 法国", "74 法属圭亚那", "75 法属波利尼西亚", "76 加蓬", "77 冈比亚", "78 乔治亚州", "79 德国", "80 加纳", "81 直布罗陀", "82 希腊", "83 格陵兰", "84 格林纳达", "85 瓜德罗普", "86 关岛", "87 危地马拉", "88 几内亚", "89 几内亚比绍", "90 圭亚那", "91 海地", "92 洪都拉斯", "93 匈牙利", "94 冰岛", "95 印度", "96 印度尼西亚", "97 伊朗", "98 伊拉克", "99 爱尔兰", "100 马恩岛", "101 以色列", "102 意大利", "103 牙买加", "104 扬马延岛", "105 日本", "106 约旦", "107 克什米尔", "108 哈萨克斯坦", "109 肯尼亚", "110 基里巴斯", "111 科威特", "112 吉尔吉斯斯坦", "113 老挝", "114 拉脱维亚", "115 黎巴嫩", "116 莱索托", "117 利比里亚", "118 利比亚", "119 列支敦士登", "120 立陶宛", "121 卢森堡", "122 马其顿 (FYROM)", "123 马达加斯加", "124 马拉维", "125 马来西亚", "126 马尔代夫", "127 马里", "128 马耳他", "129 马绍尔群岛", "130 马提尼克岛", "131 毛里塔尼亚", "132 毛里求斯", "133 马约特岛", "134 墨西哥", "135 密克罗尼西亚", "136 摩纳哥", "137 蒙古", "138 黑山", "139 摩洛哥", "140 莫桑比克", "141 缅甸", "142 纳米比亚", "143 瑙鲁", "144 尼泊尔", "145 荷兰", "146 荷属安的列斯", "147 新喀里多尼亚", "148 新西兰", "149 尼加拉瓜", "150 尼日尔", "151 尼日利亚", "152 纽埃", "153 诺福克岛", "154 北马里亚纳群岛", "155 挪威", "156 阿曼", "157 巴基斯坦", "158 帕劳", "159 巴勒斯坦", "160 巴拿马", "161 巴布亚新几内亚", "162 巴拉圭", "163 秘鲁", "164 菲律宾", "165 皮特凯恩群岛", "166 波兰", "167 葡萄牙", "168 波多黎各", "169 卡塔尔", "170 韩国", "171 摩尔多瓦", "172 团圆", "173 罗马尼亚", "174 俄罗斯联邦", "175 卢旺达", "176 圣赫勒拿", "177 圣基茨和尼维斯", "178 圣卢西亚", "179 圣文森特和格林纳丁斯", "180 圣皮埃尔和密克隆", "181 萨摩亚", "182 圣马力诺", "183 圣多美和普林西比", "184 沙特阿拉伯", "185 塞内加尔", "186 塞尔维亚", "187 塞舌尔", "188 塞拉利昂", "189 新加坡", "190 斯洛伐克", "191 斯洛文尼亚", "192 所罗门群岛", "193 索马里", "194 南非", "195 西班牙", "196 斯里兰卡", "197 苏丹", "198 苏里南", "199 斯威士兰", "200 瑞典", "201 瑞士", "202 叙利亚", "203 台湾地区", "204 塔吉克斯坦", "205 泰国", "206 多哥", "207 托克劳", "208 汤加", "209 特立尼达和多巴哥", "210 突尼斯", "211 火鸡", "212 土库曼斯坦", "213 特克斯和凯科斯群岛", "214 图瓦卢", "215 乌干达", "216 乌克兰", "217 阿拉伯联合酋长国", "218 英国", "219 坦桑尼亚", "220 美国", "221 美属维尔京群岛", "222 乌拉圭", "223 乌兹别克斯坦", "224 瓦努阿图", "225 圣座（梵蒂冈城邦）", "226 委内瑞拉", "227 越南", "228 瓦利斯和富图纳", "229 西撒哈拉", "230 也门", "231 赞比亚", "232 津巴布韦" });
             helper_country.Location = new Point(391, 47);
-            helper_country.Margin = new Padding(4, 4, 4, 4);
+            helper_country.Margin = new Padding(4);
             helper_country.Name = "helper_country";
             helper_country.Size = new Size(253, 23);
             helper_country.TabIndex = 45;
@@ -1681,7 +1681,7 @@ namespace BW_tool
             // helper_name
             // 
             helper_name.Location = new Point(103, 47);
-            helper_name.Margin = new Padding(4, 4, 4, 4);
+            helper_name.Margin = new Padding(4);
             helper_name.MaxLength = 14;
             helper_name.Name = "helper_name";
             helper_name.Size = new Size(179, 25);
@@ -1702,9 +1702,9 @@ namespace BW_tool
             groupBox1.Controls.Add(color);
             groupBox1.Controls.Add(rank);
             groupBox1.Location = new Point(16, 86);
-            groupBox1.Margin = new Padding(4, 4, 4, 4);
+            groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 4, 4, 4);
+            groupBox1.Padding = new Padding(4);
             groupBox1.Size = new Size(369, 214);
             groupBox1.TabIndex = 44;
             groupBox1.TabStop = false;
@@ -1720,9 +1720,11 @@ namespace BW_tool
             Controls.Add(Exit_but);
             Controls.Add(Saveexit_but);
             Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Join_avenue";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "汇合大道编辑器";
             ((System.ComponentModel.ISupportInitialize)rank).EndInit();
             ((System.ComponentModel.ISupportInitialize)npc).EndInit();

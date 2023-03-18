@@ -11,7 +11,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
 using System.Text;
-
+using WangPluginSav.Properties;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Resources;
@@ -383,7 +383,7 @@ namespace BW_tool
             shop_date.Value = ja.shop[(int)shop.Value].met;
             shop_recruit.Value = ja.shop[(int)shop.Value].recruitlvl;
 
-            shop_type.SelectedIndex = ja.shop[(int)shop.Value].shop_version;
+            //  shop_type.SelectedIndex = ja.shop[(int)shop.Value].shop_version;//有报错 819
             shop_rank.SelectedIndex = ja.shop[(int)shop.Value].shop_level;
             shop_store.SelectedIndex = ja.shop[(int)shop.Value].shop_type;
             shop_exp.Value = ja.shop[(int)shop.Value].shop_exp;
@@ -427,8 +427,9 @@ namespace BW_tool
         }
         void load_shop_sprite()
         {
+
             // Create a Bitmap object from a file.
-            sprites_data = (Bitmap)resources.GetObject("sprites");
+            sprites_data = (Bitmap)WangPluginSav.Properties.Resources.all_sprites;
             if (((int)shop_sprite.Value) < 32)
             {
                 cloneRect = new Rectangle((int)((shop_sprite.Value) * 32), 0, 32, 32);
@@ -661,7 +662,7 @@ namespace BW_tool
         void load_visitor_sprite()
         {
             // Create a Bitmap object from a file.
-            sprites_data = (Bitmap)resources.GetObject("sprites");
+            sprites_data = (Bitmap)WangPluginSav.Properties.Resources.all_sprites;
             if (((int)visitor_sprite.Value) < 32)
             {
                 cloneRect = new Rectangle((int)((visitor_sprite.Value) * 32), 0, 32, 32);

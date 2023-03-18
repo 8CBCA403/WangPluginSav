@@ -31,7 +31,6 @@ partial class MirageIslandForm
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MirageIslandForm));
         LocationLabel = new Label();
         SaveButton = new Button();
-        label1 = new Label();
         label2 = new Label();
         groupBox1 = new GroupBox();
         PKMList = new ListBox();
@@ -45,7 +44,7 @@ partial class MirageIslandForm
         // LocationLabel
         // 
         LocationLabel.AutoSize = true;
-        LocationLabel.Location = new Point(11, 10);
+        LocationLabel.Location = new Point(25, 9);
         LocationLabel.Margin = new Padding(5, 0, 5, 0);
         LocationLabel.Name = "LocationLabel";
         LocationLabel.Size = new Size(151, 15);
@@ -63,16 +62,6 @@ partial class MirageIslandForm
         SaveButton.Text = "保存";
         SaveButton.UseVisualStyleBackColor = true;
         SaveButton.Click += SaveButton_Click;
-        // 
-        // label1
-        // 
-        label1.AutoSize = true;
-        label1.Location = new Point(11, 10);
-        label1.Margin = new Padding(5, 0, 5, 0);
-        label1.Name = "label1";
-        label1.Size = new Size(39, 15);
-        label1.TabIndex = 0;
-        label1.Text = "幻岛";
         // 
         // label2
         // 
@@ -155,7 +144,6 @@ partial class MirageIslandForm
         Controls.Add(label3);
         Controls.Add(groupBox1);
         Controls.Add(label2);
-        Controls.Add(label1);
         Controls.Add(SaveButton);
         Controls.Add(LocationLabel);
         Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -178,7 +166,6 @@ partial class MirageIslandForm
     #endregion
     private System.Windows.Forms.Label LocationLabel;
     private System.Windows.Forms.Button SaveButton;
-    private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.GroupBox groupBox1;
     private System.Windows.Forms.ListBox PKMList;

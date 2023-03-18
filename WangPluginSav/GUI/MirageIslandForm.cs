@@ -8,7 +8,7 @@ namespace WangPluginSav;
 public partial class MirageIslandForm : Form
 {
     private readonly SAV3 sav;
-    private  List<SlotCache> cache;
+    private List<SlotCache> cache;
     private ushort seed;
 
     public PKM? SelectedPKM = null;
