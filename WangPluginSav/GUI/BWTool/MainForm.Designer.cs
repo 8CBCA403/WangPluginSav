@@ -81,7 +81,7 @@ namespace BW_tool
             // loadsave_but
             // 
             loadsave_but.Location = new Point(16, 14);
-            loadsave_but.Margin = new Padding(4, 4, 4, 4);
+            loadsave_but.Margin = new Padding(4);
             loadsave_but.Name = "loadsave_but";
             loadsave_but.Size = new Size(176, 26);
             loadsave_but.TabIndex = 0;
@@ -92,7 +92,7 @@ namespace BW_tool
             // savegamename
             // 
             savegamename.Location = new Point(16, 47);
-            savegamename.Margin = new Padding(4, 4, 4, 4);
+            savegamename.Margin = new Padding(4);
             savegamename.Name = "savegamename";
             savegamename.Size = new Size(644, 25);
             savegamename.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace BW_tool
             // 
             save_but.Enabled = false;
             save_but.Location = new Point(561, 77);
-            save_but.Margin = new Padding(4, 4, 4, 4);
+            save_but.Margin = new Padding(4);
             save_but.Name = "save_but";
             save_but.Size = new Size(100, 26);
             save_but.TabIndex = 2;
@@ -122,7 +122,7 @@ namespace BW_tool
             // 
             dumper_but.Enabled = false;
             dumper_but.Location = new Point(431, 77);
-            dumper_but.Margin = new Padding(4, 4, 4, 4);
+            dumper_but.Margin = new Padding(4);
             dumper_but.Name = "dumper_but";
             dumper_but.Size = new Size(123, 26);
             dumper_but.TabIndex = 4;
@@ -134,7 +134,7 @@ namespace BW_tool
             // 
             chk_but.Enabled = false;
             chk_but.Location = new Point(365, 14);
-            chk_but.Margin = new Padding(4, 4, 4, 4);
+            chk_but.Margin = new Padding(4);
             chk_but.Name = "chk_but";
             chk_but.Size = new Size(132, 26);
             chk_but.TabIndex = 5;
@@ -146,7 +146,7 @@ namespace BW_tool
             // 
             chk_updt_but.Enabled = false;
             chk_updt_but.Location = new Point(505, 14);
-            chk_updt_but.Margin = new Padding(4, 4, 4, 4);
+            chk_updt_but.Margin = new Padding(4);
             chk_updt_but.Name = "chk_updt_but";
             chk_updt_but.Size = new Size(156, 26);
             chk_updt_but.TabIndex = 6;
@@ -158,7 +158,7 @@ namespace BW_tool
             // 
             grotto_but.Enabled = false;
             grotto_but.Location = new Point(16, 90);
-            grotto_but.Margin = new Padding(4, 4, 4, 4);
+            grotto_but.Margin = new Padding(4);
             grotto_but.Name = "grotto_but";
             grotto_but.Size = new Size(187, 26);
             grotto_but.TabIndex = 7;
@@ -170,7 +170,7 @@ namespace BW_tool
             // 
             trainer_records_but.Enabled = false;
             trainer_records_but.Location = new Point(405, 124);
-            trainer_records_but.Margin = new Padding(4, 4, 4, 4);
+            trainer_records_but.Margin = new Padding(4);
             trainer_records_but.Name = "trainer_records_but";
             trainer_records_but.Size = new Size(187, 26);
             trainer_records_but.TabIndex = 8;
@@ -183,7 +183,7 @@ namespace BW_tool
             // 
             medal_but.Enabled = false;
             medal_but.Location = new Point(16, 190);
-            medal_but.Margin = new Padding(4, 4, 4, 4);
+            medal_but.Margin = new Padding(4);
             medal_but.Name = "medal_but";
             medal_but.Size = new Size(187, 26);
             medal_but.TabIndex = 9;
@@ -195,7 +195,7 @@ namespace BW_tool
             // 
             forest_but.Enabled = false;
             forest_but.Location = new Point(211, 90);
-            forest_but.Margin = new Padding(4, 4, 4, 4);
+            forest_but.Margin = new Padding(4);
             forest_but.Name = "forest_but";
             forest_but.Size = new Size(187, 26);
             forest_but.TabIndex = 10;
@@ -207,7 +207,7 @@ namespace BW_tool
             // 
             key_but.Enabled = false;
             key_but.Location = new Point(211, 157);
-            key_but.Margin = new Padding(4, 4, 4, 4);
+            key_but.Margin = new Padding(4);
             key_but.Name = "key_but";
             key_but.Size = new Size(187, 26);
             key_but.TabIndex = 11;
@@ -219,7 +219,7 @@ namespace BW_tool
             // 
             join_but.Enabled = false;
             join_but.Location = new Point(16, 157);
-            join_but.Margin = new Padding(4, 4, 4, 4);
+            join_but.Margin = new Padding(4);
             join_but.Name = "join_but";
             join_but.Size = new Size(187, 26);
             join_but.TabIndex = 12;
@@ -231,7 +231,7 @@ namespace BW_tool
             // 
             trainer_but.Enabled = false;
             trainer_but.Location = new Point(211, 124);
-            trainer_but.Margin = new Padding(4, 4, 4, 4);
+            trainer_but.Margin = new Padding(4);
             trainer_but.Name = "trainer_but";
             trainer_but.Size = new Size(187, 26);
             trainer_but.TabIndex = 13;
@@ -242,7 +242,7 @@ namespace BW_tool
             // about
             // 
             about.Location = new Point(639, 191);
-            about.Margin = new Padding(4, 4, 4, 4);
+            about.Margin = new Padding(4);
             about.Name = "about";
             about.Size = new Size(23, 26);
             about.TabIndex = 14;
@@ -254,7 +254,7 @@ namespace BW_tool
             // 
             memory_but.Enabled = false;
             memory_but.Location = new Point(211, 190);
-            memory_but.Margin = new Padding(4, 4, 4, 4);
+            memory_but.Margin = new Padding(4);
             memory_but.Name = "memory_but";
             memory_but.Size = new Size(187, 26);
             memory_but.TabIndex = 15;
@@ -264,22 +264,20 @@ namespace BW_tool
             // 
             // dlc_but
             // 
-            dlc_but.Enabled = false;
             dlc_but.Location = new Point(211, 224);
-            dlc_but.Margin = new Padding(4, 4, 4, 4);
+            dlc_but.Margin = new Padding(4);
             dlc_but.Name = "dlc_but";
             dlc_but.Size = new Size(187, 26);
             dlc_but.TabIndex = 16;
             dlc_but.Text = "DLC";
             dlc_but.UseVisualStyleBackColor = true;
-            dlc_but.Visible = false;
             dlc_but.Click += Dlc_butClick;
             // 
             // dr_but
             // 
             dr_but.Enabled = false;
             dr_but.Location = new Point(16, 224);
-            dr_but.Margin = new Padding(4, 4, 4, 4);
+            dr_but.Margin = new Padding(4);
             dr_but.Name = "dr_but";
             dr_but.Size = new Size(187, 26);
             dr_but.TabIndex = 17;
@@ -291,7 +289,7 @@ namespace BW_tool
             // 
             prop_but.Enabled = false;
             prop_but.Location = new Point(16, 124);
-            prop_but.Margin = new Padding(4, 4, 4, 4);
+            prop_but.Margin = new Padding(4);
             prop_but.Name = "prop_but";
             prop_but.Size = new Size(187, 26);
             prop_but.TabIndex = 18;
@@ -327,7 +325,7 @@ namespace BW_tool
             Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BWTool";

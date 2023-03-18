@@ -17,6 +17,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using PKHeX.Core;
+using Pikaedit;
+using System.Windows.Forms.Design;
 
 namespace BW_tool
 {
@@ -278,8 +280,16 @@ namespace BW_tool
         }
         void Dlc_butClick(object sender, EventArgs e)
         {
-            Form dlc = new DLC();
-            dlc.ShowDialog();
+            var sav =new Pikaedit.SaveFile(saveFile);
+            var dLCEditor = new DLCEditor();
+            dLCEditor.cgearSkin = sav.cgearSkin;
+            dLCEditor.pokedexSkin = sav.pokedexSkin;
+            dLCEditor.musicalData = sav.musical;
+            dLCEditor.Version = sav.version;
+            dLCEditor.Show();
+            sav.cgearSkin = dLCEditor.cgearSkin;
+            sav.pokedexSkin = dLCEditor.pokedexSkin;
+            sav.musical = dLCEditor.musicalData;
         }
         void Dr_butClick(object sender, EventArgs e)
         {

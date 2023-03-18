@@ -92,7 +92,7 @@ namespace BW_tool
                     "幼儿园小朋友"});
                 tnr_class.SelectedIndex = ash.trainer_class;
             }
-            else
+      /*      else
             {
                 tnr_class.Items.Clear();
                 tnr_class.Items.AddRange(new object[] {
@@ -105,7 +105,7 @@ namespace BW_tool
                     "护士",
                     "幼儿园小朋友"});
                 tnr_class.SelectedIndex = ash.trainer_class;
-            }
+            }*/
             gender.SelectedIndex = ash.gender;
 
             hours.Value = ash.hours;
