@@ -12,7 +12,7 @@ namespace WangPluginSav.Plugins
     internal class ClothesImportPlugin:WangPluginSav
     {
         public override string Name => "服装导入器";
-        public override int Priority => 3;
+        public override int Priority => 4;
 
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {

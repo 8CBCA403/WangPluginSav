@@ -12,7 +12,7 @@ namespace WangPluginSav.Plugins
     internal class Gen8EventPlugin : WangPluginSav
     {
         public override string Name => "Gen8事件修改器";
-        public override int Priority => 5;
+        public override int Priority => 6;
 
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {

@@ -12,7 +12,7 @@ namespace WangPluginSav.Plugins
     internal class RaidImportPlugin : WangPluginSav
     {
         public override string Name => "Raid导入器";
-        public override int Priority => 4;
+        public override int Priority => 5;
 
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {
