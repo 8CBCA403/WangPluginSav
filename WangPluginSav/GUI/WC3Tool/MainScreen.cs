@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using WangPluginSav.Util.WC3;
 
 namespace WC3Tool;
 

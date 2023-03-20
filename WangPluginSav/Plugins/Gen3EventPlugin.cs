@@ -80,7 +80,7 @@ namespace WangPluginSav.Plugins
                 MessageBox.Show("检测到空档，请导入有效存档");
                 return;
             }
-            var form = new MainScreen(new WC3Tool.SAV3(SaveFileEditor.SAV.Data));
+            var form = new MainScreen(new Util.WC3.SAV3(SaveFileEditor.SAV.Data));
 
             form.Show();
         }

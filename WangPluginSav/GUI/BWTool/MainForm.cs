@@ -16,7 +16,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
-using PKHeX.Core;
+using WangPluginSav.Util.Pikaedit;
 using Pikaedit;
 using System.Windows.Forms.Design;
 
@@ -280,7 +280,7 @@ namespace BW_tool
         }
         void Dlc_butClick(object sender, EventArgs e)
         {
-            var sav =new Pikaedit.SaveFile(saveFile);
+            var sav =new SaveFile(saveFile);
             var dLCEditor = new DLCEditor();
             dLCEditor.cgearSkin = sav.cgearSkin;
             dLCEditor.pokedexSkin = sav.pokedexSkin;

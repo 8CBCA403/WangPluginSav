@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using PKHeX;
+using WangPluginSav.Util.WC3.PKHeX;
 
 namespace WC3Tool;
 

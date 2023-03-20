@@ -47,153 +47,216 @@ namespace Pikaedit
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pikaedit.DLCEditor));
-            this.loadDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveDialog = new System.Windows.Forms.SaveFileDialog();
-            this.extractMusical = new System.Windows.Forms.Button();
-            this.activeMusical = new System.Windows.Forms.CheckBox();
-            this.changeMusical = new System.Windows.Forms.Button();
-            this.GroupBox3 = new System.Windows.Forms.GroupBox();
-            this.extractPokedex = new System.Windows.Forms.Button();
-            this.activePokedex = new System.Windows.Forms.CheckBox();
-            this.changePokedex = new System.Windows.Forms.Button();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.extractCGear = new System.Windows.Forms.Button();
-            this.changeCGear = new System.Windows.Forms.Button();
-            this.activeCGear = new System.Windows.Forms.CheckBox();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.musicalTitle = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.GroupBox3.SuspendLayout();
-            this.GroupBox2.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
-            base.SuspendLayout();
-            this.extractMusical.Location = new System.Drawing.Point(6, 71);
-            this.extractMusical.Name = "extractMusical";
-            this.extractMusical.Size = new System.Drawing.Size(75, 23);
-            this.extractMusical.TabIndex = 8;
-            this.extractMusical.Text = "Extract";
-            this.extractMusical.UseVisualStyleBackColor = true;
-            this.extractMusical.Click += new System.EventHandler(extract);
-            this.activeMusical.AutoSize = true;
-            this.activeMusical.Location = new System.Drawing.Point(6, 19);
-            this.activeMusical.Name = "activeMusical";
-            this.activeMusical.Size = new System.Drawing.Size(56, 17);
-            this.activeMusical.TabIndex = 6;
-            this.activeMusical.Text = "Active";
-            this.activeMusical.UseVisualStyleBackColor = true;
-            this.activeMusical.CheckedChanged += new System.EventHandler(activate);
-            this.changeMusical.Location = new System.Drawing.Point(6, 42);
-            this.changeMusical.Name = "changeMusical";
-            this.changeMusical.Size = new System.Drawing.Size(75, 23);
-            this.changeMusical.TabIndex = 7;
-            this.changeMusical.Text = "Change";
-            this.changeMusical.UseVisualStyleBackColor = true;
-            this.changeMusical.Click += new System.EventHandler(change);
-            this.GroupBox3.Controls.Add(this.label1);
-            this.GroupBox3.Controls.Add(this.musicalTitle);
-            this.GroupBox3.Controls.Add(this.extractMusical);
-            this.GroupBox3.Controls.Add(this.activeMusical);
-            this.GroupBox3.Controls.Add(this.changeMusical);
-            this.GroupBox3.Location = new System.Drawing.Point(312, 2);
-            this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(263, 110);
-            this.GroupBox3.TabIndex = 12;
-            this.GroupBox3.TabStop = false;
-            this.GroupBox3.Text = "Musical Data";
-            this.extractPokedex.Location = new System.Drawing.Point(6, 71);
-            this.extractPokedex.Name = "extractPokedex";
-            this.extractPokedex.Size = new System.Drawing.Size(75, 23);
-            this.extractPokedex.TabIndex = 8;
-            this.extractPokedex.Text = "Extract";
-            this.extractPokedex.UseVisualStyleBackColor = true;
-            this.extractPokedex.Click += new System.EventHandler(extract);
-            this.activePokedex.AutoSize = true;
-            this.activePokedex.Location = new System.Drawing.Point(6, 19);
-            this.activePokedex.Name = "activePokedex";
-            this.activePokedex.Size = new System.Drawing.Size(56, 17);
-            this.activePokedex.TabIndex = 6;
-            this.activePokedex.Text = "Active";
-            this.activePokedex.UseVisualStyleBackColor = true;
-            this.activePokedex.CheckedChanged += new System.EventHandler(activate);
-            this.changePokedex.Location = new System.Drawing.Point(6, 42);
-            this.changePokedex.Name = "changePokedex";
-            this.changePokedex.Size = new System.Drawing.Size(75, 23);
-            this.changePokedex.TabIndex = 7;
-            this.changePokedex.Text = "Change";
-            this.changePokedex.UseVisualStyleBackColor = true;
-            this.changePokedex.Click += new System.EventHandler(change);
-            this.GroupBox2.Controls.Add(this.extractPokedex);
-            this.GroupBox2.Controls.Add(this.activePokedex);
-            this.GroupBox2.Controls.Add(this.changePokedex);
-            this.GroupBox2.Location = new System.Drawing.Point(162, 2);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(144, 110);
-            this.GroupBox2.TabIndex = 11;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "Pokedex Skin";
-            this.extractCGear.Location = new System.Drawing.Point(6, 71);
-            this.extractCGear.Name = "extractCGear";
-            this.extractCGear.Size = new System.Drawing.Size(75, 23);
-            this.extractCGear.TabIndex = 5;
-            this.extractCGear.Text = "Extract";
-            this.extractCGear.UseVisualStyleBackColor = true;
-            this.extractCGear.Click += new System.EventHandler(extract);
-            this.changeCGear.Location = new System.Drawing.Point(6, 42);
-            this.changeCGear.Name = "changeCGear";
-            this.changeCGear.Size = new System.Drawing.Size(75, 23);
-            this.changeCGear.TabIndex = 4;
-            this.changeCGear.Text = "Change";
-            this.changeCGear.UseVisualStyleBackColor = true;
-            this.changeCGear.Click += new System.EventHandler(change);
-            this.activeCGear.AutoSize = true;
-            this.activeCGear.Location = new System.Drawing.Point(6, 19);
-            this.activeCGear.Name = "activeCGear";
-            this.activeCGear.Size = new System.Drawing.Size(56, 17);
-            this.activeCGear.TabIndex = 3;
-            this.activeCGear.Text = "Active";
-            this.activeCGear.UseVisualStyleBackColor = true;
-            this.activeCGear.CheckedChanged += new System.EventHandler(activate);
-            this.GroupBox1.Controls.Add(this.extractCGear);
-            this.GroupBox1.Controls.Add(this.changeCGear);
-            this.GroupBox1.Controls.Add(this.activeCGear);
-            this.GroupBox1.Location = new System.Drawing.Point(3, 2);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(153, 110);
-            this.GroupBox1.TabIndex = 10;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "C-Gear Skin";
-            this.musicalTitle.Location = new System.Drawing.Point(92, 42);
-            this.musicalTitle.MaxLength = 14;
-            this.musicalTitle.Name = "musicalTitle";
-            this.musicalTitle.Size = new System.Drawing.Size(163, 20);
-            this.musicalTitle.TabIndex = 13;
-            this.musicalTitle.TextChanged += new System.EventHandler(musicalTitle_TextChanged);
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Musical Title";
-            base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            base.ClientSize = new System.Drawing.Size(579, 116);
-            base.Controls.Add(this.GroupBox3);
-            base.Controls.Add(this.GroupBox2);
-            base.Controls.Add(this.GroupBox1);
-            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            base.Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
-            base.MaximizeBox = false;
-            base.MinimizeBox = false;
-            base.Name = "DLCEditor";
-            this.Text = "DLC";
-            this.GroupBox3.ResumeLayout(false);
-            this.GroupBox3.PerformLayout();
-            this.GroupBox2.ResumeLayout(false);
-            this.GroupBox2.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
-            base.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DLCEditor));
+            loadDialog = new OpenFileDialog();
+            saveDialog = new SaveFileDialog();
+            extractMusical = new Button();
+            activeMusical = new CheckBox();
+            changeMusical = new Button();
+            GroupBox3 = new GroupBox();
+            label1 = new Label();
+            musicalTitle = new TextBox();
+            extractPokedex = new Button();
+            activePokedex = new CheckBox();
+            changePokedex = new Button();
+            GroupBox2 = new GroupBox();
+            extractCGear = new Button();
+            changeCGear = new Button();
+            activeCGear = new CheckBox();
+            GroupBox1 = new GroupBox();
+            GroupBox3.SuspendLayout();
+            GroupBox2.SuspendLayout();
+            GroupBox1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // extractMusical
+            // 
+            extractMusical.Location = new Point(8, 109);
+            extractMusical.Margin = new Padding(4, 5, 4, 5);
+            extractMusical.Name = "extractMusical";
+            extractMusical.Size = new Size(100, 35);
+            extractMusical.TabIndex = 8;
+            extractMusical.Text = "Extract";
+            extractMusical.UseVisualStyleBackColor = true;
+            extractMusical.Click += extract;
+            // 
+            // activeMusical
+            // 
+            activeMusical.AutoSize = true;
+            activeMusical.Location = new Point(8, 29);
+            activeMusical.Margin = new Padding(4, 5, 4, 5);
+            activeMusical.Name = "activeMusical";
+            activeMusical.Size = new Size(72, 24);
+            activeMusical.TabIndex = 6;
+            activeMusical.Text = "Active";
+            activeMusical.UseVisualStyleBackColor = true;
+            activeMusical.CheckedChanged += activate;
+            // 
+            // changeMusical
+            // 
+            changeMusical.Location = new Point(8, 65);
+            changeMusical.Margin = new Padding(4, 5, 4, 5);
+            changeMusical.Name = "changeMusical";
+            changeMusical.Size = new Size(100, 35);
+            changeMusical.TabIndex = 7;
+            changeMusical.Text = "Change";
+            changeMusical.UseVisualStyleBackColor = true;
+            changeMusical.Click += change;
+            // 
+            // GroupBox3
+            // 
+            GroupBox3.Controls.Add(label1);
+            GroupBox3.Controls.Add(musicalTitle);
+            GroupBox3.Controls.Add(extractMusical);
+            GroupBox3.Controls.Add(activeMusical);
+            GroupBox3.Controls.Add(changeMusical);
+            GroupBox3.Location = new Point(416, 3);
+            GroupBox3.Margin = new Padding(4, 5, 4, 5);
+            GroupBox3.Name = "GroupBox3";
+            GroupBox3.Padding = new Padding(4, 5, 4, 5);
+            GroupBox3.Size = new Size(351, 169);
+            GroupBox3.TabIndex = 12;
+            GroupBox3.TabStop = false;
+            GroupBox3.Text = "Musical Data";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(119, 31);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 20);
+            label1.TabIndex = 14;
+            label1.Text = "Musical Title";
+            // 
+            // musicalTitle
+            // 
+            musicalTitle.Location = new Point(123, 65);
+            musicalTitle.Margin = new Padding(4, 5, 4, 5);
+            musicalTitle.MaxLength = 14;
+            musicalTitle.Name = "musicalTitle";
+            musicalTitle.Size = new Size(216, 27);
+            musicalTitle.TabIndex = 13;
+            musicalTitle.TextChanged += musicalTitle_TextChanged;
+            // 
+            // extractPokedex
+            // 
+            extractPokedex.Location = new Point(8, 109);
+            extractPokedex.Margin = new Padding(4, 5, 4, 5);
+            extractPokedex.Name = "extractPokedex";
+            extractPokedex.Size = new Size(100, 35);
+            extractPokedex.TabIndex = 8;
+            extractPokedex.Text = "Extract";
+            extractPokedex.UseVisualStyleBackColor = true;
+            extractPokedex.Click += extract;
+            // 
+            // activePokedex
+            // 
+            activePokedex.AutoSize = true;
+            activePokedex.Location = new Point(8, 29);
+            activePokedex.Margin = new Padding(4, 5, 4, 5);
+            activePokedex.Name = "activePokedex";
+            activePokedex.Size = new Size(72, 24);
+            activePokedex.TabIndex = 6;
+            activePokedex.Text = "Active";
+            activePokedex.UseVisualStyleBackColor = true;
+            activePokedex.CheckedChanged += activate;
+            // 
+            // changePokedex
+            // 
+            changePokedex.Location = new Point(8, 65);
+            changePokedex.Margin = new Padding(4, 5, 4, 5);
+            changePokedex.Name = "changePokedex";
+            changePokedex.Size = new Size(100, 35);
+            changePokedex.TabIndex = 7;
+            changePokedex.Text = "Change";
+            changePokedex.UseVisualStyleBackColor = true;
+            changePokedex.Click += change;
+            // 
+            // GroupBox2
+            // 
+            GroupBox2.Controls.Add(extractPokedex);
+            GroupBox2.Controls.Add(activePokedex);
+            GroupBox2.Controls.Add(changePokedex);
+            GroupBox2.Location = new Point(216, 3);
+            GroupBox2.Margin = new Padding(4, 5, 4, 5);
+            GroupBox2.Name = "GroupBox2";
+            GroupBox2.Padding = new Padding(4, 5, 4, 5);
+            GroupBox2.Size = new Size(192, 169);
+            GroupBox2.TabIndex = 11;
+            GroupBox2.TabStop = false;
+            GroupBox2.Text = "Pokedex Skin";
+            // 
+            // extractCGear
+            // 
+            extractCGear.Location = new Point(8, 109);
+            extractCGear.Margin = new Padding(4, 5, 4, 5);
+            extractCGear.Name = "extractCGear";
+            extractCGear.Size = new Size(100, 35);
+            extractCGear.TabIndex = 5;
+            extractCGear.Text = "Extract";
+            extractCGear.UseVisualStyleBackColor = true;
+            extractCGear.Click += extract;
+            // 
+            // changeCGear
+            // 
+            changeCGear.Location = new Point(8, 65);
+            changeCGear.Margin = new Padding(4, 5, 4, 5);
+            changeCGear.Name = "changeCGear";
+            changeCGear.Size = new Size(100, 35);
+            changeCGear.TabIndex = 4;
+            changeCGear.Text = "Change";
+            changeCGear.UseVisualStyleBackColor = true;
+            changeCGear.Click += change;
+            // 
+            // activeCGear
+            // 
+            activeCGear.AutoSize = true;
+            activeCGear.Location = new Point(8, 29);
+            activeCGear.Margin = new Padding(4, 5, 4, 5);
+            activeCGear.Name = "activeCGear";
+            activeCGear.Size = new Size(72, 24);
+            activeCGear.TabIndex = 3;
+            activeCGear.Text = "Active";
+            activeCGear.UseVisualStyleBackColor = true;
+            activeCGear.CheckedChanged += activate;
+            // 
+            // GroupBox1
+            // 
+            GroupBox1.Controls.Add(extractCGear);
+            GroupBox1.Controls.Add(changeCGear);
+            GroupBox1.Controls.Add(activeCGear);
+            GroupBox1.Location = new Point(4, 3);
+            GroupBox1.Margin = new Padding(4, 5, 4, 5);
+            GroupBox1.Name = "GroupBox1";
+            GroupBox1.Padding = new Padding(4, 5, 4, 5);
+            GroupBox1.Size = new Size(204, 169);
+            GroupBox1.TabIndex = 10;
+            GroupBox1.TabStop = false;
+            GroupBox1.Text = "C-Gear Skin";
+            // 
+            // DLCEditor
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(772, 178);
+            Controls.Add(GroupBox3);
+            Controls.Add(GroupBox2);
+            Controls.Add(GroupBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "DLCEditor";
+            Text = "DLC";
+            GroupBox3.ResumeLayout(false);
+            GroupBox3.PerformLayout();
+            GroupBox2.ResumeLayout(false);
+            GroupBox2.PerformLayout();
+            GroupBox1.ResumeLayout(false);
+            GroupBox1.PerformLayout();
+            ResumeLayout(false);
         }
     }
 }

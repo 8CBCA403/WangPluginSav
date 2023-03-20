@@ -4,7 +4,8 @@ using System.Drawing;
 using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
-using PKHeX;
+using WangPluginSav.Util.WC3;
+using WangPluginSav.Util.WC3.PKHeX;
 
 namespace WC3Tool;
 

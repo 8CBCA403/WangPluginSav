@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using PKHeX.Core;
-using System.Windows.Forms;
 
 namespace WangPluginSav;
 
@@ -161,7 +160,7 @@ public partial class FeebasLocatorForm : Form
 
     private void FeebasSeedBox_TextChanged(object sender, EventArgs e)
     {
-        Seed = Util.GetHexValue(FeebasSeedBox.Text);
+        Seed =PKHeX.Core.Util.GetHexValue(FeebasSeedBox.Text);
 
         if (sav is SAV3)
             MarkTiles(Feebas3.GetTiles(Seed));
@@ -173,11 +172,11 @@ public partial class FeebasLocatorForm : Form
     {
         if (sav is SAV3 s3)
         {
-            BitConverter.GetBytes(Util.GetHexValue(FeebasSeedBox.Text)).CopyTo(s3.Large, SeedOffset);
+            BitConverter.GetBytes(PKHeX.Core.Util.GetHexValue(FeebasSeedBox.Text)).CopyTo(s3.Large, SeedOffset);
         }
         else if (sav is SAV4 s4)
         {
-            BitConverter.GetBytes(Util.GetHexValue(FeebasSeedBox.Text)).CopyTo(s4.General, SeedOffset);
+            BitConverter.GetBytes(PKHeX.Core.Util.GetHexValue(FeebasSeedBox.Text)).CopyTo(s4.General, SeedOffset);
         }
         Close();
     }
