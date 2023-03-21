@@ -7,7 +7,7 @@ using WangPluginSav.Util.WC3;
 
 namespace WC3Tool;
 
-partial class MainScreen : Form
+partial class WC3ToolMainForm : Form
 {
     public static string savfilter = "RAW Save file|*.sav;*sa1;*sa2|All Files (*.*)|*.*";
 
@@ -45,7 +45,7 @@ partial class MainScreen : Form
         return $"BUILD {dateTime.Year}{dateTime.Month}{dateTime.Day}_{dateTime.Hour}{dateTime.Minute}{dateTime.Second}";
     }
 
-    public MainScreen(SAV3 sav)
+    public WC3ToolMainForm(SAV3 sav)
     {
         InitializeComponent();
         region_lab.Text = "";

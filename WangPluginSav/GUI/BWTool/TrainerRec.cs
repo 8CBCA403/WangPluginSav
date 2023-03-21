@@ -49,13 +49,13 @@ namespace BW_tool
             // The InitializeComponent() call is required for Windows Forms designer support.
             //
             InitializeComponent();
-            if (MainForm.save.B2W2)
+            if (BWToolMainForm.save.B2W2)
             {
-                trainerrecords = new TR(MainForm.save.getBlockDec(38));
+                trainerrecords = new TR(BWToolMainForm.save.getBlockDec(38));
             }
             else
             {
-                trainerrecords = new TR(MainForm.save.getBlockDec(38));
+                trainerrecords = new TR(BWToolMainForm.save.getBlockDec(38));
             }
             record_index.SelectedIndex = 0;
             record_value.Value = trainerrecords.WildCount;
@@ -65,7 +65,7 @@ namespace BW_tool
         }
         public class TR
         {
-            internal int Size = MainForm.save.B2W2 ? MainForm.save.getBlockLength(38) : MainForm.save.getBlockLength(38); //Update with BW 1
+            internal int Size = BWToolMainForm.save.B2W2 ? BWToolMainForm.save.getBlockLength(38) : BWToolMainForm.save.getBlockLength(38); //Update with BW 1
 
             public byte[] Data;
             public TR(byte[] data = null)

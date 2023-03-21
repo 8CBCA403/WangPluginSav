@@ -39,7 +39,7 @@ namespace BW_tool
 
             InitializeComponent();
 
-            ja = new AVENUE(MainForm.save.getBlock(avenue_block));
+            ja = new AVENUE(BWToolMainForm.save.getBlock(avenue_block));
             load_data();
 
 
@@ -110,7 +110,7 @@ namespace BW_tool
         void Saveexit_butClick(object sender, EventArgs e)
         {
             set_data();
-            MainForm.save.setBlock(ja.Data, avenue_block);
+            BWToolMainForm.save.setBlock(ja.Data, avenue_block);
             this.Close();
         }
         void Helper_countrySelectedIndexChanged(object sender, EventArgs e)
@@ -703,7 +703,7 @@ namespace BW_tool
 
         public class AVENUE
         {
-            internal int Size = MainForm.save.getBlockLength(67);//Block 67
+            internal int Size = BWToolMainForm.save.getBlockLength(67);//Block 67
 
             public byte[] Data;
             public AVENUE(byte[] data = null)

@@ -66,7 +66,7 @@ namespace WangPluginSav.Plugins
                 MessageBox.Show("检测到空档，请导入有效存档");
                 return;
             }
-            var form = new MainForm(SaveFileEditor.SAV.Data);
+            var form = new BWToolMainForm(SaveFileEditor.SAV.Data);
 
             form.Show();
         }

@@ -12,11 +12,11 @@ partial class ECB_editor : Form
 
 	public string berry_sp_filter = "All Files (*.*)|*.*";
 
-	public byte[] ecbbuffer;
+	public byte[] ?ecbbuffer;
 
-	public byte[] spritebuf;
+	public byte[] ?spritebuf;
 
-	public byte[] paletebuf;
+	public byte[] ?paletebuf;
 
 	public static ECB ecbfile;
 

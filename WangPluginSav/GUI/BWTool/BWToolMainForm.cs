@@ -1,44 +1,13 @@
-﻿/*
- * Created by SharpDevelop.
- * User: suloku
- * Date: 01/03/2016
- * Time: 20:03
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using System.Reflection;
-using WangPluginSav.Util.Pikaedit;
+﻿using WangPluginSav.Util.Pikaedit;
 using Pikaedit;
-using System.Windows.Forms.Design;
-
 namespace BW_tool
 {
-    /// <summary>
-    /// Description of MainForm.
-    /// </summary>
-    public partial class MainForm : Form
+    public partial class BWToolMainForm : Form
     {
-        public string version()
-        {
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
-            DateTime buildDate = new DateTime(2000, 1, 1).AddDays(version.Build).AddSeconds(version.Revision * 2);
-            return "BUILD " + buildDate.Year.ToString() + buildDate.Month.ToString() + buildDate.Day.ToString() + "_" + buildDate.Hour.ToString() + buildDate.Minute.ToString() + buildDate.Second.ToString();
-        }
         private byte[] saveFile { get; set; }
-        public MainForm(byte[] SAV)
+        public BWToolMainForm(byte[] SAV)
         {
-            //
-            // The InitializeComponent() call is required for Windows Forms designer support.
-            //
+           
             InitializeComponent();
             saveFile = SAV;
             int filesize = saveFile.Length;
@@ -111,31 +80,20 @@ namespace BW_tool
                 dlc_but.Enabled = false;
                 dr_but.Enabled = false;
             }
-            //
-            // TODO: Add constructor code after the InitializeComponent() call.
-            //
         }
         public string dsfilter = "NDS存档文件|*.sav;*.dsv|所有文件(*.*)|*.*";
-        public byte[] savebuffer;
-        public static SAV5 save;
-
-        void MainScreenDragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.All;
-        }
-        void MainScreenDragDrop(object sender, DragEventArgs e)
-        {
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
-            load_savegame(files[0]);
-        }
+        public byte[] ?savebuffer;
+        public static SAV5? save;
         void Loadsave_butClick(object sender, EventArgs e)
         {
             load_savegame(null);
         }
-        void load_savegame(string filepath)
+        void load_savegame(string? filepath)
         {
-            string path = filepath;
-            int filesize = FileIO.load_file(ref savebuffer, ref path, dsfilter);
+            string ?path = filepath;
+            int filesize = 0;
+            if(savebuffer!=null&&path!=null)
+            filesize = FileIO.load_file(ref savebuffer, ref path, dsfilter);
             versiontext.Text = "";
 
             if (filesize == SAV5.SIZERAW || filesize == SAV5.SIZERAW + 122)
@@ -145,8 +103,9 @@ namespace BW_tool
                     Array.Resize(ref savebuffer, SAV5.SIZERAW);
 
                 savegamename.Text = path;
+                if(savebuffer!=null)
                 save = new SAV5(savebuffer);
-
+             if(save!=null)
                 if (save.B2W2)
                 {
                     versiontext.Text = "黑2/白2";
@@ -213,21 +172,18 @@ namespace BW_tool
         }
         void Save_butClick(object sender, EventArgs e)
         {
-            //if (save.Edited)
-            FileIO.save_data(save.Data);
-            //else MessageBox.Show("Save has not been edited");
+            if (save != null)
+                FileIO.save_data(save.Data);
         }
         void Chk_butClick(object sender, EventArgs e)
         {
-            save.chkCheck(false); //Only verify
+            if (save != null)
+                save.chkCheck(false); //Only verify
         }
         void Chk_updt_butClick(object sender, EventArgs e)
         {
-            save.chkCheck(true); //Recalculate checksums and set them to savefile
-        }
-        void SavegamenameTextChanged(object sender, EventArgs e)
-        {
-
+            if (save != null)
+                save.chkCheck(true); //Recalculate checksums and set them to savefile
         }
         void Dumper_butClick(object sender, EventArgs e)
         {
@@ -271,7 +227,7 @@ namespace BW_tool
         }
         void AboutClick(object sender, EventArgs e)
         {
-            MessageBox.Show("宝可梦GEN5存档工具by suloku '16\n\n许多曾提供帮助的人我或许已记不清名字，感谢你们。但有那么几位无论如何也不会忘记的：提供了许多研究和信息的BlackShark，用以参考的kaphotic的pkhex的源代码及其在projectpokemon论坛上的研究。\n\n" + version());
+            MessageBox.Show("宝可梦GEN5存档工具by suloku '16\n\n许多曾提供帮助的人我或许已记不清名字，感谢你们。但有那么几位无论如何也不会忘记的：提供了许多研究和信息的BlackShark，用以参考的kaphotic的pkhex的源代码及其在projectpokemon论坛上的研究。\n\n");
         }
         void Memory_butClick(object sender, EventArgs e)
         {
@@ -290,6 +246,7 @@ namespace BW_tool
             sav.cgearSkin = dLCEditor.cgearSkin;
             sav.pokedexSkin = dLCEditor.pokedexSkin;
             sav.musical = dLCEditor.musicalData;
+            save = new SAV5(sav.data);
         }
         void Dr_butClick(object sender, EventArgs e)
         {

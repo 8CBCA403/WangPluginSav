@@ -8,7 +8,7 @@
  */
 namespace BW_tool
 {
-    partial class MainForm
+    partial class BWToolMainForm
     {
         /// <summary>
         /// Designer variable used to keep track of non-visual components.
@@ -56,7 +56,7 @@ namespace BW_tool
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BWToolMainForm));
             loadsave_but = new Button();
             savegamename = new TextBox();
             save_but = new Button();
@@ -96,7 +96,6 @@ namespace BW_tool
             savegamename.Name = "savegamename";
             savegamename.Size = new Size(644, 25);
             savegamename.TabIndex = 1;
-            savegamename.TextChanged += SavegamenameTextChanged;
             // 
             // save_but
             // 
@@ -329,8 +328,7 @@ namespace BW_tool
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BWTool";
-            DragDrop += MainScreenDragDrop;
-            DragEnter += MainScreenDragEnter;
+          
             ResumeLayout(false);
             PerformLayout();
         }

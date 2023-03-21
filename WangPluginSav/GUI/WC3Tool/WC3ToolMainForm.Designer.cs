@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WC3Tool
 {
-    partial class MainScreen
+    partial class WC3ToolMainForm
     {
         private System.ComponentModel.IContainer components = null;
         private Button wc3_editor_but;
@@ -96,7 +96,7 @@ namespace WC3Tool
 
         private void InitializeComponent()
         {
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainScreen));
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(WC3ToolMainForm));
             wc3_editor_but = new Button();
             load_save_but = new Button();
             inject_wc3_but = new Button();

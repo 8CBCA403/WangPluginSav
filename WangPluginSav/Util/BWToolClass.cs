@@ -8,7 +8,7 @@ namespace BW_tool
 {
     public class DRKEY
     {
-        internal int Size = MainForm.save.getBlockLength(72);
+        internal int Size = BWToolMainForm.save.getBlockLength(72);
 
         public byte[] Data;
         public DRKEY(byte[] data = null)

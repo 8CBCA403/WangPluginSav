@@ -249,6 +249,7 @@ namespace Pikaedit
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "DLCEditor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DLC";
             GroupBox3.ResumeLayout(false);
             GroupBox3.PerformLayout();

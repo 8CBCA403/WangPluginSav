@@ -29,7 +29,7 @@ namespace BW_tool
             InitializeComponent();
             rand = new Random(Guid.NewGuid().GetHashCode());
 
-            ml = new MEMORIES(MainForm.save.getData(MEMORIES.Offset, MEMORIES.Size));
+            ml = new MEMORIES(BWToolMainForm.save.getData(MEMORIES.Offset, MEMORIES.Size));
 
             if (ml.block2.name == "")
             {
@@ -109,7 +109,7 @@ namespace BW_tool
         {
             set_data();
 
-            MainForm.save.setData(ml.Data, MEMORIES.Offset);
+            BWToolMainForm.save.setData(ml.Data, MEMORIES.Offset);
 
             this.Close();
         }

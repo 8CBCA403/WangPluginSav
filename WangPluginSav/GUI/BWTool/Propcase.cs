@@ -33,7 +33,7 @@ namespace BW_tool
             //
             InitializeComponent();
 
-            myProps = new PROPCASE(MainForm.save.getData(0x1F958, 13));//Same offset for BW1 and BW2. Should update to block management...
+            myProps = new PROPCASE(BWToolMainForm.save.getData(0x1F958, 13));//Same offset for BW1 and BW2. Should update to block management...
             Proplist.SelectedIndex = 0;
             hasprop_checkbox.Checked = myProps.getProp(Proplist.SelectedIndex);
             //propHex.Text = "0x" + BitConverter.ToString(myProps.Data).Replace("-", string.Empty);
@@ -129,11 +129,11 @@ namespace BW_tool
                 }
             }
 
-            MainForm.save.setData(myProps.Data, 0x1F958);
+            BWToolMainForm.save.setData(myProps.Data, 0x1F958);
             //Mirror
-            MainForm.save.setData(myProps.Data, 0x45958);
+            BWToolMainForm.save.setData(myProps.Data, 0x45958);
             //Update Checksum
-            MainForm.save.block_crc_recalc(42);
+            BWToolMainForm.save.block_crc_recalc(42);
             this.Close();
         }
 

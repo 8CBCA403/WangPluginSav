@@ -1,6 +1,4 @@
 ﻿using PKHeX.Core;
-using WangPluginSav.GUI;
-
 namespace WangPluginSav
 {
     public abstract class WangPluginSav : IPlugin
@@ -22,6 +20,7 @@ namespace WangPluginSav
             SaveFileEditor = (ISaveFileProvider)Array.Find(args, z => z is ISaveFileProvider);
             PKMEditor = (IPKMView)Array.Find(args, z => z is IPKMView);
             var menu = (ToolStrip)Array.Find(args, z => z is ToolStrip);
+            if(menu!=null)
             LoadMenuStrip(menu);
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 #pragma warning restore CS8601 // Converting null literal or possible null value to non-nullable type.
@@ -35,9 +34,6 @@ namespace WangPluginSav
             var toolsitems = tools.DropDownItems;
             var modmenusearch = toolsitems.Find(ParentMenuName, false);
             var modmenu = GetModMenu(tools, modmenusearch);
-            var form = tools.GetCurrentParent().FindForm();
-         //   if (form is not null)
-               // form.Icon = Properties.Resources.WangPluginSav;
             AddPluginControl(modmenu);
         }
         private static ToolStripMenuItem GetModMenu(ToolStripDropDownItem tools, IReadOnlyList<ToolStripItem> search)
@@ -56,16 +52,9 @@ namespace WangPluginSav
             Name = ParentMenuName,
         };
         protected abstract void AddPluginControl(ToolStripDropDownItem modmenu);
-
-
-
-        public void NotifySaveLoaded()
-        {
-            Console.WriteLine($"{Name} was notified that a Save File was just loaded.");
-        }
+        public void NotifySaveLoaded(){}
         public bool TryLoadFile(string filePath)
         {
-            Console.WriteLine($"{Name} was provided with the file path, but chose to do nothing with it.");
             return false; // no action taken
         }
     }

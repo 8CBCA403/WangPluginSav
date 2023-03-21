@@ -435,7 +435,7 @@ namespace BW_tool
             if (world < 8)
             {
                 int i = 0;
-                if (MainForm.save.B2W2 == true)
+                if (BWToolMainForm.save.B2W2 == true)
                 {
                     for (i = 0; i < world_BW1_exclusives[world].Length; i++)
                     {
@@ -470,7 +470,7 @@ namespace BW_tool
             }
             else if (world == 8)
             {
-                if (MainForm.save.B2W2 == true)
+                if (BWToolMainForm.save.B2W2 == true)
                 {
                     if (PGL_exclusives[speciesbox.SelectedIndex] == 0)
                     {

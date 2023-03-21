@@ -39,23 +39,23 @@ namespace BW_tool
             money.Maximum = 9999999;
             bp.Maximum = 9999;
 
-            if (MainForm.save.B2W2 == false) //BW1 battle points are in another block
+            if (BWToolMainForm.save.B2W2 == false) //BW1 battle points are in another block
             {
                 battle_block = 58;
-                battle = new BATTLE(MainForm.save.getBlock(battle_block), 1);
+                battle = new BATTLE(BWToolMainForm.save.getBlock(battle_block), 1);
                 rival_name.Visible = false;
                 rival_label.Visible = false;
             }
             else //B2W2
             {
-                battle = new BATTLE(MainForm.save.getBlock(battle_block));
-                gary = new RIVAL(MainForm.save.getBlock(rival_block));
+                battle = new BATTLE(BWToolMainForm.save.getBlock(battle_block));
+                gary = new RIVAL(BWToolMainForm.save.getBlock(rival_block));
             }
 
             //Common data
-            ash = new TRAINER(MainForm.save.getBlock(trainer_block));
-            badge = new BADGES(MainForm.save.getBlock(badges_block));
-            card = new CARDSIG(MainForm.save.getBlock(cardsig_block));
+            ash = new TRAINER(BWToolMainForm.save.getBlock(trainer_block));
+            badge = new BADGES(BWToolMainForm.save.getBlock(badges_block));
+            card = new CARDSIG(BWToolMainForm.save.getBlock(cardsig_block));
 
             load_data();
 
@@ -67,7 +67,7 @@ namespace BW_tool
         void load_data()
         {
             name.Text = ash.name;
-            if (MainForm.save.B2W2 == true)
+            if (BWToolMainForm.save.B2W2 == true)
             {
                 rival_name.Text = gary.name;
             }
@@ -141,7 +141,7 @@ namespace BW_tool
         {
             ash.name = name.Text;
 
-            if (MainForm.save.B2W2 == true)
+            if (BWToolMainForm.save.B2W2 == true)
             {
                 gary.name = rival_name.Text;
             }
@@ -194,20 +194,20 @@ namespace BW_tool
         {
             set_data();
 
-            MainForm.save.setBlock(ash.Data, trainer_block);
-            if (MainForm.save.B2W2 == true)
+            BWToolMainForm.save.setBlock(ash.Data, trainer_block);
+            if (BWToolMainForm.save.B2W2 == true)
             {
-                MainForm.save.setBlock(gary.Data, rival_block);
+                BWToolMainForm.save.setBlock(gary.Data, rival_block);
             }
-            MainForm.save.setBlock(badge.Data, badges_block);
-            MainForm.save.setBlock(battle.Data, battle_block);
-            MainForm.save.setBlock(card.Data, cardsig_block);
+            BWToolMainForm.save.setBlock(badge.Data, badges_block);
+            BWToolMainForm.save.setBlock(battle.Data, battle_block);
+            BWToolMainForm.save.setBlock(card.Data, cardsig_block);
             this.Close();
         }
 
         public class TRAINER
         {
-            internal int Size = MainForm.save.getBlockLength(27);//Block 67
+            internal int Size = BWToolMainForm.save.getBlockLength(27);//Block 67
 
             public byte[] Data;
             public TRAINER(byte[] data = null)
@@ -342,7 +342,7 @@ namespace BW_tool
         }
         public class RIVAL
         {
-            internal int Size = MainForm.save.getBlockLength(66);//Block 66
+            internal int Size = BWToolMainForm.save.getBlockLength(66);//Block 66
 
             public byte[] Data;
             public RIVAL(byte[] data = null)
@@ -391,7 +391,7 @@ namespace BW_tool
 
         public class BADGES
         {
-            internal int Size = MainForm.save.getBlockLength(52);//Block 66
+            internal int Size = BWToolMainForm.save.getBlockLength(52);//Block 66
 
             public byte[] Data;
             public BADGES(byte[] data = null)
@@ -559,8 +559,8 @@ namespace BW_tool
         }
         public class BATTLE
         {
-            internal int SizeBW2 = MainForm.save.getBlockLength(57);//Block 57 BW2
-            internal int SizeBW = MainForm.save.getBlockLength(58);//Block 58 BW
+            internal int SizeBW2 = BWToolMainForm.save.getBlockLength(57);//Block 57 BW2
+            internal int SizeBW = BWToolMainForm.save.getBlockLength(58);//Block 58 BW
 
             public byte[] Data;
             public BATTLE(byte[] data = null)
@@ -596,7 +596,7 @@ namespace BW_tool
         }
         public class CARDSIG
         {
-            internal int Size = MainForm.save.getBlockLength(33);//Block 57 BW2
+            internal int Size = BWToolMainForm.save.getBlockLength(33);//Block 57 BW2
 
             public byte[] Data;
             public CARDSIG(byte[] data = null)

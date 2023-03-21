@@ -97,8 +97,8 @@ namespace BW_tool
             //
             InitializeComponent();
             unknowngrottobox.Hexadecimal = true;
-            Array.Copy(MainForm.save.Data, MainForm.save.blocks[grottoblock].Offset, grottobuffer, 0, GROTTO_BLOCK_SIZE);
-            Array.Copy(MainForm.save.Data, MainForm.save.blocks[overworldblock].Offset, overworldbuffer, 0, OVERWORLD_BLOCK_SIZE);
+            Array.Copy(BWToolMainForm.save.Data, BWToolMainForm.save.blocks[grottoblock].Offset, grottobuffer, 0, GROTTO_BLOCK_SIZE);
+            Array.Copy(BWToolMainForm.save.Data, BWToolMainForm.save.blocks[overworldblock].Offset, overworldbuffer, 0, OVERWORLD_BLOCK_SIZE);
             loadGrottoData();
             loadSwarmData();
             Grotto_route.SelectedIndex = 0;
@@ -682,11 +682,11 @@ namespace BW_tool
             //PDR_fix_grotto_checksum();
             //PDR_injectNsave();
 
-            Array.Copy(grottobuffer, 0, MainForm.save.Data, MainForm.save.blocks[grottoblock].Offset, GROTTO_BLOCK_SIZE);
-            Array.Copy(grottobuffer, 0, MainForm.save.Data, MainForm.save.blocks[grottoblock].Offset + 0x26000, GROTTO_BLOCK_SIZE);//Should not hardcode value...
-            Array.Copy(overworldbuffer, 0, MainForm.save.Data, MainForm.save.blocks[overworldblock].Offset, OVERWORLD_BLOCK_SIZE);
-            Array.Copy(overworldbuffer, 0, MainForm.save.Data, MainForm.save.blocks[overworldblock].Offset + 0x26000, OVERWORLD_BLOCK_SIZE);//Should not hardcode value...
-            MainForm.save.Edited = true;
+            Array.Copy(grottobuffer, 0, BWToolMainForm.save.Data, BWToolMainForm.save.blocks[grottoblock].Offset, GROTTO_BLOCK_SIZE);
+            Array.Copy(grottobuffer, 0, BWToolMainForm.save.Data, BWToolMainForm.save.blocks[grottoblock].Offset + 0x26000, GROTTO_BLOCK_SIZE);//Should not hardcode value...
+            Array.Copy(overworldbuffer, 0, BWToolMainForm.save.Data, BWToolMainForm.save.blocks[overworldblock].Offset, OVERWORLD_BLOCK_SIZE);
+            Array.Copy(overworldbuffer, 0, BWToolMainForm.save.Data, BWToolMainForm.save.blocks[overworldblock].Offset + 0x26000, OVERWORLD_BLOCK_SIZE);//Should not hardcode value...
+            BWToolMainForm.save.Edited = true;
             this.Close();
         }
         void LastvisitedhelpClick(object sender, EventArgs e)

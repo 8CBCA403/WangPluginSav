@@ -25,7 +25,7 @@ namespace BW_tool
             //
             InitializeComponent();
             red_panel.Visible = false;
-            medals = new MEDAL(MainForm.save.getBlock(68));
+            medals = new MEDAL(BWToolMainForm.save.getBlock(68));
             indexbox.SelectedIndex = 0;
 
             update_date();
@@ -156,7 +156,7 @@ namespace BW_tool
         }
         void Saveexit_butClick(object sender, EventArgs e)
         {
-            MainForm.save.setBlock(medals.Data, 68);
+            BWToolMainForm.save.setBlock(medals.Data, 68);
             this.Close();
         }
         void Flag1boxCheckedChanged(object sender, EventArgs e)
@@ -227,7 +227,7 @@ namespace BW_tool
         public class MEDAL
         {
             internal int MedalSize = 4;
-            internal int Size = MainForm.save.getBlockLength(68);
+            internal int Size = BWToolMainForm.save.getBlockLength(68);
 
             public byte[] Data;
             public MEDAL(byte[] data = null)

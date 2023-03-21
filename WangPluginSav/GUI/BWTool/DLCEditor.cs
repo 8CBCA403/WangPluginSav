@@ -1,33 +1,27 @@
-using System;
-using System.ComponentModel;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
 using WangPluginSav.Util.Pikaedit;
-
 namespace Pikaedit;
-
 partial class DLCEditor : Form
 {
-    private Musical musical;
+    private Musical? musical;
 
-    private CgearSkin cgear;
+    private CgearSkin? cgear;
 
-    private PokedexSkin pokedex;
+    private PokedexSkin? pokedex;
 
     private SaveFile.Version version;
 
-    private OpenFileDialog loadDialog;
+    private OpenFileDialog ?loadDialog;
 
-    private SaveFileDialog saveDialog;
-
-
-
+    private SaveFileDialog ?saveDialog;
+    public DLCEditor()
+    {
+        InitializeComponent();
+    }
     public Musical musicalData
     {
         get
         {
-            return musical;
+            return musical = null!;
         }
         set
         {
@@ -49,7 +43,7 @@ partial class DLCEditor : Form
     {
         get
         {
-            return cgear;
+            return cgear = null!;
         }
         set
         {
@@ -70,7 +64,7 @@ partial class DLCEditor : Form
     {
         get
         {
-            return pokedex;
+            return pokedex = null!;
         }
         set
         {
@@ -94,12 +88,6 @@ partial class DLCEditor : Form
             version = value;
         }
     }
-
-    public DLCEditor()
-    {
-        InitializeComponent();
-    }
-
     private void change(object sender, EventArgs e)
     {
         if (!(sender is Button))
@@ -107,7 +95,7 @@ partial class DLCEditor : Form
             return;
         }
         Button button = (Button)sender;
-        if (button.Equals(changeCGear))
+        if (button.Equals(changeCGear)&&loadDialog!=null)
         {
             if (version == SaveFile.Version.BW2)
             {
@@ -118,33 +106,40 @@ partial class DLCEditor : Form
                 loadDialog.Filter = "Pokemon C-Gear Skin (*.psk)|*.psk";
             }
         }
-        if (button.Equals(changePokedex))
+        if (button.Equals(changePokedex) && loadDialog != null)
         {
             loadDialog.Filter = "Pokemon Pokedex Skin (*.pds)|*.pds";
         }
-        if (button.Equals(changeMusical))
+        if (button.Equals(changeMusical) && loadDialog != null)
         {
             loadDialog.Filter = "Pokemon Musical Data (*.pms)|*.pms";
         }
-        DialogResult dialogResult = loadDialog.ShowDialog();
-        if (dialogResult == DialogResult.OK && loadDialog.FileName != "")
+        DialogResult dialogResult = DialogResult.Yes;
+        if (loadDialog != null)
         {
-            if (button.Equals(changeCGear))
+            dialogResult = loadDialog.ShowDialog();
+            if (dialogResult == DialogResult.OK && loadDialog.FileName != "")
             {
-                cgear = new CgearSkin(File.ReadAllBytes(loadDialog.FileName), active: true);
-                activeCGear.Checked = !cgear.isEmpty();
-            }
-            if (button.Equals(changePokedex))
-            {
-                pokedex = new PokedexSkin(File.ReadAllBytes(loadDialog.FileName), active: true);
-                activePokedex.Checked = !pokedex.isEmpty();
+                if (button.Equals(changeCGear))
+                {
+                    cgear = new CgearSkin(File.ReadAllBytes(loadDialog.FileName), active: true);
+                    activeCGear.Checked = !cgear.isEmpty();
+                }
+                if (button.Equals(changePokedex))
+                {
+                    pokedex = new PokedexSkin(File.ReadAllBytes(loadDialog.FileName), active: true);
+                    activePokedex.Checked = !pokedex.isEmpty();
+                }
             }
         }
         if (button.Equals(changeMusical))
         {
-            musical = new Musical(File.ReadAllBytes(loadDialog.FileName), version, active: true);
-            activeMusical.Checked = !musical.isEmpty();
-            musicalTitle.Text = musical.title;
+            if (loadDialog != null)
+            {
+                musical = new Musical(File.ReadAllBytes(loadDialog.FileName), version, active: true);
+                activeMusical.Checked = !musical.isEmpty();
+                musicalTitle.Text = musical.title;
+            }
         }
     }
 
@@ -155,7 +150,7 @@ partial class DLCEditor : Form
             return;
         }
         Button button = (Button)sender;
-        if (button.Equals(extractCGear))
+        if (button.Equals(extractCGear) && saveDialog != null)
         {
             if (version == SaveFile.Version.BW2)
             {
@@ -166,26 +161,28 @@ partial class DLCEditor : Form
                 saveDialog.Filter = "Pokemon C-Gear Skin (*.psk)|*.psk";
             }
         }
-        if (button.Equals(extractPokedex))
+        if (button.Equals(extractPokedex) && saveDialog != null)
         {
             saveDialog.Filter = "Pokemon Pokedex Skin (*.pds)|*.pds";
         }
-        if (button.Equals(extractMusical))
+        if (button.Equals(extractMusical) && saveDialog != null)
         {
             saveDialog.Filter = "Pokemon Musical Data (*.pms)|*.pms";
         }
-        DialogResult dialogResult = saveDialog.ShowDialog();
-        if (dialogResult == DialogResult.OK)
+        DialogResult dialogResult = DialogResult.Yes;
+        if (saveDialog != null)
+        dialogResult = saveDialog.ShowDialog();
+        if (dialogResult == DialogResult.OK && saveDialog != null)
         {
-            if (button.Equals(extractCGear))
+            if (button.Equals(extractCGear) && cgear != null)
             {
                 File.WriteAllBytes(saveDialog.FileName, cgear.data);
             }
-            if (button.Equals(extractPokedex))
+            if (button.Equals(extractPokedex)&&pokedex!=null)
             {
                 File.WriteAllBytes(saveDialog.FileName, pokedex.data);
             }
-            if (button.Equals(extractMusical))
+            if (button.Equals(extractMusical)&&musical!=null)
             {
                 File.WriteAllBytes(saveDialog.FileName, musical.data);
             }
@@ -197,15 +194,15 @@ partial class DLCEditor : Form
         if (sender is CheckBox)
         {
             CheckBox checkBox = (CheckBox)sender;
-            if (checkBox.Equals(changeCGear))
+            if (checkBox.Equals(changeCGear) && cgear != null)
             {
                 cgear.active = checkBox.Checked;
             }
-            if (checkBox.Equals(extractPokedex))
+            if (checkBox.Equals(extractPokedex) && pokedex != null)
             {
                 pokedex.active = checkBox.Checked;
             }
-            if (checkBox.Equals(extractMusical))
+            if (checkBox.Equals(extractMusical) && musical != null)
             {
                 musical.active = checkBox.Checked;
             }
@@ -214,6 +211,7 @@ partial class DLCEditor : Form
 
     private void musicalTitle_TextChanged(object sender, EventArgs e)
     {
+        if(musical != null)
         musical.title = musicalTitle.Text;
     }
 

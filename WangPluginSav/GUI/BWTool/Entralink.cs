@@ -59,7 +59,7 @@ namespace BW_tool
 
             dataGridView1.Rows.Add(19);
 
-            forest = new FOREST(MainForm.save.B2W2 ? MainForm.save.getBlockDec(60) : MainForm.save.getBlockDec(61));
+            forest = new FOREST(BWToolMainForm.save.B2W2 ? BWToolMainForm.save.getBlockDec(60) : BWToolMainForm.save.getBlockDec(61));
             unlock8box.SelectedIndex = forest.Unlock8;
             unlock9.SelectedIndex = forest.Unlock9;
             forest.Area = 4;
@@ -348,10 +348,10 @@ namespace BW_tool
         }
         void Saveexit_butClick(object sender, EventArgs e)
         {
-            if (MainForm.save.B2W2 == true)
-                MainForm.save.setBlockCrypt(forest.Data, 60);
+            if (BWToolMainForm.save.B2W2 == true)
+                BWToolMainForm.save.setBlockCrypt(forest.Data, 60);
             else
-                MainForm.save.setBlockCrypt(forest.Data, 61);
+                BWToolMainForm.save.setBlockCrypt(forest.Data, 61);
 
             this.Close();
         }
@@ -418,7 +418,7 @@ namespace BW_tool
         {
             //Handle species without sprites
             int i = 0;
-            if (MainForm.save.B2W2 == true && spbox1.SelectedIndex > 493)
+            if (BWToolMainForm.save.B2W2 == true && spbox1.SelectedIndex > 493)
             {
 
                 for (i = 0; i < 53; i++)
@@ -718,7 +718,7 @@ namespace BW_tool
         public class FOREST
         {
 
-            internal int Size = MainForm.save.B2W2 ? MainForm.save.getBlockLength(60) : MainForm.save.getBlockLength(61);
+            internal int Size = BWToolMainForm.save.B2W2 ? BWToolMainForm.save.getBlockLength(60) : BWToolMainForm.save.getBlockLength(61);
 
             public byte[] Data;
             public FOREST(byte[] data = null)

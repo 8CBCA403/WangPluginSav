@@ -12,7 +12,7 @@ partial class Decor_editor : Form
 
 	private SAV3 sav3file;
 
-	public string savfilter = MainScreen.savfilter;
+	public string savfilter = WC3ToolMainForm.savfilter;
 
 	private int[] desk_ref = new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 

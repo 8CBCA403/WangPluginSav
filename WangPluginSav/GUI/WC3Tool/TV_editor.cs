@@ -10,7 +10,7 @@ partial class TV_editor : Form
 {
 	private SAV3 sav3file;
 
-	public string savfilter = MainScreen.savfilter;
+	public string savfilter = WC3ToolMainForm.savfilter;
 
 	private TV_EVENTS events;
 

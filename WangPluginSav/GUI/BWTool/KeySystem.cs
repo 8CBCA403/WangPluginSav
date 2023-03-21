@@ -25,7 +25,7 @@ namespace BW_tool
             // The InitializeComponent() call is required for Windows Forms designer support.
             //
             InitializeComponent();
-            keys = new KEY(MainForm.save.getBlock(keyblock));
+            keys = new KEY(BWToolMainForm.save.getBlock(keyblock));
 
             if (keys.KeysUnlocked() == false)
                 MessageBox.Show("  警告！\n\n这个存档似乎还未开启钥匙系统。\n钥匙系统将在登入名人堂后开启。\n\n您仍可以在此处编辑。");
@@ -112,12 +112,12 @@ namespace BW_tool
         void Saveexit_butClick(object sender, EventArgs e)
         {
             setAllkeys();
-            MainForm.save.setBlock(keys.Data, keyblock);
+            BWToolMainForm.save.setBlock(keys.Data, keyblock);
             this.Close();
         }
         public class KEY
         {
-            internal int Size = MainForm.save.getBlockLength(69);
+            internal int Size = BWToolMainForm.save.getBlockLength(69);
 
             public byte[] Data;
             public KEY(byte[] data = null)
