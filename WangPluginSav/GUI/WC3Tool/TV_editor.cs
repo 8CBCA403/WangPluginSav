@@ -195,7 +195,7 @@ partial class TV_editor : Form
             shows.shows[(int)(tv_slot.Value - 1m)].outbreak_move3 = (ushort)outbreak_move3.SelectedIndex;
             shows.shows[(int)(tv_slot.Value - 1m)].outbreak_move4 = (ushort)outbreak_move4.SelectedIndex;
         }
-        MessageBox.Show("½ÚÄ¿-´óÁ¿³öÏÖ ÒÑ¸üÐÂ£¡");
+        MessageBox.Show("节目-大量出现 已更新！");
     }
 
     private void Tv_statusSelectedIndexChanged(object sender, EventArgs e)

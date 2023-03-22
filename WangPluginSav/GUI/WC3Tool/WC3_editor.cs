@@ -163,7 +163,7 @@ partial class WC3_editor : Form
             if (filesize == wc3.SIZE_WC3_jap)
             {
                 japanese = true;
-                regionlab.Text = "ÈÕ°æ";
+                regionlab.Text = "日版";
                 header1.MaxLength = 18;
                 header2.MaxLength = 13;
                 body1.MaxLength = 20;
@@ -176,7 +176,7 @@ partial class WC3_editor : Form
             else
             {
                 japanese = false;
-                regionlab.Text = "ÃÀ/Å·°æ";
+                regionlab.Text = "美/欧版";
                 header1.MaxLength = 40;
                 header2.MaxLength = 40;
                 body1.MaxLength = 40;
@@ -204,7 +204,7 @@ partial class WC3_editor : Form
         }
         else
         {
-            MessageBox.Show("ÎÞÐ§ÎÄ¼þ´óÐ¡¡£");
+            MessageBox.Show("无效文件大小。");
         }
     }
 

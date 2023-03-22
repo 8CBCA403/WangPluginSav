@@ -10,7 +10,7 @@ namespace WC3Tool;
 
 partial class WCN_editor : Form
 {
-    public string wcnfilter = "ÉñÃØÐÂÎÅÎÄ¼þ|*.wn3|ËùÓÐÎÄ¼þ(*.*)|*.*";
+    public string wcnfilter = "神秘新闻文件|*.wn3|所有文件(*.*)|*.*";
 
     public byte[] wcnbuffer = new byte[448];
 
@@ -84,7 +84,7 @@ partial class WCN_editor : Form
             if (num == 228)
             {
                 japanese = true;
-                regionlab.Text = "ÈÕ°æ";
+                regionlab.Text = "日版";
                 header1.MaxLength = 20;
                 body1.MaxLength = 20;
                 body2.MaxLength = 20;
@@ -100,7 +100,7 @@ partial class WCN_editor : Form
             else
             {
                 japanese = false;
-                regionlab.Text = "ÃÀ/Å·°æ";
+                regionlab.Text = "美/欧版";
                 header1.MaxLength = 40;
                 body1.MaxLength = 40;
                 body2.MaxLength = 40;
@@ -120,7 +120,7 @@ partial class WCN_editor : Form
         }
         else
         {
-            MessageBox.Show("ÎÞÐ§ÎÄ¼þ´óÐ¡¡£");
+            MessageBox.Show("无效文件大小。");
         }
     }
 

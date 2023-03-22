@@ -10,7 +10,7 @@ namespace WC3Tool;
 
 partial class ECT_editor : Form
 {
-    public string ectfilter = "e-card Trainer file|*.ect|All Files (*.*)|*.*";
+    public string ectfilter = "e卡训练家文件|*.ect|所有文件(*.*)|*.*";
 
     public byte[] ectbuffer;
 
@@ -770,7 +770,7 @@ partial class ECT_editor : Form
         }
         else
         {
-            MessageBox.Show("Invalid file size.");
+            MessageBox.Show("无效文件大小。");
         }
     }
 
@@ -789,13 +789,13 @@ partial class ECT_editor : Form
         }
         else
         {
-            MessageBox.Show("Save has not been edited");
+            MessageBox.Show("存档未被编辑。");
         }
     }
 
     private void Helpclass_butClick(object sender, EventArgs e)
     {
-        MessageBox.Show("The classes AQUA ADMIN, MAGMA ADMIN, and WINSTRATE are apparently unavailable, as are the other five Leaders and two Elite Four members. Indices greater than those in the list (0x4C, 0x4F and 0x92) result in mismatches between the trainer class and sprite.\n\nThis value also determines the overworld sprite shown in the Mossdeep house. Some classes and any value greater than the ones listed, will be shown in the overworld as a generic male NPC.\n\nThere are two identical entries for the unused BOARDER class in this list, implying that male and female versions were planned, and three identical entries each for Brendan and May, which might indicate that they were intended to have multiple sprites like the rivals in prior games.");
+        MessageBox.Show("训练家类型 海洋队干部，熔岩队干部和连胜家族不可用，其他五位道馆馆主及两位四天王成员也是如此。大于列表中的索引（0x4C、0x4F 和 0x92）会导致训练家类型和sprite之间的不匹配。\n\n该值同样决定了显示在绿岭市房屋中的主世界的sprite。某些类型及任何大于所列数值的类型，将在主世界里显示为普通男性NPC。\n\n列表中未使用的单板玩家有两个相同条目，暗示曾计划区分推出男性和女性的类别。小悠和小遥各有三个相同条目，这可能表明他们打算像之前游戏中的劲敌一样拥有多个sprite。");
     }
 
     private void Pkm1_edit_butClick(object sender, EventArgs e)
@@ -818,7 +818,7 @@ partial class ECT_editor : Form
         name.Text = PKM.getG3Str(ectfile.getData(4, 8), jap_check.Checked);
         if (jap_check.Checked)
         {
-            MessageBox.Show("Remember Japanese names have a maximum of 5 characters.");
+            MessageBox.Show("谨记日版最多5字符");
         }
     }
 
@@ -856,7 +856,7 @@ partial class ECT_editor : Form
 
     private void NoteClick(object sender, EventArgs e)
     {
-        MessageBox.Show("Easy chat system implementation currently has limitations, pokemon and move groups need more research for their values and won't properly work. All other word groups work fine. There might also be problems between different languages, even though english words are supposed to be translated from japanese.");
+        MessageBox.Show("简单会话系统的实现目前仍有局限性，宝可梦种族及招式词组仍需要对它们的数值进行进一步研究，并且不会正常工作。其他词组均可以正常工作。不同语言之间可能也存在问题，即便英语词语是从日语翻译而来。");
     }
 
     private void Trainer_class_valueValueChanged(object sender, EventArgs e)
