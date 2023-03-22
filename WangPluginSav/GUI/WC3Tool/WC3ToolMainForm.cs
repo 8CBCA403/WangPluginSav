@@ -9,17 +9,12 @@ namespace WC3Tool;
 
 partial class WC3ToolMainForm : Form
 {
-    public static string savfilter = "RAW Save file|*.sav;*sa1;*sa2|All Files (*.*)|*.*";
-
-    public string wc3filter = "Wonder Card file|*.wc3|All Files (*.*)|*.*";
-
-    public string wcnfilter = "Wonder News file|*.wn3|All Files (*.*)|*.*";
-
-    public string me3filter = "Mystery Event file|*.me3|All Files (*.*)|*.*";
-
-    public string ectfilter = "e-card Trainer file|*.ect|All Files (*.*)|*.*";
-
-    public string berryfilter = "e-card Berry file|*.ecb|All Files (*.*)|*.*";
+    public static string savfilter = "原始存档文件|*.sav;*sa1;*sa2|所有文件(*.*)|*.*";
+    public string wc3filter = "神秘卡片文件|*.wc3|所有文件(*.*)|*.*";
+    public string wcnfilter = "神秘新闻文件|*.wn3|所有文件(*.*)|*.*";
+    public string me3filter = "神秘事件文件|*.me3|所有文件(*.*)|*.*";
+    public string ectfilter = "e卡训练家文件|*.ect|所有文件(*.*)|*.*";
+    public string berryfilter = "e卡树果文件|*.ecb|所有文件(*.*)|*.*";
 
     public byte[] savbuffer;
 
@@ -36,7 +31,7 @@ partial class WC3ToolMainForm : Form
     public static SAV3 sav3file = SAV;
 
 
-   
+
     private static SAV3 SAV { get; set; }
     public string version()
     {
@@ -149,23 +144,23 @@ partial class WC3ToolMainForm : Form
                 game_box.SelectedIndex = sav3file.game;
                 if (sav3file.isjap && sav3file.language != 1)
                 {
-                    switch (MessageBox.Show("Region/language autodetection inconsistency.\n\nIs this a japanese savegame?", "Region Input", MessageBoxButtons.YesNo))
+                    DialogResult dialogResult = MessageBox.Show("区域/语言检测不一致。\n\n这是日版的游戏存档吗？", "输入区域", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        case DialogResult.Yes:
-                            sav3file.isjap = true;
-                            region_lab.Text = "JAP";
-                            language_box.SelectedIndex = 0;
-                            break;
-                        case DialogResult.No:
-                            sav3file.isjap = false;
-                            region_lab.Text = "USA/EUR";
-                            break;
+                        sav3file.isjap = true;
+                        region_lab.Text = "日版";
+                        language_box.SelectedIndex = 0;
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        sav3file.isjap = false;
+                        region_lab.Text = "美/欧版";
                     }
                 }
                 sav3file.updateOffsets();
                 break;
             default:
-                MessageBox.Show("Invalid file.");
+                MessageBox.Show("无效文件。");
                 break;
             case -1:
                 break;
@@ -181,7 +176,7 @@ partial class WC3ToolMainForm : Form
     {
         if (!sav3file.has_WC)
         {
-            MessageBox.Show("Save file does not contain WonderCard data.");
+            MessageBox.Show("存档未包含神秘卡片数据。");
         }
         else
         {
@@ -191,29 +186,35 @@ partial class WC3ToolMainForm : Form
 
     private void Inject_wc3_butClick(object sender, EventArgs e)
     {
-        if (sav3file.has_WC && MessageBox.Show("Savefile already has a WonderCard. Overwrite?", "WonderCard Injection", MessageBoxButtons.YesNo) == DialogResult.No)
+        DialogResult dialogResult = MessageBox.Show("存档已经有一张神秘卡片了，是否覆盖？", "神秘卡片配信中", MessageBoxButtons.YesNo);
+        if (dialogResult == DialogResult.No)
         {
             return;
         }
         if (sav3file.has_mystery_gift)
         {
             string path = null;
-            int num = FileIO.load_file(ref wc3new, ref path, wc3filter);
-            if ((num == 1420 && !sav3file.isjap) || (num == 1252 && sav3file.isjap))
+            int filesize = FileIO.load_file(ref wc3new, ref path, wc3filter);
+            if (filesize == wc3.SIZE_WC3 && sav3file.isjap == false || filesize == wc3.SIZE_WC3_jap && sav3file.isjap)
             {
                 sav3file.set_WC3(wc3new);
                 sav3file.update_section_chk(4);
-                MessageBox.Show("WC3 injected.");
+                MessageBox.Show("神秘卡片配信完成。");
                 FileIO.save_data(sav3file.Data, savfilter);
+
             }
-            else if (num != -1)
+            else if (filesize == -1)
             {
-                MessageBox.Show("Invalid file size.");
+                ;
+            }
+            else
+            {
+                MessageBox.Show("无效文件大小。");
             }
         }
         else
         {
-            MessageBox.Show("Save file does not have Mystery Gift enabled.");
+            MessageBox.Show("存档未开启神秘礼物功能。");
         }
     }
 
@@ -221,7 +222,7 @@ partial class WC3ToolMainForm : Form
     {
         if (!sav3file.has_WCN)
         {
-            MessageBox.Show("Save file does not contain Wonder News data.");
+            MessageBox.Show("存档未包含神秘新闻数据。");
         }
         else
         {
@@ -234,22 +235,27 @@ partial class WC3ToolMainForm : Form
         if (sav3file.has_mystery_gift)
         {
             string path = null;
-            int num = FileIO.load_file(ref wcnnew, ref path, wcnfilter);
-            if ((num == 448 && !sav3file.isjap) || (num == 228 && sav3file.isjap))
+            int filesize = FileIO.load_file(ref wcnnew, ref path, wcnfilter);
+            if (filesize == SAV3.WCN_SIZE && sav3file.isjap == false || filesize == SAV3.WCN_SIZE_jap && sav3file.isjap)
             {
                 sav3file.set_WCN(wcnnew);
                 sav3file.update_section_chk(4);
-                MessageBox.Show("WC News injected.");
+                MessageBox.Show("神秘新闻配信完成。");
                 FileIO.save_data(sav3file.Data, savfilter);
+
             }
-            else if (num != -1)
+            else if (filesize == -1)
             {
-                MessageBox.Show("Invalid file size.");
+                ;
+            }
+            else
+            {
+                MessageBox.Show("无效文件大小。");
             }
         }
         else
         {
-            MessageBox.Show("Save file does not have Mystery Gift enabled.");
+            MessageBox.Show("存档未开启神秘礼物功能。");
         }
     }
 
@@ -260,20 +266,14 @@ partial class WC3ToolMainForm : Form
 
     private void Export_me3_butClick(object sender, EventArgs e)
     {
-        int num = sav3file.has_ME3();
-        switch (num)
-        {
-            case 0:
-                MessageBox.Show("Save file does not contain Mystery Event Data.");
-                break;
-            case 2:
-                MessageBox.Show("Save file does contain Mystery Event Data, but the script has already been erased from savedata.");
-                break;
-        }
-        if (num != 0)
-        {
+        int check = sav3file.has_ME3();
+        if (check == 0)
+            MessageBox.Show("存档未包含神秘事件数据。");
+        else if (check == 2)
+            MessageBox.Show("存档包含神秘事件数据，但脚本已从存档数据中被删除。");
+
+        if (check != 0)
             FileIO.save_data(sav3file.get_ME3(), me3filter);
-        }
     }
 
     private void Inject_me3_butClick(object sender, EventArgs e)
@@ -281,32 +281,38 @@ partial class WC3ToolMainForm : Form
         if (sav3file.has_mystery_event || sav3file.game == 1)
         {
             if (sav3file.game == 1)
-            {
-                MessageBox.Show("Mystery Event was removed from non Japanese Emerald.\n\tYou can still inject the data at your own risk.");
-            }
+                MessageBox.Show("非日版绿宝石里已移除神秘事件。\n\t您仍可以自行承担风险继续配信数据。");
             string path = null;
-            int num = FileIO.load_file(ref me3file, ref path, me3filter);
-            if (num == sav3file.me3_size)
+            int filesize = FileIO.load_file(ref me3file, ref path, me3filter);
+            if (filesize == sav3file.me3_size)
             {
-                ME3 mE = new ME3(me3file, num);
-                if (sav3file.game != mE.isemerald)
+                ME3 me3_struct = new ME3(me3file, filesize);
+                if (sav3file.game != me3_struct.isemerald)
                 {
-                    MessageBox.Show("This ME3 file is not for this game!");
-                    return;
+                    MessageBox.Show("神秘事件文件不适用于此游戏！");
                 }
-                sav3file.set_ME3(me3file);
-                sav3file.update_section_chk(4);
-                MessageBox.Show("Mystery event injected.");
-                FileIO.save_data(sav3file.Data, savfilter);
+                else
+                {
+                    sav3file.set_ME3(me3file);
+                    //custom_script.Checked = true;
+                    //Add fix sav3 checksum func3
+                    sav3file.update_section_chk(4);
+                    MessageBox.Show("神秘事件配信完成。");
+                    FileIO.save_data(sav3file.Data, savfilter);
+                }
+
             }
-            else if (num != -1)
+            else if (filesize == -1)
             {
-                MessageBox.Show("Invalid file size.");
+            }
+            else
+            {
+                MessageBox.Show("无效文件大小。");
             }
         }
         else
         {
-            MessageBox.Show("Save file does not have Mystery Event enabled.");
+            MessageBox.Show("存档未开启神秘事件功能。");
         }
     }
 
@@ -317,9 +323,9 @@ partial class WC3ToolMainForm : Form
 
     private void Eon_em_butClick(object sender, EventArgs e)
     {
-        MessageBox.Show("This will enable the Eon ticket event as distributed in Japan.\nKeep in mind this event was never available outside Japan.\nIf you want a legit EON ticket in Emerald, you have to Mix Records with a Ruby/Saphire game with distributable EON ticket.");
+        MessageBox.Show("无限船票将作为日版活动配信。\n请注意此活动从未在日本以外地区配信过。\n如您想在非日版绿宝石获得合法无限船票，请与配信了无限船票的红宝石/蓝宝石进行混合记录。");
         sav3file.enable_eon_emerald();
-        MessageBox.Show("Mystery event EON Ticket injected.\n\nNote: if you saved in the 2nd floor of Pokémon Center, you'll have to exit and enter for the Blue man to appear.");
+        MessageBox.Show("神秘事件无限船票配信完成。\n\n注：如存档在宝可梦中心二楼保存, 您需离开二楼再返回以使蓝色邮递员出现。");
         FileIO.save_data(sav3file.Data, savfilter);
     }
 
@@ -359,23 +365,24 @@ partial class WC3ToolMainForm : Form
     private void Inject_ect_butClick(object sender, EventArgs e)
     {
         if (sav3file.game == 1)
-        {
-            MessageBox.Show("Mystery Event was removed from non Japanese Emerald.\n\tYou can still inject the data at your own risk.");
-        }
+            MessageBox.Show("非日版绿宝石里已移除神秘事件。\n\t您仍可以自行承担风险继续配信数据。");
         string path = null;
-        switch (FileIO.load_file(ref ectfile, ref path, ectfilter))
+        int filesize = FileIO.load_file(ref ectfile, ref path, ectfilter);
+        if (filesize == ECT.SIZE_ECT)
         {
-            case 188:
-                sav3file.set_ECT(ectfile);
-                sav3file.update_section_chk(0);
-                MessageBox.Show("e-card Trainer injected.");
-                FileIO.save_data(sav3file.Data, savfilter);
-                break;
-            default:
-                MessageBox.Show("Invalid file size.");
-                break;
-            case -1:
-                break;
+            sav3file.set_ECT(ectfile);
+            sav3file.update_section_chk(0);
+            MessageBox.Show("e卡训练家配信完成。");
+            FileIO.save_data(sav3file.Data, savfilter);
+
+        }
+        else if (filesize == -1)
+        {
+            ;
+        }
+        else
+        {
+            MessageBox.Show("无效文件大小。");
         }
     }
 
@@ -409,13 +416,9 @@ partial class WC3ToolMainForm : Form
             sav3file.isjap = false;
         }
         if (sav3file.isjap)
-        {
-            region_lab.Text = "JAP";
-        }
+            region_lab.Text = "日版";
         else
-        {
-            region_lab.Text = "USA/EUR";
-        }
+            region_lab.Text = "美/欧版";
         update_button_state();
         sav3file.updateOffsets();
     }
@@ -433,7 +436,7 @@ partial class WC3ToolMainForm : Form
     private void ClearEggEventFlagToolStripMenuItemClick(object sender, EventArgs e)
     {
         sav3file.clear_EggEvent_Flag();
-        MessageBox.Show("Egg Event flag cleared.");
+        MessageBox.Show("事件旗标“蛋事件”已移除。");
         FileIO.save_data(sav3file.Data, savfilter);
         clearEggEventFlagToolStripMenuItem.Enabled = sav3file.has_EggEvent_Flag();
     }
@@ -450,7 +453,7 @@ partial class WC3ToolMainForm : Form
         }
         else
         {
-            MessageBox.Show("There's no berry in savefile.");
+            MessageBox.Show("此存档文件没有树果。");
         }
     }
 
@@ -459,20 +462,23 @@ partial class WC3ToolMainForm : Form
         if (sav3file.game == 0)
         {
             string path = null;
-            switch (FileIO.load_file(ref berryfile, ref path, berryfilter))
+            int filesize = FileIO.load_file(ref berryfile, ref path, berryfilter);
+            if (filesize == SAV3.BERRY_SIZE)
             {
-                case 1328:
-                    sav3file.set_ECB(berryfile);
-                    sav3file.set_Enigma_Flag();
-                    sav3file.update_section_chk(4);
-                    MessageBox.Show("Enigma Berry injected.");
-                    FileIO.save_data(sav3file.Data, savfilter);
-                    break;
-                default:
-                    MessageBox.Show("Invalid file size.");
-                    break;
-                case -1:
-                    break;
+                sav3file.set_ECB(berryfile);
+                sav3file.set_Enigma_Flag();
+                sav3file.update_section_chk(4);
+                MessageBox.Show("谜芝果配信完成。");
+                FileIO.save_data(sav3file.Data, savfilter);
+
+            }
+            else if (filesize == -1)
+            {
+                ;
+            }
+            else
+            {
+                MessageBox.Show("无效文件大小。");
             }
         }
     }
@@ -484,7 +490,12 @@ partial class WC3ToolMainForm : Form
 
     private void AboutToolStripMenuItem1Click(object sender, EventArgs e)
     {
-        MessageBox.Show("Mystery Gift Tool 0.1f by Sabresite (" + version() + ")\n\nMany thanks to suloku, ajxpkm, Real.96, BlackShark, lostaddict, Háčky, every contributor and many more involved in Mystery Event research!\n\nThe research thread at projectpokemon.org might be of your interest.\n\nIf you want to contribute any missing event, contact Sabresite, suloku or ajxpkm at projectpokemon's forums or sabresite@projectpokemon.org");
+        MessageBox.Show("Mystery Gift Tool 0.1f by Sabresite（汉化者：卧看微尘/Wokann） \n" +
+            "(" + version() + ")\n\n非常感谢suloku、ajxpkm、Real.96、BlackShark、lostaddict、Háčky、" +
+            "每一位贡献者以及更多参与神秘事件研究的人！\n\n" +
+            "您可能会对projectpokemon.org 上的研究线程感兴趣。\n\n" +
+            "如果您想贡献任何缺失的官方配信活动，请在 projectpokemon 的论坛或 sabresite@projectpokemon.org " +
+            "联系 Sabresite、suloku 或 ajxpkm。");
     }
 
     private void Tvswarm_butClick(object sender, EventArgs e)
@@ -497,5 +508,5 @@ partial class WC3ToolMainForm : Form
         new EventTool().ShowDialog();
     }
 
-    
+
 }

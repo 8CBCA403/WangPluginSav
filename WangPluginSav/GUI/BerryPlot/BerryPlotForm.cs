@@ -248,7 +248,7 @@ partial class BerryPlotForm : Form
         protagbox.Parent = BerryPicture;
     }
 
-   
 
-   
+
+
 }

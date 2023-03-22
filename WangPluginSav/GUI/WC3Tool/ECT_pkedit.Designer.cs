@@ -123,624 +123,648 @@ namespace WC3Tool
 
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.item_box = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.move1 = new System.Windows.Forms.ComboBox();
-            this.move2 = new System.Windows.Forms.ComboBox();
-            this.move3 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.level = new System.Windows.Forms.NumericUpDown();
-            this.pp1 = new System.Windows.Forms.NumericUpDown();
-            this.pp2 = new System.Windows.Forms.NumericUpDown();
-            this.pp3 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.otid = new System.Windows.Forms.NumericUpDown();
-            this.otsid = new System.Windows.Forms.NumericUpDown();
-            this.pid = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ability = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.friendship = new System.Windows.Forms.NumericUpDown();
-            this.namebox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.iv1 = new System.Windows.Forms.NumericUpDown();
-            this.iv2 = new System.Windows.Forms.NumericUpDown();
-            this.iv3 = new System.Windows.Forms.NumericUpDown();
-            this.iv4 = new System.Windows.Forms.NumericUpDown();
-            this.iv5 = new System.Windows.Forms.NumericUpDown();
-            this.iv6 = new System.Windows.Forms.NumericUpDown();
-            this.ev6 = new System.Windows.Forms.NumericUpDown();
-            this.ev5 = new System.Windows.Forms.NumericUpDown();
-            this.ev4 = new System.Windows.Forms.NumericUpDown();
-            this.ev3 = new System.Windows.Forms.NumericUpDown();
-            this.ev2 = new System.Windows.Forms.NumericUpDown();
-            this.ev1 = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.save = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.move4 = new System.Windows.Forms.ComboBox();
-            this.pp4 = new System.Windows.Forms.NumericUpDown();
-            this.jap_check = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)this.level).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.otid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.otsid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.pid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.ability).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.friendship).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp4).BeginInit();
-            base.SuspendLayout();
-            this.label1.Location = new System.Drawing.Point(29, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Held item:";
-            this.item_box.FormattingEnabled = true;
-            this.item_box.Items.AddRange(new object[377]
-            {
-            "Nothing", "Master Ball", "Ultra Ball", "Great Ball", "Poké Ball", "Safari Ball", "Net Ball", "Dive Ball", "Nest Ball", "Repeat Ball",
-            "Timer Ball", "Luxury Ball", "Premier Ball", "Potion", "Antidote", "Burn Heal", "Ice Heal", "Awakening", "Parlyz Heal", "Full Restore",
-            "Max Potion", "Hyper Potion", "Super Potion", "Full Heal", "Revive", "Max Revive", "Fresh Water", "Soda Pop", "Lemonade", "Moomoo Milk",
-            "EnergyPowder", "Energy Root", "Heal Powder", "Revival Herb", "Ether", "Max Ether", "Elixir", "Max Elixir", "Lava Cookie", "Blue Flute",
-            "Yellow Flute", "Red Flute", "Black Flute", "White Flute", "Berry Juice", "Sacred Ash", "Shoal Salt", "Shoal Shell", "Red Shard", "Blue Shard",
-            "Yellow Shard", "Green Shard", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown",
-            "unknown", "unknown", "unknown", "HP Up", "Protein", "Iron", "Carbos", "Calcium", "Rare Candy", "PP Up",
-            "Zinc", "PP Max", "unknown", "Guard Spec.", "Dire Hit", "X Attack", "X Defend", "X Speed", "X Accuracy", "X Special",
-            "Poké Doll", "Fluffy Tail", "unknown", "Super Repel", "Max Repel", "Escape Rope", "Repel", "unknown", "unknown", "unknown",
-            "unknown", "unknown", "unknown", "Sun Stone", "Moon Stone", "Fire Stone", "Thunder Stone", "Water Stone", "Leaf Stone", "unknown",
-            "unknown", "unknown", "unknown", "TinyMushroom", "Big Mushroom", "unknown", "Pearl", "Big Pearl", "Stardust", "Star Piece",
-            "Nugget", "Heart Scale", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown",
-            "unknown", "Orange Mail", "Harbor Mail", "Glitter Mail", "Mech Mail", "Wood Mail", "Wave Mail", "Bead Mail", "Shadow Mail", "Tropic Mail",
-            "Dream Mail", "Fab Mail", "Retro Mail", "Cheri Berry", "Chesto Berry", "Pecha Berry", "Rawst Berry", "Aspear Berry", "Leppa Berry", "Oran Berry",
-            "Persim Berry", "Lum Berry", "Sitrus Berry", "Figy Berry", "Wiki Berry", "Mago Berry", "Aguav Berry", "Iapapa Berry", "Razz Berry", "Bluk Berry",
-            "Nanab Berry", "Wepear Berry", "Pinap Berry", "Pomeg Berry", "Kelpsy Berry", "Qualot Berry", "Hondew Berry", "Grepa Berry", "Tamato Berry", "Cornn Berry",
-            "Magost Berry", "Rabuta Berry", "Nomel Berry", "Spelon Berry", "Pamtre Berry", "Watmel Berry", "Durin Berry", "Belue Berry", "Liechi Berry", "Ganlon Berry",
-            "Salac Berry", "Petaya Berry", "Apicot Berry", "Lansat Berry", "Starf Berry", "Enigma Berry", "unknown", "unknown", "unknown", "BrightPowder",
-            "White Herb", "Macho Brace", "Exp. Share", "Quick Claw", "Soothe Bell", "Mental Herb", "Choice Band", "King's Rock", "SilverPowder", "Amulet Coin",
-            "Cleanse Tag", "Soul Dew", "DeepSeaTooth", "DeepSeaScale", "Smoke Ball", "Everstone", "Focus Band", "Lucky Egg", "Scope Lens", "Metal Coat",
-            "Leftovers", "Dragon Scale", "Light Ball", "Soft Sand", "Hard Stone", "Miracle Seed", "BlackGlasses", "Black Belt", "Magnet", "Mystic Water",
-            "Sharp Beak", "Poison Barb", "NeverMeltIce", "Spell Tag", "TwistedSpoon", "Charcoal", "Dragon Fang", "Silk Scarf", "Up-Grade", "Shell Bell",
-            "Sea Incense", "Lax Incense", "Lucky Punch", "Metal Powder", "Thick Club", "Stick", "unknown", "unknown", "unknown", "unknown",
-            "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown",
-            "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown",
-            "unknown", "unknown", "unknown", "unknown", "Red Scarf", "Blue Scarf", "Pink Scarf", "Green Scarf", "Yellow Scarf", "Mach Bike",
-            "Coin Case", "Itemfinder", "Old Rod", "Good Rod", "Super Rod", "S.S. Ticket", "Contest Pass", "unknown", "Wailmer Pail", "Devon Goods",
-            "Soot Sack", "Basement Key", "Acro Bike", "Pokéblock Case", "Letter", "Eon Ticket", "Red Orb", "Blue Orb", "Scanner", "Go-Goggles",
-            "Meteorite", "Rm. 1 Key", "Rm. 2 Key", "Rm. 4 Key", "Rm. 6 Key", "Storage Key", "Root Fossil", "Claw Fossil", "Devon Scope", "TM01",
-            "TM02", "TM03", "TM04", "TM05", "TM06", "TM07", "TM08", "TM09", "TM10", "TM11",
-            "TM12", "TM13", "TM14", "TM15", "TM16", "TM17", "TM18", "TM19", "TM20", "TM21",
-            "TM22", "TM23", "TM24", "TM25", "TM26", "TM27", "TM28", "TM29", "TM30", "TM31",
-            "TM32", "TM33", "TM34", "TM35", "TM36", "TM37", "TM38", "TM39", "TM40", "TM41",
-            "TM42", "TM43", "TM44", "TM45", "TM46", "TM47", "TM48", "TM49", "TM50", "HM01",
-            "HM02", "HM03", "HM04", "HM05", "HM06", "HM07", "HM08", "unknown", "unknown", "Oak's Parcel* (Only FRLG)",
-            "Poké Flute* (Only FRLG)", "Secret Key* (Only FRLG)", "Bike Voucher* (Only FRLG)", "Gold Teeth* (Only FRLG)", "Old Amber* (Only FRLG)", "Card Key* (Only FRLG)", "Lift Key* (Only FRLG)", "Helix Fossil* (Only FRLG)", "Dome Fossil* (Only FRLG)", "Silph Scope* (Only FRLG)",
-            "Bicycle* (Only FRLG)", "Town Map* (Only FRLG)", "Vs. Seeker* (Only FRLG)", "Fame Checker* (Only FRLG)", "TM Case* (Only FRLG)", "Berry Pouch* (Only FRLG)", "Teachy TV* (Only FRLG)", "Tri-Pass* (Only FRLG)", "Rainbow Pass* (Only FRLG)", "Tea* (Only FRLG)",
-            "MysticTicket* (Only FRLG)", "AuroraTicket* (Only FRLG)", "Powder Jar* (Only FRLG)", "Ruby* (Only FRLG)", "Sapphire* (Only FRLG)", "Magma Emblem* (Only E)", "Old Sea Map* (Only E)"
-            });
-            this.item_box.Location = new System.Drawing.Point(96, 62);
-            this.item_box.Name = "item_box";
-            this.item_box.Size = new System.Drawing.Size(164, 21);
-            this.item_box.TabIndex = 1;
-            this.label2.Location = new System.Drawing.Point(29, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Move 1:";
-            this.label3.Location = new System.Drawing.Point(29, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Move 2:";
-            this.label4.Location = new System.Drawing.Point(29, 165);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Move 3:";
-            this.move1.FormattingEnabled = true;
-            this.move1.Items.AddRange(new object[355]
-            {
-            "-NONE-", "Pound", "Karate Chop*", "Double Slap", "Comet Punch", "Mega Punch", "Pay Day", "Fire Punch", "Ice Punch", "Thunder Punch",
-            "Scratch", "Vice Grip", "Guillotine", "Razor Wind", "Swords Dance", "Cut", "Gust*", "Wing Attack", "Whirlwind", "Fly",
-            "Bind", "Slam", "Vine Whip", "Stomp", "Double Kick", "Mega Kick", "Jump Kick", "Rolling Kick", "Sand Attack*", "Headbutt",
-            "Horn Attack", "Fury Attack", "Horn Drill", "Tackle", "Body Slam", "Wrap", "Take Down", "Thrash", "Double-Edge", "Tail Whip",
-            "Poison Sting", "Twineedle", "Pin Missile", "Leer", "Bite*", "Growl", "Roar", "Sing", "Supersonic", "Sonic Boom",
-            "Disable", "Acid", "Ember", "Flamethrower", "Mist", "Water Gun", "Hydro Pump", "Surf", "Ice Beam", "Blizzard",
-            "Psybeam", "Bubble Beam", "Aurora Beam", "Hyper Beam", "Peck", "Drill Peck", "Submission", "Low Kick", "Counter", "Seismic Toss",
-            "Strength", "Absorb", "Mega Drain", "Leech Seed", "Growth", "Razor Leaf", "Solar Beam", "Poison Powder", "Stun Spore", "Sleep Powder",
-            "Petal Dance", "String Shot", "Dragon Rage", "Fire Spin", "Thunder Shock", "Thunderbolt", "Thunder Wave", "Thunder", "Rock Throw", "Earthquake",
-            "Fissure", "Dig", "Toxic", "Confusion", "Psychic", "Hypnosis", "Meditate", "Agility", "Quick Attack", "Rage",
-            "Teleport", "Night Shade", "Mimic", "Screech", "Double Team", "Recover", "Harden", "Minimize", "Smokescreen", "Confuse Ray",
-            "Withdraw", "Defense Curl", "Barrier", "Light Screen", "Haze", "Reflect", "Focus Energy", "Bide", "Metronome", "Mirror Move",
-            "Self-Destruct", "Egg Bomb", "Lick", "Smog", "Sludge", "Bone Club", "Fire Blast", "Waterfall", "Clamp", "Swift",
-            "Skull Bash", "Spike Cannon", "Constrict", "Amnesia", "Kinesis", "Soft-Boiled", "High Jump Kick", "Glare", "Dream Eater", "Poison Gas",
-            "Barrage", "Leech Life", "Lovely Kiss", "Sky Attack", "Transform", "Bubble", "Dizzy Punch", "Spore", "Flash", "Psywave",
-            "Splash", "Acid Armor", "Crabhammer", "Explosion", "Fury Swipes", "Bonemerang", "Rest", "Rock Slide", "Hyper Fang", "Sharpen",
-            "Conversion", "Tri Attack", "Super Fang", "Slash", "Substitute", "Struggle", "Sketch", "Triple Kick", "Thief", "Spider Web",
-            "Mind Reader", "Nightmare", "Flame Wheel", "Snore", "Curse*", "Flail", "Conversion 2", "Aeroblast", "Cotton Spore", "Reversal",
-            "Spite", "Powder Snow", "Protect", "Mach Punch", "Scary Face", "Feint Attack", "Sweet Kiss*", "Belly Drum", "Sludge Bomb", "Mud-Slap",
-            "Octazooka", "Spikes", "Zap Cannon", "Foresight", "Destiny Bond", "Perish Song", "Icy Wind", "Detect", "Bone Rush", "Lock-On",
-            "Outrage", "Sandstorm", "Giga Drain", "Endure", "Charm*", "Rollout", "False Swipe", "Swagger", "Milk Drink", "Spark",
-            "Fury Cutter", "Steel Wing", "Mean Look", "Attract", "Sleep Talk", "Heal Bell", "Return", "Present", "Frustration", "Safeguard",
-            "Pain Split", "Sacred Fire", "Magnitude", "Dynamic Punch", "Megahorn", "Dragon Breath", "Baton Pass", "Encore", "Pursuit", "Rapid Spin",
-            "Sweet Scent", "Iron Tail", "Metal Claw", "Vital Throw", "Morning Sun", "Synthesis", "Moonlight*", "Hidden Power", "Cross Chop", "Twister",
-            "Rain Dance", "Sunny Day", "Crunch", "Mirror Coat", "Psych Up", "Extreme Speed", "Ancient Power", "Shadow Ball", "Future Sight", "Rock Smash",
-            "Whirlpool", "Beat Up", "Fake Out", "Uproar", "Stockpile", "Spit Up", "Swallow", "Heat Wave", "Hail", "Torment",
-            "Flatter", "Will-O-Wisp", "Memento", "Facade", "Focus Punch", "Smelling Salts", "Follow Me", "Nature Power", "Charge", "Taunt",
-            "Helping Hand", "Trick", "Role Play", "Wish", "Assist", "Ingrain", "Superpower", "Magic Coat", "Recycle", "Revenge",
-            "Brick Break", "Yawn", "Knock Off", "Endeavor", "Eruption", "Skill Swap", "Imprison", "Refresh", "Grudge", "Snatch",
-            "Secret Power", "Dive", "Arm Thrust", "Camouflage", "Tail Glow", "Luster Purge", "Mist Ball", "Feather Dance", "Teeter Dance", "Blaze Kick",
-            "Mud Sport", "Ice Ball", "Needle Arm", "Slack Off", "Hyper Voice", "Poison Fang", "Crush Claw", "Blast Burn", "Hydro Cannon", "Meteor Mash",
-            "Astonish", "Weather Ball", "Aromatherapy", "Fake Tears", "Air Cutter", "Overheat", "Odor Sleuth", "Rock Tomb", "Silver Wind", "Metal Sound",
-            "Grass Whistle", "Tickle", "Cosmic Power", "Water Spout", "Signal Beam", "Shadow Punch", "Extrasensory", "Sky Uppercut", "Sand Tomb", "Sheer Cold",
-            "Muddy Water", "Bullet Seed", "Aerial Ace", "Icicle Spear", "Iron Defense", "Block", "Howl", "Dragon Claw", "Frenzy Plant", "Bulk Up",
-            "Bounce", "Mud Shot", "Poison Tail", "Covet", "Volt Tackle", "Magical Leaf", "Water Sport", "Calm Mind", "Leaf Blade", "Dragon Dance",
-            "Rock Blast", "Shock Wave", "Water Pulse", "Doom Desire", "Psycho Boost"
-            });
-            this.move1.Location = new System.Drawing.Point(96, 110);
-            this.move1.Name = "move1";
-            this.move1.Size = new System.Drawing.Size(164, 21);
-            this.move1.TabIndex = 5;
-            this.move2.FormattingEnabled = true;
-            this.move2.Items.AddRange(new object[355]
-            {
-            "-NONE-", "Pound", "Karate Chop*", "Double Slap", "Comet Punch", "Mega Punch", "Pay Day", "Fire Punch", "Ice Punch", "Thunder Punch",
-            "Scratch", "Vice Grip", "Guillotine", "Razor Wind", "Swords Dance", "Cut", "Gust*", "Wing Attack", "Whirlwind", "Fly",
-            "Bind", "Slam", "Vine Whip", "Stomp", "Double Kick", "Mega Kick", "Jump Kick", "Rolling Kick", "Sand Attack*", "Headbutt",
-            "Horn Attack", "Fury Attack", "Horn Drill", "Tackle", "Body Slam", "Wrap", "Take Down", "Thrash", "Double-Edge", "Tail Whip",
-            "Poison Sting", "Twineedle", "Pin Missile", "Leer", "Bite*", "Growl", "Roar", "Sing", "Supersonic", "Sonic Boom",
-            "Disable", "Acid", "Ember", "Flamethrower", "Mist", "Water Gun", "Hydro Pump", "Surf", "Ice Beam", "Blizzard",
-            "Psybeam", "Bubble Beam", "Aurora Beam", "Hyper Beam", "Peck", "Drill Peck", "Submission", "Low Kick", "Counter", "Seismic Toss",
-            "Strength", "Absorb", "Mega Drain", "Leech Seed", "Growth", "Razor Leaf", "Solar Beam", "Poison Powder", "Stun Spore", "Sleep Powder",
-            "Petal Dance", "String Shot", "Dragon Rage", "Fire Spin", "Thunder Shock", "Thunderbolt", "Thunder Wave", "Thunder", "Rock Throw", "Earthquake",
-            "Fissure", "Dig", "Toxic", "Confusion", "Psychic", "Hypnosis", "Meditate", "Agility", "Quick Attack", "Rage",
-            "Teleport", "Night Shade", "Mimic", "Screech", "Double Team", "Recover", "Harden", "Minimize", "Smokescreen", "Confuse Ray",
-            "Withdraw", "Defense Curl", "Barrier", "Light Screen", "Haze", "Reflect", "Focus Energy", "Bide", "Metronome", "Mirror Move",
-            "Self-Destruct", "Egg Bomb", "Lick", "Smog", "Sludge", "Bone Club", "Fire Blast", "Waterfall", "Clamp", "Swift",
-            "Skull Bash", "Spike Cannon", "Constrict", "Amnesia", "Kinesis", "Soft-Boiled", "High Jump Kick", "Glare", "Dream Eater", "Poison Gas",
-            "Barrage", "Leech Life", "Lovely Kiss", "Sky Attack", "Transform", "Bubble", "Dizzy Punch", "Spore", "Flash", "Psywave",
-            "Splash", "Acid Armor", "Crabhammer", "Explosion", "Fury Swipes", "Bonemerang", "Rest", "Rock Slide", "Hyper Fang", "Sharpen",
-            "Conversion", "Tri Attack", "Super Fang", "Slash", "Substitute", "Struggle", "Sketch", "Triple Kick", "Thief", "Spider Web",
-            "Mind Reader", "Nightmare", "Flame Wheel", "Snore", "Curse*", "Flail", "Conversion 2", "Aeroblast", "Cotton Spore", "Reversal",
-            "Spite", "Powder Snow", "Protect", "Mach Punch", "Scary Face", "Feint Attack", "Sweet Kiss*", "Belly Drum", "Sludge Bomb", "Mud-Slap",
-            "Octazooka", "Spikes", "Zap Cannon", "Foresight", "Destiny Bond", "Perish Song", "Icy Wind", "Detect", "Bone Rush", "Lock-On",
-            "Outrage", "Sandstorm", "Giga Drain", "Endure", "Charm*", "Rollout", "False Swipe", "Swagger", "Milk Drink", "Spark",
-            "Fury Cutter", "Steel Wing", "Mean Look", "Attract", "Sleep Talk", "Heal Bell", "Return", "Present", "Frustration", "Safeguard",
-            "Pain Split", "Sacred Fire", "Magnitude", "Dynamic Punch", "Megahorn", "Dragon Breath", "Baton Pass", "Encore", "Pursuit", "Rapid Spin",
-            "Sweet Scent", "Iron Tail", "Metal Claw", "Vital Throw", "Morning Sun", "Synthesis", "Moonlight*", "Hidden Power", "Cross Chop", "Twister",
-            "Rain Dance", "Sunny Day", "Crunch", "Mirror Coat", "Psych Up", "Extreme Speed", "Ancient Power", "Shadow Ball", "Future Sight", "Rock Smash",
-            "Whirlpool", "Beat Up", "Fake Out", "Uproar", "Stockpile", "Spit Up", "Swallow", "Heat Wave", "Hail", "Torment",
-            "Flatter", "Will-O-Wisp", "Memento", "Facade", "Focus Punch", "Smelling Salts", "Follow Me", "Nature Power", "Charge", "Taunt",
-            "Helping Hand", "Trick", "Role Play", "Wish", "Assist", "Ingrain", "Superpower", "Magic Coat", "Recycle", "Revenge",
-            "Brick Break", "Yawn", "Knock Off", "Endeavor", "Eruption", "Skill Swap", "Imprison", "Refresh", "Grudge", "Snatch",
-            "Secret Power", "Dive", "Arm Thrust", "Camouflage", "Tail Glow", "Luster Purge", "Mist Ball", "Feather Dance", "Teeter Dance", "Blaze Kick",
-            "Mud Sport", "Ice Ball", "Needle Arm", "Slack Off", "Hyper Voice", "Poison Fang", "Crush Claw", "Blast Burn", "Hydro Cannon", "Meteor Mash",
-            "Astonish", "Weather Ball", "Aromatherapy", "Fake Tears", "Air Cutter", "Overheat", "Odor Sleuth", "Rock Tomb", "Silver Wind", "Metal Sound",
-            "Grass Whistle", "Tickle", "Cosmic Power", "Water Spout", "Signal Beam", "Shadow Punch", "Extrasensory", "Sky Uppercut", "Sand Tomb", "Sheer Cold",
-            "Muddy Water", "Bullet Seed", "Aerial Ace", "Icicle Spear", "Iron Defense", "Block", "Howl", "Dragon Claw", "Frenzy Plant", "Bulk Up",
-            "Bounce", "Mud Shot", "Poison Tail", "Covet", "Volt Tackle", "Magical Leaf", "Water Sport", "Calm Mind", "Leaf Blade", "Dragon Dance",
-            "Rock Blast", "Shock Wave", "Water Pulse", "Doom Desire", "Psycho Boost"
-            });
-            this.move2.Location = new System.Drawing.Point(96, 137);
-            this.move2.Name = "move2";
-            this.move2.Size = new System.Drawing.Size(164, 21);
-            this.move2.TabIndex = 6;
-            this.move3.FormattingEnabled = true;
-            this.move3.Items.AddRange(new object[355]
-            {
-            "-NONE-", "Pound", "Karate Chop*", "Double Slap", "Comet Punch", "Mega Punch", "Pay Day", "Fire Punch", "Ice Punch", "Thunder Punch",
-            "Scratch", "Vice Grip", "Guillotine", "Razor Wind", "Swords Dance", "Cut", "Gust*", "Wing Attack", "Whirlwind", "Fly",
-            "Bind", "Slam", "Vine Whip", "Stomp", "Double Kick", "Mega Kick", "Jump Kick", "Rolling Kick", "Sand Attack*", "Headbutt",
-            "Horn Attack", "Fury Attack", "Horn Drill", "Tackle", "Body Slam", "Wrap", "Take Down", "Thrash", "Double-Edge", "Tail Whip",
-            "Poison Sting", "Twineedle", "Pin Missile", "Leer", "Bite*", "Growl", "Roar", "Sing", "Supersonic", "Sonic Boom",
-            "Disable", "Acid", "Ember", "Flamethrower", "Mist", "Water Gun", "Hydro Pump", "Surf", "Ice Beam", "Blizzard",
-            "Psybeam", "Bubble Beam", "Aurora Beam", "Hyper Beam", "Peck", "Drill Peck", "Submission", "Low Kick", "Counter", "Seismic Toss",
-            "Strength", "Absorb", "Mega Drain", "Leech Seed", "Growth", "Razor Leaf", "Solar Beam", "Poison Powder", "Stun Spore", "Sleep Powder",
-            "Petal Dance", "String Shot", "Dragon Rage", "Fire Spin", "Thunder Shock", "Thunderbolt", "Thunder Wave", "Thunder", "Rock Throw", "Earthquake",
-            "Fissure", "Dig", "Toxic", "Confusion", "Psychic", "Hypnosis", "Meditate", "Agility", "Quick Attack", "Rage",
-            "Teleport", "Night Shade", "Mimic", "Screech", "Double Team", "Recover", "Harden", "Minimize", "Smokescreen", "Confuse Ray",
-            "Withdraw", "Defense Curl", "Barrier", "Light Screen", "Haze", "Reflect", "Focus Energy", "Bide", "Metronome", "Mirror Move",
-            "Self-Destruct", "Egg Bomb", "Lick", "Smog", "Sludge", "Bone Club", "Fire Blast", "Waterfall", "Clamp", "Swift",
-            "Skull Bash", "Spike Cannon", "Constrict", "Amnesia", "Kinesis", "Soft-Boiled", "High Jump Kick", "Glare", "Dream Eater", "Poison Gas",
-            "Barrage", "Leech Life", "Lovely Kiss", "Sky Attack", "Transform", "Bubble", "Dizzy Punch", "Spore", "Flash", "Psywave",
-            "Splash", "Acid Armor", "Crabhammer", "Explosion", "Fury Swipes", "Bonemerang", "Rest", "Rock Slide", "Hyper Fang", "Sharpen",
-            "Conversion", "Tri Attack", "Super Fang", "Slash", "Substitute", "Struggle", "Sketch", "Triple Kick", "Thief", "Spider Web",
-            "Mind Reader", "Nightmare", "Flame Wheel", "Snore", "Curse*", "Flail", "Conversion 2", "Aeroblast", "Cotton Spore", "Reversal",
-            "Spite", "Powder Snow", "Protect", "Mach Punch", "Scary Face", "Feint Attack", "Sweet Kiss*", "Belly Drum", "Sludge Bomb", "Mud-Slap",
-            "Octazooka", "Spikes", "Zap Cannon", "Foresight", "Destiny Bond", "Perish Song", "Icy Wind", "Detect", "Bone Rush", "Lock-On",
-            "Outrage", "Sandstorm", "Giga Drain", "Endure", "Charm*", "Rollout", "False Swipe", "Swagger", "Milk Drink", "Spark",
-            "Fury Cutter", "Steel Wing", "Mean Look", "Attract", "Sleep Talk", "Heal Bell", "Return", "Present", "Frustration", "Safeguard",
-            "Pain Split", "Sacred Fire", "Magnitude", "Dynamic Punch", "Megahorn", "Dragon Breath", "Baton Pass", "Encore", "Pursuit", "Rapid Spin",
-            "Sweet Scent", "Iron Tail", "Metal Claw", "Vital Throw", "Morning Sun", "Synthesis", "Moonlight*", "Hidden Power", "Cross Chop", "Twister",
-            "Rain Dance", "Sunny Day", "Crunch", "Mirror Coat", "Psych Up", "Extreme Speed", "Ancient Power", "Shadow Ball", "Future Sight", "Rock Smash",
-            "Whirlpool", "Beat Up", "Fake Out", "Uproar", "Stockpile", "Spit Up", "Swallow", "Heat Wave", "Hail", "Torment",
-            "Flatter", "Will-O-Wisp", "Memento", "Facade", "Focus Punch", "Smelling Salts", "Follow Me", "Nature Power", "Charge", "Taunt",
-            "Helping Hand", "Trick", "Role Play", "Wish", "Assist", "Ingrain", "Superpower", "Magic Coat", "Recycle", "Revenge",
-            "Brick Break", "Yawn", "Knock Off", "Endeavor", "Eruption", "Skill Swap", "Imprison", "Refresh", "Grudge", "Snatch",
-            "Secret Power", "Dive", "Arm Thrust", "Camouflage", "Tail Glow", "Luster Purge", "Mist Ball", "Feather Dance", "Teeter Dance", "Blaze Kick",
-            "Mud Sport", "Ice Ball", "Needle Arm", "Slack Off", "Hyper Voice", "Poison Fang", "Crush Claw", "Blast Burn", "Hydro Cannon", "Meteor Mash",
-            "Astonish", "Weather Ball", "Aromatherapy", "Fake Tears", "Air Cutter", "Overheat", "Odor Sleuth", "Rock Tomb", "Silver Wind", "Metal Sound",
-            "Grass Whistle", "Tickle", "Cosmic Power", "Water Spout", "Signal Beam", "Shadow Punch", "Extrasensory", "Sky Uppercut", "Sand Tomb", "Sheer Cold",
-            "Muddy Water", "Bullet Seed", "Aerial Ace", "Icicle Spear", "Iron Defense", "Block", "Howl", "Dragon Claw", "Frenzy Plant", "Bulk Up",
-            "Bounce", "Mud Shot", "Poison Tail", "Covet", "Volt Tackle", "Magical Leaf", "Water Sport", "Calm Mind", "Leaf Blade", "Dragon Dance",
-            "Rock Blast", "Shock Wave", "Water Pulse", "Doom Desire", "Psycho Boost"
-            });
-            this.move3.Location = new System.Drawing.Point(96, 162);
-            this.move3.Name = "move3";
-            this.move3.Size = new System.Drawing.Size(164, 21);
-            this.move3.TabIndex = 7;
-            this.label5.Location = new System.Drawing.Point(541, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Level:";
-            this.level.Location = new System.Drawing.Point(583, 23);
-            this.level.Name = "level";
-            this.level.Size = new System.Drawing.Size(120, 20);
-            this.level.TabIndex = 9;
-            this.pp1.Location = new System.Drawing.Point(266, 111);
-            this.pp1.Maximum = new decimal(new int[4] { 3, 0, 0, 0 });
-            this.pp1.Name = "pp1";
-            this.pp1.Size = new System.Drawing.Size(37, 20);
-            this.pp1.TabIndex = 10;
-            this.pp2.Location = new System.Drawing.Point(266, 138);
-            this.pp2.Maximum = new decimal(new int[4] { 3, 0, 0, 0 });
-            this.pp2.Name = "pp2";
-            this.pp2.Size = new System.Drawing.Size(37, 20);
-            this.pp2.TabIndex = 11;
-            this.pp3.Location = new System.Drawing.Point(266, 163);
-            this.pp3.Maximum = new decimal(new int[4] { 3, 0, 0, 0 });
-            this.pp3.Name = "pp3";
-            this.pp3.Size = new System.Drawing.Size(37, 20);
-            this.pp3.TabIndex = 12;
-            this.label6.Location = new System.Drawing.Point(266, 95);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "PPup";
-            this.label7.Location = new System.Drawing.Point(524, 112);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "OT ID:";
-            this.label8.Location = new System.Drawing.Point(524, 139);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "OT SID:";
-            this.otid.Location = new System.Drawing.Point(583, 110);
-            this.otid.Maximum = new decimal(new int[4] { 65535, 0, 0, 0 });
-            this.otid.Name = "otid";
-            this.otid.Size = new System.Drawing.Size(120, 20);
-            this.otid.TabIndex = 16;
-            this.otsid.Location = new System.Drawing.Point(583, 137);
-            this.otsid.Maximum = new decimal(new int[4] { 65535, 0, 0, 0 });
-            this.otsid.Name = "otsid";
-            this.otsid.Size = new System.Drawing.Size(120, 20);
-            this.otsid.TabIndex = 17;
-            this.pid.Location = new System.Drawing.Point(583, 162);
-            this.pid.Maximum = new decimal(new int[4]);
-            this.pid.Name = "pid";
-            this.pid.Size = new System.Drawing.Size(120, 20);
-            this.pid.TabIndex = 18;
-            this.label9.Location = new System.Drawing.Point(524, 164);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 23);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "PID:";
-            this.ability.Location = new System.Drawing.Point(583, 75);
-            this.ability.Maximum = new decimal(new int[4] { 1, 0, 0, 0 });
-            this.ability.Name = "ability";
-            this.ability.Size = new System.Drawing.Size(120, 20);
-            this.ability.TabIndex = 20;
-            this.label10.Location = new System.Drawing.Point(524, 77);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 23);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Ability:";
-            this.label11.Location = new System.Drawing.Point(524, 51);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 23);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Friendship:";
-            this.friendship.Location = new System.Drawing.Point(583, 49);
-            this.friendship.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.friendship.Name = "friendship";
-            this.friendship.Size = new System.Drawing.Size(120, 20);
-            this.friendship.TabIndex = 23;
-            this.namebox.Location = new System.Drawing.Point(96, 36);
-            this.namebox.MaxLength = 10;
-            this.namebox.Name = "namebox";
-            this.namebox.Size = new System.Drawing.Size(216, 20);
-            this.namebox.TabIndex = 24;
-            this.label12.Location = new System.Drawing.Point(29, 39);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 14);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Name:";
-            this.label13.Location = new System.Drawing.Point(356, 33);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 23);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "HP";
-            this.iv1.Location = new System.Drawing.Point(390, 33);
-            this.iv1.Maximum = new decimal(new int[4] { 31, 0, 0, 0 });
-            this.iv1.Name = "iv1";
-            this.iv1.Size = new System.Drawing.Size(51, 20);
-            this.iv1.TabIndex = 28;
-            this.iv2.Location = new System.Drawing.Point(390, 59);
-            this.iv2.Maximum = new decimal(new int[4] { 31, 0, 0, 0 });
-            this.iv2.Name = "iv2";
-            this.iv2.Size = new System.Drawing.Size(51, 20);
-            this.iv2.TabIndex = 29;
-            this.iv3.Location = new System.Drawing.Point(390, 85);
-            this.iv3.Maximum = new decimal(new int[4] { 31, 0, 0, 0 });
-            this.iv3.Name = "iv3";
-            this.iv3.Size = new System.Drawing.Size(51, 20);
-            this.iv3.TabIndex = 30;
-            this.iv4.Location = new System.Drawing.Point(390, 111);
-            this.iv4.Maximum = new decimal(new int[4] { 31, 0, 0, 0 });
-            this.iv4.Name = "iv4";
-            this.iv4.Size = new System.Drawing.Size(51, 20);
-            this.iv4.TabIndex = 31;
-            this.iv5.Location = new System.Drawing.Point(390, 137);
-            this.iv5.Maximum = new decimal(new int[4] { 31, 0, 0, 0 });
-            this.iv5.Name = "iv5";
-            this.iv5.Size = new System.Drawing.Size(51, 20);
-            this.iv5.TabIndex = 32;
-            this.iv6.Location = new System.Drawing.Point(390, 163);
-            this.iv6.Maximum = new decimal(new int[4] { 31, 0, 0, 0 });
-            this.iv6.Name = "iv6";
-            this.iv6.Size = new System.Drawing.Size(51, 20);
-            this.iv6.TabIndex = 33;
-            this.ev6.Location = new System.Drawing.Point(447, 163);
-            this.ev6.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.ev6.Name = "ev6";
-            this.ev6.Size = new System.Drawing.Size(51, 20);
-            this.ev6.TabIndex = 40;
-            this.ev5.Location = new System.Drawing.Point(447, 137);
-            this.ev5.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.ev5.Name = "ev5";
-            this.ev5.Size = new System.Drawing.Size(51, 20);
-            this.ev5.TabIndex = 39;
-            this.ev4.Location = new System.Drawing.Point(447, 111);
-            this.ev4.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.ev4.Name = "ev4";
-            this.ev4.Size = new System.Drawing.Size(51, 20);
-            this.ev4.TabIndex = 38;
-            this.ev3.Location = new System.Drawing.Point(447, 85);
-            this.ev3.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.ev3.Name = "ev3";
-            this.ev3.Size = new System.Drawing.Size(51, 20);
-            this.ev3.TabIndex = 37;
-            this.ev2.Location = new System.Drawing.Point(447, 59);
-            this.ev2.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.ev2.Name = "ev2";
-            this.ev2.Size = new System.Drawing.Size(51, 20);
-            this.ev2.TabIndex = 36;
-            this.ev1.Location = new System.Drawing.Point(447, 33);
-            this.ev1.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.ev1.Name = "ev1";
-            this.ev1.Size = new System.Drawing.Size(51, 20);
-            this.ev1.TabIndex = 35;
-            this.label14.Location = new System.Drawing.Point(356, 60);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(28, 23);
-            this.label14.TabIndex = 41;
-            this.label14.Text = "Atk";
-            this.label15.Location = new System.Drawing.Point(356, 87);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(28, 23);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "Def";
-            this.label16.Location = new System.Drawing.Point(356, 113);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 23);
-            this.label16.TabIndex = 43;
-            this.label16.Text = "Sp";
-            this.label17.Location = new System.Drawing.Point(356, 139);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 23);
-            this.label17.TabIndex = 44;
-            this.label17.Text = "SPA";
-            this.label18.Location = new System.Drawing.Point(356, 165);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(32, 23);
-            this.label18.TabIndex = 45;
-            this.label18.Text = "SPD";
-            this.label19.Location = new System.Drawing.Point(399, 18);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(28, 13);
-            this.label19.TabIndex = 46;
-            this.label19.Text = "IV";
-            this.label20.Location = new System.Drawing.Point(456, 18);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(28, 13);
-            this.label20.TabIndex = 47;
-            this.label20.Text = "EV";
-            this.save.Location = new System.Drawing.Point(15, 225);
-            this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(75, 23);
-            this.save.TabIndex = 48;
-            this.save.Text = "Save";
-            this.save.UseVisualStyleBackColor = true;
-            this.save.Click += new System.EventHandler(SaveClick);
-            this.cancel.Location = new System.Drawing.Point(96, 225);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(75, 23);
-            this.cancel.TabIndex = 49;
-            this.cancel.Text = "Cancel";
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Click += new System.EventHandler(CancelClick);
-            this.label21.Location = new System.Drawing.Point(29, 194);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(100, 23);
-            this.label21.TabIndex = 50;
-            this.label21.Text = "Move 4:";
-            this.move4.FormattingEnabled = true;
-            this.move4.Items.AddRange(new object[355]
-            {
-            "-NONE-", "Pound", "Karate Chop*", "Double Slap", "Comet Punch", "Mega Punch", "Pay Day", "Fire Punch", "Ice Punch", "Thunder Punch",
-            "Scratch", "Vice Grip", "Guillotine", "Razor Wind", "Swords Dance", "Cut", "Gust*", "Wing Attack", "Whirlwind", "Fly",
-            "Bind", "Slam", "Vine Whip", "Stomp", "Double Kick", "Mega Kick", "Jump Kick", "Rolling Kick", "Sand Attack*", "Headbutt",
-            "Horn Attack", "Fury Attack", "Horn Drill", "Tackle", "Body Slam", "Wrap", "Take Down", "Thrash", "Double-Edge", "Tail Whip",
-            "Poison Sting", "Twineedle", "Pin Missile", "Leer", "Bite*", "Growl", "Roar", "Sing", "Supersonic", "Sonic Boom",
-            "Disable", "Acid", "Ember", "Flamethrower", "Mist", "Water Gun", "Hydro Pump", "Surf", "Ice Beam", "Blizzard",
-            "Psybeam", "Bubble Beam", "Aurora Beam", "Hyper Beam", "Peck", "Drill Peck", "Submission", "Low Kick", "Counter", "Seismic Toss",
-            "Strength", "Absorb", "Mega Drain", "Leech Seed", "Growth", "Razor Leaf", "Solar Beam", "Poison Powder", "Stun Spore", "Sleep Powder",
-            "Petal Dance", "String Shot", "Dragon Rage", "Fire Spin", "Thunder Shock", "Thunderbolt", "Thunder Wave", "Thunder", "Rock Throw", "Earthquake",
-            "Fissure", "Dig", "Toxic", "Confusion", "Psychic", "Hypnosis", "Meditate", "Agility", "Quick Attack", "Rage",
-            "Teleport", "Night Shade", "Mimic", "Screech", "Double Team", "Recover", "Harden", "Minimize", "Smokescreen", "Confuse Ray",
-            "Withdraw", "Defense Curl", "Barrier", "Light Screen", "Haze", "Reflect", "Focus Energy", "Bide", "Metronome", "Mirror Move",
-            "Self-Destruct", "Egg Bomb", "Lick", "Smog", "Sludge", "Bone Club", "Fire Blast", "Waterfall", "Clamp", "Swift",
-            "Skull Bash", "Spike Cannon", "Constrict", "Amnesia", "Kinesis", "Soft-Boiled", "High Jump Kick", "Glare", "Dream Eater", "Poison Gas",
-            "Barrage", "Leech Life", "Lovely Kiss", "Sky Attack", "Transform", "Bubble", "Dizzy Punch", "Spore", "Flash", "Psywave",
-            "Splash", "Acid Armor", "Crabhammer", "Explosion", "Fury Swipes", "Bonemerang", "Rest", "Rock Slide", "Hyper Fang", "Sharpen",
-            "Conversion", "Tri Attack", "Super Fang", "Slash", "Substitute", "Struggle", "Sketch", "Triple Kick", "Thief", "Spider Web",
-            "Mind Reader", "Nightmare", "Flame Wheel", "Snore", "Curse*", "Flail", "Conversion 2", "Aeroblast", "Cotton Spore", "Reversal",
-            "Spite", "Powder Snow", "Protect", "Mach Punch", "Scary Face", "Feint Attack", "Sweet Kiss*", "Belly Drum", "Sludge Bomb", "Mud-Slap",
-            "Octazooka", "Spikes", "Zap Cannon", "Foresight", "Destiny Bond", "Perish Song", "Icy Wind", "Detect", "Bone Rush", "Lock-On",
-            "Outrage", "Sandstorm", "Giga Drain", "Endure", "Charm*", "Rollout", "False Swipe", "Swagger", "Milk Drink", "Spark",
-            "Fury Cutter", "Steel Wing", "Mean Look", "Attract", "Sleep Talk", "Heal Bell", "Return", "Present", "Frustration", "Safeguard",
-            "Pain Split", "Sacred Fire", "Magnitude", "Dynamic Punch", "Megahorn", "Dragon Breath", "Baton Pass", "Encore", "Pursuit", "Rapid Spin",
-            "Sweet Scent", "Iron Tail", "Metal Claw", "Vital Throw", "Morning Sun", "Synthesis", "Moonlight*", "Hidden Power", "Cross Chop", "Twister",
-            "Rain Dance", "Sunny Day", "Crunch", "Mirror Coat", "Psych Up", "Extreme Speed", "Ancient Power", "Shadow Ball", "Future Sight", "Rock Smash",
-            "Whirlpool", "Beat Up", "Fake Out", "Uproar", "Stockpile", "Spit Up", "Swallow", "Heat Wave", "Hail", "Torment",
-            "Flatter", "Will-O-Wisp", "Memento", "Facade", "Focus Punch", "Smelling Salts", "Follow Me", "Nature Power", "Charge", "Taunt",
-            "Helping Hand", "Trick", "Role Play", "Wish", "Assist", "Ingrain", "Superpower", "Magic Coat", "Recycle", "Revenge",
-            "Brick Break", "Yawn", "Knock Off", "Endeavor", "Eruption", "Skill Swap", "Imprison", "Refresh", "Grudge", "Snatch",
-            "Secret Power", "Dive", "Arm Thrust", "Camouflage", "Tail Glow", "Luster Purge", "Mist Ball", "Feather Dance", "Teeter Dance", "Blaze Kick",
-            "Mud Sport", "Ice Ball", "Needle Arm", "Slack Off", "Hyper Voice", "Poison Fang", "Crush Claw", "Blast Burn", "Hydro Cannon", "Meteor Mash",
-            "Astonish", "Weather Ball", "Aromatherapy", "Fake Tears", "Air Cutter", "Overheat", "Odor Sleuth", "Rock Tomb", "Silver Wind", "Metal Sound",
-            "Grass Whistle", "Tickle", "Cosmic Power", "Water Spout", "Signal Beam", "Shadow Punch", "Extrasensory", "Sky Uppercut", "Sand Tomb", "Sheer Cold",
-            "Muddy Water", "Bullet Seed", "Aerial Ace", "Icicle Spear", "Iron Defense", "Block", "Howl", "Dragon Claw", "Frenzy Plant", "Bulk Up",
-            "Bounce", "Mud Shot", "Poison Tail", "Covet", "Volt Tackle", "Magical Leaf", "Water Sport", "Calm Mind", "Leaf Blade", "Dragon Dance",
-            "Rock Blast", "Shock Wave", "Water Pulse", "Doom Desire", "Psycho Boost"
-            });
-            this.move4.Location = new System.Drawing.Point(96, 191);
-            this.move4.Name = "move4";
-            this.move4.Size = new System.Drawing.Size(164, 21);
-            this.move4.TabIndex = 51;
-            this.pp4.Location = new System.Drawing.Point(266, 192);
-            this.pp4.Name = "pp4";
-            this.pp4.Size = new System.Drawing.Size(37, 20);
-            this.pp4.TabIndex = 52;
-            this.jap_check.Location = new System.Drawing.Point(96, 6);
-            this.jap_check.Name = "jap_check";
-            this.jap_check.Size = new System.Drawing.Size(128, 24);
-            this.jap_check.TabIndex = 53;
-            this.jap_check.Text = "Japanese encoding";
-            this.jap_check.UseVisualStyleBackColor = true;
-            this.jap_check.CheckedChanged += new System.EventHandler(Jap_checkCheckedChanged);
-            base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            base.ClientSize = new System.Drawing.Size(728, 260);
-            base.Controls.Add(this.jap_check);
-            base.Controls.Add(this.pp4);
-            base.Controls.Add(this.move4);
-            base.Controls.Add(this.label21);
-            base.Controls.Add(this.cancel);
-            base.Controls.Add(this.save);
-            base.Controls.Add(this.label20);
-            base.Controls.Add(this.label19);
-            base.Controls.Add(this.label18);
-            base.Controls.Add(this.label17);
-            base.Controls.Add(this.label16);
-            base.Controls.Add(this.label15);
-            base.Controls.Add(this.label14);
-            base.Controls.Add(this.ev6);
-            base.Controls.Add(this.ev5);
-            base.Controls.Add(this.ev4);
-            base.Controls.Add(this.ev3);
-            base.Controls.Add(this.ev2);
-            base.Controls.Add(this.ev1);
-            base.Controls.Add(this.iv6);
-            base.Controls.Add(this.iv5);
-            base.Controls.Add(this.iv4);
-            base.Controls.Add(this.iv3);
-            base.Controls.Add(this.iv2);
-            base.Controls.Add(this.iv1);
-            base.Controls.Add(this.label13);
-            base.Controls.Add(this.label12);
-            base.Controls.Add(this.namebox);
-            base.Controls.Add(this.friendship);
-            base.Controls.Add(this.label11);
-            base.Controls.Add(this.label10);
-            base.Controls.Add(this.ability);
-            base.Controls.Add(this.label9);
-            base.Controls.Add(this.pid);
-            base.Controls.Add(this.otsid);
-            base.Controls.Add(this.otid);
-            base.Controls.Add(this.label8);
-            base.Controls.Add(this.label7);
-            base.Controls.Add(this.label6);
-            base.Controls.Add(this.pp3);
-            base.Controls.Add(this.pp2);
-            base.Controls.Add(this.pp1);
-            base.Controls.Add(this.level);
-            base.Controls.Add(this.label5);
-            base.Controls.Add(this.move3);
-            base.Controls.Add(this.move2);
-            base.Controls.Add(this.move1);
-            base.Controls.Add(this.label4);
-            base.Controls.Add(this.label3);
-            base.Controls.Add(this.label2);
-            base.Controls.Add(this.item_box);
-            base.Controls.Add(this.label1);
-            base.Name = "ECT_pkedit";
-            this.Text = "Trainer Pokemon Editor";
-            ((System.ComponentModel.ISupportInitialize)this.level).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.otid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.otsid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.pid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.ability).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.friendship).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.iv6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.ev1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.pp4).EndInit();
-            base.ResumeLayout(false);
-            base.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ECT_pkedit));
+            label1 = new Label();
+            item_box = new ComboBox();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            move1 = new ComboBox();
+            move2 = new ComboBox();
+            move3 = new ComboBox();
+            label5 = new Label();
+            level = new NumericUpDown();
+            pp1 = new NumericUpDown();
+            pp2 = new NumericUpDown();
+            pp3 = new NumericUpDown();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            otid = new NumericUpDown();
+            otsid = new NumericUpDown();
+            pid = new NumericUpDown();
+            label9 = new Label();
+            ability = new NumericUpDown();
+            label10 = new Label();
+            label11 = new Label();
+            friendship = new NumericUpDown();
+            namebox = new TextBox();
+            label12 = new Label();
+            label13 = new Label();
+            iv1 = new NumericUpDown();
+            iv2 = new NumericUpDown();
+            iv3 = new NumericUpDown();
+            iv4 = new NumericUpDown();
+            iv5 = new NumericUpDown();
+            iv6 = new NumericUpDown();
+            ev6 = new NumericUpDown();
+            ev5 = new NumericUpDown();
+            ev4 = new NumericUpDown();
+            ev3 = new NumericUpDown();
+            ev2 = new NumericUpDown();
+            ev1 = new NumericUpDown();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            label19 = new Label();
+            label20 = new Label();
+            save = new Button();
+            cancel = new Button();
+            label21 = new Label();
+            move4 = new ComboBox();
+            pp4 = new NumericUpDown();
+            jap_check = new CheckBox();
+            ((System.ComponentModel.ISupportInitialize)level).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pp1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pp2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pp3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)otid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)otsid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ability).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)friendship).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iv1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iv2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iv3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iv4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iv5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iv6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ev6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ev5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ev4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ev3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ev2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ev1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pp4).BeginInit();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.Location = new Point(39, 75);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 20);
+            label1.TabIndex = 0;
+            label1.Text = "持有物：";
+            // 
+            // item_box
+            // 
+            item_box.FormattingEnabled = true;
+            item_box.Items.AddRange(new object[] { "无", "大师球", "高级球", "超级球", "精灵球", "狩猎球", "捕网球", "潜水球", "巢穴球", "重复球", "计时球", "豪华球", "纪念球", "伤药", "解毒药", "灼伤药", "解冻药", "解眠药", "解麻药", "全复药", "全满药", "厉害伤药", "好伤药", "万灵药", "活力碎片", "活力块", "美味之水", "劲爽汽水", "果汁牛奶", "哞哞鲜奶", "元气粉", "元气根", "万能粉", "复活草", "ＰＰ单项小补剂", "ＰＰ单项全补剂", "ＰＰ多项小补剂", "ＰＰ多项全补剂", "釜炎仙贝", "蓝色玻璃哨", "黄色玻璃哨", "红色玻璃哨", "黑色玻璃哨", "白色玻璃哨", "树果汁", "圣灰", "浅滩海盐", "浅滩贝壳", "红色碎片", "蓝色碎片", "黄色碎片", "绿色碎片", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "ＨＰ增强剂", "攻击增强剂", "防御增强剂", "速度增强剂", "特攻增强剂", "神奇糖果", "ＰＰ提升剂", "特防增强剂", "ＰＰ极限提升剂", "未知", "能力防守", "要害攻击", "力量强化", "防御强化", "速度强化", "命中强化", "特攻强化", "皮皮玩偶", "向尾喵的尾巴", "未知", "白银喷雾", "黄金喷雾", "离洞绳", "除虫喷雾", "未知", "未知", "未知", "未知", "未知", "未知", "日之石", "月之石", "火之石", "雷之石", "水之石", "叶之石", "未知", "未知", "未知", "未知", "小蘑菇", "大蘑菇", "未知", "珍珠", "大珍珠", "星星沙子", "星星碎片", "金珠", "心之鳞片", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "橙色邮件", "港口邮件", "闪亮邮件", "机械邮件", "木纹邮件", "波涛邮件", "珠宝邮件", "影子邮件", "热带邮件", "梦境邮件", "奇迹邮件", "复古邮件", "樱子果", "零余果", "桃桃果", "莓莓果", "利木果", "苹野果", "橙橙果", "柿仔果", "木子果", "文柚果", "勿花果", "异奇果", "芒芒果", "乐芭果", "芭亚果", "蔓莓果", "墨莓果", "蕉香果", "西梨果", "凰梨果", "榴石果", "藻根果", "比巴果", "哈密果", "萄葡果", "茄番果", "玉黍果", "岳竹果", "茸丹果", "檬柠果", "刺角果", "椰木果", "瓜西果", "金枕果", "靛莓果", "枝荔果", "龙睛果", "沙鳞果", "龙火果", "杏仔果", "兰萨果", "星桃果", "谜芝果", "未知", "未知", "未知", "光粉", "白色香草", "强制锻炼器", "学习装置", "先制之爪", "安抚之铃", "心灵香草", "讲究头带", "王者之证", "银粉", "护符金币", "洁净之符", "心之水滴", "深海之牙", "深海鳞片", "烟雾球", "不变之石", "气势头带", "幸运蛋", "焦点镜", "金属膜", "吃剩的东西", "龙之鳞片", "电气球", "柔软沙子", "硬石头", "奇迹种子", "黑色眼镜", "黑带", "磁铁", "神秘水滴", "锐利鸟嘴", "毒针", "不融冰", "诅咒之符", "弯曲的汤匙", "木炭", "龙之牙", "丝绸围巾", "升级数据", "贝壳之铃", "海潮薰香", "悠闲薰香", "吉利拳", "金属粉", "粗骨头", "大葱", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "未知", "红色头巾", "蓝色头巾", "粉红头巾", "绿色头巾", "黄色头巾", "音速自行车", "代币盒", "探宝器", "破旧钓竿", "好钓竿", "厉害钓竿", "船票", "华丽大赛参加证", "未知", "吼吼鲸喷壶", "得文的物品", "集灰袋", "地下钥匙", "越野自行车", "宝可方块盒", "给大吾的信", "无限船票", "朱红色宝珠", "靛蓝色宝珠", "探测器", "ＧＯＧＯ护目镜", "陨石", "１号客房的钥匙", "２号客房的钥匙", "４号客房的钥匙", "６号客房的钥匙", "仓库钥匙", "根状化石", "爪子化石", "得文侦测镜", "TM01", "TM02", "TM03", "TM04", "TM05", "TM06", "TM07", "TM08", "TM09", "TM10", "TM11", "TM12", "TM13", "TM14", "TM15", "TM16", "TM17", "TM18", "TM19", "TM20", "TM21", "TM22", "TM23", "TM24", "TM25", "TM26", "TM27", "TM28", "TM29", "TM30", "TM31", "TM32", "TM33", "TM34", "TM35", "TM36", "TM37", "TM38", "TM39", "TM40", "TM41", "TM42", "TM43", "TM44", "TM45", "TM46", "TM47", "TM48", "TM49", "TM50", "HM01", "HM02", "HM03", "HM04", "HM05", "HM06", "HM07", "HM08", "未知", "未知", "包裹* (仅火红叶绿)", "宝可梦之笛* (仅火红叶绿)", "秘密钥匙* (仅火红叶绿)", "兑换券* (仅火红叶绿)", "金假牙* (仅火红叶绿)", "秘密琥珀* (仅火红叶绿)", "钥匙卡* (仅火红叶绿)", "电梯钥匙* (仅火红叶绿)", "贝壳化石* (仅火红叶绿)", "甲壳化石* (仅火红叶绿)", "西尔佛检视镜* (仅火红叶绿)", "自行车* (仅火红叶绿)", "城镇地图* (仅火红叶绿)", "对战搜寻器* (仅火红叶绿)", "声音记录器* (仅火红叶绿)", "招式学习器盒* (仅火红叶绿)", "树果袋* (仅火红叶绿)", "教学电视* (仅火红叶绿)", "三岛通行证* (仅火红叶绿)", "七岛通行证* (仅火红叶绿)", "茶* (仅火红叶绿)", "神秘船票* (仅火红叶绿)", "极光船票* (仅火红叶绿)", "粉末收集瓶* (仅火红叶绿)", "红宝石* (仅火红叶绿)", "蓝宝石* (仅火红叶绿)", "熔岩标志* (仅绿宝石)", "古航海图* (仅绿宝石)" });
+            item_box.Location = new Point(128, 71);
+            item_box.Margin = new Padding(4);
+            item_box.Name = "item_box";
+            item_box.Size = new Size(217, 23);
+            item_box.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.Location = new Point(39, 130);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(133, 26);
+            label2.TabIndex = 2;
+            label2.Text = "招式1：";
+            // 
+            // label3
+            // 
+            label3.Location = new Point(39, 161);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(133, 26);
+            label3.TabIndex = 3;
+            label3.Text = "招式2：";
+            // 
+            // label4
+            // 
+            label4.Location = new Point(39, 190);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(133, 26);
+            label4.TabIndex = 4;
+            label4.Text = "招式3：";
+            // 
+            // move1
+            // 
+            move1.FormattingEnabled = true;
+            move1.Items.AddRange(new object[] { "-无-", "拍击", "空手劈", "连环巴掌", "连续拳", "百万吨重拳", "聚宝功", "火焰拳", "冰冻拳", "雷电拳", "抓", "夹住", "断头钳", "旋风刀", "剑舞", "居合斩", "起风", "翅膀攻击", "吹飞", "飞翔", "绑紧", "摔打", "藤鞭", "踩踏", "二连踢", "百万吨重踢", "飞踢", "回旋踢", "泼沙", "头锤", "角撞", "乱击", "角钻", "撞击", "泰山压顶", "紧束", "猛撞", "大闹一番", "舍身冲撞", "摇尾巴", "毒针", "双针", "飞弹针", "瞪眼", "咬住", "叫声", "吼叫", "唱歌", "超音波", "音爆", "定身法", "溶解液", "火花", "喷射火焰", "白雾", "水枪", "水炮", "冲浪", "冰冻光束", "暴风雪", "幻象光线", "泡沫光线", "极光束", "破坏光线", "啄", "啄钻", "地狱翻滚", "踢倒", "双倍奉还", "地球上投", "怪力", "吸取", "超级吸取", "寄生种子", "生长", "飞叶快刀", "日光束", "毒粉", "麻痹粉", "催眠粉", "花瓣舞", "吐丝", "龙之怒", "火焰旋涡", "电击", "十万伏特", "电磁波", "打雷", "落石", "地震", "地裂", "挖洞", "剧毒", "念力", "精神强念", "催眠术", "瑜伽姿势", "高速移动", "电光一闪", "愤怒", "瞬间移动", "黑夜魔影", "模仿", "刺耳声", "影子分身", "自我再生", "变硬", "变小", "烟幕", "奇异之光", "缩入壳中", "变圆", "屏障", "光墙", "黑雾", "反射壁", "聚气", "忍耐", "挥指", "鹦鹉学舌", "自爆", "炸蛋", "舌舔", "浊雾", "污泥攻击", "骨棒", "大字爆炎", "攀瀑", "贝壳夹击", "高速星星", "火箭头锤", "尖刺加农炮", "缠绕", "瞬间失忆", "折弯汤匙", "生蛋", "飞膝踢", "大蛇瞪眼", "食梦", "毒瓦斯", "投球", "吸血", "恶魔之吻", "神鸟猛击", "变身", "泡沫", "迷昏拳", "蘑菇孢子", "闪光", "精神波", "跃起", "溶化", "蟹钳锤", "大爆炸", "乱抓", "骨头回力镖", "睡觉", "岩崩", "必杀门牙", "棱角化", "纹理", "三重攻击", "愤怒门牙", "劈开", "替身", "挣扎", "写生", "三连踢", "小偷", "蛛网", "心之眼", "恶梦", "火焰轮", "打鼾", "诅咒", "抓狂", "纹理２", "气旋攻击", "棉孢子", "起死回生", "怨恨", "细雪", "守住", "音速拳", "鬼面", "出奇一击", "天使之吻", "腹鼓", "污泥炸弹", "掷泥", "章鱼桶炮", "撒菱", "电磁炮", "识破", "同命", "灭亡之歌", "冰冻之风", "看穿", "骨棒乱打", "锁定", "逆鳞", "沙暴", "终极吸取", "挺住", "撒娇", "滚动", "点到为止", "虚张声势", "喝牛奶", "电光", "连斩", "钢翼", "黑色目光", "迷人", "梦话", "治愈铃声", "报恩", "礼物", "迁怒", "神秘守护", "分担痛楚", "神圣之火", "震级", "爆裂拳", "超级角击", "龙息", "接棒", "再来一次", "追打", "高速旋转", "甜甜香气", "铁尾", "金属爪", "借力摔", "晨光", "光合作用", "月光", "觉醒力量", "十字劈", "龙卷风", "求雨", "大晴天", "咬碎", "镜面反射", "自我暗示", "神速", "原始之力", "暗影球", "预知未来", "碎岩", "潮旋", "围攻", "击掌奇袭", "吵闹", "蓄力", "喷出", "吞下", "热风", "冰雹", "无理取闹", "吹捧", "鬼火", "临别礼物", "硬撑", "真气拳", "清醒", "看我嘛", "自然之力", "充电", "挑衅", "帮助", "戏法", "扮演", "祈愿", "借助", "扎根", "蛮力", "魔法反射", "回收利用", "报复", "劈瓦", "哈欠", "拍落", "蛮干", "喷火", "特性互换", "封印", "焕然一新", "怨念", "抢夺", "秘密之力", "潜水", "猛推", "保护色", "萤火", "洁净光芒", "薄雾球", "羽毛舞", "摇晃舞", "火焰踢", "玩泥巴", "冰球", "尖刺臂", "偷懒", "巨声", "剧毒牙", "撕裂爪", "爆炸烈焰", "加农水炮", "彗星拳", "惊吓", "气象球", "芳香治疗", "假哭", "空气利刃", "过热", "气味侦测", "岩石封锁", "银色旋风", "金属音", "草笛", "挠痒", "宇宙力量", "喷水", "信号光束", "暗影拳", "神通力", "冲天拳", "流沙地狱", "绝对零度", "浊流", "种子机关枪", "燕返", "冰锥", "铁壁", "挡路", "长嚎", "龙爪", "疯狂植物", "健美", "弹跳", "泥巴射击", "毒尾", "渴望", "伏特攻击", "魔法叶", "玩水", "冥想", "叶刃", "龙之舞", "岩石爆击", "电击波", "水之波动", "破灭之愿", "精神突进" });
+            move1.Location = new Point(128, 127);
+            move1.Margin = new Padding(4);
+            move1.Name = "move1";
+            move1.Size = new Size(217, 23);
+            move1.TabIndex = 5;
+            // 
+            // move2
+            // 
+            move2.FormattingEnabled = true;
+            move2.Items.AddRange(new object[] { "-无-", "拍击", "空手劈", "连环巴掌", "连续拳", "百万吨重拳", "聚宝功", "火焰拳", "冰冻拳", "雷电拳", "抓", "夹住", "断头钳", "旋风刀", "剑舞", "居合斩", "起风", "翅膀攻击", "吹飞", "飞翔", "绑紧", "摔打", "藤鞭", "踩踏", "二连踢", "百万吨重踢", "飞踢", "回旋踢", "泼沙", "头锤", "角撞", "乱击", "角钻", "撞击", "泰山压顶", "紧束", "猛撞", "大闹一番", "舍身冲撞", "摇尾巴", "毒针", "双针", "飞弹针", "瞪眼", "咬住", "叫声", "吼叫", "唱歌", "超音波", "音爆", "定身法", "溶解液", "火花", "喷射火焰", "白雾", "水枪", "水炮", "冲浪", "冰冻光束", "暴风雪", "幻象光线", "泡沫光线", "极光束", "破坏光线", "啄", "啄钻", "地狱翻滚", "踢倒", "双倍奉还", "地球上投", "怪力", "吸取", "超级吸取", "寄生种子", "生长", "飞叶快刀", "日光束", "毒粉", "麻痹粉", "催眠粉", "花瓣舞", "吐丝", "龙之怒", "火焰旋涡", "电击", "十万伏特", "电磁波", "打雷", "落石", "地震", "地裂", "挖洞", "剧毒", "念力", "精神强念", "催眠术", "瑜伽姿势", "高速移动", "电光一闪", "愤怒", "瞬间移动", "黑夜魔影", "模仿", "刺耳声", "影子分身", "自我再生", "变硬", "变小", "烟幕", "奇异之光", "缩入壳中", "变圆", "屏障", "光墙", "黑雾", "反射壁", "聚气", "忍耐", "挥指", "鹦鹉学舌", "自爆", "炸蛋", "舌舔", "浊雾", "污泥攻击", "骨棒", "大字爆炎", "攀瀑", "贝壳夹击", "高速星星", "火箭头锤", "尖刺加农炮", "缠绕", "瞬间失忆", "折弯汤匙", "生蛋", "飞膝踢", "大蛇瞪眼", "食梦", "毒瓦斯", "投球", "吸血", "恶魔之吻", "神鸟猛击", "变身", "泡沫", "迷昏拳", "蘑菇孢子", "闪光", "精神波", "跃起", "溶化", "蟹钳锤", "大爆炸", "乱抓", "骨头回力镖", "睡觉", "岩崩", "必杀门牙", "棱角化", "纹理", "三重攻击", "愤怒门牙", "劈开", "替身", "挣扎", "写生", "三连踢", "小偷", "蛛网", "心之眼", "恶梦", "火焰轮", "打鼾", "诅咒", "抓狂", "纹理２", "气旋攻击", "棉孢子", "起死回生", "怨恨", "细雪", "守住", "音速拳", "鬼面", "出奇一击", "天使之吻", "腹鼓", "污泥炸弹", "掷泥", "章鱼桶炮", "撒菱", "电磁炮", "识破", "同命", "灭亡之歌", "冰冻之风", "看穿", "骨棒乱打", "锁定", "逆鳞", "沙暴", "终极吸取", "挺住", "撒娇", "滚动", "点到为止", "虚张声势", "喝牛奶", "电光", "连斩", "钢翼", "黑色目光", "迷人", "梦话", "治愈铃声", "报恩", "礼物", "迁怒", "神秘守护", "分担痛楚", "神圣之火", "震级", "爆裂拳", "超级角击", "龙息", "接棒", "再来一次", "追打", "高速旋转", "甜甜香气", "铁尾", "金属爪", "借力摔", "晨光", "光合作用", "月光", "觉醒力量", "十字劈", "龙卷风", "求雨", "大晴天", "咬碎", "镜面反射", "自我暗示", "神速", "原始之力", "暗影球", "预知未来", "碎岩", "潮旋", "围攻", "击掌奇袭", "吵闹", "蓄力", "喷出", "吞下", "热风", "冰雹", "无理取闹", "吹捧", "鬼火", "临别礼物", "硬撑", "真气拳", "清醒", "看我嘛", "自然之力", "充电", "挑衅", "帮助", "戏法", "扮演", "祈愿", "借助", "扎根", "蛮力", "魔法反射", "回收利用", "报复", "劈瓦", "哈欠", "拍落", "蛮干", "喷火", "特性互换", "封印", "焕然一新", "怨念", "抢夺", "秘密之力", "潜水", "猛推", "保护色", "萤火", "洁净光芒", "薄雾球", "羽毛舞", "摇晃舞", "火焰踢", "玩泥巴", "冰球", "尖刺臂", "偷懒", "巨声", "剧毒牙", "撕裂爪", "爆炸烈焰", "加农水炮", "彗星拳", "惊吓", "气象球", "芳香治疗", "假哭", "空气利刃", "过热", "气味侦测", "岩石封锁", "银色旋风", "金属音", "草笛", "挠痒", "宇宙力量", "喷水", "信号光束", "暗影拳", "神通力", "冲天拳", "流沙地狱", "绝对零度", "浊流", "种子机关枪", "燕返", "冰锥", "铁壁", "挡路", "长嚎", "龙爪", "疯狂植物", "健美", "弹跳", "泥巴射击", "毒尾", "渴望", "伏特攻击", "魔法叶", "玩水", "冥想", "叶刃", "龙之舞", "岩石爆击", "电击波", "水之波动", "破灭之愿", "精神突进", "-无-", "拍击", "空手劈", "连环巴掌", "连续拳", "百万吨重拳", "聚宝功", "火焰拳", "冰冻拳", "雷电拳", "抓", "夹住", "断头钳", "旋风刀", "剑舞", "居合斩", "起风", "翅膀攻击", "吹飞", "飞翔", "绑紧", "摔打", "藤鞭", "踩踏", "二连踢", "百万吨重踢", "飞踢", "回旋踢", "泼沙", "头锤", "角撞", "乱击", "角钻", "撞击", "泰山压顶", "紧束", "猛撞", "大闹一番", "舍身冲撞", "摇尾巴", "毒针", "双针", "飞弹针", "瞪眼", "咬住", "叫声", "吼叫", "唱歌", "超音波", "音爆", "定身法", "溶解液", "火花", "喷射火焰", "白雾", "水枪", "水炮", "冲浪", "冰冻光束", "暴风雪", "幻象光线", "泡沫光线", "极光束", "破坏光线", "啄", "啄钻", "地狱翻滚", "踢倒", "双倍奉还", "地球上投", "怪力", "吸取", "超级吸取", "寄生种子", "生长", "飞叶快刀", "日光束", "毒粉", "麻痹粉", "催眠粉", "花瓣舞", "吐丝", "龙之怒", "火焰旋涡", "电击", "十万伏特", "电磁波", "打雷", "落石", "地震", "地裂", "挖洞", "剧毒", "念力", "精神强念", "催眠术", "瑜伽姿势", "高速移动", "电光一闪", "愤怒", "瞬间移动", "黑夜魔影", "模仿", "刺耳声", "影子分身", "自我再生", "变硬", "变小", "烟幕", "奇异之光", "缩入壳中", "变圆", "屏障", "光墙", "黑雾", "反射壁", "聚气", "忍耐", "挥指", "鹦鹉学舌", "自爆", "炸蛋", "舌舔", "浊雾", "污泥攻击", "骨棒", "大字爆炎", "攀瀑", "贝壳夹击", "高速星星", "火箭头锤", "尖刺加农炮", "缠绕", "瞬间失忆", "折弯汤匙", "生蛋", "飞膝踢", "大蛇瞪眼", "食梦", "毒瓦斯", "投球", "吸血", "恶魔之吻", "神鸟猛击", "变身", "泡沫", "迷昏拳", "蘑菇孢子", "闪光", "精神波", "跃起", "溶化", "蟹钳锤", "大爆炸", "乱抓", "骨头回力镖", "睡觉", "岩崩", "必杀门牙", "棱角化", "纹理", "三重攻击", "愤怒门牙", "劈开", "替身", "挣扎", "写生", "三连踢", "小偷", "蛛网", "心之眼", "恶梦", "火焰轮", "打鼾", "诅咒", "抓狂", "纹理２", "气旋攻击", "棉孢子", "起死回生", "怨恨", "细雪", "守住", "音速拳", "鬼面", "出奇一击", "天使之吻", "腹鼓", "污泥炸弹", "掷泥", "章鱼桶炮", "撒菱", "电磁炮", "识破", "同命", "灭亡之歌", "冰冻之风", "看穿", "骨棒乱打", "锁定", "逆鳞", "沙暴", "终极吸取", "挺住", "撒娇", "滚动", "点到为止", "虚张声势", "喝牛奶", "电光", "连斩", "钢翼", "黑色目光", "迷人", "梦话", "治愈铃声", "报恩", "礼物", "迁怒", "神秘守护", "分担痛楚", "神圣之火", "震级", "爆裂拳", "超级角击", "龙息", "接棒", "再来一次", "追打", "高速旋转", "甜甜香气", "铁尾", "金属爪", "借力摔", "晨光", "光合作用", "月光", "觉醒力量", "十字劈", "龙卷风", "求雨", "大晴天", "咬碎", "镜面反射", "自我暗示", "神速", "原始之力", "暗影球", "预知未来", "碎岩", "潮旋", "围攻", "击掌奇袭", "吵闹", "蓄力", "喷出", "吞下", "热风", "冰雹", "无理取闹", "吹捧", "鬼火", "临别礼物", "硬撑", "真气拳", "清醒", "看我嘛", "自然之力", "充电", "挑衅", "帮助", "戏法", "扮演", "祈愿", "借助", "扎根", "蛮力", "魔法反射", "回收利用", "报复", "劈瓦", "哈欠", "拍落", "蛮干", "喷火", "特性互换", "封印", "焕然一新", "怨念", "抢夺", "秘密之力", "潜水", "猛推", "保护色", "萤火", "洁净光芒", "薄雾球", "羽毛舞", "摇晃舞", "火焰踢", "玩泥巴", "冰球", "尖刺臂", "偷懒", "巨声", "剧毒牙", "撕裂爪", "爆炸烈焰", "加农水炮", "彗星拳", "惊吓", "气象球", "芳香治疗", "假哭", "空气利刃", "过热", "气味侦测", "岩石封锁", "银色旋风", "金属音", "草笛", "挠痒", "宇宙力量", "喷水", "信号光束", "暗影拳", "神通力", "冲天拳", "流沙地狱", "绝对零度", "浊流", "种子机关枪", "燕返", "冰锥", "铁壁", "挡路", "长嚎", "龙爪", "疯狂植物", "健美", "弹跳", "泥巴射击", "毒尾", "渴望", "伏特攻击", "魔法叶", "玩水", "冥想", "叶刃", "龙之舞", "岩石爆击", "电击波", "水之波动", "破灭之愿", "精神突进" });
+            move2.Location = new Point(128, 158);
+            move2.Margin = new Padding(4);
+            move2.Name = "move2";
+            move2.Size = new Size(217, 23);
+            move2.TabIndex = 6;
+            // 
+            // move3
+            // 
+            move3.FormattingEnabled = true;
+            move3.Items.AddRange(new object[] { "-无-", "拍击", "空手劈", "连环巴掌", "连续拳", "百万吨重拳", "聚宝功", "火焰拳", "冰冻拳", "雷电拳", "抓", "夹住", "断头钳", "旋风刀", "剑舞", "居合斩", "起风", "翅膀攻击", "吹飞", "飞翔", "绑紧", "摔打", "藤鞭", "踩踏", "二连踢", "百万吨重踢", "飞踢", "回旋踢", "泼沙", "头锤", "角撞", "乱击", "角钻", "撞击", "泰山压顶", "紧束", "猛撞", "大闹一番", "舍身冲撞", "摇尾巴", "毒针", "双针", "飞弹针", "瞪眼", "咬住", "叫声", "吼叫", "唱歌", "超音波", "音爆", "定身法", "溶解液", "火花", "喷射火焰", "白雾", "水枪", "水炮", "冲浪", "冰冻光束", "暴风雪", "幻象光线", "泡沫光线", "极光束", "破坏光线", "啄", "啄钻", "地狱翻滚", "踢倒", "双倍奉还", "地球上投", "怪力", "吸取", "超级吸取", "寄生种子", "生长", "飞叶快刀", "日光束", "毒粉", "麻痹粉", "催眠粉", "花瓣舞", "吐丝", "龙之怒", "火焰旋涡", "电击", "十万伏特", "电磁波", "打雷", "落石", "地震", "地裂", "挖洞", "剧毒", "念力", "精神强念", "催眠术", "瑜伽姿势", "高速移动", "电光一闪", "愤怒", "瞬间移动", "黑夜魔影", "模仿", "刺耳声", "影子分身", "自我再生", "变硬", "变小", "烟幕", "奇异之光", "缩入壳中", "变圆", "屏障", "光墙", "黑雾", "反射壁", "聚气", "忍耐", "挥指", "鹦鹉学舌", "自爆", "炸蛋", "舌舔", "浊雾", "污泥攻击", "骨棒", "大字爆炎", "攀瀑", "贝壳夹击", "高速星星", "火箭头锤", "尖刺加农炮", "缠绕", "瞬间失忆", "折弯汤匙", "生蛋", "飞膝踢", "大蛇瞪眼", "食梦", "毒瓦斯", "投球", "吸血", "恶魔之吻", "神鸟猛击", "变身", "泡沫", "迷昏拳", "蘑菇孢子", "闪光", "精神波", "跃起", "溶化", "蟹钳锤", "大爆炸", "乱抓", "骨头回力镖", "睡觉", "岩崩", "必杀门牙", "棱角化", "纹理", "三重攻击", "愤怒门牙", "劈开", "替身", "挣扎", "写生", "三连踢", "小偷", "蛛网", "心之眼", "恶梦", "火焰轮", "打鼾", "诅咒", "抓狂", "纹理２", "气旋攻击", "棉孢子", "起死回生", "怨恨", "细雪", "守住", "音速拳", "鬼面", "出奇一击", "天使之吻", "腹鼓", "污泥炸弹", "掷泥", "章鱼桶炮", "撒菱", "电磁炮", "识破", "同命", "灭亡之歌", "冰冻之风", "看穿", "骨棒乱打", "锁定", "逆鳞", "沙暴", "终极吸取", "挺住", "撒娇", "滚动", "点到为止", "虚张声势", "喝牛奶", "电光", "连斩", "钢翼", "黑色目光", "迷人", "梦话", "治愈铃声", "报恩", "礼物", "迁怒", "神秘守护", "分担痛楚", "神圣之火", "震级", "爆裂拳", "超级角击", "龙息", "接棒", "再来一次", "追打", "高速旋转", "甜甜香气", "铁尾", "金属爪", "借力摔", "晨光", "光合作用", "月光", "觉醒力量", "十字劈", "龙卷风", "求雨", "大晴天", "咬碎", "镜面反射", "自我暗示", "神速", "原始之力", "暗影球", "预知未来", "碎岩", "潮旋", "围攻", "击掌奇袭", "吵闹", "蓄力", "喷出", "吞下", "热风", "冰雹", "无理取闹", "吹捧", "鬼火", "临别礼物", "硬撑", "真气拳", "清醒", "看我嘛", "自然之力", "充电", "挑衅", "帮助", "戏法", "扮演", "祈愿", "借助", "扎根", "蛮力", "魔法反射", "回收利用", "报复", "劈瓦", "哈欠", "拍落", "蛮干", "喷火", "特性互换", "封印", "焕然一新", "怨念", "抢夺", "秘密之力", "潜水", "猛推", "保护色", "萤火", "洁净光芒", "薄雾球", "羽毛舞", "摇晃舞", "火焰踢", "玩泥巴", "冰球", "尖刺臂", "偷懒", "巨声", "剧毒牙", "撕裂爪", "爆炸烈焰", "加农水炮", "彗星拳", "惊吓", "气象球", "芳香治疗", "假哭", "空气利刃", "过热", "气味侦测", "岩石封锁", "银色旋风", "金属音", "草笛", "挠痒", "宇宙力量", "喷水", "信号光束", "暗影拳", "神通力", "冲天拳", "流沙地狱", "绝对零度", "浊流", "种子机关枪", "燕返", "冰锥", "铁壁", "挡路", "长嚎", "龙爪", "疯狂植物", "健美", "弹跳", "泥巴射击", "毒尾", "渴望", "伏特攻击", "魔法叶", "玩水", "冥想", "叶刃", "龙之舞", "岩石爆击", "电击波", "水之波动", "破灭之愿", "精神突进", "-无-", "拍击", "空手劈", "连环巴掌", "连续拳", "百万吨重拳", "聚宝功", "火焰拳", "冰冻拳", "雷电拳", "抓", "夹住", "断头钳", "旋风刀", "剑舞", "居合斩", "起风", "翅膀攻击", "吹飞", "飞翔", "绑紧", "摔打", "藤鞭", "踩踏", "二连踢", "百万吨重踢", "飞踢", "回旋踢", "泼沙", "头锤", "角撞", "乱击", "角钻", "撞击", "泰山压顶", "紧束", "猛撞", "大闹一番", "舍身冲撞", "摇尾巴", "毒针", "双针", "飞弹针", "瞪眼", "咬住", "叫声", "吼叫", "唱歌", "超音波", "音爆", "定身法", "溶解液", "火花", "喷射火焰", "白雾", "水枪", "水炮", "冲浪", "冰冻光束", "暴风雪", "幻象光线", "泡沫光线", "极光束", "破坏光线", "啄", "啄钻", "地狱翻滚", "踢倒", "双倍奉还", "地球上投", "怪力", "吸取", "超级吸取", "寄生种子", "生长", "飞叶快刀", "日光束", "毒粉", "麻痹粉", "催眠粉", "花瓣舞", "吐丝", "龙之怒", "火焰旋涡", "电击", "十万伏特", "电磁波", "打雷", "落石", "地震", "地裂", "挖洞", "剧毒", "念力", "精神强念", "催眠术", "瑜伽姿势", "高速移动", "电光一闪", "愤怒", "瞬间移动", "黑夜魔影", "模仿", "刺耳声", "影子分身", "自我再生", "变硬", "变小", "烟幕", "奇异之光", "缩入壳中", "变圆", "屏障", "光墙", "黑雾", "反射壁", "聚气", "忍耐", "挥指", "鹦鹉学舌", "自爆", "炸蛋", "舌舔", "浊雾", "污泥攻击", "骨棒", "大字爆炎", "攀瀑", "贝壳夹击", "高速星星", "火箭头锤", "尖刺加农炮", "缠绕", "瞬间失忆", "折弯汤匙", "生蛋", "飞膝踢", "大蛇瞪眼", "食梦", "毒瓦斯", "投球", "吸血", "恶魔之吻", "神鸟猛击", "变身", "泡沫", "迷昏拳", "蘑菇孢子", "闪光", "精神波", "跃起", "溶化", "蟹钳锤", "大爆炸", "乱抓", "骨头回力镖", "睡觉", "岩崩", "必杀门牙", "棱角化", "纹理", "三重攻击", "愤怒门牙", "劈开", "替身", "挣扎", "写生", "三连踢", "小偷", "蛛网", "心之眼", "恶梦", "火焰轮", "打鼾", "诅咒", "抓狂", "纹理２", "气旋攻击", "棉孢子", "起死回生", "怨恨", "细雪", "守住", "音速拳", "鬼面", "出奇一击", "天使之吻", "腹鼓", "污泥炸弹", "掷泥", "章鱼桶炮", "撒菱", "电磁炮", "识破", "同命", "灭亡之歌", "冰冻之风", "看穿", "骨棒乱打", "锁定", "逆鳞", "沙暴", "终极吸取", "挺住", "撒娇", "滚动", "点到为止", "虚张声势", "喝牛奶", "电光", "连斩", "钢翼", "黑色目光", "迷人", "梦话", "治愈铃声", "报恩", "礼物", "迁怒", "神秘守护", "分担痛楚", "神圣之火", "震级", "爆裂拳", "超级角击", "龙息", "接棒", "再来一次", "追打", "高速旋转", "甜甜香气", "铁尾", "金属爪", "借力摔", "晨光", "光合作用", "月光", "觉醒力量", "十字劈", "龙卷风", "求雨", "大晴天", "咬碎", "镜面反射", "自我暗示", "神速", "原始之力", "暗影球", "预知未来", "碎岩", "潮旋", "围攻", "击掌奇袭", "吵闹", "蓄力", "喷出", "吞下", "热风", "冰雹", "无理取闹", "吹捧", "鬼火", "临别礼物", "硬撑", "真气拳", "清醒", "看我嘛", "自然之力", "充电", "挑衅", "帮助", "戏法", "扮演", "祈愿", "借助", "扎根", "蛮力", "魔法反射", "回收利用", "报复", "劈瓦", "哈欠", "拍落", "蛮干", "喷火", "特性互换", "封印", "焕然一新", "怨念", "抢夺", "秘密之力", "潜水", "猛推", "保护色", "萤火", "洁净光芒", "薄雾球", "羽毛舞", "摇晃舞", "火焰踢", "玩泥巴", "冰球", "尖刺臂", "偷懒", "巨声", "剧毒牙", "撕裂爪", "爆炸烈焰", "加农水炮", "彗星拳", "惊吓", "气象球", "芳香治疗", "假哭", "空气利刃", "过热", "气味侦测", "岩石封锁", "银色旋风", "金属音", "草笛", "挠痒", "宇宙力量", "喷水", "信号光束", "暗影拳", "神通力", "冲天拳", "流沙地狱", "绝对零度", "浊流", "种子机关枪", "燕返", "冰锥", "铁壁", "挡路", "长嚎", "龙爪", "疯狂植物", "健美", "弹跳", "泥巴射击", "毒尾", "渴望", "伏特攻击", "魔法叶", "玩水", "冥想", "叶刃", "龙之舞", "岩石爆击", "电击波", "水之波动", "破灭之愿", "精神突进" });
+            move3.Location = new Point(128, 187);
+            move3.Margin = new Padding(4);
+            move3.Name = "move3";
+            move3.Size = new Size(217, 23);
+            move3.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.Location = new Point(721, 28);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(133, 26);
+            label5.TabIndex = 8;
+            label5.Text = "等级：";
+            // 
+            // level
+            // 
+            level.Location = new Point(777, 26);
+            level.Margin = new Padding(4);
+            level.Name = "level";
+            level.Size = new Size(160, 25);
+            level.TabIndex = 9;
+            // 
+            // pp1
+            // 
+            pp1.Location = new Point(355, 128);
+            pp1.Margin = new Padding(4);
+            pp1.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
+            pp1.Name = "pp1";
+            pp1.Size = new Size(49, 25);
+            pp1.TabIndex = 10;
+            // 
+            // pp2
+            // 
+            pp2.Location = new Point(355, 159);
+            pp2.Margin = new Padding(4);
+            pp2.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
+            pp2.Name = "pp2";
+            pp2.Size = new Size(49, 25);
+            pp2.TabIndex = 11;
+            // 
+            // pp3
+            // 
+            pp3.Location = new Point(355, 188);
+            pp3.Margin = new Padding(4);
+            pp3.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
+            pp3.Name = "pp3";
+            pp3.Size = new Size(49, 25);
+            pp3.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.Location = new Point(355, 110);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(49, 15);
+            label6.TabIndex = 13;
+            label6.Text = "PP提升";
+            // 
+            // label7
+            // 
+            label7.Location = new Point(672, 130);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(155, 14);
+            label7.TabIndex = 14;
+            label7.Text = "初训家TID：";
+            // 
+            // label8
+            // 
+            label8.Location = new Point(672, 156);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(132, 20);
+            label8.TabIndex = 15;
+            label8.Text = "初训家SID：";
+            // 
+            // otid
+            // 
+            otid.Location = new Point(777, 127);
+            otid.Margin = new Padding(4);
+            otid.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
+            otid.Name = "otid";
+            otid.Size = new Size(160, 25);
+            otid.TabIndex = 16;
+            // 
+            // otsid
+            // 
+            otsid.Location = new Point(777, 158);
+            otsid.Margin = new Padding(4);
+            otsid.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
+            otsid.Name = "otsid";
+            otsid.Size = new Size(160, 25);
+            otsid.TabIndex = 17;
+            // 
+            // pid
+            // 
+            pid.Location = new Point(777, 187);
+            pid.Margin = new Padding(4);
+            pid.Maximum = new decimal(new int[] { 0, 0, 0, 0 });
+            pid.Name = "pid";
+            pid.Size = new Size(160, 25);
+            pid.TabIndex = 18;
+            // 
+            // label9
+            // 
+            label9.Location = new Point(672, 187);
+            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(98, 26);
+            label9.TabIndex = 19;
+            label9.Text = "性格值PID：";
+            // 
+            // ability
+            // 
+            ability.Location = new Point(777, 86);
+            ability.Margin = new Padding(4);
+            ability.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            ability.Name = "ability";
+            ability.Size = new Size(160, 25);
+            ability.TabIndex = 20;
+            // 
+            // label10
+            // 
+            label10.Location = new Point(699, 88);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(71, 26);
+            label10.TabIndex = 21;
+            label10.Text = "特性位：";
+            // 
+            // label11
+            // 
+            label11.Location = new Point(699, 58);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(81, 26);
+            label11.TabIndex = 22;
+            label11.Text = "亲密度：";
+            // 
+            // friendship
+            // 
+            friendship.Location = new Point(777, 56);
+            friendship.Margin = new Padding(4);
+            friendship.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            friendship.Name = "friendship";
+            friendship.Size = new Size(160, 25);
+            friendship.TabIndex = 23;
+            // 
+            // namebox
+            // 
+            namebox.Location = new Point(128, 41);
+            namebox.Margin = new Padding(4);
+            namebox.MaxLength = 10;
+            namebox.Name = "namebox";
+            namebox.Size = new Size(287, 25);
+            namebox.TabIndex = 24;
+            // 
+            // label12
+            // 
+            label12.Location = new Point(39, 45);
+            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(57, 16);
+            label12.TabIndex = 25;
+            label12.Text = "名字：";
+            // 
+            // label13
+            // 
+            label13.Location = new Point(446, 37);
+            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(37, 26);
+            label13.TabIndex = 26;
+            label13.Text = "HP";
+            // 
+            // iv1
+            // 
+            iv1.Location = new Point(520, 38);
+            iv1.Margin = new Padding(4);
+            iv1.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            iv1.Name = "iv1";
+            iv1.Size = new Size(68, 25);
+            iv1.TabIndex = 28;
+            // 
+            // iv2
+            // 
+            iv2.Location = new Point(520, 68);
+            iv2.Margin = new Padding(4);
+            iv2.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            iv2.Name = "iv2";
+            iv2.Size = new Size(68, 25);
+            iv2.TabIndex = 29;
+            // 
+            // iv3
+            // 
+            iv3.Location = new Point(520, 98);
+            iv3.Margin = new Padding(4);
+            iv3.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            iv3.Name = "iv3";
+            iv3.Size = new Size(68, 25);
+            iv3.TabIndex = 30;
+            // 
+            // iv4
+            // 
+            iv4.Location = new Point(520, 128);
+            iv4.Margin = new Padding(4);
+            iv4.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            iv4.Name = "iv4";
+            iv4.Size = new Size(68, 25);
+            iv4.TabIndex = 31;
+            // 
+            // iv5
+            // 
+            iv5.Location = new Point(520, 158);
+            iv5.Margin = new Padding(4);
+            iv5.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            iv5.Name = "iv5";
+            iv5.Size = new Size(68, 25);
+            iv5.TabIndex = 32;
+            // 
+            // iv6
+            // 
+            iv6.Location = new Point(520, 188);
+            iv6.Margin = new Padding(4);
+            iv6.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            iv6.Name = "iv6";
+            iv6.Size = new Size(68, 25);
+            iv6.TabIndex = 33;
+            // 
+            // ev6
+            // 
+            ev6.Location = new Point(596, 188);
+            ev6.Margin = new Padding(4);
+            ev6.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            ev6.Name = "ev6";
+            ev6.Size = new Size(68, 25);
+            ev6.TabIndex = 40;
+            // 
+            // ev5
+            // 
+            ev5.Location = new Point(596, 158);
+            ev5.Margin = new Padding(4);
+            ev5.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            ev5.Name = "ev5";
+            ev5.Size = new Size(68, 25);
+            ev5.TabIndex = 39;
+            // 
+            // ev4
+            // 
+            ev4.Location = new Point(596, 128);
+            ev4.Margin = new Padding(4);
+            ev4.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            ev4.Name = "ev4";
+            ev4.Size = new Size(68, 25);
+            ev4.TabIndex = 38;
+            // 
+            // ev3
+            // 
+            ev3.Location = new Point(596, 98);
+            ev3.Margin = new Padding(4);
+            ev3.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            ev3.Name = "ev3";
+            ev3.Size = new Size(68, 25);
+            ev3.TabIndex = 37;
+            // 
+            // ev2
+            // 
+            ev2.Location = new Point(596, 68);
+            ev2.Margin = new Padding(4);
+            ev2.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            ev2.Name = "ev2";
+            ev2.Size = new Size(68, 25);
+            ev2.TabIndex = 36;
+            // 
+            // ev1
+            // 
+            ev1.Location = new Point(596, 38);
+            ev1.Margin = new Padding(4);
+            ev1.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            ev1.Name = "ev1";
+            ev1.Size = new Size(68, 25);
+            ev1.TabIndex = 35;
+            // 
+            // label14
+            // 
+            label14.Location = new Point(446, 68);
+            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(43, 26);
+            label14.TabIndex = 41;
+            label14.Text = "攻击";
+            // 
+            // label15
+            // 
+            label15.Location = new Point(446, 99);
+            label15.Margin = new Padding(4, 0, 4, 0);
+            label15.Name = "label15";
+            label15.Size = new Size(43, 26);
+            label15.TabIndex = 42;
+            label15.Text = "防御";
+            // 
+            // label16
+            // 
+            label16.Location = new Point(446, 129);
+            label16.Margin = new Padding(4, 0, 4, 0);
+            label16.Name = "label16";
+            label16.Size = new Size(43, 26);
+            label16.TabIndex = 43;
+            label16.Text = "速度";
+            // 
+            // label17
+            // 
+            label17.Location = new Point(446, 160);
+            label17.Margin = new Padding(4, 0, 4, 0);
+            label17.Name = "label17";
+            label17.Size = new Size(71, 21);
+            label17.TabIndex = 44;
+            label17.Text = "特攻";
+            // 
+            // label18
+            // 
+            label18.Location = new Point(446, 189);
+            label18.Margin = new Padding(4, 0, 4, 0);
+            label18.Name = "label18";
+            label18.Size = new Size(43, 26);
+            label18.TabIndex = 45;
+            label18.Text = "特防";
+            // 
+            // label19
+            // 
+            label19.Location = new Point(520, 18);
+            label19.Margin = new Padding(4, 0, 4, 0);
+            label19.Name = "label19";
+            label19.Size = new Size(77, 15);
+            label19.TabIndex = 46;
+            label19.Text = "个体值";
+            // 
+            // label20
+            // 
+            label20.Location = new Point(596, 18);
+            label20.Margin = new Padding(4, 0, 4, 0);
+            label20.Name = "label20";
+            label20.Size = new Size(88, 16);
+            label20.TabIndex = 47;
+            label20.Text = "基础点数";
+            // 
+            // save
+            // 
+            save.Location = new Point(20, 260);
+            save.Margin = new Padding(4);
+            save.Name = "save";
+            save.Size = new Size(100, 26);
+            save.TabIndex = 48;
+            save.Text = "写入记录";
+            save.UseVisualStyleBackColor = true;
+            save.Click += SaveClick;
+            // 
+            // cancel
+            // 
+            cancel.Location = new Point(128, 260);
+            cancel.Margin = new Padding(4);
+            cancel.Name = "cancel";
+            cancel.Size = new Size(100, 26);
+            cancel.TabIndex = 49;
+            cancel.Text = "取消";
+            cancel.UseVisualStyleBackColor = true;
+            cancel.Click += CancelClick;
+            // 
+            // label21
+            // 
+            label21.Location = new Point(39, 224);
+            label21.Margin = new Padding(4, 0, 4, 0);
+            label21.Name = "label21";
+            label21.Size = new Size(133, 26);
+            label21.TabIndex = 50;
+            label21.Text = "招式4：";
+            // 
+            // move4
+            // 
+            move4.FormattingEnabled = true;
+            move4.Items.AddRange(new object[] { "-无-", "拍击", "空手劈", "连环巴掌", "连续拳", "百万吨重拳", "聚宝功", "火焰拳", "冰冻拳", "雷电拳", "抓", "夹住", "断头钳", "旋风刀", "剑舞", "居合斩", "起风", "翅膀攻击", "吹飞", "飞翔", "绑紧", "摔打", "藤鞭", "踩踏", "二连踢", "百万吨重踢", "飞踢", "回旋踢", "泼沙", "头锤", "角撞", "乱击", "角钻", "撞击", "泰山压顶", "紧束", "猛撞", "大闹一番", "舍身冲撞", "摇尾巴", "毒针", "双针", "飞弹针", "瞪眼", "咬住", "叫声", "吼叫", "唱歌", "超音波", "音爆", "定身法", "溶解液", "火花", "喷射火焰", "白雾", "水枪", "水炮", "冲浪", "冰冻光束", "暴风雪", "幻象光线", "泡沫光线", "极光束", "破坏光线", "啄", "啄钻", "地狱翻滚", "踢倒", "双倍奉还", "地球上投", "怪力", "吸取", "超级吸取", "寄生种子", "生长", "飞叶快刀", "日光束", "毒粉", "麻痹粉", "催眠粉", "花瓣舞", "吐丝", "龙之怒", "火焰旋涡", "电击", "十万伏特", "电磁波", "打雷", "落石", "地震", "地裂", "挖洞", "剧毒", "念力", "精神强念", "催眠术", "瑜伽姿势", "高速移动", "电光一闪", "愤怒", "瞬间移动", "黑夜魔影", "模仿", "刺耳声", "影子分身", "自我再生", "变硬", "变小", "烟幕", "奇异之光", "缩入壳中", "变圆", "屏障", "光墙", "黑雾", "反射壁", "聚气", "忍耐", "挥指", "鹦鹉学舌", "自爆", "炸蛋", "舌舔", "浊雾", "污泥攻击", "骨棒", "大字爆炎", "攀瀑", "贝壳夹击", "高速星星", "火箭头锤", "尖刺加农炮", "缠绕", "瞬间失忆", "折弯汤匙", "生蛋", "飞膝踢", "大蛇瞪眼", "食梦", "毒瓦斯", "投球", "吸血", "恶魔之吻", "神鸟猛击", "变身", "泡沫", "迷昏拳", "蘑菇孢子", "闪光", "精神波", "跃起", "溶化", "蟹钳锤", "大爆炸", "乱抓", "骨头回力镖", "睡觉", "岩崩", "必杀门牙", "棱角化", "纹理", "三重攻击", "愤怒门牙", "劈开", "替身", "挣扎", "写生", "三连踢", "小偷", "蛛网", "心之眼", "恶梦", "火焰轮", "打鼾", "诅咒", "抓狂", "纹理２", "气旋攻击", "棉孢子", "起死回生", "怨恨", "细雪", "守住", "音速拳", "鬼面", "出奇一击", "天使之吻", "腹鼓", "污泥炸弹", "掷泥", "章鱼桶炮", "撒菱", "电磁炮", "识破", "同命", "灭亡之歌", "冰冻之风", "看穿", "骨棒乱打", "锁定", "逆鳞", "沙暴", "终极吸取", "挺住", "撒娇", "滚动", "点到为止", "虚张声势", "喝牛奶", "电光", "连斩", "钢翼", "黑色目光", "迷人", "梦话", "治愈铃声", "报恩", "礼物", "迁怒", "神秘守护", "分担痛楚", "神圣之火", "震级", "爆裂拳", "超级角击", "龙息", "接棒", "再来一次", "追打", "高速旋转", "甜甜香气", "铁尾", "金属爪", "借力摔", "晨光", "光合作用", "月光", "觉醒力量", "十字劈", "龙卷风", "求雨", "大晴天", "咬碎", "镜面反射", "自我暗示", "神速", "原始之力", "暗影球", "预知未来", "碎岩", "潮旋", "围攻", "击掌奇袭", "吵闹", "蓄力", "喷出", "吞下", "热风", "冰雹", "无理取闹", "吹捧", "鬼火", "临别礼物", "硬撑", "真气拳", "清醒", "看我嘛", "自然之力", "充电", "挑衅", "帮助", "戏法", "扮演", "祈愿", "借助", "扎根", "蛮力", "魔法反射", "回收利用", "报复", "劈瓦", "哈欠", "拍落", "蛮干", "喷火", "特性互换", "封印", "焕然一新", "怨念", "抢夺", "秘密之力", "潜水", "猛推", "保护色", "萤火", "洁净光芒", "薄雾球", "羽毛舞", "摇晃舞", "火焰踢", "玩泥巴", "冰球", "尖刺臂", "偷懒", "巨声", "剧毒牙", "撕裂爪", "爆炸烈焰", "加农水炮", "彗星拳", "惊吓", "气象球", "芳香治疗", "假哭", "空气利刃", "过热", "气味侦测", "岩石封锁", "银色旋风", "金属音", "草笛", "挠痒", "宇宙力量", "喷水", "信号光束", "暗影拳", "神通力", "冲天拳", "流沙地狱", "绝对零度", "浊流", "种子机关枪", "燕返", "冰锥", "铁壁", "挡路", "长嚎", "龙爪", "疯狂植物", "健美", "弹跳", "泥巴射击", "毒尾", "渴望", "伏特攻击", "魔法叶", "玩水", "冥想", "叶刃", "龙之舞", "岩石爆击", "电击波", "水之波动", "破灭之愿", "精神突进", "-无-", "拍击", "空手劈", "连环巴掌", "连续拳", "百万吨重拳", "聚宝功", "火焰拳", "冰冻拳", "雷电拳", "抓", "夹住", "断头钳", "旋风刀", "剑舞", "居合斩", "起风", "翅膀攻击", "吹飞", "飞翔", "绑紧", "摔打", "藤鞭", "踩踏", "二连踢", "百万吨重踢", "飞踢", "回旋踢", "泼沙", "头锤", "角撞", "乱击", "角钻", "撞击", "泰山压顶", "紧束", "猛撞", "大闹一番", "舍身冲撞", "摇尾巴", "毒针", "双针", "飞弹针", "瞪眼", "咬住", "叫声", "吼叫", "唱歌", "超音波", "音爆", "定身法", "溶解液", "火花", "喷射火焰", "白雾", "水枪", "水炮", "冲浪", "冰冻光束", "暴风雪", "幻象光线", "泡沫光线", "极光束", "破坏光线", "啄", "啄钻", "地狱翻滚", "踢倒", "双倍奉还", "地球上投", "怪力", "吸取", "超级吸取", "寄生种子", "生长", "飞叶快刀", "日光束", "毒粉", "麻痹粉", "催眠粉", "花瓣舞", "吐丝", "龙之怒", "火焰旋涡", "电击", "十万伏特", "电磁波", "打雷", "落石", "地震", "地裂", "挖洞", "剧毒", "念力", "精神强念", "催眠术", "瑜伽姿势", "高速移动", "电光一闪", "愤怒", "瞬间移动", "黑夜魔影", "模仿", "刺耳声", "影子分身", "自我再生", "变硬", "变小", "烟幕", "奇异之光", "缩入壳中", "变圆", "屏障", "光墙", "黑雾", "反射壁", "聚气", "忍耐", "挥指", "鹦鹉学舌", "自爆", "炸蛋", "舌舔", "浊雾", "污泥攻击", "骨棒", "大字爆炎", "攀瀑", "贝壳夹击", "高速星星", "火箭头锤", "尖刺加农炮", "缠绕", "瞬间失忆", "折弯汤匙", "生蛋", "飞膝踢", "大蛇瞪眼", "食梦", "毒瓦斯", "投球", "吸血", "恶魔之吻", "神鸟猛击", "变身", "泡沫", "迷昏拳", "蘑菇孢子", "闪光", "精神波", "跃起", "溶化", "蟹钳锤", "大爆炸", "乱抓", "骨头回力镖", "睡觉", "岩崩", "必杀门牙", "棱角化", "纹理", "三重攻击", "愤怒门牙", "劈开", "替身", "挣扎", "写生", "三连踢", "小偷", "蛛网", "心之眼", "恶梦", "火焰轮", "打鼾", "诅咒", "抓狂", "纹理２", "气旋攻击", "棉孢子", "起死回生", "怨恨", "细雪", "守住", "音速拳", "鬼面", "出奇一击", "天使之吻", "腹鼓", "污泥炸弹", "掷泥", "章鱼桶炮", "撒菱", "电磁炮", "识破", "同命", "灭亡之歌", "冰冻之风", "看穿", "骨棒乱打", "锁定", "逆鳞", "沙暴", "终极吸取", "挺住", "撒娇", "滚动", "点到为止", "虚张声势", "喝牛奶", "电光", "连斩", "钢翼", "黑色目光", "迷人", "梦话", "治愈铃声", "报恩", "礼物", "迁怒", "神秘守护", "分担痛楚", "神圣之火", "震级", "爆裂拳", "超级角击", "龙息", "接棒", "再来一次", "追打", "高速旋转", "甜甜香气", "铁尾", "金属爪", "借力摔", "晨光", "光合作用", "月光", "觉醒力量", "十字劈", "龙卷风", "求雨", "大晴天", "咬碎", "镜面反射", "自我暗示", "神速", "原始之力", "暗影球", "预知未来", "碎岩", "潮旋", "围攻", "击掌奇袭", "吵闹", "蓄力", "喷出", "吞下", "热风", "冰雹", "无理取闹", "吹捧", "鬼火", "临别礼物", "硬撑", "真气拳", "清醒", "看我嘛", "自然之力", "充电", "挑衅", "帮助", "戏法", "扮演", "祈愿", "借助", "扎根", "蛮力", "魔法反射", "回收利用", "报复", "劈瓦", "哈欠", "拍落", "蛮干", "喷火", "特性互换", "封印", "焕然一新", "怨念", "抢夺", "秘密之力", "潜水", "猛推", "保护色", "萤火", "洁净光芒", "薄雾球", "羽毛舞", "摇晃舞", "火焰踢", "玩泥巴", "冰球", "尖刺臂", "偷懒", "巨声", "剧毒牙", "撕裂爪", "爆炸烈焰", "加农水炮", "彗星拳", "惊吓", "气象球", "芳香治疗", "假哭", "空气利刃", "过热", "气味侦测", "岩石封锁", "银色旋风", "金属音", "草笛", "挠痒", "宇宙力量", "喷水", "信号光束", "暗影拳", "神通力", "冲天拳", "流沙地狱", "绝对零度", "浊流", "种子机关枪", "燕返", "冰锥", "铁壁", "挡路", "长嚎", "龙爪", "疯狂植物", "健美", "弹跳", "泥巴射击", "毒尾", "渴望", "伏特攻击", "魔法叶", "玩水", "冥想", "叶刃", "龙之舞", "岩石爆击", "电击波", "水之波动", "破灭之愿", "精神突进" });
+            move4.Location = new Point(128, 220);
+            move4.Margin = new Padding(4);
+            move4.Name = "move4";
+            move4.Size = new Size(217, 23);
+            move4.TabIndex = 51;
+            // 
+            // pp4
+            // 
+            pp4.Location = new Point(355, 221);
+            pp4.Margin = new Padding(4);
+            pp4.Name = "pp4";
+            pp4.Size = new Size(49, 25);
+            pp4.TabIndex = 52;
+            // 
+            // jap_check
+            // 
+            jap_check.Location = new Point(128, 7);
+            jap_check.Margin = new Padding(4);
+            jap_check.Name = "jap_check";
+            jap_check.Size = new Size(171, 28);
+            jap_check.TabIndex = 53;
+            jap_check.Text = "日文解码";
+            jap_check.UseVisualStyleBackColor = true;
+            jap_check.CheckedChanged += Jap_checkCheckedChanged;
+            // 
+            // ECT_pkedit
+            // 
+            AutoScaleDimensions = new SizeF(8F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(971, 300);
+            Controls.Add(jap_check);
+            Controls.Add(pp4);
+            Controls.Add(move4);
+            Controls.Add(label21);
+            Controls.Add(cancel);
+            Controls.Add(save);
+            Controls.Add(label20);
+            Controls.Add(label19);
+            Controls.Add(label18);
+            Controls.Add(label17);
+            Controls.Add(label16);
+            Controls.Add(label15);
+            Controls.Add(label14);
+            Controls.Add(ev6);
+            Controls.Add(ev5);
+            Controls.Add(ev4);
+            Controls.Add(ev3);
+            Controls.Add(ev2);
+            Controls.Add(ev1);
+            Controls.Add(iv6);
+            Controls.Add(iv5);
+            Controls.Add(iv4);
+            Controls.Add(iv3);
+            Controls.Add(iv2);
+            Controls.Add(iv1);
+            Controls.Add(label13);
+            Controls.Add(label12);
+            Controls.Add(namebox);
+            Controls.Add(friendship);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(ability);
+            Controls.Add(label9);
+            Controls.Add(pid);
+            Controls.Add(otsid);
+            Controls.Add(otid);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(pp3);
+            Controls.Add(pp2);
+            Controls.Add(pp1);
+            Controls.Add(level);
+            Controls.Add(label5);
+            Controls.Add(move3);
+            Controls.Add(move2);
+            Controls.Add(move1);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(item_box);
+            Controls.Add(label1);
+            Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4);
+            MaximizeBox = false;
+            Name = "ECT_pkedit";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "训练家宝可梦编辑器";
+            ((System.ComponentModel.ISupportInitialize)level).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pp1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pp2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pp3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)otid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)otsid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ability).EndInit();
+            ((System.ComponentModel.ISupportInitialize)friendship).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iv1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iv2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iv3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iv4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iv5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iv6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ev6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ev5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ev4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ev3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ev2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ev1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pp4).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
-
     }
 }

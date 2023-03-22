@@ -48,53 +48,53 @@ namespace BerryPlot
             // LocationLabel
             // 
             LocationLabel.AutoSize = true;
-            LocationLabel.Location = new Point(12, 14);
+            LocationLabel.Location = new Point(12, 10);
             LocationLabel.Margin = new Padding(4, 0, 4, 0);
             LocationLabel.Name = "LocationLabel";
-            LocationLabel.Size = new Size(0, 20);
+            LocationLabel.Size = new Size(0, 15);
             LocationLabel.TabIndex = 3;
             // 
             // BerryTypeLabel
             // 
             BerryTypeLabel.AutoSize = true;
-            BerryTypeLabel.Location = new Point(347, 68);
+            BerryTypeLabel.Location = new Point(347, 51);
             BerryTypeLabel.Margin = new Padding(4, 0, 4, 0);
             BerryTypeLabel.Name = "BerryTypeLabel";
-            BerryTypeLabel.Size = new Size(78, 20);
+            BerryTypeLabel.Size = new Size(71, 15);
             BerryTypeLabel.TabIndex = 2;
-            BerryTypeLabel.Text = "Berry Type";
+            BerryTypeLabel.Text = "树果类型";
             // 
             // SaveButton
             // 
-            SaveButton.Location = new Point(624, 8);
-            SaveButton.Margin = new Padding(4, 5, 4, 5);
+            SaveButton.Location = new Point(624, 6);
+            SaveButton.Margin = new Padding(4, 4, 4, 4);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(100, 40);
+            SaveButton.Size = new Size(100, 30);
             SaveButton.TabIndex = 12;
-            SaveButton.Text = "Edit this plot";
+            SaveButton.Text = "保存";
             SaveButton.UseVisualStyleBackColor = true;
             SaveButton.Click += SaveButton_Click;
             // 
             // GrowthStageLabel
             // 
             GrowthStageLabel.AutoSize = true;
-            GrowthStageLabel.Location = new Point(347, 111);
+            GrowthStageLabel.Location = new Point(347, 83);
             GrowthStageLabel.Margin = new Padding(4, 0, 4, 0);
             GrowthStageLabel.Name = "GrowthStageLabel";
-            GrowthStageLabel.Size = new Size(99, 20);
+            GrowthStageLabel.Size = new Size(71, 15);
             GrowthStageLabel.TabIndex = 7;
-            GrowthStageLabel.Text = "Growth Stage";
+            GrowthStageLabel.Text = "生长阶段";
             // 
             // BerryTypeBox
             // 
             BerryTypeBox.AllowDrop = true;
             BerryTypeBox.DropDownStyle = ComboBoxStyle.DropDownList;
             BerryTypeBox.FormattingEnabled = true;
-            BerryTypeBox.Items.AddRange(new object[] { "None", "Cheri Berry", "Chesto Berry", "Pecha Berry", "Rawst Berry", "Aspear Berry", "Leppa Berry", "Oran Berry", "Persim Berry", "Lum Berry", "Sitrus Berry", "Figy Berry", "Wiki Berry", "Mago Berry", "Aguav Berry", "Iapapa Berry", "Razz Berry", "Bluk Berry", "Nanab Berry", "Wepear Berry", "Pinap Berry", "Pomeg Berry", "Kelpsy Berry", "Qualot Berry", "Hondew Berry", "Grepa Berry", "Tamato Berry", "Cornn Berry", "Magost Berry", "Rabuta Berry", "Nomel Berry", "Spelon Berry", "Pamtre Berry", "Watmel Berry", "Durin Berry", "Belue Berry", "Liechi Berry", "Ganlon Berry", "Salac Berry", "Petaya Berry", "Apicot Berry", "Lansat Berry", "Starf Berry", "Enigma Berry" });
-            BerryTypeBox.Location = new Point(439, 63);
-            BerryTypeBox.Margin = new Padding(4, 5, 4, 5);
+            BerryTypeBox.Items.AddRange(new object[] { "无", "樱子果", "零余果", "桃桃果", "莓莓果", "利木果", "苹野果", "橙橙果", "柿仔果", "木子果", "文柚果", "勿花果", "异奇果", "芒芒果", "乐芭果", "芭亚果", "蔓莓果", "墨莓果", "蕉香果", "西梨果", "凰梨果", "榴石果", "藻根果", "比巴果", "哈密果", "萄葡果", "茄番果", "玉黍果", "岳竹果", "茸丹果", "檬柠果", "刺角果", "椰木果", "瓜西果", "金枕果", "靛莓果", "枝荔果", "龙睛果", "沙鳞果", "龙火果", "杏仔果", "兰萨果", "星桃果", "谜芝果" });
+            BerryTypeBox.Location = new Point(439, 47);
+            BerryTypeBox.Margin = new Padding(4, 4, 4, 4);
             BerryTypeBox.Name = "BerryTypeBox";
-            BerryTypeBox.Size = new Size(139, 28);
+            BerryTypeBox.Size = new Size(139, 23);
             BerryTypeBox.TabIndex = 2;
             // 
             // GrowthStageBox
@@ -102,30 +102,30 @@ namespace BerryPlot
             GrowthStageBox.AllowDrop = true;
             GrowthStageBox.DropDownStyle = ComboBoxStyle.DropDownList;
             GrowthStageBox.FormattingEnabled = true;
-            GrowthStageBox.Items.AddRange(new object[] { "None Planted", "Berry Planted", "Berry Sprouted", "Berry Taller", "Berry Flowering", "Berries Ready", "Unknown" });
-            GrowthStageBox.Location = new Point(439, 106);
-            GrowthStageBox.Margin = new Padding(4, 5, 4, 5);
+            GrowthStageBox.Items.AddRange(new object[] { "未种植", "果树种植", "果树发芽", "果树长高", "果树开花", "树果成熟", "未知的" });
+            GrowthStageBox.Location = new Point(439, 80);
+            GrowthStageBox.Margin = new Padding(4, 4, 4, 4);
             GrowthStageBox.Name = "GrowthStageBox";
-            GrowthStageBox.Size = new Size(139, 28);
+            GrowthStageBox.Size = new Size(139, 23);
             GrowthStageBox.TabIndex = 3;
             // 
             // BerryAmoutLabel
             // 
             BerryAmoutLabel.AutoSize = true;
-            BerryAmoutLabel.Location = new Point(351, 192);
+            BerryAmoutLabel.Location = new Point(347, 144);
             BerryAmoutLabel.Margin = new Padding(4, 0, 4, 0);
             BerryAmoutLabel.Name = "BerryAmoutLabel";
-            BerryAmoutLabel.Size = new Size(62, 20);
+            BerryAmoutLabel.Size = new Size(39, 15);
             BerryAmoutLabel.TabIndex = 15;
-            BerryAmoutLabel.Text = "Amount";
+            BerryAmoutLabel.Text = "数量";
             // 
             // BerryAmountBox
             // 
-            BerryAmountBox.Location = new Point(439, 188);
-            BerryAmountBox.Margin = new Padding(4, 5, 4, 5);
+            BerryAmountBox.Location = new Point(439, 141);
+            BerryAmountBox.Margin = new Padding(4, 4, 4, 4);
             BerryAmountBox.MaxLength = 3;
             BerryAmountBox.Name = "BerryAmountBox";
-            BerryAmountBox.Size = new Size(139, 27);
+            BerryAmountBox.Size = new Size(139, 25);
             BerryAmountBox.TabIndex = 5;
             BerryAmountBox.TextChanged += BerryAmountBox_TextChanged;
             // 
@@ -134,11 +134,11 @@ namespace BerryPlot
             BerryPlotLocale.AllowDrop = true;
             BerryPlotLocale.DropDownStyle = ComboBoxStyle.DropDownList;
             BerryPlotLocale.FormattingEnabled = true;
-            BerryPlotLocale.Items.AddRange(new object[] { "ROUTE_102_PECHA", "ROUTE_102_ORAN", "ROUTE_104_SOIL_1", "ROUTE_104_ORAN_1", "ROUTE_103_CHERI_1", "ROUTE_103_LEPPA", "ROUTE_103_CHERI_2", "ROUTE_104_CHERI_1", "ROUTE_104_SOIL_2", "ROUTE_104_LEPPA", "ROUTE_104_ORAN_2", "ROUTE_104_SOIL_3", "ROUTE_104_PECHA", "ROUTE_123_QUALOT_1", "ROUTE_123_POMEG_1", "ROUTE_110_NANAB_1", "ROUTE_110_NANAB_2", "ROUTE_110_NANAB_3", "ROUTE_111_RAZZ_1", "ROUTE_111_RAZZ_2", "ROUTE_112_RAWST_1", "ROUTE_112_PECHA_1", "ROUTE_112_PECHA_2", "ROUTE_112_RAWST_2", "ROUTE_116_PINAP_1", "ROUTE_116_CHESTO_1", "ROUTE_117_WEPEAR_1", "ROUTE_117_WEPEAR_2", "ROUTE_117_WEPEAR_3", "ROUTE_123_POMEG_2", "ROUTE_118_SITRUS_1", "ROUTE_118_SOIL", "ROUTE_118_SITRUS_2", "ROUTE_119_POMEG_1", "ROUTE_119_POMEG_2", "ROUTE_119_POMEG_3", "ROUTE_120_ASPEAR_1", "ROUTE_120_ASPEAR_2", "ROUTE_120_ASPEAR_3", "ROUTE_120_PECHA_1", "ROUTE_120_PECHA_2", "ROUTE_120_PECHA_3", "ROUTE_120_RAZZ", "ROUTE_120_NANAB", "ROUTE_120_PINAP", "ROUTE_120_WEPEAR", "ROUTE_121_PERSIM", "ROUTE_121_ASPEAR", "ROUTE_121_RAWST", "ROUTE_121_CHESTO", "ROUTE_121_SOIL_1", "ROUTE_121_NANAB_1", "ROUTE_121_NANAB_2", "ROUTE_121_SOIL_2", "ROUTE_115_BLUK_1", "ROUTE_115_BLUK_2", "UNUSED", "ROUTE_123_POMEG_3", "ROUTE_123_POMEG_4", "ROUTE_123_GREPA_1", "ROUTE_123_GREPA_2", "ROUTE_123_LEPPA_1", "ROUTE_123_SOIL", "ROUTE_123_LEPPA_2", "ROUTE_123_GREPA_3", "ROUTE_116_CHESTO_2", "ROUTE_116_PINAP_2", "ROUTE_114_PERSIM_1", "ROUTE_115_KELPSY_1", "ROUTE_115_KELPSY_2", "ROUTE_115_KELPSY_3", "ROUTE_123_GREPA_4", "ROUTE_123_QUALOT_2", "ROUTE_123_QUALOT_3", "ROUTE_104_SOIL_4", "ROUTE_104_CHERI_2", "ROUTE_114_PERSIM_2", "ROUTE_114_PERSIM_3", "ROUTE_123_QUALOT_4", "ROUTE_111_ORAN_1", "ROUTE_111_ORAN_2", "ROUTE_130_LIECHI", "ROUTE_119_HONDEW_1", "ROUTE_119_HONDEW_2", "ROUTE_119_SITRUS", "ROUTE_119_LEPPA", "ROUTE_123_PECHA", "ROUTE_123_SITRUS", "ROUTE_123_RAWST" });
-            BerryPlotLocale.Location = new Point(351, 14);
-            BerryPlotLocale.Margin = new Padding(4, 5, 4, 5);
+            BerryPlotLocale.Items.AddRange(new object[] { "102道路_桃桃果", "102道路_橙橙果", "104道路_松软土壤_1", "104道路_橙橙果_1", "103道路_樱子果_1", "103道路_苹野果", "103道路_樱子果_2", "104道路_樱子果_1", "104道路_松软土壤_2", "104道路_苹野果", "104道路_橙橙果_2", "104道路_松软土壤_3", "104道路_桃桃果", "123道路_比巴果_1", "123道路_榴石果_1", "110道路_蕉香果_1", "110道路_蕉香果_2", "110道路_蕉香果_3", "111道路_蔓莓果_1", "111道路_蔓莓果_2", "112道路_莓莓果_1", "112道路_桃桃果_1", "112道路_桃桃果_2", "112道路_莓莓果_2", "116道路_凰梨果_1", "116道路_零余果_1", "117道路_西梨果_1", "117道路_西梨果_2", "117道路_西梨果_3", "123道路_榴石果_2", "118道路_文柚果_1", "118道路_松软土壤", "118道路_文柚果_2", "119道路_榴石果_1", "119道路_榴石果_2", "119道路_榴石果_3", "120道路_利木果_1", "120道路_利木果_2", "120道路_利木果_3", "120道路_桃桃果_1", "120道路_桃桃果_2", "120道路_桃桃果_3", "120道路_蔓莓果", "120道路_蕉香果", "120道路_凰梨果", "120道路_西梨果", "121道路_柿仔果", "121道路_利木果", "121道路_莓莓果", "121道路_零余果", "121道路_松软土壤_1", "121道路_蕉香果_1", "121道路_蕉香果_2", "121道路_松软土壤_2", "115道路_墨莓果_1", "115道路_墨莓果_2", "空", "123道路_榴石果_3", "123道路_榴石果_4", "123道路_萄葡果_1", "123道路_萄葡果_2", "123道路_苹野果_1", "123道路_松软土壤", "123道路_苹野果_2", "123道路_萄葡果_3", "116道路_零余果_2", "116道路_凰梨果_2", "114道路_柿仔果_1", "115道路_藻根果_1", "115道路_藻根果_2", "115道路_藻根果_3", "123道路_萄葡果_4", "123道路_比巴果_2", "123道路_比巴果_3", "104道路_松软土壤_4", "104道路_樱子果_2", "114道路_柿仔果_2", "114道路_柿仔果_3", "123道路_比巴果_4", "111道路_橙橙果_1", "111道路_橙橙果_2", "幻影岛_枝荔果", "119道路_哈密果_1", "119道路_哈密果_2", "119道路_文柚果", "119道路_苹野果", "123道路_桃桃果", "123道路_文柚果", "123道路_莓莓果" });
+            BerryPlotLocale.Location = new Point(351, 10);
+            BerryPlotLocale.Margin = new Padding(4, 4, 4, 4);
             BerryPlotLocale.Name = "BerryPlotLocale";
-            BerryPlotLocale.Size = new Size(227, 28);
+            BerryPlotLocale.Size = new Size(227, 23);
             BerryPlotLocale.TabIndex = 1;
             BerryPlotLocale.SelectedIndexChanged += BerryPlotLocale_SelectedIndexChanged;
             // 
@@ -146,107 +146,107 @@ namespace BerryPlot
             // 
             SparklingCheck.AutoSize = true;
             SparklingCheck.Enabled = false;
-            SparklingCheck.Location = new Point(593, 66);
-            SparklingCheck.Margin = new Padding(4, 5, 4, 5);
+            SparklingCheck.Location = new Point(593, 50);
+            SparklingCheck.Margin = new Padding(4, 4, 4, 4);
             SparklingCheck.Name = "SparklingCheck";
-            SparklingCheck.Size = new Size(100, 24);
+            SparklingCheck.Size = new Size(85, 19);
             SparklingCheck.TabIndex = 7;
-            SparklingCheck.Text = "Sparkling?";
+            SparklingCheck.Text = "闪亮的?";
             SparklingCheck.UseVisualStyleBackColor = true;
             // 
             // MinutesToNextStageLabel
             // 
             MinutesToNextStageLabel.AutoSize = true;
-            MinutesToNextStageLabel.Location = new Point(347, 143);
+            MinutesToNextStageLabel.Location = new Point(347, 107);
             MinutesToNextStageLabel.Margin = new Padding(4, 0, 4, 0);
             MinutesToNextStageLabel.Name = "MinutesToNextStageLabel";
-            MinutesToNextStageLabel.Size = new Size(82, 40);
+            MinutesToNextStageLabel.Size = new Size(71, 30);
             MinutesToNextStageLabel.TabIndex = 19;
-            MinutesToNextStageLabel.Text = "Minutes to\r\nNext Stage";
+            MinutesToNextStageLabel.Text = "几分钟后\r\n下一阶段";
             // 
             // MinutesToNextStageBox
             // 
-            MinutesToNextStageBox.Location = new Point(439, 148);
-            MinutesToNextStageBox.Margin = new Padding(4, 5, 4, 5);
+            MinutesToNextStageBox.Location = new Point(439, 111);
+            MinutesToNextStageBox.Margin = new Padding(4, 4, 4, 4);
             MinutesToNextStageBox.MaxLength = 5;
             MinutesToNextStageBox.Name = "MinutesToNextStageBox";
-            MinutesToNextStageBox.Size = new Size(139, 27);
+            MinutesToNextStageBox.Size = new Size(139, 25);
             MinutesToNextStageBox.TabIndex = 4;
             MinutesToNextStageBox.TextChanged += MinutesToNextStageBox_TextChanged;
             // 
             // RegrowthBox
             // 
-            RegrowthBox.Location = new Point(439, 228);
-            RegrowthBox.Margin = new Padding(4, 5, 4, 5);
+            RegrowthBox.Location = new Point(439, 171);
+            RegrowthBox.Margin = new Padding(4, 4, 4, 4);
             RegrowthBox.MaxLength = 2;
             RegrowthBox.Name = "RegrowthBox";
-            RegrowthBox.Size = new Size(139, 27);
+            RegrowthBox.Size = new Size(139, 25);
             RegrowthBox.TabIndex = 6;
             RegrowthBox.TextChanged += RegrowthBox_TextChanged;
             // 
             // RegrowthLabel
             // 
             RegrowthLabel.AutoSize = true;
-            RegrowthLabel.Location = new Point(351, 222);
+            RegrowthLabel.Location = new Point(347, 166);
             RegrowthLabel.Margin = new Padding(4, 0, 4, 0);
             RegrowthLabel.Name = "RegrowthLabel";
-            RegrowthLabel.Size = new Size(73, 40);
+            RegrowthLabel.Size = new Size(71, 30);
             RegrowthLabel.TabIndex = 22;
-            RegrowthLabel.Text = "Regrowth\r\nCount";
+            RegrowthLabel.Text = "树果再生\r\n计数";
             // 
             // Watered1Check
             // 
             Watered1Check.AutoSize = true;
-            Watered1Check.Location = new Point(593, 125);
-            Watered1Check.Margin = new Padding(4, 5, 4, 5);
+            Watered1Check.Location = new Point(593, 94);
+            Watered1Check.Margin = new Padding(4, 4, 4, 4);
             Watered1Check.Name = "Watered1Check";
-            Watered1Check.Size = new Size(119, 24);
+            Watered1Check.Size = new Size(109, 19);
             Watered1Check.TabIndex = 8;
-            Watered1Check.Text = "Berry Planted";
+            Watered1Check.Text = "果树种下了";
             Watered1Check.UseVisualStyleBackColor = true;
             // 
             // Watered2Check
             // 
             Watered2Check.AutoSize = true;
-            Watered2Check.Location = new Point(593, 160);
-            Watered2Check.Margin = new Padding(4, 5, 4, 5);
+            Watered2Check.Location = new Point(593, 120);
+            Watered2Check.Margin = new Padding(4, 4, 4, 4);
             Watered2Check.Name = "Watered2Check";
-            Watered2Check.Size = new Size(130, 24);
+            Watered2Check.Size = new Size(93, 19);
             Watered2Check.TabIndex = 9;
-            Watered2Check.Text = "Berry Sprouted";
+            Watered2Check.Text = "果树发芽";
             Watered2Check.UseVisualStyleBackColor = true;
             // 
             // Watered3Check
             // 
             Watered3Check.AutoSize = true;
-            Watered3Check.Location = new Point(593, 195);
-            Watered3Check.Margin = new Padding(4, 5, 4, 5);
+            Watered3Check.Location = new Point(593, 146);
+            Watered3Check.Margin = new Padding(4, 4, 4, 4);
             Watered3Check.Name = "Watered3Check";
-            Watered3Check.Size = new Size(104, 24);
+            Watered3Check.Size = new Size(93, 19);
             Watered3Check.TabIndex = 10;
-            Watered3Check.Text = "Berry Taller";
+            Watered3Check.Text = "果树长高";
             Watered3Check.UseVisualStyleBackColor = true;
             // 
             // Watered4Check
             // 
             Watered4Check.AutoSize = true;
-            Watered4Check.Location = new Point(593, 231);
-            Watered4Check.Margin = new Padding(4, 5, 4, 5);
+            Watered4Check.Location = new Point(593, 173);
+            Watered4Check.Margin = new Padding(4, 4, 4, 4);
             Watered4Check.Name = "Watered4Check";
-            Watered4Check.Size = new Size(134, 24);
+            Watered4Check.Size = new Size(93, 19);
             Watered4Check.TabIndex = 11;
-            Watered4Check.Text = "Berry Flowering";
+            Watered4Check.Text = "果树开花";
             Watered4Check.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(589, 100);
+            label1.Location = new Point(589, 75);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(68, 20);
+            label1.Size = new Size(47, 15);
             label1.TabIndex = 24;
-            label1.Text = "Watered:";
+            label1.Text = "浇水:";
             // 
             // protagbox
             // 
@@ -254,28 +254,28 @@ namespace BerryPlot
             protagbox.BackColor = Color.Transparent;
             protagbox.BackgroundImageLayout = ImageLayout.None;
             protagbox.InitialImage = null;
-            protagbox.Location = new Point(151, 102);
-            protagbox.Margin = new Padding(4, 5, 4, 5);
+            protagbox.Location = new Point(151, 76);
+            protagbox.Margin = new Padding(4, 4, 4, 4);
             protagbox.Name = "protagbox";
-            protagbox.Size = new Size(19, 32);
+            protagbox.Size = new Size(19, 24);
             protagbox.TabIndex = 25;
             protagbox.TabStop = false;
             protagbox.Visible = false;
             // 
             // BerryPicture
             // 
-            BerryPicture.Location = new Point(16, 12);
-            BerryPicture.Margin = new Padding(4, 5, 4, 5);
+            BerryPicture.Location = new Point(16, 9);
+            BerryPicture.Margin = new Padding(4, 4, 4, 4);
             BerryPicture.Name = "BerryPicture";
-            BerryPicture.Size = new Size(320, 246);
+            BerryPicture.Size = new Size(320, 184);
             BerryPicture.TabIndex = 23;
             BerryPicture.TabStop = false;
             // 
             // BerryPlotForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(733, 272);
+            ClientSize = new Size(733, 204);
             Controls.Add(protagbox);
             Controls.Add(label1);
             Controls.Add(BerryPicture);
@@ -297,19 +297,21 @@ namespace BerryPlot
             Controls.Add(GrowthStageLabel);
             Controls.Add(BerryTypeLabel);
             Controls.Add(LocationLabel);
+            Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(4, 4, 4, 4);
             MaximizeBox = false;
             Name = "BerryPlotForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Berry Plots";
+            Text = "树果种植";
             Load += BerryPlotForm_Load;
             ((ISupportInitialize)protagbox).EndInit();
             ((ISupportInitialize)BerryPicture).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
+
         private Label LocationLabel;
 
         private Label BerryTypeLabel;

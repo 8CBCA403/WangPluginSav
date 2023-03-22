@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using BW_tool;
 using WangPluginSav.GUI;
+using LTDCE;
 
 namespace WangPluginSav.Plugins
 {
@@ -27,11 +28,17 @@ namespace WangPluginSav.Plugins
             {
                 Image = Properties.Resources.BWTool
             };
+            var LTDCE = new ToolStripMenuItem("自由船票编辑器")
+            {
+                Image = Properties.Resources.liberty
+            };
             ctrl.DropDownItems.Add(BWTool);
             ctrl.DropDownItems.Add(BWNPC);
+            ctrl.DropDownItems.Add(LTDCE);
 #pragma warning disable CS8622
             BWTool.Click += BWToolOpenForm;
             BWNPC.Click += BWNPCOpenForm;
+            LTDCE.Click += LTDCEOpenForm;
             ctrl.Name = "Gen5事件修改器";
             modmenu.DropDownItems.Add(ctrl);
 
@@ -70,7 +77,16 @@ namespace WangPluginSav.Plugins
 
             form.Show();
         }
+        private void LTDCEOpenForm(object sender, EventArgs e)
+        {
+            if (!(SaveFileEditor.SAV is SAV5BW or SAV5B2W2))
+            {
+                MessageBox.Show("此工具只适用于黑白,黑二白二版本！");
+                return;
+            }
+            var form = new LTDCEForm();
+            form.Show();
+        }
 
-    
     }
 }

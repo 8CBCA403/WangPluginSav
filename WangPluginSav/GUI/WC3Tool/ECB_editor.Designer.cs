@@ -199,770 +199,1147 @@ namespace WC3Tool
 
         private void InitializeComponent()
         {
-            this.load_ecb_but = new System.Windows.Forms.Button();
-            this.save_ecb_but = new System.Windows.Forms.Button();
-            this.ecb_path = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.TextBox();
-            this.firm_box = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.size = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.yield_max = new System.Windows.Forms.NumericUpDown();
-            this.yield_min = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.growth = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.spicy = new System.Windows.Forms.NumericUpDown();
-            this.dry = new System.Windows.Forms.NumericUpDown();
-            this.sweet = new System.Windows.Forms.NumericUpDown();
-            this.bitter = new System.Windows.Forms.NumericUpDown();
-            this.sour = new System.Windows.Forms.NumericUpDown();
-            this.smooth = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.desc1 = new System.Windows.Forms.TextBox();
-            this.desc2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.held = new System.Windows.Forms.NumericUpDown();
-            this.held_help = new System.Windows.Forms.Button();
-            this.sprite_export_but = new System.Windows.Forms.Button();
-            this.sprite_import_but = new System.Windows.Forms.Button();
-            this.palette_export_but = new System.Windows.Forms.Button();
-            this.palette_import_but = new System.Windows.Forms.Button();
-            this.sprite_help = new System.Windows.Forms.Button();
-            this.jap_encoding = new System.Windows.Forms.CheckBox();
-            this.heal_inf = new System.Windows.Forms.CheckBox();
-            this.heal_sleep = new System.Windows.Forms.CheckBox();
-            this.heal_poison = new System.Windows.Forms.CheckBox();
-            this.heal_burn = new System.Windows.Forms.CheckBox();
-            this.heal_ice = new System.Windows.Forms.CheckBox();
-            this.heal_para = new System.Windows.Forms.CheckBox();
-            this.heal_confu = new System.Windows.Forms.CheckBox();
-            this.guard = new System.Windows.Forms.CheckBox();
-            this.lvlup = new System.Windows.Forms.CheckBox();
-            this.firstpoke = new System.Windows.Forms.CheckBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.direhit = new System.Windows.Forms.NumericUpDown();
-            this.atkup = new System.Windows.Forms.NumericUpDown();
-            this.defup = new System.Windows.Forms.NumericUpDown();
-            this.speedup = new System.Windows.Forms.NumericUpDown();
-            this.spatkup = new System.Windows.Forms.NumericUpDown();
-            this.accurup = new System.Windows.Forms.NumericUpDown();
-            this.ev_hp = new System.Windows.Forms.CheckBox();
-            this.ev_atk = new System.Windows.Forms.CheckBox();
-            this.ev_def = new System.Windows.Forms.CheckBox();
-            this.ev_speed = new System.Windows.Forms.CheckBox();
-            this.ev_speatk = new System.Windows.Forms.CheckBox();
-            this.ev_spedef = new System.Windows.Forms.CheckBox();
-            this.tr6_val = new System.Windows.Forms.NumericUpDown();
-            this.heal_hp = new System.Windows.Forms.CheckBox();
-            this.heal_pp = new System.Windows.Forms.CheckBox();
-            this.selectedatk = new System.Windows.Forms.CheckBox();
-            this.maxppUP = new System.Windows.Forms.CheckBox();
-            this.revive = new System.Windows.Forms.CheckBox();
-            this.stone = new System.Windows.Forms.CheckBox();
-            this.happy200 = new System.Windows.Forms.CheckBox();
-            this.happy100 = new System.Windows.Forms.CheckBox();
-            this.happy0 = new System.Windows.Forms.CheckBox();
-            this.hap200 = new System.Windows.Forms.NumericUpDown();
-            this.hap100 = new System.Windows.Forms.NumericUpDown();
-            this.happ0 = new System.Windows.Forms.NumericUpDown();
-            this.ppup = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.pphelp = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.note = new System.Windows.Forms.Button();
-            this.modifier_help = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)this.size).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.yield_max).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.yield_min).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.growth).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.spicy).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.dry).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.sweet).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.bitter).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.sour).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.smooth).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.held).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.direhit).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.atkup).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.defup).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.speedup).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.spatkup).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.accurup).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.tr6_val).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.hap200).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.hap100).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.happ0).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            base.SuspendLayout();
-            this.load_ecb_but.Location = new System.Drawing.Point(12, 21);
-            this.load_ecb_but.Name = "load_ecb_but";
-            this.load_ecb_but.Size = new System.Drawing.Size(75, 23);
-            this.load_ecb_but.TabIndex = 0;
-            this.load_ecb_but.Text = "Load ECB";
-            this.load_ecb_but.UseVisualStyleBackColor = true;
-            this.load_ecb_but.Click += new System.EventHandler(Load_ecb_butClick);
-            this.save_ecb_but.Enabled = false;
-            this.save_ecb_but.Location = new System.Drawing.Point(93, 21);
-            this.save_ecb_but.Name = "save_ecb_but";
-            this.save_ecb_but.Size = new System.Drawing.Size(75, 23);
-            this.save_ecb_but.TabIndex = 1;
-            this.save_ecb_but.Text = "Save ECB";
-            this.save_ecb_but.UseVisualStyleBackColor = true;
-            this.save_ecb_but.Click += new System.EventHandler(Save_ecb_butClick);
-            this.ecb_path.Location = new System.Drawing.Point(174, 24);
-            this.ecb_path.Name = "ecb_path";
-            this.ecb_path.Size = new System.Drawing.Size(482, 20);
-            this.ecb_path.TabIndex = 2;
-            this.label1.Location = new System.Drawing.Point(12, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Name:";
-            this.name.Location = new System.Drawing.Point(93, 69);
-            this.name.MaxLength = 6;
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(252, 20);
-            this.name.TabIndex = 4;
-            this.firm_box.FormattingEnabled = true;
-            this.firm_box.Items.AddRange(new object[5] { "Very soft", "Soft", "Hard", "Very hard", "Super hard" });
-            this.firm_box.Location = new System.Drawing.Point(93, 151);
-            this.firm_box.Name = "firm_box";
-            this.firm_box.Size = new System.Drawing.Size(120, 21);
-            this.firm_box.TabIndex = 5;
-            this.label2.Location = new System.Drawing.Point(12, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Firmness:";
-            this.size.Location = new System.Drawing.Point(93, 177);
-            this.size.Maximum = new decimal(new int[4] { 65535, 0, 0, 0 });
-            this.size.Name = "size";
-            this.size.Size = new System.Drawing.Size(120, 20);
-            this.size.TabIndex = 7;
-            this.label3.Location = new System.Drawing.Point(12, 179);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Size:";
-            this.label4.Location = new System.Drawing.Point(12, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Maximum yield:";
-            this.label5.Location = new System.Drawing.Point(12, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Minumum yield:";
-            this.yield_max.Location = new System.Drawing.Point(93, 203);
-            this.yield_max.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.yield_max.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-            this.yield_max.Name = "yield_max";
-            this.yield_max.Size = new System.Drawing.Size(120, 20);
-            this.yield_max.TabIndex = 11;
-            this.yield_max.Value = new decimal(new int[4] { 1, 0, 0, 0 });
-            this.yield_min.Location = new System.Drawing.Point(93, 229);
-            this.yield_min.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.yield_min.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-            this.yield_min.Name = "yield_min";
-            this.yield_min.Size = new System.Drawing.Size(120, 20);
-            this.yield_min.TabIndex = 12;
-            this.yield_min.Value = new decimal(new int[4] { 1, 0, 0, 0 });
-            this.label6.Location = new System.Drawing.Point(12, 254);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 34);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Growth hours per stage:";
-            this.growth.Location = new System.Drawing.Point(93, 255);
-            this.growth.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.growth.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-            this.growth.Name = "growth";
-            this.growth.Size = new System.Drawing.Size(120, 20);
-            this.growth.TabIndex = 14;
-            this.growth.Value = new decimal(new int[4] { 1, 0, 0, 0 });
-            this.label7.Location = new System.Drawing.Point(219, 154);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 23);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Spicyness:";
-            this.label8.Location = new System.Drawing.Point(219, 179);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 23);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Dryness:";
-            this.label9.Location = new System.Drawing.Point(219, 205);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Sweetness:";
-            this.label10.Location = new System.Drawing.Point(219, 231);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Bitterness:";
-            this.label11.Location = new System.Drawing.Point(219, 257);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 23);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Sourness:";
-            this.spicy.Location = new System.Drawing.Point(288, 152);
-            this.spicy.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.spicy.Name = "spicy";
-            this.spicy.Size = new System.Drawing.Size(78, 20);
-            this.spicy.TabIndex = 20;
-            this.dry.Location = new System.Drawing.Point(288, 177);
-            this.dry.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.dry.Name = "dry";
-            this.dry.Size = new System.Drawing.Size(78, 20);
-            this.dry.TabIndex = 21;
-            this.sweet.Location = new System.Drawing.Point(288, 203);
-            this.sweet.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.sweet.Name = "sweet";
-            this.sweet.Size = new System.Drawing.Size(78, 20);
-            this.sweet.TabIndex = 22;
-            this.bitter.Location = new System.Drawing.Point(288, 229);
-            this.bitter.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.bitter.Name = "bitter";
-            this.bitter.Size = new System.Drawing.Size(78, 20);
-            this.bitter.TabIndex = 23;
-            this.sour.Location = new System.Drawing.Point(288, 255);
-            this.sour.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.sour.Name = "sour";
-            this.sour.Size = new System.Drawing.Size(78, 20);
-            this.sour.TabIndex = 24;
-            this.smooth.Location = new System.Drawing.Point(288, 281);
-            this.smooth.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.smooth.Name = "smooth";
-            this.smooth.Size = new System.Drawing.Size(78, 20);
-            this.smooth.TabIndex = 25;
-            this.label12.Location = new System.Drawing.Point(219, 283);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 23);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Smoothness:";
-            this.desc1.Location = new System.Drawing.Point(42, 94);
-            this.desc1.MaxLength = 44;
-            this.desc1.Name = "desc1";
-            this.desc1.Size = new System.Drawing.Size(303, 20);
-            this.desc1.TabIndex = 27;
-            this.desc2.Location = new System.Drawing.Point(42, 120);
-            this.desc2.MaxLength = 44;
-            this.desc2.Name = "desc2";
-            this.desc2.Size = new System.Drawing.Size(303, 20);
-            this.desc2.TabIndex = 28;
-            this.label13.Location = new System.Drawing.Point(12, 311);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 18);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Usage as held item:";
-            this.held.Location = new System.Drawing.Point(120, 309);
-            this.held.Maximum = new decimal(new int[4] { 255, 0, 0, 0 });
-            this.held.Name = "held";
-            this.held.Size = new System.Drawing.Size(59, 20);
-            this.held.TabIndex = 30;
-            this.held_help.Location = new System.Drawing.Point(185, 309);
-            this.held_help.Name = "held_help";
-            this.held_help.Size = new System.Drawing.Size(15, 20);
-            this.held_help.TabIndex = 31;
-            this.held_help.Text = "?";
-            this.held_help.UseVisualStyleBackColor = true;
-            this.held_help.Click += new System.EventHandler(Held_helpClick);
-            this.sprite_export_but.Enabled = false;
-            this.sprite_export_but.Location = new System.Drawing.Point(662, 21);
-            this.sprite_export_but.Name = "sprite_export_but";
-            this.sprite_export_but.Size = new System.Drawing.Size(86, 23);
-            this.sprite_export_but.TabIndex = 33;
-            this.sprite_export_but.Text = "Export Sprite";
-            this.sprite_export_but.UseVisualStyleBackColor = true;
-            this.sprite_export_but.Click += new System.EventHandler(Sprite_export_butClick);
-            this.sprite_import_but.Enabled = false;
-            this.sprite_import_but.Location = new System.Drawing.Point(754, 21);
-            this.sprite_import_but.Name = "sprite_import_but";
-            this.sprite_import_but.Size = new System.Drawing.Size(86, 23);
-            this.sprite_import_but.TabIndex = 34;
-            this.sprite_import_but.Text = "Import Sprite";
-            this.sprite_import_but.UseVisualStyleBackColor = true;
-            this.sprite_import_but.Click += new System.EventHandler(Sprite_import_butClick);
-            this.palette_export_but.Enabled = false;
-            this.palette_export_but.Location = new System.Drawing.Point(472, 0);
-            this.palette_export_but.Name = "palette_export_but";
-            this.palette_export_but.Size = new System.Drawing.Size(86, 23);
-            this.palette_export_but.TabIndex = 35;
-            this.palette_export_but.Text = "Export Palette";
-            this.palette_export_but.UseVisualStyleBackColor = true;
-            this.palette_export_but.Visible = false;
-            this.palette_export_but.Click += new System.EventHandler(Palette_export_butClick);
-            this.palette_import_but.Enabled = false;
-            this.palette_import_but.Location = new System.Drawing.Point(564, 0);
-            this.palette_import_but.Name = "palette_import_but";
-            this.palette_import_but.Size = new System.Drawing.Size(86, 23);
-            this.palette_import_but.TabIndex = 36;
-            this.palette_import_but.Text = "Import Palette";
-            this.palette_import_but.UseVisualStyleBackColor = true;
-            this.palette_import_but.Visible = false;
-            this.palette_import_but.Click += new System.EventHandler(Palette_import_butClick);
-            this.sprite_help.Location = new System.Drawing.Point(846, 22);
-            this.sprite_help.Name = "sprite_help";
-            this.sprite_help.Size = new System.Drawing.Size(15, 20);
-            this.sprite_help.TabIndex = 37;
-            this.sprite_help.Text = "?";
-            this.sprite_help.UseVisualStyleBackColor = true;
-            this.sprite_help.Click += new System.EventHandler(Sprite_helpClick);
-            this.jap_encoding.Location = new System.Drawing.Point(93, 47);
-            this.jap_encoding.Name = "jap_encoding";
-            this.jap_encoding.Size = new System.Drawing.Size(134, 22);
-            this.jap_encoding.TabIndex = 38;
-            this.jap_encoding.Text = "Japanese encoding";
-            this.jap_encoding.UseVisualStyleBackColor = true;
-            this.jap_encoding.CheckedChanged += new System.EventHandler(Jap_encodingCheckedChanged);
-            this.heal_inf.Location = new System.Drawing.Point(6, 19);
-            this.heal_inf.Name = "heal_inf";
-            this.heal_inf.Size = new System.Drawing.Size(104, 18);
-            this.heal_inf.TabIndex = 39;
-            this.heal_inf.Text = "Heal Infatuation";
-            this.heal_inf.UseVisualStyleBackColor = true;
-            this.heal_sleep.Location = new System.Drawing.Point(6, 40);
-            this.heal_sleep.Name = "heal_sleep";
-            this.heal_sleep.Size = new System.Drawing.Size(104, 18);
-            this.heal_sleep.TabIndex = 40;
-            this.heal_sleep.Text = "Heal Sleep";
-            this.heal_sleep.UseVisualStyleBackColor = true;
-            this.heal_poison.Location = new System.Drawing.Point(6, 58);
-            this.heal_poison.Name = "heal_poison";
-            this.heal_poison.Size = new System.Drawing.Size(104, 18);
-            this.heal_poison.TabIndex = 41;
-            this.heal_poison.Text = "Heal Poison";
-            this.heal_poison.UseVisualStyleBackColor = true;
-            this.heal_burn.Location = new System.Drawing.Point(6, 76);
-            this.heal_burn.Name = "heal_burn";
-            this.heal_burn.Size = new System.Drawing.Size(104, 18);
-            this.heal_burn.TabIndex = 42;
-            this.heal_burn.Text = "Heal Burn";
-            this.heal_burn.UseVisualStyleBackColor = true;
-            this.heal_ice.Location = new System.Drawing.Point(6, 93);
-            this.heal_ice.Name = "heal_ice";
-            this.heal_ice.Size = new System.Drawing.Size(104, 18);
-            this.heal_ice.TabIndex = 43;
-            this.heal_ice.Text = "Heal Ice";
-            this.heal_ice.UseVisualStyleBackColor = true;
-            this.heal_para.Location = new System.Drawing.Point(6, 111);
-            this.heal_para.Name = "heal_para";
-            this.heal_para.Size = new System.Drawing.Size(104, 18);
-            this.heal_para.TabIndex = 44;
-            this.heal_para.Text = "Heal Paralyze";
-            this.heal_para.UseVisualStyleBackColor = true;
-            this.heal_confu.Location = new System.Drawing.Point(6, 129);
-            this.heal_confu.Name = "heal_confu";
-            this.heal_confu.Size = new System.Drawing.Size(104, 18);
-            this.heal_confu.TabIndex = 45;
-            this.heal_confu.Text = "Heal Confusion";
-            this.heal_confu.UseVisualStyleBackColor = true;
-            this.guard.Location = new System.Drawing.Point(17, 141);
-            this.guard.Name = "guard";
-            this.guard.Size = new System.Drawing.Size(91, 16);
-            this.guard.TabIndex = 46;
-            this.guard.Text = "Guard-spec";
-            this.guard.UseVisualStyleBackColor = true;
-            this.lvlup.Location = new System.Drawing.Point(228, 226);
-            this.lvlup.Name = "lvlup";
-            this.lvlup.Size = new System.Drawing.Size(104, 16);
-            this.lvlup.TabIndex = 47;
-            this.lvlup.Text = "Level up";
-            this.lvlup.UseVisualStyleBackColor = true;
-            this.firstpoke.Location = new System.Drawing.Point(228, 191);
-            this.firstpoke.Name = "firstpoke";
-            this.firstpoke.Size = new System.Drawing.Size(95, 40);
-            this.firstpoke.TabIndex = 48;
-            this.firstpoke.Text = "Apply to first pokemon";
-            this.firstpoke.UseVisualStyleBackColor = true;
-            this.label15.Location = new System.Drawing.Point(17, 18);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 13);
-            this.label15.TabIndex = 49;
-            this.label15.Text = "Dire Hit";
-            this.label16.Location = new System.Drawing.Point(17, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 13);
-            this.label16.TabIndex = 50;
-            this.label16.Text = "Atk Up";
-            this.label17.Location = new System.Drawing.Point(17, 60);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(100, 13);
-            this.label17.TabIndex = 51;
-            this.label17.Text = "Def Up";
-            this.label18.Location = new System.Drawing.Point(17, 81);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(100, 13);
-            this.label18.TabIndex = 52;
-            this.label18.Text = "Speed Up";
-            this.label19.Location = new System.Drawing.Point(17, 102);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(100, 13);
-            this.label19.TabIndex = 53;
-            this.label19.Text = "SP Atk Up";
-            this.label20.Location = new System.Drawing.Point(17, 123);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(100, 13);
-            this.label20.TabIndex = 54;
-            this.label20.Text = "Accur. Up";
-            this.direhit.Location = new System.Drawing.Point(78, 16);
-            this.direhit.Maximum = new decimal(new int[4] { 3, 0, 0, 0 });
-            this.direhit.Name = "direhit";
-            this.direhit.Size = new System.Drawing.Size(39, 20);
-            this.direhit.TabIndex = 56;
-            this.atkup.Location = new System.Drawing.Point(78, 37);
-            this.atkup.Maximum = new decimal(new int[4] { 15, 0, 0, 0 });
-            this.atkup.Name = "atkup";
-            this.atkup.Size = new System.Drawing.Size(39, 20);
-            this.atkup.TabIndex = 57;
-            this.defup.Location = new System.Drawing.Point(78, 58);
-            this.defup.Maximum = new decimal(new int[4] { 15, 0, 0, 0 });
-            this.defup.Name = "defup";
-            this.defup.Size = new System.Drawing.Size(39, 20);
-            this.defup.TabIndex = 58;
-            this.speedup.Location = new System.Drawing.Point(78, 79);
-            this.speedup.Maximum = new decimal(new int[4] { 15, 0, 0, 0 });
-            this.speedup.Name = "speedup";
-            this.speedup.Size = new System.Drawing.Size(39, 20);
-            this.speedup.TabIndex = 59;
-            this.spatkup.Location = new System.Drawing.Point(78, 100);
-            this.spatkup.Maximum = new decimal(new int[4] { 15, 0, 0, 0 });
-            this.spatkup.Name = "spatkup";
-            this.spatkup.Size = new System.Drawing.Size(39, 20);
-            this.spatkup.TabIndex = 60;
-            this.accurup.Location = new System.Drawing.Point(78, 121);
-            this.accurup.Maximum = new decimal(new int[4] { 15, 0, 0, 0 });
-            this.accurup.Name = "accurup";
-            this.accurup.Size = new System.Drawing.Size(39, 20);
-            this.accurup.TabIndex = 61;
-            this.ev_hp.Location = new System.Drawing.Point(13, 17);
-            this.ev_hp.Name = "ev_hp";
-            this.ev_hp.Size = new System.Drawing.Size(65, 18);
-            this.ev_hp.TabIndex = 62;
-            this.ev_hp.Text = "HP";
-            this.ev_hp.UseVisualStyleBackColor = true;
-            this.ev_atk.Location = new System.Drawing.Point(13, 38);
-            this.ev_atk.Name = "ev_atk";
-            this.ev_atk.Size = new System.Drawing.Size(65, 18);
-            this.ev_atk.TabIndex = 63;
-            this.ev_atk.Text = "Attack";
-            this.ev_atk.UseVisualStyleBackColor = true;
-            this.ev_def.Location = new System.Drawing.Point(13, 56);
-            this.ev_def.Name = "ev_def";
-            this.ev_def.Size = new System.Drawing.Size(75, 18);
-            this.ev_def.TabIndex = 65;
-            this.ev_def.Text = "Defense";
-            this.ev_def.UseVisualStyleBackColor = true;
-            this.ev_speed.Location = new System.Drawing.Point(13, 74);
-            this.ev_speed.Name = "ev_speed";
-            this.ev_speed.Size = new System.Drawing.Size(75, 18);
-            this.ev_speed.TabIndex = 66;
-            this.ev_speed.Text = "Speed";
-            this.ev_speed.UseVisualStyleBackColor = true;
-            this.ev_speatk.Location = new System.Drawing.Point(13, 91);
-            this.ev_speatk.Name = "ev_speatk";
-            this.ev_speatk.Size = new System.Drawing.Size(75, 18);
-            this.ev_speatk.TabIndex = 67;
-            this.ev_speatk.Text = "SPE Atk";
-            this.ev_speatk.UseVisualStyleBackColor = true;
-            this.ev_spedef.Location = new System.Drawing.Point(13, 109);
-            this.ev_spedef.Name = "ev_spedef";
-            this.ev_spedef.Size = new System.Drawing.Size(75, 18);
-            this.ev_spedef.TabIndex = 68;
-            this.ev_spedef.Text = "SPE Def";
-            this.ev_spedef.UseVisualStyleBackColor = true;
-            this.tr6_val.Location = new System.Drawing.Point(401, 207);
-            this.tr6_val.Maximum = new decimal(new int[4] { 127, 0, 0, 0 });
-            this.tr6_val.Name = "tr6_val";
-            this.tr6_val.Size = new System.Drawing.Size(54, 20);
-            this.tr6_val.TabIndex = 69;
-            this.heal_hp.Location = new System.Drawing.Point(6, 21);
-            this.heal_hp.Name = "heal_hp";
-            this.heal_hp.Size = new System.Drawing.Size(104, 18);
-            this.heal_hp.TabIndex = 70;
-            this.heal_hp.Text = "Heal HP";
-            this.heal_hp.UseVisualStyleBackColor = true;
-            this.heal_pp.Location = new System.Drawing.Point(6, 39);
-            this.heal_pp.Name = "heal_pp";
-            this.heal_pp.Size = new System.Drawing.Size(104, 18);
-            this.heal_pp.TabIndex = 71;
-            this.heal_pp.Text = "Heal PP";
-            this.heal_pp.UseVisualStyleBackColor = true;
-            this.selectedatk.Location = new System.Drawing.Point(6, 57);
-            this.selectedatk.Name = "selectedatk";
-            this.selectedatk.Size = new System.Drawing.Size(139, 18);
-            this.selectedatk.TabIndex = 73;
-            this.selectedatk.Text = "Only to selected attack";
-            this.selectedatk.UseVisualStyleBackColor = true;
-            this.maxppUP.Location = new System.Drawing.Point(6, 78);
-            this.maxppUP.Name = "maxppUP";
-            this.maxppUP.Size = new System.Drawing.Size(109, 18);
-            this.maxppUP.TabIndex = 74;
-            this.maxppUP.Text = "Increase Max PP";
-            this.maxppUP.UseVisualStyleBackColor = true;
-            this.revive.Location = new System.Drawing.Point(6, 95);
-            this.revive.Name = "revive";
-            this.revive.Size = new System.Drawing.Size(104, 18);
-            this.revive.TabIndex = 75;
-            this.revive.Text = "Revive and heal";
-            this.revive.UseVisualStyleBackColor = true;
-            this.stone.Location = new System.Drawing.Point(6, 142);
-            this.stone.Name = "stone";
-            this.stone.Size = new System.Drawing.Size(104, 18);
-            this.stone.TabIndex = 76;
-            this.stone.Text = "Evolution stone";
-            this.stone.UseVisualStyleBackColor = true;
-            this.happy200.Location = new System.Drawing.Point(12, 16);
-            this.happy200.Name = "happy200";
-            this.happy200.Size = new System.Drawing.Size(104, 18);
-            this.happy200.TabIndex = 77;
-            this.happy200.Text = "Friendship >200";
-            this.happy200.UseVisualStyleBackColor = true;
-            this.happy100.Location = new System.Drawing.Point(12, 42);
-            this.happy100.Name = "happy100";
-            this.happy100.Size = new System.Drawing.Size(104, 18);
-            this.happy100.TabIndex = 78;
-            this.happy100.Text = "Friendship >100";
-            this.happy100.UseVisualStyleBackColor = true;
-            this.happy0.Location = new System.Drawing.Point(12, 68);
-            this.happy0.Name = "happy0";
-            this.happy0.Size = new System.Drawing.Size(109, 18);
-            this.happy0.TabIndex = 79;
-            this.happy0.Text = "Friendship < 100";
-            this.happy0.UseVisualStyleBackColor = true;
-            this.hap200.Location = new System.Drawing.Point(117, 16);
-            this.hap200.Maximum = new decimal(new int[4] { 127, 0, 0, 0 });
-            this.hap200.Name = "hap200";
-            this.hap200.Size = new System.Drawing.Size(57, 20);
-            this.hap200.TabIndex = 80;
-            this.hap100.Location = new System.Drawing.Point(117, 42);
-            this.hap100.Maximum = new decimal(new int[4] { 127, 0, 0, 0 });
-            this.hap100.Name = "hap100";
-            this.hap100.Size = new System.Drawing.Size(57, 20);
-            this.hap100.TabIndex = 81;
-            this.happ0.Location = new System.Drawing.Point(117, 68);
-            this.happ0.Maximum = new decimal(new int[4] { 127, 0, 0, 0 });
-            this.happ0.Name = "happ0";
-            this.happ0.Size = new System.Drawing.Size(57, 20);
-            this.happ0.TabIndex = 82;
-            this.ppup.Location = new System.Drawing.Point(6, 111);
-            this.ppup.Name = "ppup";
-            this.ppup.Size = new System.Drawing.Size(124, 30);
-            this.ppup.TabIndex = 83;
-            this.ppup.Text = "Increase PP to max on selected attack";
-            this.ppup.UseVisualStyleBackColor = true;
-            this.groupBox1.Controls.Add(this.lvlup);
-            this.groupBox1.Controls.Add(this.groupBox6);
-            this.groupBox1.Controls.Add(this.groupBox5);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.note);
-            this.groupBox1.Controls.Add(this.modifier_help);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.tr6_val);
-            this.groupBox1.Controls.Add(this.firstpoke);
-            this.groupBox1.Location = new System.Drawing.Point(372, 53);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(525, 283);
-            this.groupBox1.TabIndex = 84;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Usage by trainer:";
-            this.groupBox6.Controls.Add(this.pphelp);
-            this.groupBox6.Controls.Add(this.ppup);
-            this.groupBox6.Controls.Add(this.stone);
-            this.groupBox6.Controls.Add(this.revive);
-            this.groupBox6.Controls.Add(this.maxppUP);
-            this.groupBox6.Controls.Add(this.heal_pp);
-            this.groupBox6.Controls.Add(this.heal_hp);
-            this.groupBox6.Controls.Add(this.selectedatk);
-            this.groupBox6.Location = new System.Drawing.Point(370, 16);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(144, 168);
-            this.groupBox6.TabIndex = 92;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "HP/PP";
-            this.pphelp.Location = new System.Drawing.Point(113, 13);
-            this.pphelp.Name = "pphelp";
-            this.pphelp.Size = new System.Drawing.Size(25, 21);
-            this.pphelp.TabIndex = 85;
-            this.pphelp.Text = "?";
-            this.pphelp.UseVisualStyleBackColor = true;
-            this.pphelp.Click += new System.EventHandler(PphelpClick);
-            this.groupBox5.Controls.Add(this.happ0);
-            this.groupBox5.Controls.Add(this.hap100);
-            this.groupBox5.Controls.Add(this.hap200);
-            this.groupBox5.Controls.Add(this.happy0);
-            this.groupBox5.Controls.Add(this.happy100);
-            this.groupBox5.Controls.Add(this.happy200);
-            this.groupBox5.Location = new System.Drawing.Point(6, 180);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(199, 96);
-            this.groupBox5.TabIndex = 91;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Friendship";
-            this.groupBox4.Controls.Add(this.heal_confu);
-            this.groupBox4.Controls.Add(this.heal_para);
-            this.groupBox4.Controls.Add(this.heal_ice);
-            this.groupBox4.Controls.Add(this.heal_burn);
-            this.groupBox4.Controls.Add(this.heal_poison);
-            this.groupBox4.Controls.Add(this.heal_sleep);
-            this.groupBox4.Controls.Add(this.heal_inf);
-            this.groupBox4.Location = new System.Drawing.Point(6, 19);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(121, 162);
-            this.groupBox4.TabIndex = 90;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Status";
-            this.groupBox3.Controls.Add(this.accurup);
-            this.groupBox3.Controls.Add(this.spatkup);
-            this.groupBox3.Controls.Add(this.speedup);
-            this.groupBox3.Controls.Add(this.defup);
-            this.groupBox3.Controls.Add(this.atkup);
-            this.groupBox3.Controls.Add(this.direhit);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.guard);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Location = new System.Drawing.Point(133, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(132, 162);
-            this.groupBox3.TabIndex = 89;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Battle";
-            this.groupBox2.Controls.Add(this.ev_spedef);
-            this.groupBox2.Controls.Add(this.ev_speatk);
-            this.groupBox2.Controls.Add(this.ev_speed);
-            this.groupBox2.Controls.Add(this.ev_def);
-            this.groupBox2.Controls.Add(this.ev_atk);
-            this.groupBox2.Controls.Add(this.ev_hp);
-            this.groupBox2.Location = new System.Drawing.Point(271, 20);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(93, 133);
-            this.groupBox2.TabIndex = 88;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "EV";
-            this.note.Location = new System.Drawing.Point(301, 248);
-            this.note.Name = "note";
-            this.note.Size = new System.Drawing.Size(75, 23);
-            this.note.TabIndex = 87;
-            this.note.Text = "Note";
-            this.note.UseVisualStyleBackColor = true;
-            this.note.Click += new System.EventHandler(NoteClick);
-            this.modifier_help.Location = new System.Drawing.Point(461, 206);
-            this.modifier_help.Name = "modifier_help";
-            this.modifier_help.Size = new System.Drawing.Size(25, 21);
-            this.modifier_help.TabIndex = 86;
-            this.modifier_help.Text = "?";
-            this.modifier_help.UseVisualStyleBackColor = true;
-            this.modifier_help.Click += new System.EventHandler(Modifier_helpClick);
-            this.label14.Location = new System.Drawing.Point(395, 187);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(105, 20);
-            this.label14.TabIndex = 84;
-            this.label14.Text = "HP/PP/EV modifier:";
-            this.AllowDrop = true;
-            base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            base.ClientSize = new System.Drawing.Size(901, 342);
-            base.Controls.Add(this.groupBox1);
-            base.Controls.Add(this.jap_encoding);
-            base.Controls.Add(this.sprite_help);
-            base.Controls.Add(this.palette_import_but);
-            base.Controls.Add(this.palette_export_but);
-            base.Controls.Add(this.sprite_import_but);
-            base.Controls.Add(this.sprite_export_but);
-            base.Controls.Add(this.held_help);
-            base.Controls.Add(this.held);
-            base.Controls.Add(this.label13);
-            base.Controls.Add(this.desc2);
-            base.Controls.Add(this.desc1);
-            base.Controls.Add(this.label12);
-            base.Controls.Add(this.smooth);
-            base.Controls.Add(this.sour);
-            base.Controls.Add(this.bitter);
-            base.Controls.Add(this.sweet);
-            base.Controls.Add(this.dry);
-            base.Controls.Add(this.spicy);
-            base.Controls.Add(this.label11);
-            base.Controls.Add(this.label10);
-            base.Controls.Add(this.label9);
-            base.Controls.Add(this.label8);
-            base.Controls.Add(this.label7);
-            base.Controls.Add(this.growth);
-            base.Controls.Add(this.label6);
-            base.Controls.Add(this.yield_min);
-            base.Controls.Add(this.yield_max);
-            base.Controls.Add(this.label5);
-            base.Controls.Add(this.label4);
-            base.Controls.Add(this.label3);
-            base.Controls.Add(this.size);
-            base.Controls.Add(this.label2);
-            base.Controls.Add(this.firm_box);
-            base.Controls.Add(this.name);
-            base.Controls.Add(this.label1);
-            base.Controls.Add(this.ecb_path);
-            base.Controls.Add(this.save_ecb_but);
-            base.Controls.Add(this.load_ecb_but);
-            base.Name = "ECB_editor";
-            this.Text = "ECB Editor";
-            base.DragDrop += new System.Windows.Forms.DragEventHandler(ECB_editorDragDrop);
-            base.DragEnter += new System.Windows.Forms.DragEventHandler(ECB_editorDragEnter);
-            ((System.ComponentModel.ISupportInitialize)this.size).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.yield_max).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.yield_min).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.growth).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.spicy).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.dry).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.sweet).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.bitter).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.sour).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.smooth).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.held).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.direhit).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.atkup).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.defup).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.speedup).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.spatkup).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.accurup).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.tr6_val).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.hap200).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.hap100).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.happ0).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            base.ResumeLayout(false);
-            base.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ECB_editor));
+            load_ecb_but = new Button();
+            save_ecb_but = new Button();
+            ecb_path = new TextBox();
+            label1 = new Label();
+            name = new TextBox();
+            firm_box = new ComboBox();
+            label2 = new Label();
+            size = new NumericUpDown();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            yield_max = new NumericUpDown();
+            yield_min = new NumericUpDown();
+            label6 = new Label();
+            growth = new NumericUpDown();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            spicy = new NumericUpDown();
+            dry = new NumericUpDown();
+            sweet = new NumericUpDown();
+            bitter = new NumericUpDown();
+            sour = new NumericUpDown();
+            smooth = new NumericUpDown();
+            label12 = new Label();
+            desc1 = new TextBox();
+            desc2 = new TextBox();
+            label13 = new Label();
+            held = new NumericUpDown();
+            held_help = new Button();
+            sprite_export_but = new Button();
+            sprite_import_but = new Button();
+            palette_export_but = new Button();
+            palette_import_but = new Button();
+            sprite_help = new Button();
+            jap_encoding = new CheckBox();
+            heal_inf = new CheckBox();
+            heal_sleep = new CheckBox();
+            heal_poison = new CheckBox();
+            heal_burn = new CheckBox();
+            heal_ice = new CheckBox();
+            heal_para = new CheckBox();
+            heal_confu = new CheckBox();
+            guard = new CheckBox();
+            lvlup = new CheckBox();
+            firstpoke = new CheckBox();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            label19 = new Label();
+            label20 = new Label();
+            direhit = new NumericUpDown();
+            atkup = new NumericUpDown();
+            defup = new NumericUpDown();
+            speedup = new NumericUpDown();
+            spatkup = new NumericUpDown();
+            accurup = new NumericUpDown();
+            ev_hp = new CheckBox();
+            ev_atk = new CheckBox();
+            ev_def = new CheckBox();
+            ev_speed = new CheckBox();
+            ev_speatk = new CheckBox();
+            ev_spedef = new CheckBox();
+            tr6_val = new NumericUpDown();
+            heal_hp = new CheckBox();
+            heal_pp = new CheckBox();
+            selectedatk = new CheckBox();
+            maxppUP = new CheckBox();
+            revive = new CheckBox();
+            stone = new CheckBox();
+            happy200 = new CheckBox();
+            happy100 = new CheckBox();
+            happy0 = new CheckBox();
+            hap200 = new NumericUpDown();
+            hap100 = new NumericUpDown();
+            happ0 = new NumericUpDown();
+            ppup = new CheckBox();
+            groupBox1 = new GroupBox();
+            groupBox6 = new GroupBox();
+            pphelp = new Button();
+            groupBox5 = new GroupBox();
+            groupBox4 = new GroupBox();
+            groupBox3 = new GroupBox();
+            groupBox2 = new GroupBox();
+            note = new Button();
+            modifier_help = new Button();
+            label14 = new Label();
+            ((System.ComponentModel.ISupportInitialize)size).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)yield_max).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)yield_min).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)growth).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)spicy).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dry).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)sweet).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bitter).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)sour).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)smooth).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)held).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)direhit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)atkup).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)defup).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)speedup).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)spatkup).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)accurup).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tr6_val).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hap200).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hap100).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)happ0).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox4.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
+            // 
+            // load_ecb_but
+            // 
+            load_ecb_but.Location = new Point(12, 13);
+            load_ecb_but.Margin = new Padding(4);
+            load_ecb_but.Name = "load_ecb_but";
+            load_ecb_but.Size = new Size(176, 28);
+            load_ecb_but.TabIndex = 0;
+            load_ecb_but.Text = "读取e卡树果文件";
+            load_ecb_but.UseVisualStyleBackColor = true;
+            load_ecb_but.Click += Load_ecb_butClick;
+            // 
+            // save_ecb_but
+            // 
+            save_ecb_but.Enabled = false;
+            save_ecb_but.Location = new Point(12, 49);
+            save_ecb_but.Margin = new Padding(4);
+            save_ecb_but.Name = "save_ecb_but";
+            save_ecb_but.Size = new Size(176, 28);
+            save_ecb_but.TabIndex = 1;
+            save_ecb_but.Text = "保存e卡树果文件";
+            save_ecb_but.UseVisualStyleBackColor = true;
+            save_ecb_but.Click += Save_ecb_butClick;
+            // 
+            // ecb_path
+            // 
+            ecb_path.Location = new Point(196, 49);
+            ecb_path.Margin = new Padding(4);
+            ecb_path.Multiline = true;
+            ecb_path.Name = "ecb_path";
+            ecb_path.Size = new Size(674, 28);
+            ecb_path.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.Location = new Point(13, 117);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(133, 20);
+            label1.TabIndex = 3;
+            label1.Text = "名字：";
+            // 
+            // name
+            // 
+            name.Location = new Point(121, 111);
+            name.Margin = new Padding(4);
+            name.MaxLength = 6;
+            name.Name = "name";
+            name.Size = new Size(335, 25);
+            name.TabIndex = 4;
+            // 
+            // firm_box
+            // 
+            firm_box.FormattingEnabled = true;
+            firm_box.Items.AddRange(new object[] { "很柔软", "柔软", "坚硬", "很坚硬", "非常坚硬" });
+            firm_box.Location = new Point(121, 214);
+            firm_box.Margin = new Padding(4);
+            firm_box.Name = "firm_box";
+            firm_box.Size = new Size(159, 23);
+            firm_box.TabIndex = 5;
+            // 
+            // label2
+            // 
+            label2.Location = new Point(13, 218);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(85, 22);
+            label2.TabIndex = 6;
+            label2.Text = "硬度：";
+            // 
+            // size
+            // 
+            size.Location = new Point(121, 246);
+            size.Margin = new Padding(4);
+            size.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
+            size.Name = "size";
+            size.Size = new Size(160, 25);
+            size.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.Location = new Point(13, 249);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 22);
+            label3.TabIndex = 8;
+            label3.Text = "尺寸：";
+            // 
+            // label4
+            // 
+            label4.Location = new Point(13, 281);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(115, 28);
+            label4.TabIndex = 9;
+            label4.Text = "最大产量：";
+            // 
+            // label5
+            // 
+            label5.Location = new Point(13, 314);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(133, 28);
+            label5.TabIndex = 10;
+            label5.Text = "最小产量:";
+            // 
+            // yield_max
+            // 
+            yield_max.Location = new Point(121, 279);
+            yield_max.Margin = new Padding(4);
+            yield_max.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            yield_max.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            yield_max.Name = "yield_max";
+            yield_max.Size = new Size(160, 25);
+            yield_max.TabIndex = 11;
+            yield_max.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // yield_min
+            // 
+            yield_min.Location = new Point(121, 311);
+            yield_min.Margin = new Padding(4);
+            yield_min.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            yield_min.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            yield_min.Name = "yield_min";
+            yield_min.Size = new Size(160, 25);
+            yield_min.TabIndex = 12;
+            yield_min.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // label6
+            // 
+            label6.Location = new Point(13, 342);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(100, 43);
+            label6.TabIndex = 13;
+            label6.Text = "每阶段生长所需小时：";
+            // 
+            // growth
+            // 
+            growth.Location = new Point(121, 344);
+            growth.Margin = new Padding(4);
+            growth.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            growth.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            growth.Name = "growth";
+            growth.Size = new Size(160, 25);
+            growth.TabIndex = 14;
+            growth.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // label7
+            // 
+            label7.Location = new Point(289, 218);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(133, 28);
+            label7.TabIndex = 15;
+            label7.Text = "辣：";
+            // 
+            // label8
+            // 
+            label8.Location = new Point(289, 249);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(133, 28);
+            label8.TabIndex = 16;
+            label8.Text = "涩：";
+            // 
+            // label9
+            // 
+            label9.Location = new Point(289, 281);
+            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(133, 28);
+            label9.TabIndex = 17;
+            label9.Text = "甜：";
+            // 
+            // label10
+            // 
+            label10.Location = new Point(289, 314);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(133, 28);
+            label10.TabIndex = 18;
+            label10.Text = "苦：";
+            // 
+            // label11
+            // 
+            label11.Location = new Point(289, 346);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(133, 28);
+            label11.TabIndex = 19;
+            label11.Text = "酸：";
+            // 
+            // spicy
+            // 
+            spicy.Location = new Point(381, 215);
+            spicy.Margin = new Padding(4);
+            spicy.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            spicy.Name = "spicy";
+            spicy.Size = new Size(104, 25);
+            spicy.TabIndex = 20;
+            // 
+            // dry
+            // 
+            dry.Location = new Point(381, 246);
+            dry.Margin = new Padding(4);
+            dry.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            dry.Name = "dry";
+            dry.Size = new Size(104, 25);
+            dry.TabIndex = 21;
+            // 
+            // sweet
+            // 
+            sweet.Location = new Point(381, 279);
+            sweet.Margin = new Padding(4);
+            sweet.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            sweet.Name = "sweet";
+            sweet.Size = new Size(104, 25);
+            sweet.TabIndex = 22;
+            // 
+            // bitter
+            // 
+            bitter.Location = new Point(381, 311);
+            bitter.Margin = new Padding(4);
+            bitter.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            bitter.Name = "bitter";
+            bitter.Size = new Size(104, 25);
+            bitter.TabIndex = 23;
+            // 
+            // sour
+            // 
+            sour.Location = new Point(381, 344);
+            sour.Margin = new Padding(4);
+            sour.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            sour.Name = "sour";
+            sour.Size = new Size(104, 25);
+            sour.TabIndex = 24;
+            // 
+            // smooth
+            // 
+            smooth.Location = new Point(381, 376);
+            smooth.Margin = new Padding(4);
+            smooth.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            smooth.Name = "smooth";
+            smooth.Size = new Size(104, 25);
+            smooth.TabIndex = 25;
+            // 
+            // label12
+            // 
+            label12.Location = new Point(289, 378);
+            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(84, 28);
+            label12.TabIndex = 26;
+            label12.Text = "细腻度：";
+            // 
+            // desc1
+            // 
+            desc1.Location = new Point(53, 143);
+            desc1.Margin = new Padding(4);
+            desc1.MaxLength = 44;
+            desc1.Name = "desc1";
+            desc1.Size = new Size(403, 25);
+            desc1.TabIndex = 27;
+            // 
+            // desc2
+            // 
+            desc2.Location = new Point(53, 175);
+            desc2.Margin = new Padding(4);
+            desc2.MaxLength = 44;
+            desc2.Name = "desc2";
+            desc2.Size = new Size(403, 25);
+            desc2.TabIndex = 28;
+            // 
+            // label13
+            // 
+            label13.Location = new Point(12, 381);
+            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(136, 22);
+            label13.TabIndex = 29;
+            label13.Text = "携带时使用";
+            // 
+            // held
+            // 
+            held.Location = new Point(156, 379);
+            held.Margin = new Padding(4);
+            held.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            held.Name = "held";
+            held.Size = new Size(79, 25);
+            held.TabIndex = 30;
+            // 
+            // held_help
+            // 
+            held_help.Location = new Point(243, 379);
+            held_help.Margin = new Padding(4);
+            held_help.Name = "held_help";
+            held_help.Size = new Size(20, 25);
+            held_help.TabIndex = 31;
+            held_help.Text = "?";
+            held_help.UseVisualStyleBackColor = true;
+            held_help.Click += Held_helpClick;
+            // 
+            // sprite_export_but
+            // 
+            sprite_export_but.Enabled = false;
+            sprite_export_but.Location = new Point(880, 49);
+            sprite_export_but.Margin = new Padding(4);
+            sprite_export_but.Name = "sprite_export_but";
+            sprite_export_but.Size = new Size(114, 28);
+            sprite_export_but.TabIndex = 33;
+            sprite_export_but.Text = "导出sprite";
+            sprite_export_but.UseVisualStyleBackColor = true;
+            sprite_export_but.Click += Sprite_export_butClick;
+            // 
+            // sprite_import_but
+            // 
+            sprite_import_but.Enabled = false;
+            sprite_import_but.Location = new Point(1002, 49);
+            sprite_import_but.Margin = new Padding(4);
+            sprite_import_but.Name = "sprite_import_but";
+            sprite_import_but.Size = new Size(115, 28);
+            sprite_import_but.TabIndex = 34;
+            sprite_import_but.Text = "导入sprite";
+            sprite_import_but.UseVisualStyleBackColor = true;
+            sprite_import_but.Click += Sprite_import_butClick;
+            // 
+            // palette_export_but
+            // 
+            palette_export_but.Enabled = false;
+            palette_export_but.Location = new Point(632, 13);
+            palette_export_but.Margin = new Padding(4);
+            palette_export_but.Name = "palette_export_but";
+            palette_export_but.Size = new Size(115, 28);
+            palette_export_but.TabIndex = 35;
+            palette_export_but.Text = "导出调色盘";
+            palette_export_but.UseVisualStyleBackColor = true;
+            palette_export_but.Visible = false;
+            palette_export_but.Click += Palette_export_butClick;
+            // 
+            // palette_import_but
+            // 
+            palette_import_but.Enabled = false;
+            palette_import_but.Location = new Point(755, 13);
+            palette_import_but.Margin = new Padding(4);
+            palette_import_but.Name = "palette_import_but";
+            palette_import_but.Size = new Size(115, 28);
+            palette_import_but.TabIndex = 36;
+            palette_import_but.Text = "导入调色盘";
+            palette_import_but.UseVisualStyleBackColor = true;
+            palette_import_but.Visible = false;
+            palette_import_but.Click += Palette_import_butClick;
+            // 
+            // sprite_help
+            // 
+            sprite_help.Location = new Point(1125, 49);
+            sprite_help.Margin = new Padding(4);
+            sprite_help.Name = "sprite_help";
+            sprite_help.Size = new Size(34, 27);
+            sprite_help.TabIndex = 37;
+            sprite_help.Text = "?";
+            sprite_help.UseVisualStyleBackColor = true;
+            sprite_help.Click += Sprite_helpClick;
+            // 
+            // jap_encoding
+            // 
+            jap_encoding.Location = new Point(121, 83);
+            jap_encoding.Margin = new Padding(4);
+            jap_encoding.Name = "jap_encoding";
+            jap_encoding.Size = new Size(179, 28);
+            jap_encoding.TabIndex = 38;
+            jap_encoding.Text = "日文解码";
+            jap_encoding.UseVisualStyleBackColor = true;
+            jap_encoding.CheckedChanged += Jap_encodingCheckedChanged;
+            // 
+            // heal_inf
+            // 
+            heal_inf.Location = new Point(8, 24);
+            heal_inf.Margin = new Padding(4);
+            heal_inf.Name = "heal_inf";
+            heal_inf.Size = new Size(139, 22);
+            heal_inf.TabIndex = 39;
+            heal_inf.Text = "治愈着迷";
+            heal_inf.UseVisualStyleBackColor = true;
+            // 
+            // heal_sleep
+            // 
+            heal_sleep.Location = new Point(8, 50);
+            heal_sleep.Margin = new Padding(4);
+            heal_sleep.Name = "heal_sleep";
+            heal_sleep.Size = new Size(139, 22);
+            heal_sleep.TabIndex = 40;
+            heal_sleep.Text = "治愈睡眠";
+            heal_sleep.UseVisualStyleBackColor = true;
+            // 
+            // heal_poison
+            // 
+            heal_poison.Location = new Point(8, 73);
+            heal_poison.Margin = new Padding(4);
+            heal_poison.Name = "heal_poison";
+            heal_poison.Size = new Size(139, 22);
+            heal_poison.TabIndex = 41;
+            heal_poison.Text = "治愈中毒";
+            heal_poison.UseVisualStyleBackColor = true;
+            // 
+            // heal_burn
+            // 
+            heal_burn.Location = new Point(8, 95);
+            heal_burn.Margin = new Padding(4);
+            heal_burn.Name = "heal_burn";
+            heal_burn.Size = new Size(139, 22);
+            heal_burn.TabIndex = 42;
+            heal_burn.Text = "治愈灼伤";
+            heal_burn.UseVisualStyleBackColor = true;
+            // 
+            // heal_ice
+            // 
+            heal_ice.Location = new Point(8, 116);
+            heal_ice.Margin = new Padding(4);
+            heal_ice.Name = "heal_ice";
+            heal_ice.Size = new Size(139, 22);
+            heal_ice.TabIndex = 43;
+            heal_ice.Text = "治愈冰冻";
+            heal_ice.UseVisualStyleBackColor = true;
+            // 
+            // heal_para
+            // 
+            heal_para.Location = new Point(8, 139);
+            heal_para.Margin = new Padding(4);
+            heal_para.Name = "heal_para";
+            heal_para.Size = new Size(139, 22);
+            heal_para.TabIndex = 44;
+            heal_para.Text = "治愈麻痹";
+            heal_para.UseVisualStyleBackColor = true;
+            // 
+            // heal_confu
+            // 
+            heal_confu.Location = new Point(8, 161);
+            heal_confu.Margin = new Padding(4);
+            heal_confu.Name = "heal_confu";
+            heal_confu.Size = new Size(139, 22);
+            heal_confu.TabIndex = 45;
+            heal_confu.Text = "治愈混乱";
+            heal_confu.UseVisualStyleBackColor = true;
+            // 
+            // guard
+            // 
+            guard.Location = new Point(8, 179);
+            guard.Margin = new Padding(4);
+            guard.Name = "guard";
+            guard.Size = new Size(121, 20);
+            guard.TabIndex = 46;
+            guard.Text = "能力防守";
+            guard.UseVisualStyleBackColor = true;
+            // 
+            // lvlup
+            // 
+            lvlup.Location = new Point(281, 266);
+            lvlup.Margin = new Padding(4);
+            lvlup.Name = "lvlup";
+            lvlup.Size = new Size(117, 26);
+            lvlup.TabIndex = 47;
+            lvlup.Text = "等级提升";
+            lvlup.UseVisualStyleBackColor = true;
+            // 
+            // firstpoke
+            // 
+            firstpoke.Location = new Point(281, 227);
+            firstpoke.Margin = new Padding(4);
+            firstpoke.Name = "firstpoke";
+            firstpoke.Size = new Size(161, 46);
+            firstpoke.TabIndex = 48;
+            firstpoke.Text = "对首位宝可梦应用";
+            firstpoke.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            label15.Location = new Point(23, 22);
+            label15.Margin = new Padding(4, 0, 4, 0);
+            label15.Name = "label15";
+            label15.Size = new Size(73, 16);
+            label15.TabIndex = 49;
+            label15.Text = "要害攻击";
+            // 
+            // label16
+            // 
+            label16.Location = new Point(23, 49);
+            label16.Margin = new Padding(4, 0, 4, 0);
+            label16.Name = "label16";
+            label16.Size = new Size(133, 16);
+            label16.TabIndex = 50;
+            label16.Text = "攻击强化";
+            // 
+            // label17
+            // 
+            label17.Location = new Point(23, 75);
+            label17.Margin = new Padding(4, 0, 4, 0);
+            label17.Name = "label17";
+            label17.Size = new Size(133, 16);
+            label17.TabIndex = 51;
+            label17.Text = "防御强化";
+            // 
+            // label18
+            // 
+            label18.Location = new Point(23, 101);
+            label18.Margin = new Padding(4, 0, 4, 0);
+            label18.Name = "label18";
+            label18.Size = new Size(133, 16);
+            label18.TabIndex = 52;
+            label18.Text = "速度强化";
+            // 
+            // label19
+            // 
+            label19.Location = new Point(23, 128);
+            label19.Margin = new Padding(4, 0, 4, 0);
+            label19.Name = "label19";
+            label19.Size = new Size(133, 16);
+            label19.TabIndex = 53;
+            label19.Text = "特攻强化";
+            // 
+            // label20
+            // 
+            label20.Location = new Point(23, 154);
+            label20.Margin = new Padding(4, 0, 4, 0);
+            label20.Name = "label20";
+            label20.Size = new Size(133, 16);
+            label20.TabIndex = 54;
+            label20.Text = "命中强化";
+            // 
+            // direhit
+            // 
+            direhit.Location = new Point(104, 20);
+            direhit.Margin = new Padding(4);
+            direhit.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
+            direhit.Name = "direhit";
+            direhit.Size = new Size(52, 25);
+            direhit.TabIndex = 56;
+            // 
+            // atkup
+            // 
+            atkup.Location = new Point(104, 46);
+            atkup.Margin = new Padding(4);
+            atkup.Maximum = new decimal(new int[] { 15, 0, 0, 0 });
+            atkup.Name = "atkup";
+            atkup.Size = new Size(52, 25);
+            atkup.TabIndex = 57;
+            // 
+            // defup
+            // 
+            defup.Location = new Point(104, 73);
+            defup.Margin = new Padding(4);
+            defup.Maximum = new decimal(new int[] { 15, 0, 0, 0 });
+            defup.Name = "defup";
+            defup.Size = new Size(52, 25);
+            defup.TabIndex = 58;
+            // 
+            // speedup
+            // 
+            speedup.Location = new Point(104, 99);
+            speedup.Margin = new Padding(4);
+            speedup.Maximum = new decimal(new int[] { 15, 0, 0, 0 });
+            speedup.Name = "speedup";
+            speedup.Size = new Size(52, 25);
+            speedup.TabIndex = 59;
+            // 
+            // spatkup
+            // 
+            spatkup.Location = new Point(104, 125);
+            spatkup.Margin = new Padding(4);
+            spatkup.Maximum = new decimal(new int[] { 15, 0, 0, 0 });
+            spatkup.Name = "spatkup";
+            spatkup.Size = new Size(52, 25);
+            spatkup.TabIndex = 60;
+            // 
+            // accurup
+            // 
+            accurup.Location = new Point(104, 152);
+            accurup.Margin = new Padding(4);
+            accurup.Maximum = new decimal(new int[] { 15, 0, 0, 0 });
+            accurup.Name = "accurup";
+            accurup.Size = new Size(52, 25);
+            accurup.TabIndex = 61;
+            // 
+            // ev_hp
+            // 
+            ev_hp.Location = new Point(17, 21);
+            ev_hp.Margin = new Padding(4);
+            ev_hp.Name = "ev_hp";
+            ev_hp.Size = new Size(87, 22);
+            ev_hp.TabIndex = 62;
+            ev_hp.Text = "HP";
+            ev_hp.UseVisualStyleBackColor = true;
+            // 
+            // ev_atk
+            // 
+            ev_atk.Location = new Point(17, 47);
+            ev_atk.Margin = new Padding(4);
+            ev_atk.Name = "ev_atk";
+            ev_atk.Size = new Size(87, 22);
+            ev_atk.TabIndex = 63;
+            ev_atk.Text = "攻击";
+            ev_atk.UseVisualStyleBackColor = true;
+            // 
+            // ev_def
+            // 
+            ev_def.Location = new Point(17, 70);
+            ev_def.Margin = new Padding(4);
+            ev_def.Name = "ev_def";
+            ev_def.Size = new Size(100, 22);
+            ev_def.TabIndex = 65;
+            ev_def.Text = "防御";
+            ev_def.UseVisualStyleBackColor = true;
+            // 
+            // ev_speed
+            // 
+            ev_speed.Location = new Point(17, 92);
+            ev_speed.Margin = new Padding(4);
+            ev_speed.Name = "ev_speed";
+            ev_speed.Size = new Size(100, 22);
+            ev_speed.TabIndex = 66;
+            ev_speed.Text = "速度";
+            ev_speed.UseVisualStyleBackColor = true;
+            // 
+            // ev_speatk
+            // 
+            ev_speatk.Location = new Point(17, 114);
+            ev_speatk.Margin = new Padding(4);
+            ev_speatk.Name = "ev_speatk";
+            ev_speatk.Size = new Size(100, 22);
+            ev_speatk.TabIndex = 67;
+            ev_speatk.Text = "特攻";
+            ev_speatk.UseVisualStyleBackColor = true;
+            // 
+            // ev_spedef
+            // 
+            ev_spedef.Location = new Point(17, 136);
+            ev_spedef.Margin = new Padding(4);
+            ev_spedef.Name = "ev_spedef";
+            ev_spedef.Size = new Size(100, 22);
+            ev_spedef.TabIndex = 68;
+            ev_spedef.Text = "特防";
+            ev_spedef.UseVisualStyleBackColor = true;
+            // 
+            // tr6_val
+            // 
+            tr6_val.Location = new Point(609, 235);
+            tr6_val.Margin = new Padding(4);
+            tr6_val.Maximum = new decimal(new int[] { 127, 0, 0, 0 });
+            tr6_val.Name = "tr6_val";
+            tr6_val.Size = new Size(72, 25);
+            tr6_val.TabIndex = 69;
+            // 
+            // heal_hp
+            // 
+            heal_hp.Location = new Point(8, 26);
+            heal_hp.Margin = new Padding(4);
+            heal_hp.Name = "heal_hp";
+            heal_hp.Size = new Size(139, 22);
+            heal_hp.TabIndex = 70;
+            heal_hp.Text = "回复HP";
+            heal_hp.UseVisualStyleBackColor = true;
+            // 
+            // heal_pp
+            // 
+            heal_pp.Location = new Point(8, 49);
+            heal_pp.Margin = new Padding(4);
+            heal_pp.Name = "heal_pp";
+            heal_pp.Size = new Size(139, 22);
+            heal_pp.TabIndex = 71;
+            heal_pp.Text = "回复PP";
+            heal_pp.UseVisualStyleBackColor = true;
+            // 
+            // selectedatk
+            // 
+            selectedatk.Location = new Point(8, 71);
+            selectedatk.Margin = new Padding(4);
+            selectedatk.Name = "selectedatk";
+            selectedatk.Size = new Size(185, 22);
+            selectedatk.TabIndex = 73;
+            selectedatk.Text = "只针对选定的攻击";
+            selectedatk.UseVisualStyleBackColor = true;
+            // 
+            // maxppUP
+            // 
+            maxppUP.Location = new Point(8, 98);
+            maxppUP.Margin = new Padding(4);
+            maxppUP.Name = "maxppUP";
+            maxppUP.Size = new Size(145, 22);
+            maxppUP.TabIndex = 74;
+            maxppUP.Text = "提升PP极限值";
+            maxppUP.UseVisualStyleBackColor = true;
+            // 
+            // revive
+            // 
+            revive.Location = new Point(8, 118);
+            revive.Margin = new Padding(4);
+            revive.Name = "revive";
+            revive.Size = new Size(139, 22);
+            revive.TabIndex = 75;
+            revive.Text = "脱离濒死并治愈";
+            revive.UseVisualStyleBackColor = true;
+            // 
+            // stone
+            // 
+            stone.Location = new Point(8, 178);
+            stone.Margin = new Padding(4);
+            stone.Name = "stone";
+            stone.Size = new Size(139, 22);
+            stone.TabIndex = 76;
+            stone.Text = "进化石";
+            stone.UseVisualStyleBackColor = true;
+            // 
+            // happy200
+            // 
+            happy200.Location = new Point(16, 20);
+            happy200.Margin = new Padding(4);
+            happy200.Name = "happy200";
+            happy200.Size = new Size(139, 22);
+            happy200.TabIndex = 77;
+            happy200.Text = "亲密度>200";
+            happy200.UseVisualStyleBackColor = true;
+            // 
+            // happy100
+            // 
+            happy100.Location = new Point(16, 52);
+            happy100.Margin = new Padding(4);
+            happy100.Name = "happy100";
+            happy100.Size = new Size(139, 22);
+            happy100.TabIndex = 78;
+            happy100.Text = "亲密度>100";
+            happy100.UseVisualStyleBackColor = true;
+            // 
+            // happy0
+            // 
+            happy0.Location = new Point(16, 85);
+            happy0.Margin = new Padding(4);
+            happy0.Name = "happy0";
+            happy0.Size = new Size(145, 22);
+            happy0.TabIndex = 79;
+            happy0.Text = "亲密度<100";
+            happy0.UseVisualStyleBackColor = true;
+            // 
+            // hap200
+            // 
+            hap200.Location = new Point(156, 20);
+            hap200.Margin = new Padding(4);
+            hap200.Maximum = new decimal(new int[] { 127, 0, 0, 0 });
+            hap200.Name = "hap200";
+            hap200.Size = new Size(76, 25);
+            hap200.TabIndex = 80;
+            // 
+            // hap100
+            // 
+            hap100.Location = new Point(156, 52);
+            hap100.Margin = new Padding(4);
+            hap100.Maximum = new decimal(new int[] { 127, 0, 0, 0 });
+            hap100.Name = "hap100";
+            hap100.Size = new Size(76, 25);
+            hap100.TabIndex = 81;
+            // 
+            // happ0
+            // 
+            happ0.Location = new Point(156, 85);
+            happ0.Margin = new Padding(4);
+            happ0.Maximum = new decimal(new int[] { 127, 0, 0, 0 });
+            happ0.Name = "happ0";
+            happ0.Size = new Size(76, 25);
+            happ0.TabIndex = 82;
+            // 
+            // ppup
+            // 
+            ppup.Location = new Point(8, 139);
+            ppup.Margin = new Padding(4);
+            ppup.Name = "ppup";
+            ppup.Size = new Size(165, 38);
+            ppup.TabIndex = 83;
+            ppup.Text = "将选定攻击的PP增加到最大值";
+            ppup.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(lvlup);
+            groupBox1.Controls.Add(groupBox6);
+            groupBox1.Controls.Add(groupBox5);
+            groupBox1.Controls.Add(groupBox4);
+            groupBox1.Controls.Add(groupBox3);
+            groupBox1.Controls.Add(groupBox2);
+            groupBox1.Controls.Add(note);
+            groupBox1.Controls.Add(modifier_help);
+            groupBox1.Controls.Add(label14);
+            groupBox1.Controls.Add(tr6_val);
+            groupBox1.Controls.Add(firstpoke);
+            groupBox1.Location = new Point(493, 87);
+            groupBox1.Margin = new Padding(4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4);
+            groupBox1.Size = new Size(700, 360);
+            groupBox1.TabIndex = 84;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "训练家主动使用";
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(pphelp);
+            groupBox6.Controls.Add(ppup);
+            groupBox6.Controls.Add(stone);
+            groupBox6.Controls.Add(revive);
+            groupBox6.Controls.Add(maxppUP);
+            groupBox6.Controls.Add(heal_pp);
+            groupBox6.Controls.Add(heal_hp);
+            groupBox6.Controls.Add(selectedatk);
+            groupBox6.Location = new Point(493, 16);
+            groupBox6.Margin = new Padding(4);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Padding = new Padding(4);
+            groupBox6.Size = new Size(192, 206);
+            groupBox6.TabIndex = 92;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "HP/PP";
+            // 
+            // pphelp
+            // 
+            pphelp.Location = new Point(139, 17);
+            pphelp.Margin = new Padding(4);
+            pphelp.Name = "pphelp";
+            pphelp.Size = new Size(34, 24);
+            pphelp.TabIndex = 85;
+            pphelp.Text = "?";
+            pphelp.UseVisualStyleBackColor = true;
+            pphelp.Click += PphelpClick;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(happ0);
+            groupBox5.Controls.Add(hap100);
+            groupBox5.Controls.Add(hap200);
+            groupBox5.Controls.Add(happy0);
+            groupBox5.Controls.Add(happy100);
+            groupBox5.Controls.Add(happy200);
+            groupBox5.Location = new Point(8, 218);
+            groupBox5.Margin = new Padding(4);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Padding = new Padding(4);
+            groupBox5.Size = new Size(265, 122);
+            groupBox5.TabIndex = 91;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "亲密度";
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(heal_confu);
+            groupBox4.Controls.Add(heal_para);
+            groupBox4.Controls.Add(heal_ice);
+            groupBox4.Controls.Add(heal_burn);
+            groupBox4.Controls.Add(heal_poison);
+            groupBox4.Controls.Add(heal_sleep);
+            groupBox4.Controls.Add(heal_inf);
+            groupBox4.Location = new Point(8, 20);
+            groupBox4.Margin = new Padding(4);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Padding = new Padding(4);
+            groupBox4.Size = new Size(161, 190);
+            groupBox4.TabIndex = 90;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "状态";
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(accurup);
+            groupBox3.Controls.Add(spatkup);
+            groupBox3.Controls.Add(speedup);
+            groupBox3.Controls.Add(defup);
+            groupBox3.Controls.Add(atkup);
+            groupBox3.Controls.Add(direhit);
+            groupBox3.Controls.Add(label20);
+            groupBox3.Controls.Add(label19);
+            groupBox3.Controls.Add(label18);
+            groupBox3.Controls.Add(label17);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(guard);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Location = new Point(177, 16);
+            groupBox3.Margin = new Padding(4);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(4);
+            groupBox3.Size = new Size(176, 203);
+            groupBox3.TabIndex = 89;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "对战";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(ev_spedef);
+            groupBox2.Controls.Add(ev_speatk);
+            groupBox2.Controls.Add(ev_speed);
+            groupBox2.Controls.Add(ev_def);
+            groupBox2.Controls.Add(ev_atk);
+            groupBox2.Controls.Add(ev_hp);
+            groupBox2.Location = new Point(361, 20);
+            groupBox2.Margin = new Padding(4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4);
+            groupBox2.Size = new Size(124, 197);
+            groupBox2.TabIndex = 88;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "基础点数";
+            // 
+            // note
+            // 
+            note.Location = new Point(402, 267);
+            note.Margin = new Padding(4);
+            note.Name = "note";
+            note.Size = new Size(100, 26);
+            note.TabIndex = 87;
+            note.Text = "注意";
+            note.UseVisualStyleBackColor = true;
+            note.Click += NoteClick;
+            // 
+            // modifier_help
+            // 
+            modifier_help.Location = new Point(633, 267);
+            modifier_help.Margin = new Padding(4);
+            modifier_help.Name = "modifier_help";
+            modifier_help.Size = new Size(33, 24);
+            modifier_help.TabIndex = 86;
+            modifier_help.Text = "?";
+            modifier_help.UseVisualStyleBackColor = true;
+            modifier_help.Click += Modifier_helpClick;
+            // 
+            // label14
+            // 
+            label14.Location = new Point(450, 240);
+            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(151, 22);
+            label14.TabIndex = 84;
+            label14.Text = "HP/PP/基础点数修饰符：";
+            // 
+            // ECB_editor
+            // 
+            AllowDrop = true;
+            AutoScaleDimensions = new SizeF(8F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1201, 453);
+            Controls.Add(groupBox1);
+            Controls.Add(jap_encoding);
+            Controls.Add(sprite_help);
+            Controls.Add(palette_import_but);
+            Controls.Add(palette_export_but);
+            Controls.Add(sprite_import_but);
+            Controls.Add(sprite_export_but);
+            Controls.Add(held_help);
+            Controls.Add(held);
+            Controls.Add(label13);
+            Controls.Add(desc2);
+            Controls.Add(desc1);
+            Controls.Add(label12);
+            Controls.Add(smooth);
+            Controls.Add(sour);
+            Controls.Add(bitter);
+            Controls.Add(sweet);
+            Controls.Add(dry);
+            Controls.Add(spicy);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(growth);
+            Controls.Add(label6);
+            Controls.Add(yield_min);
+            Controls.Add(yield_max);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(size);
+            Controls.Add(label2);
+            Controls.Add(firm_box);
+            Controls.Add(name);
+            Controls.Add(label1);
+            Controls.Add(ecb_path);
+            Controls.Add(save_ecb_but);
+            Controls.Add(load_ecb_but);
+            Font = new Font("SimHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4);
+            MaximizeBox = false;
+            Name = "ECB_editor";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ECB Editor";
+            DragDrop += ECB_editorDragDrop;
+            DragEnter += ECB_editorDragEnter;
+            ((System.ComponentModel.ISupportInitialize)size).EndInit();
+            ((System.ComponentModel.ISupportInitialize)yield_max).EndInit();
+            ((System.ComponentModel.ISupportInitialize)yield_min).EndInit();
+            ((System.ComponentModel.ISupportInitialize)growth).EndInit();
+            ((System.ComponentModel.ISupportInitialize)spicy).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dry).EndInit();
+            ((System.ComponentModel.ISupportInitialize)sweet).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bitter).EndInit();
+            ((System.ComponentModel.ISupportInitialize)sour).EndInit();
+            ((System.ComponentModel.ISupportInitialize)smooth).EndInit();
+            ((System.ComponentModel.ISupportInitialize)held).EndInit();
+            ((System.ComponentModel.ISupportInitialize)direhit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)atkup).EndInit();
+            ((System.ComponentModel.ISupportInitialize)defup).EndInit();
+            ((System.ComponentModel.ISupportInitialize)speedup).EndInit();
+            ((System.ComponentModel.ISupportInitialize)spatkup).EndInit();
+            ((System.ComponentModel.ISupportInitialize)accurup).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tr6_val).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hap200).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hap100).EndInit();
+            ((System.ComponentModel.ISupportInitialize)happ0).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox5.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }
