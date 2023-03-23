@@ -615,7 +615,7 @@ namespace NPCmonEditor
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(253, 19);
             checkBox2.TabIndex = 813;
-            checkBox2.Text = "Automatically send to viewer";
+            checkBox2.Text = "自动发送给查看器";
             checkBox2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -624,7 +624,7 @@ namespace NPCmonEditor
             button1.Name = "button1";
             button1.Size = new Size(135, 23);
             button1.TabIndex = 814;
-            button1.Text = "Send selection to viewer";
+            button1.Text = "将选择发送给查看器";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -634,7 +634,7 @@ namespace NPCmonEditor
             button2.Name = "button2";
             button2.Size = new Size(145, 23);
             button2.TabIndex = 815;
-            button2.Text = "Inject from viewer into slot";
+            button2.Text = "从查看器注入槽位";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
