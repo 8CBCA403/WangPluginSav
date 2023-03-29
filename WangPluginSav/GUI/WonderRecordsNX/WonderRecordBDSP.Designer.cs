@@ -1353,7 +1353,7 @@ namespace NXWonderRecord
             DeleteWR8Button.Name = "DeleteWR8Button";
             DeleteWR8Button.Size = new Size(151, 26);
             DeleteWR8Button.TabIndex = 771;
-            DeleteWR8Button.Text = "Delete Slot";
+            DeleteWR8Button.Text = "删除槽位";
             DeleteWR8Button.UseVisualStyleBackColor = true;
             DeleteWR8Button.Click += DeleteWR8Button_Click;
             // 
@@ -1365,7 +1365,7 @@ namespace NXWonderRecord
             ExtractWR8Button.Name = "ExtractWR8Button";
             ExtractWR8Button.Size = new Size(151, 26);
             ExtractWR8Button.TabIndex = 770;
-            ExtractWR8Button.Text = "Extract WRB8";
+            ExtractWR8Button.Text = "提取 WRB8";
             ExtractWR8Button.UseVisualStyleBackColor = true;
             ExtractWR8Button.Click += ExtractWR8Button_Click;
             // 
@@ -1377,7 +1377,7 @@ namespace NXWonderRecord
             InsertWR8Button.Name = "InsertWR8Button";
             InsertWR8Button.Size = new Size(151, 26);
             InsertWR8Button.TabIndex = 769;
-            InsertWR8Button.Text = "Insert WRB8";
+            InsertWR8Button.Text = "插入 WRB8";
             InsertWR8Button.UseVisualStyleBackColor = true;
             InsertWR8Button.Click += InsertWR8Button_Click;
             // 
@@ -1404,7 +1404,7 @@ namespace NXWonderRecord
             groupBox1.Size = new Size(609, 81);
             groupBox1.TabIndex = 780;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Timestamp Reader";
+            groupBox1.Text = "配信时间读取器";
             // 
             // DateNul
             // 
@@ -1413,7 +1413,7 @@ namespace NXWonderRecord
             DateNul.Name = "DateNul";
             DateNul.Size = new Size(75, 23);
             DateNul.TabIndex = 7;
-            DateNul.Text = "NULL";
+            DateNul.Text = "无效";
             DateNul.UseVisualStyleBackColor = true;
             // 
             // SecBox
@@ -1433,7 +1433,7 @@ namespace NXWonderRecord
             label40.Name = "label40";
             label40.Size = new Size(31, 15);
             label40.TabIndex = 723;
-            label40.Text = "Sec";
+            label40.Text = "秒";
             // 
             // DayBox
             // 
@@ -1494,7 +1494,7 @@ namespace NXWonderRecord
             label39.Name = "label39";
             label39.Size = new Size(39, 15);
             label39.TabIndex = 717;
-            label39.Text = "Hour";
+            label39.Text = "时";
             // 
             // label36
             // 
@@ -1504,7 +1504,7 @@ namespace NXWonderRecord
             label36.Name = "label36";
             label36.Size = new Size(31, 15);
             label36.TabIndex = 714;
-            label36.Text = "Day";
+            label36.Text = "日";
             // 
             // label19
             // 
@@ -1514,7 +1514,7 @@ namespace NXWonderRecord
             label19.Name = "label19";
             label19.Size = new Size(39, 15);
             label19.TabIndex = 711;
-            label19.Text = "Year";
+            label19.Text = "年";
             // 
             // label38
             // 
@@ -1524,7 +1524,7 @@ namespace NXWonderRecord
             label38.Name = "label38";
             label38.Size = new Size(31, 15);
             label38.TabIndex = 718;
-            label38.Text = "Min";
+            label38.Text = "分";
             // 
             // label35
             // 
@@ -1534,7 +1534,7 @@ namespace NXWonderRecord
             label35.Name = "label35";
             label35.Size = new Size(47, 15);
             label35.TabIndex = 712;
-            label35.Text = "Month";
+            label35.Text = "月";
             // 
             // TimestampBox
             // 
@@ -1555,7 +1555,7 @@ namespace NXWonderRecord
             label34.Name = "label34";
             label34.Size = new Size(79, 15);
             label34.TabIndex = 779;
-            label34.Text = "Timestamp";
+            label34.Text = "时间戳";
             // 
             // WC8_2_WR8_Button
             // 
@@ -1566,7 +1566,7 @@ namespace NXWonderRecord
             WC8_2_WR8_Button.Name = "WC8_2_WR8_Button";
             WC8_2_WR8_Button.Size = new Size(168, 26);
             WC8_2_WR8_Button.TabIndex = 768;
-            WC8_2_WR8_Button.Text = "Insert WB8 as WRB8";
+            WC8_2_WR8_Button.Text = "插入 WB8 与 WRB8";
             WC8_2_WR8_Button.UseVisualStyleBackColor = true;
             WC8_2_WR8_Button.Click += WC8_2_WR8_Button_Click;
             // 
@@ -1578,7 +1578,7 @@ namespace NXWonderRecord
             label12.Name = "label12";
             label12.Size = new Size(127, 30);
             label12.TabIndex = 778;
-            label12.Text = "Season\r\n(If Applicable)";
+            label12.Text = "赛季\r\n(如果适用)";
             label12.Visible = false;
             // 
             // seasonbox
@@ -1628,7 +1628,7 @@ namespace NXWonderRecord
             tabPage1.Padding = new Padding(4, 4, 4, 4);
             tabPage1.Size = new Size(687, 275);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "None";
+            tabPage1.Text = "无";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -1668,7 +1668,7 @@ namespace NXWonderRecord
             tabPage2.Padding = new Padding(4, 4, 4, 4);
             tabPage2.Size = new Size(687, 275);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Pokémon";
+            tabPage2.Text = "宝可梦";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // RefinedSpeciesBox
@@ -1702,7 +1702,7 @@ namespace NXWonderRecord
             isegg.RightToLeft = RightToLeft.Yes;
             isegg.Size = new Size(101, 19);
             isegg.TabIndex = 14;
-            isegg.Text = "?Is Egg  ";
+            isegg.Text = "是蛋?  ";
             isegg.UseVisualStyleBackColor = true;
             // 
             // Label26
@@ -1713,7 +1713,7 @@ namespace NXWonderRecord
             Label26.Name = "Label26";
             Label26.Size = new Size(79, 15);
             Label26.TabIndex = 701;
-            Label26.Text = "Held Item";
+            Label26.Text = "持有道具";
             // 
             // move2list
             // 
@@ -1735,7 +1735,7 @@ namespace NXWonderRecord
             Label28.Name = "Label28";
             Label28.Size = new Size(39, 15);
             Label28.TabIndex = 703;
-            Label28.Text = "Form";
+            Label28.Text = "形态";
             // 
             // helditem
             // 
@@ -1792,7 +1792,7 @@ namespace NXWonderRecord
             label11.Name = "label11";
             label11.Size = new Size(55, 15);
             label11.TabIndex = 680;
-            label11.Text = "Move 1";
+            label11.Text = "技能1";
             // 
             // ribbondescbox
             // 
@@ -1813,7 +1813,7 @@ namespace NXWonderRecord
             label10.Name = "label10";
             label10.Size = new Size(55, 15);
             label10.TabIndex = 681;
-            label10.Text = "Move 2";
+            label10.Text = "技能2";
             // 
             // Label4
             // 
@@ -1823,7 +1823,7 @@ namespace NXWonderRecord
             Label4.Name = "Label4";
             Label4.Size = new Size(55, 15);
             Label4.TabIndex = 682;
-            Label4.Text = "Move 3";
+            Label4.Text = "技能3";
             // 
             // Label5
             // 
@@ -1833,7 +1833,7 @@ namespace NXWonderRecord
             Label5.Name = "Label5";
             Label5.Size = new Size(55, 15);
             Label5.TabIndex = 683;
-            Label5.Text = "Move 4";
+            Label5.Text = "技能4";
             // 
             // Label21
             // 
@@ -1844,7 +1844,7 @@ namespace NXWonderRecord
             Label21.Name = "Label21";
             Label21.Size = new Size(87, 15);
             Label21.TabIndex = 694;
-            Label21.Text = "Line Count";
+            Label21.Text = "行数";
             Label21.Visible = false;
             // 
             // Label6
@@ -1885,7 +1885,7 @@ namespace NXWonderRecord
             Label9.Name = "Label9";
             Label9.Size = new Size(55, 15);
             Label9.TabIndex = 692;
-            Label9.Text = "Gender";
+            Label9.Text = "性别";
             // 
             // OTG
             // 
@@ -1903,7 +1903,7 @@ namespace NXWonderRecord
             // 
             _gender.AllowDrop = true;
             _gender.FormattingEnabled = true;
-            _gender.Items.AddRange(new object[] { "Male", "Female", "Genderless", "Random" });
+            _gender.Items.AddRange(new object[] { "公", "母", "无性别", "随机" });
             _gender.Location = new Point(120, 148);
             _gender.Margin = new Padding(4, 4, 4, 4);
             _gender.Name = "_gender";
@@ -1930,7 +1930,7 @@ namespace NXWonderRecord
             Label8.Name = "Label8";
             Label8.Size = new Size(55, 15);
             Label8.TabIndex = 690;
-            Label8.Text = "Ribbon";
+            Label8.Text = "奖章";
             // 
             // Label7
             // 
@@ -1940,7 +1940,7 @@ namespace NXWonderRecord
             Label7.Name = "Label7";
             Label7.Size = new Size(71, 15);
             Label7.TabIndex = 688;
-            Label7.Text = "Language";
+            Label7.Text = "语言" ;
             // 
             // FormBox
             // 
@@ -1955,7 +1955,7 @@ namespace NXWonderRecord
             // 
             ribbonlist.AllowDrop = true;
             ribbonlist.FormattingEnabled = true;
-            ribbonlist.Items.AddRange(new object[] { "Kalos Champion Ribbon", "Champion Ribbon", "Sinnoh Champion Ribbon", "Best Friends Ribbon", "Training Ribbon", "Skillful Battler Ribbon", "Expert Battler Ribbon", "Effort Ribbon", "Alert Ribbon", "Shock Ribbon", "Downcast Ribbon", "Careless Ribbon", "Relax Ribbon", "Snooze Ribbon", "Smile Ribbon", "Gorgeous Ribbon", "Royal Ribbon", "Gorgeous Royal Ribbon", "Artist Ribbon", "Footprint Ribbon", "Record Ribbon", "Legend Ribbon", "Country Ribbon", "National Ribbon", "Earth Ribbon", "World Ribbon", "Classic Ribbon", "Premier Ribbon", "Event Ribbon", "Birthday Ribbon", "Special Ribbon", "Souvenir Ribbon", "Wishing Ribbon", "Battle Champion Ribbon", "Regional Champion Ribbon", "National Champion Ribbon", "World Champion Ribbon", "Contest Memory Ribbon", "Battle Memory Ribbon", "Hoenn Champion Ribbon", "Contest Star Ribbon", "Coolness Master Ribbon", "Beauty Master Ribbon", "Cuteness Master Ribbon", "Cleverness Master Ribbon", "Toughness Master Ribbon", "Alola Champion Ribbon", "Battle Royal Master Ribbon", "Battle Tree Great Ribbon", "Battle Tree Master Ribbon", "Galar Champion Ribbon", "Tower Master Ribbon", "Master Rank Ribbon", "Lunchtime Mark", "Sleepy-Time Mark", "Dusk Mark", "Dawn Mark", "Cloudy Mark", "Rainy Mark", "Stormy Mark", "Snowy Mark", "Blizzard Mark", "Dry Mark", "Sandstorm Mark", "Misty Mark", "Destiny Mark", "Fishing Mark", "Curry Mark", "Uncommon Mark", "Rare Mark", "Rowdy Mark", "Absent-Minded Mark", "Jittery Mark", "Excited Mark", "Charismatic Mark", "Calmness Mark", "Intense Mark", "Zoned-Out Mark", "Joyful Mark", "Angry Mark", "Smiley Mark", "Teary Mark", "Upbeat Mark", "Peeved Mark", "Intellectual Mark", "Ferocious Mark", "Crafty Mark", "Scowling Mark", "Kindly Mark", "Flustered Mark", "Pumped-Up Mark", "Zero Energy Mark", "Prideful Mark", "Unsure Mark", "Humble Mark", "Thorny Mark", "Vigor Mark", "Slump Mark", "Dummy", "Twinkling Star Ribbon", "None" });
+            ribbonlist.Items.AddRange(new object[] { "卡洛斯冠军奖章", "冠军奖章", "神奥冠军奖章", "好友奖章", "修行奖章", "高手对战奖章", "大师对战奖章", "努力奖章", "振奋奖章", "心跳奖章", "失望奖章", "大意奖章", "畅快奖章", "酣睡奖章", "欢笑奖章", "豪华奖章", "高贵奖章", "豪华高贵奖章", "肖像奖章", "脚印奖章", "纪录奖章", "传说奖章", "地区奖章", "国家奖章", "地球奖章", "世界奖章", "经典奖章", "纪念奖章", "活动奖章", "生日奖章", "特殊奖章", "回忆奖章", "许愿奖章", "对战冠军奖章", "地区冠军奖章", "国家冠军奖章", "世界冠军奖章", "华丽大赛回忆奖章", "对战回忆奖章", "丰缘冠军奖章", "华丽大赛之星奖章", "帅气大师奖章", "美丽大师奖章", "可爱大师奖章", "聪明大师奖章", "强壮大师奖章", "阿罗拉冠军奖章", "皇家大师奖章", "高手对战树奖章", "大师对战树奖章", "伽勒尔冠军奖章", "对战塔大师奖章", "级别对战大师奖章", "正午之证", "午夜之证", "黄昏之证", "拂晓之证", "阴云之证", "降雨之证", "落雷之证", "降雪之证", "暴雪之证", "干燥之证", "沙尘之证", "浓雾之证", "命运之证", "上钩之证", "咖喱之证", "偶遇之证", "未知之证", "淘气之证", "无虑之证", "紧张之证", "期待之证", "领袖之证", "冷静之证", "热情之证", "疏忽之证", "幸福之证", "愤怒之证", "微笑之证", "悲伤之证", "爽快之证", "激动之证", "理性之证", "本能之证", "狡猾之证", "凶悍之证", "优雅之证", "动摇之证", "昂扬之证", "倦怠之证", "自信之证", "自卑之证", "木讷之证", "不纯之证", "活力之证", "不振之证", "假的", "闪亮之星奖章", "无" });
             ribbonlist.Location = new Point(120, 178);
             ribbonlist.Margin = new Padding(4, 4, 4, 4);
             ribbonlist.Name = "ribbonlist";
@@ -1982,7 +1982,7 @@ namespace NXWonderRecord
             SpeciesLabel.Name = "SpeciesLabel";
             SpeciesLabel.Size = new Size(63, 15);
             SpeciesLabel.TabIndex = 32;
-            SpeciesLabel.Text = "Species";
+            SpeciesLabel.Text = "种类";
             // 
             // tabPage3
             // 
@@ -2016,7 +2016,7 @@ namespace NXWonderRecord
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(687, 275);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Items";
+            tabPage3.Text = "道具";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // statuebox
@@ -2040,7 +2040,7 @@ namespace NXWonderRecord
             label37.Name = "label37";
             label37.Size = new Size(55, 15);
             label37.TabIndex = 544;
-            label37.Text = "Item 7";
+            label37.Text = "道具7";
             // 
             // nitem7
             // 
@@ -2139,7 +2139,7 @@ namespace NXWonderRecord
             Label20.Name = "Label20";
             Label20.Size = new Size(87, 15);
             Label20.TabIndex = 533;
-            Label20.Text = "Line Count";
+            Label20.Text = "行数";
             Label20.Visible = false;
             // 
             // Label18
@@ -2150,7 +2150,7 @@ namespace NXWonderRecord
             Label18.Name = "Label18";
             Label18.Size = new Size(55, 15);
             Label18.TabIndex = 532;
-            Label18.Text = "Item 6";
+            Label18.Text = "道具6";
             // 
             // Label17
             // 
@@ -2160,7 +2160,7 @@ namespace NXWonderRecord
             Label17.Name = "Label17";
             Label17.Size = new Size(55, 15);
             Label17.TabIndex = 531;
-            Label17.Text = "Item 5";
+            Label17.Text = "道具5";
             // 
             // Label16
             // 
@@ -2170,7 +2170,7 @@ namespace NXWonderRecord
             Label16.Name = "Label16";
             Label16.Size = new Size(55, 15);
             Label16.TabIndex = 530;
-            Label16.Text = "Item 4";
+            Label16.Text = "道具4";
             // 
             // Label15
             // 
@@ -2180,7 +2180,7 @@ namespace NXWonderRecord
             Label15.Name = "Label15";
             Label15.Size = new Size(55, 15);
             Label15.TabIndex = 529;
-            Label15.Text = "Item 3";
+            Label15.Text = "道具3";
             // 
             // Label14
             // 
@@ -2190,7 +2190,7 @@ namespace NXWonderRecord
             Label14.Name = "Label14";
             Label14.Size = new Size(55, 15);
             Label14.TabIndex = 528;
-            Label14.Text = "Item 2";
+            Label14.Text = "道具2";
             // 
             // itembox6
             // 
@@ -2266,7 +2266,7 @@ namespace NXWonderRecord
             Label13.Name = "Label13";
             Label13.Size = new Size(55, 15);
             Label13.TabIndex = 521;
-            Label13.Text = "Item 1";
+            Label13.Text = "道具1";
             // 
             // tabPage4
             // 
@@ -2299,7 +2299,7 @@ namespace NXWonderRecord
             label31.Name = "label31";
             label31.Size = new Size(87, 15);
             label31.TabIndex = 668;
-            label31.Text = "Line Count";
+            label31.Text = "行数";
             label31.Visible = false;
             // 
             // bpsamount
@@ -2318,7 +2318,7 @@ namespace NXWonderRecord
             label32.Name = "label32";
             label32.Size = new Size(55, 15);
             label32.TabIndex = 666;
-            label32.Text = "Amount";
+            label32.Text = "数量";
             // 
             // tabPage5
             // 
@@ -2353,14 +2353,14 @@ namespace NXWonderRecord
             tabPage5.Name = "tabPage5";
             tabPage5.Size = new Size(687, 275);
             tabPage5.TabIndex = 4;
-            tabPage5.Text = "Clothes";
+            tabPage5.Text = "服装";
             tabPage5.UseVisualStyleBackColor = true;
             // 
             // d7
             // 
             d7.DropDownStyle = ComboBoxStyle.Simple;
             d7.FormattingEnabled = true;
-            d7.Items.AddRange(new object[] { "(none)", "Everyday Style", "Contest Style", "Platinum Style", "Overalls Style", "Eevee Style", "Gengar Style", "Cyber Style", "Summer Style", "Winter Style", "Spring Style", "Casual Style", "Leather Style" });
+            d7.Items.AddRange(new object[] { "(无)", "平常的风格", "华丽大赛风格", "白金风格", "工装服风格", "伊布刺绣夹克风格", "耿鬼刺绣夹克风格", "赛博风格", "夏季风格", "冬季风格", "春季风格", "运动风格", "皮夹克风格" });
             d7.Location = new Point(120, 204);
             d7.Margin = new Padding(4, 4, 4, 4);
             d7.Name = "d7";
@@ -2371,7 +2371,7 @@ namespace NXWonderRecord
             // 
             d6.DropDownStyle = ComboBoxStyle.Simple;
             d6.FormattingEnabled = true;
-            d6.Items.AddRange(new object[] { "(none)", "Everyday Style", "Contest Style", "Platinum Style", "Overalls Style", "Eevee Style", "Gengar Style", "Cyber Style", "Summer Style", "Winter Style", "Spring Style", "Casual Style", "Leather Style" });
+            d6.Items.AddRange(new object[] { "(无)", "平常的风格", "华丽大赛风格", "白金风格", "工装服风格", "伊布刺绣夹克风格", "耿鬼刺绣夹克风格", "赛博风格", "夏季风格", "冬季风格", "春季风格", "运动风格", "皮夹克风格" });
             d6.Location = new Point(120, 174);
             d6.Margin = new Padding(4, 4, 4, 4);
             d6.Name = "d6";
@@ -2382,7 +2382,7 @@ namespace NXWonderRecord
             // 
             d5.DropDownStyle = ComboBoxStyle.Simple;
             d5.FormattingEnabled = true;
-            d5.Items.AddRange(new object[] { "(none)", "Everyday Style", "Contest Style", "Platinum Style", "Overalls Style", "Eevee Style", "Gengar Style", "Cyber Style", "Summer Style", "Winter Style", "Spring Style", "Casual Style", "Leather Style" });
+            d5.Items.AddRange(new object[] { "(无)", "平常的风格", "华丽大赛风格", "白金风格", "工装服风格", "伊布刺绣夹克风格", "耿鬼刺绣夹克风格", "赛博风格", "夏季风格", "冬季风格", "春季风格", "运动风格", "皮夹克风格" });
             d5.Location = new Point(120, 144);
             d5.Margin = new Padding(4, 4, 4, 4);
             d5.Name = "d5";
@@ -2393,7 +2393,7 @@ namespace NXWonderRecord
             // 
             d4.DropDownStyle = ComboBoxStyle.Simple;
             d4.FormattingEnabled = true;
-            d4.Items.AddRange(new object[] { "(none)", "Everyday Style", "Contest Style", "Platinum Style", "Overalls Style", "Eevee Style", "Gengar Style", "Cyber Style", "Summer Style", "Winter Style", "Spring Style", "Casual Style", "Leather Style" });
+            d4.Items.AddRange(new object[] { "(无)", "平常的风格", "华丽大赛风格", "白金风格", "工装服风格", "伊布刺绣夹克风格", "耿鬼刺绣夹克风格", "赛博风格", "夏季风格", "冬季风格", "春季风格", "运动风格", "皮夹克风格" });
             d4.Location = new Point(120, 114);
             d4.Margin = new Padding(4, 4, 4, 4);
             d4.Name = "d4";
@@ -2404,7 +2404,7 @@ namespace NXWonderRecord
             // 
             d3.DropDownStyle = ComboBoxStyle.Simple;
             d3.FormattingEnabled = true;
-            d3.Items.AddRange(new object[] { "(none)", "Everyday Style", "Contest Style", "Platinum Style", "Overalls Style", "Eevee Style", "Gengar Style", "Cyber Style", "Summer Style", "Winter Style", "Spring Style", "Casual Style", "Leather Style" });
+            d3.Items.AddRange(new object[] { "(无)", "平常的风格", "华丽大赛风格", "白金风格", "工装服风格", "伊布刺绣夹克风格", "耿鬼刺绣夹克风格", "赛博风格", "夏季风格", "冬季风格", "春季风格", "运动风格", "皮夹克风格" });
             d3.Location = new Point(120, 84);
             d3.Margin = new Padding(4, 4, 4, 4);
             d3.Name = "d3";
@@ -2415,7 +2415,7 @@ namespace NXWonderRecord
             // 
             d2.DropDownStyle = ComboBoxStyle.Simple;
             d2.FormattingEnabled = true;
-            d2.Items.AddRange(new object[] { "(none)", "Everyday Style", "Contest Style", "Platinum Style", "Overalls Style", "Eevee Style", "Gengar Style", "Cyber Style", "Summer Style", "Winter Style", "Spring Style", "Casual Style", "Leather Style" });
+            d2.Items.AddRange(new object[] { "(无)", "平常的风格", "华丽大赛风格", "白金风格", "工装服风格", "伊布刺绣夹克风格", "耿鬼刺绣夹克风格", "赛博风格", "夏季风格", "冬季风格", "春季风格", "运动风格", "皮夹克风格" });
             d2.Location = new Point(120, 54);
             d2.Margin = new Padding(4, 4, 4, 4);
             d2.Name = "d2";
@@ -2426,7 +2426,7 @@ namespace NXWonderRecord
             // 
             d1.DropDownStyle = ComboBoxStyle.Simple;
             d1.FormattingEnabled = true;
-            d1.Items.AddRange(new object[] { "(none)", "Everyday Style", "Contest Style", "Platinum Style", "Overalls Style", "Eevee Style", "Gengar Style", "Cyber Style", "Summer Style", "Winter Style", "Spring Style", "Casual Style", "Leather Style" });
+            d1.Items.AddRange(new object[] { "(无)", "平常的风格", "华丽大赛风格", "白金风格", "工装服风格", "伊布刺绣夹克风格", "耿鬼刺绣夹克风格", "赛博风格", "夏季风格", "冬季风格", "春季风格", "运动风格", "皮夹克风格" });
             d1.Location = new Point(120, 24);
             d1.Margin = new Padding(4, 4, 4, 4);
             d1.Name = "d1";
@@ -2441,7 +2441,7 @@ namespace NXWonderRecord
             label30.Name = "label30";
             label30.Size = new Size(63, 15);
             label30.TabIndex = 771;
-            label30.Text = "Style 7";
+            label30.Text = "风格7";
             // 
             // label27
             // 
@@ -2451,7 +2451,7 @@ namespace NXWonderRecord
             label27.Name = "label27";
             label27.Size = new Size(63, 15);
             label27.TabIndex = 770;
-            label27.Text = "Style 6";
+            label27.Text = "风格6";
             // 
             // label29
             // 
@@ -2461,7 +2461,7 @@ namespace NXWonderRecord
             label29.Name = "label29";
             label29.Size = new Size(63, 15);
             label29.TabIndex = 769;
-            label29.Text = "Style 5";
+            label29.Text = "风格5";
             // 
             // label24
             // 
@@ -2471,7 +2471,7 @@ namespace NXWonderRecord
             label24.Name = "label24";
             label24.Size = new Size(63, 15);
             label24.TabIndex = 768;
-            label24.Text = "Style 4";
+            label24.Text = "风格4";
             // 
             // label25
             // 
@@ -2481,7 +2481,7 @@ namespace NXWonderRecord
             label25.Name = "label25";
             label25.Size = new Size(63, 15);
             label25.TabIndex = 767;
-            label25.Text = "Style 3";
+            label25.Text = "风格3";
             // 
             // label23
             // 
@@ -2491,7 +2491,7 @@ namespace NXWonderRecord
             label23.Name = "label23";
             label23.Size = new Size(63, 15);
             label23.TabIndex = 766;
-            label23.Text = "Style 2";
+            label23.Text = "风格2";
             // 
             // fjacket
             // 
@@ -2567,7 +2567,7 @@ namespace NXWonderRecord
             label22.Name = "label22";
             label22.Size = new Size(63, 15);
             label22.TabIndex = 741;
-            label22.Text = "Style 1";
+            label22.Text = "风格1";
             // 
             // feyeweardesc
             // 
@@ -2650,7 +2650,7 @@ namespace NXWonderRecord
             tabPage6.Name = "tabPage6";
             tabPage6.Size = new Size(687, 275);
             tabPage6.TabIndex = 5;
-            tabPage6.Text = "Money";
+            tabPage6.Text = "金钱";
             tabPage6.UseVisualStyleBackColor = true;
             // 
             // moneylc
@@ -2670,7 +2670,7 @@ namespace NXWonderRecord
             label33.Name = "label33";
             label33.Size = new Size(87, 15);
             label33.TabIndex = 672;
-            label33.Text = "Line Count";
+            label33.Text = "行数";
             label33.Visible = false;
             // 
             // moneyamount
@@ -2699,7 +2699,7 @@ namespace NXWonderRecord
             label3.Name = "label3";
             label3.Size = new Size(87, 15);
             label3.TabIndex = 776;
-            label3.Text = "Card Title";
+            label3.Text = "礼物卡标题";
             // 
             // CardTitleRawBox
             // 
@@ -2740,7 +2740,7 @@ namespace NXWonderRecord
             EntryTypeBox.DropDownStyle = ComboBoxStyle.DropDownList;
             EntryTypeBox.Enabled = false;
             EntryTypeBox.FormattingEnabled = true;
-            EntryTypeBox.Items.AddRange(new object[] { "None", "Pokémon", "Items", "BPs", "Clothes", "Money", "Statue", "Unknown" });
+            EntryTypeBox.Items.AddRange(new object[] { "无", "宝可梦", "道具", "BPs", "服装", "金钱", "雕像", "未知的" });
             EntryTypeBox.Location = new Point(559, 71);
             EntryTypeBox.Margin = new Padding(4, 4, 4, 4);
             EntryTypeBox.Name = "EntryTypeBox";
@@ -2755,7 +2755,7 @@ namespace NXWonderRecord
             label1.Name = "label1";
             label1.Size = new Size(87, 15);
             label1.TabIndex = 774;
-            label1.Text = "Entry Type";
+            label1.Text = "配信类型";
             // 
             // SlotIndex
             // 
@@ -2775,7 +2775,7 @@ namespace NXWonderRecord
             AreaSlotLabel.Name = "AreaSlotLabel";
             AreaSlotLabel.Size = new Size(87, 15);
             AreaSlotLabel.TabIndex = 773;
-            AreaSlotLabel.Text = "Entry Slot";
+            AreaSlotLabel.Text = "配信槽位";
             // 
             // textBox1
             // 
@@ -2891,7 +2891,7 @@ namespace NXWonderRecord
             Margin = new Padding(4, 4, 4, 4);
             Name = "WonderRecordBDSP";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Wonder Records Tool (BDSP)";
+            Text = "神秘礼物记录工具 (BDSP)";
             ((System.ComponentModel.ISupportInitialize)SpeciesImageBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox50).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox49).EndInit();
