@@ -76,7 +76,7 @@ namespace Pikaedit
             extractMusical.Name = "extractMusical";
             extractMusical.Size = new Size(100, 35);
             extractMusical.TabIndex = 8;
-            extractMusical.Text = "Extract";
+            extractMusical.Text = "提取";
             extractMusical.UseVisualStyleBackColor = true;
             extractMusical.Click += extract;
             // 
@@ -88,7 +88,7 @@ namespace Pikaedit
             activeMusical.Name = "activeMusical";
             activeMusical.Size = new Size(72, 24);
             activeMusical.TabIndex = 6;
-            activeMusical.Text = "Active";
+            activeMusical.Text = "已激活";
             activeMusical.UseVisualStyleBackColor = true;
             activeMusical.CheckedChanged += activate;
             // 
@@ -99,7 +99,7 @@ namespace Pikaedit
             changeMusical.Name = "changeMusical";
             changeMusical.Size = new Size(100, 35);
             changeMusical.TabIndex = 7;
-            changeMusical.Text = "Change";
+            changeMusical.Text = "更换";
             changeMusical.UseVisualStyleBackColor = true;
             changeMusical.Click += change;
             // 
@@ -117,7 +117,7 @@ namespace Pikaedit
             GroupBox3.Size = new Size(351, 169);
             GroupBox3.TabIndex = 12;
             GroupBox3.TabStop = false;
-            GroupBox3.Text = "Musical Data";
+            GroupBox3.Text = "音乐剧 数据";
             // 
             // label1
             // 
@@ -127,7 +127,7 @@ namespace Pikaedit
             label1.Name = "label1";
             label1.Size = new Size(92, 20);
             label1.TabIndex = 14;
-            label1.Text = "Musical Title";
+            label1.Text = "音乐剧 标题";
             // 
             // musicalTitle
             // 
@@ -146,7 +146,7 @@ namespace Pikaedit
             extractPokedex.Name = "extractPokedex";
             extractPokedex.Size = new Size(100, 35);
             extractPokedex.TabIndex = 8;
-            extractPokedex.Text = "Extract";
+            extractPokedex.Text = "提取";
             extractPokedex.UseVisualStyleBackColor = true;
             extractPokedex.Click += extract;
             // 
@@ -158,7 +158,7 @@ namespace Pikaedit
             activePokedex.Name = "activePokedex";
             activePokedex.Size = new Size(72, 24);
             activePokedex.TabIndex = 6;
-            activePokedex.Text = "Active";
+            activePokedex.Text = "已激活";
             activePokedex.UseVisualStyleBackColor = true;
             activePokedex.CheckedChanged += activate;
             // 
@@ -169,7 +169,7 @@ namespace Pikaedit
             changePokedex.Name = "changePokedex";
             changePokedex.Size = new Size(100, 35);
             changePokedex.TabIndex = 7;
-            changePokedex.Text = "Change";
+            changePokedex.Text = "更换";
             changePokedex.UseVisualStyleBackColor = true;
             changePokedex.Click += change;
             // 
@@ -185,7 +185,7 @@ namespace Pikaedit
             GroupBox2.Size = new Size(192, 169);
             GroupBox2.TabIndex = 11;
             GroupBox2.TabStop = false;
-            GroupBox2.Text = "Pokedex Skin";
+            GroupBox2.Text = "图鉴 皮肤";
             // 
             // extractCGear
             // 
@@ -194,7 +194,7 @@ namespace Pikaedit
             extractCGear.Name = "extractCGear";
             extractCGear.Size = new Size(100, 35);
             extractCGear.TabIndex = 5;
-            extractCGear.Text = "Extract";
+            extractCGear.Text = "提取";
             extractCGear.UseVisualStyleBackColor = true;
             extractCGear.Click += extract;
             // 
@@ -205,7 +205,7 @@ namespace Pikaedit
             changeCGear.Name = "changeCGear";
             changeCGear.Size = new Size(100, 35);
             changeCGear.TabIndex = 4;
-            changeCGear.Text = "Change";
+            changeCGear.Text = "更换";
             changeCGear.UseVisualStyleBackColor = true;
             changeCGear.Click += change;
             // 
@@ -217,7 +217,7 @@ namespace Pikaedit
             activeCGear.Name = "activeCGear";
             activeCGear.Size = new Size(72, 24);
             activeCGear.TabIndex = 3;
-            activeCGear.Text = "Active";
+            activeCGear.Text = "已激活";
             activeCGear.UseVisualStyleBackColor = true;
             activeCGear.CheckedChanged += activate;
             // 
@@ -233,7 +233,7 @@ namespace Pikaedit
             GroupBox1.Size = new Size(204, 169);
             GroupBox1.TabIndex = 10;
             GroupBox1.TabStop = false;
-            GroupBox1.Text = "C-Gear Skin";
+            GroupBox1.Text = "C-装置 皮肤";
             // 
             // DLCEditor
             // 

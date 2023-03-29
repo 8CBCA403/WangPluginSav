@@ -210,7 +210,7 @@ namespace XYORAS_Safari_Mirage_Tool
             loadsave.Name = "loadsave";
             loadsave.Size = new Size(216, 26);
             loadsave.TabIndex = 0;
-            loadsave.Text = "Load XY/ORAS Savegame";
+            loadsave.Text = "读取XY/ORAS 保存游戏";
             loadsave.UseVisualStyleBackColor = true;
             loadsave.Click += LoadsaveClick;
             // 
@@ -308,7 +308,7 @@ namespace XYORAS_Safari_Mirage_Tool
             groupBox7.Size = new Size(487, 103);
             groupBox7.TabIndex = 143;
             groupBox7.TabStop = false;
-            groupBox7.Text = "Savegame";
+            groupBox7.Text = "保存游戏";
             // 
             // unlock_safari
             // 
@@ -318,7 +318,7 @@ namespace XYORAS_Safari_Mirage_Tool
             unlock_safari.Name = "unlock_safari";
             unlock_safari.Size = new Size(137, 41);
             unlock_safari.TabIndex = 144;
-            unlock_safari.Text = "Unlock all Friend Safari (XY only)";
+            unlock_safari.Text = "解锁所有朋友狩猎 (仅限XY)";
             unlock_safari.UseVisualStyleBackColor = true;
             unlock_safari.Click += Unlock_safariClick;
             // 
@@ -326,7 +326,7 @@ namespace XYORAS_Safari_Mirage_Tool
             // 
             comboBox2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "00: NONE", "01: 467 - Crescent Isle           - Cresselia", "02: 184 - East of Mossdeep        - Tangela, Sunkern, Glameow, Minccino", "03: 185 - North of Route 124      - Tangela, Sunkern, Purugly, Vulpix", "04: 186 - West of Route 114       - Tangela, Sunkern, Purugly, Petilil", "05: 187 - North of Lilycove       - Tangela, Sunkern, Purugly, Cherrim", "06: 188 - South of Route 132      - Sunkern, Petilil, Audino", "07: 189 - West of Route 105       - Forretress, Happiny", "08: 190 - South of Route 109      - Audino, Sunkern", "09: 191 - North of Route 111      - Kricketune, Larvesta", "10: 192 - West of Rustboro        - Tynamo, Klink, Boldore, Graveler", "11: 193 - North of Fortree        - Klink, Tynamo, Excadrill, Onix", "12: 194 - South of Pacifidlog     - Tynamo, Cofagrigus, Slowpoke", "13: 195 - South of Route 107      - Unown", "14: 196 - North of Route 124      - Klink, Cofagrigus, Graveler, Boldore", "15: 197 - North of Route 132      - Ditto, Excadrill, Tynamo", "16: 198 - Southeast of Route 129  - Tynamo, Onix, Graveler, Boldore", "17: 199 - North of Fallarbor      - Slowpoke, Tynamo", "18: 200 - West of Route 104       - Venomoth, Xatu, Zebstrika, Darmanitan", "19: 201 - South of Route 134      - Venomoth, Xatu, Zebstrika, Maractus", "20: 202 - North of Route 124      - Venomoth, Xatu, Zebstrika, Persian", "21: 203 - West of Dewford Town    - Venomoth, Xatu, Zebstrika, Tangela", "22: 204 - South of Pacifidlog     - Audino, Xatu", "23: 205 - South of Route 132      - Munna, Ditto", "24: 206 - North of Route 113      - Darmanitan, Larvesta", "25: 207 - East of Shoal Cave      - Purugly, Porygon", "26: 208 - West of Route 104       - Forretress, Donphan, Kricketune, Stantler", "27: 460 - North of Lilycove       - Forretress, Donphan, Kricketune, Rufflet", "28: 461 - Northeast of Route 125  - Forretress, Donphan, Kricketune, Vullaby", "29: 462 - West of Route 131       - Donphan, Kricketune, Girafarig", "30: 463 - North of Mossdeep       - Magby, Darmanitan", "31: 464 - South of Route 129      - Zebstrika, Elekid", "32: 465 - Southeast of Route 129  - Porygon, Xatu, Munna", "33: 466 - East of Mossdeep        - Audino, Happiny, Tangela" });
+            comboBox2.Items.AddRange(new object[] { "00: 无", "01: 467 - 弓形岛           - 克雷色利亚", "02: 184 - 绿岭市东部        - 蔓藤怪, 向日种子, 魅力喵, 泡沫栗鼠", "03: 185 - 124水路北部      - 蔓藤怪, 向日种子, 东施喵, 六尾", "04: 186 - 114道路西部       - 蔓藤怪, 向日种子, 东施喵, 百合根娃娃", "05: 187 - 水静市北部       - 蔓藤怪, 向日种子, 东施喵, 樱花儿", "06: 188 - 132水路南部      - 向日种子, 百合根娃娃, 差不多娃娃", "07: 189 - 105水路西部       - 佛烈托斯, 小福蛋", "08: 190 - 109水路南部      - 差不多娃娃, 向日种子", "09: 191 - 111道路北部      - 音箱蟀, 燃烧虫", "10: 192 - 卡那兹市西部        - 麻麻小鱼, 齿轮儿, 地幔岩, 隆隆石", "11: 193 - 茵郁市北部        - 齿轮儿, 麻麻小鱼, 龙头地鼠, 大岩蛇", "12: 194 - 暮水镇南部     - 麻麻小鱼, 迭失棺, 呆呆兽", "13: 195 - 107水路南部      - 未知图腾", "14: 196 - 124水路北部      - 齿轮儿, 迭失棺, 隆隆石, 地幔岩", "15: 197 - 132水路北部      - 百变怪, 龙头地鼠, 麻麻小鱼", "16: 198 - 129水路东南部  - 麻麻小鱼, 大岩蛇, 隆隆石, 地幔岩", "17: 199 - 秋叶镇北部     - 呆呆兽, 麻麻小鱼", "18: 200 - 104道路西部       - 摩鲁蛾, 天然鸟, 雷电斑马, 达摩狒狒", "19: 201 - 134水路南部      - 摩鲁蛾, 天然鸟, 雷电斑马, 沙铃仙人掌", "20: 202 - 124水路北部      - 摩鲁蛾, 天然鸟, 雷电斑马, 猫老大", "21: 203 - 武斗镇西部    - 摩鲁蛾, 天然鸟, 雷电斑马, 蔓藤怪", "22: 204 - 暮水镇南部     - 差不多娃娃, 天然鸟", "23: 205 - 132水路南部      - 食梦梦, 百变怪", "24: 206 - 113道路北部      - 达摩狒狒, 燃烧虫", "25: 207 - 浅滩洞穴东部      - 东施喵, 多边兽", "26: 208 - 104道路西部       - 佛烈托斯, 顿甲, 音箱蟀, 惊角鹿", "27: 460 - 水静市北部       - 佛烈托斯, 顿甲, 音箱蟀, 毛头小鹰", "28: 461 - 125水路东北部  - 佛烈托斯, 顿甲, 音箱蟀, 秃鹰丫头", "29: 462 - 131水路西部       - 顿甲, 音箱蟀, 麒麟奇", "30: 463 - 绿岭市北部       - 鸭嘴宝宝, 达摩狒狒", "31: 464 - 129水路南部      - 雷电斑马, 电击怪", "32: 465 - 129水路东南部  - 多边兽, 天然鸟, 食梦梦", "33: 466 - 绿岭市东部        - 差不多娃娃, 小福蛋, 蔓藤怪" });
             comboBox2.Location = new Point(136, 83);
             comboBox2.Margin = new Padding(4, 4, 4, 4);
             comboBox2.Name = "comboBox2";
@@ -341,7 +341,7 @@ namespace XYORAS_Safari_Mirage_Tool
             label2.Name = "label2";
             label2.Size = new Size(117, 22);
             label2.TabIndex = 148;
-            label2.Text = "Mirage Spot:";
+            label2.Text = "幻之地点:";
             label2.TextAlign = ContentAlignment.TopRight;
             // 
             // orasbox
@@ -356,7 +356,7 @@ namespace XYORAS_Safari_Mirage_Tool
             orasbox.Size = new Size(947, 266);
             orasbox.TabIndex = 149;
             orasbox.TabStop = false;
-            orasbox.Text = "OR/AS Mirage Spot";
+            orasbox.Text = "OR/AS 幻之地点";
             orasbox.Enter += GroupBox1Enter;
             // 
             // groupBox1
@@ -392,7 +392,7 @@ namespace XYORAS_Safari_Mirage_Tool
             groupBox1.Size = new Size(919, 116);
             groupBox1.TabIndex = 195;
             groupBox1.TabStop = false;
-            groupBox1.Text = "PSS Mirage Spot";
+            groupBox1.Text = "PSS 幻之地点";
             groupBox1.Enter += GroupBox1Enter;
             // 
             // spot9
@@ -422,7 +422,7 @@ namespace XYORAS_Safari_Mirage_Tool
             oras_save.Name = "oras_save";
             oras_save.Size = new Size(100, 26);
             oras_save.TabIndex = 163;
-            oras_save.Text = "Save";
+            oras_save.Text = "保存";
             oras_save.UseVisualStyleBackColor = true;
             oras_save.Click += Oras_saveClick;
             // 
@@ -433,7 +433,7 @@ namespace XYORAS_Safari_Mirage_Tool
             mdv_advanced.Name = "mdv_advanced";
             mdv_advanced.Size = new Size(157, 45);
             mdv_advanced.TabIndex = 149;
-            mdv_advanced.Text = "Daily Mirage Spot (advanced)";
+            mdv_advanced.Text = "每日幻之地点(高级)";
             mdv_advanced.UseVisualStyleBackColor = true;
             mdv_advanced.Click += Mdv_advancedClick;
             // 
@@ -649,7 +649,7 @@ namespace XYORAS_Safari_Mirage_Tool
             infobut.Name = "infobut";
             infobut.Size = new Size(100, 26);
             infobut.TabIndex = 162;
-            infobut.Text = "Info";
+            infobut.Text = "信息";
             infobut.UseVisualStyleBackColor = true;
             infobut.Click += InfobutClick;
             // 
@@ -778,7 +778,7 @@ namespace XYORAS_Safari_Mirage_Tool
             close_info.Name = "close_info";
             close_info.Size = new Size(80, 26);
             close_info.TabIndex = 2;
-            close_info.Text = "Close";
+            close_info.Text = "关闭";
             close_info.UseVisualStyleBackColor = true;
             close_info.Click += Close_infoClick;
             // 
@@ -828,7 +828,7 @@ namespace XYORAS_Safari_Mirage_Tool
             Margin = new Padding(4, 4, 4, 4);
             Name = "SafariMirageForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "XYORAS Safari Mirage Tool";
+            Text = "XYORAS 狩猎 幻之地点工具";
             ((ISupportInitialize)ev_5).EndInit();
             ((ISupportInitialize)ev_4).EndInit();
             ((ISupportInitialize)ev_3).EndInit();
