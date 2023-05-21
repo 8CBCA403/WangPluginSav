@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WangPluginSav.Plugins
 {
-    internal class FeebasLocatorPlugin : WangPluginSav
+    public class FeebasLocatorPlugin : WangPluginSav
     {
         public override string Name => "丑丑鱼钓点修改器";
         public override int Priority =>1;

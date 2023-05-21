@@ -9,7 +9,7 @@ using WangPluginSav.BlockImportUtil;
 
 namespace WangPluginSav.Plugins
 {
-    internal class RaidImportPlugin : WangPluginSav
+    public class RaidImportPlugin : WangPluginSav
     {
         public override string Name => "Raid导入器";
         public override int Priority => 5;

@@ -8,7 +8,7 @@ using XYORAS_Safari_Mirage_Tool;
 
 namespace WangPluginSav.Plugins
 {
-    internal class SafariMiragePlugin : WangPluginSav
+    public class SafariMiragePlugin : WangPluginSav
     {
         public override string Name => "XYORAS幻岛修改器";
         public override int Priority => 3;

@@ -9,7 +9,7 @@ using WC3Tool;
 
 namespace WangPluginSav.Plugins
 {
-    internal class Gen3EventPlugin : WangPluginSav
+    public class Gen3EventPlugin : WangPluginSav
     {
         public override string Name => "Gen3事件修改器";
         public override int Priority => 0;

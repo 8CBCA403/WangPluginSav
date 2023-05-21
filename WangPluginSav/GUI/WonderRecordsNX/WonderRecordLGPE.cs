@@ -48,7 +48,7 @@ partial class WonderRecordLGPE : Form
         InitialLoading();
         if (sav is SAV7b sAV7b)
         {
-            WRBlock = sAV7b.GetData(284160, 3200);
+            WRBlock = sAV7b.Data.AsSpan(284160, 3200).ToArray();
             InitialLoad = false;
             loadslots();
             ((PictureBox)base.Controls["pictureBox1".ToString()]).BorderStyle = BorderStyle.Fixed3D;

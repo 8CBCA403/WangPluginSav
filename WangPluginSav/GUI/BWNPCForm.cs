@@ -75,23 +75,23 @@ namespace WangPluginSav.GUI
             byte[] b2;
             for (int i = 0; i < 20; i++)
             {
-                if (sav.GetData(p, 1) != null)
+                if (sav.Data.AsSpan(p, 1) != null)
                 {
-                    b = sav.GetData(p, 1);
+                    b = sav.Data.AsSpan(p, 1).ToArray();
                 }
                 else
                     return;
                 int p2 = p + 1;
-                if (sav.GetData(p2, 1) != null)
+                if (sav.Data.AsSpan(p2, 1) != null)
                 {
-                    b2 = sav.GetData(p2, 1);
+                    b2 = sav.Data.AsSpan(p2, 1).ToArray();
                 }
                 else
                     return;
                 int p3 = p2 + 1;
-                var b3 = sav.GetData(p3, 1);
+                var b3 = sav.Data.AsSpan(p3, 1);
                 int p4 = p3 + 1;
-                var b4 = sav.GetData(p4, 1);
+                var b4 = sav.Data.AsSpan(p4, 1);
                 int p5 = p4 + 1;
                 if (b[0] == 1)
                 {
@@ -114,13 +114,13 @@ namespace WangPluginSav.GUI
             int p = 129544;
             for (int j = 0; j < 20; j++)
             {
-                var exists = sav.GetData(p, 1);
+                var exists = sav.Data.AsSpan(p, 1);
                 p++;
-                var no = sav.GetData(p, 1);
+                var no = sav.Data.AsSpan(p, 1);
                 p++;
-                var hp = sav.GetData(p, 1);
+                var hp = sav.Data.AsSpan(p, 1);
                 p++;
-                var op = sav.GetData(p, 1);
+                var op = sav.Data.AsSpan(p, 1);
                 p++;
                 if (exists[0] == 17)
                 {

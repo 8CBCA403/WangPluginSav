@@ -9,7 +9,7 @@ using LTDCE;
 
 namespace WangPluginSav.Plugins
 {
-    internal class Gen5EventPlugin : WangPluginSav
+    public class Gen5EventPlugin : WangPluginSav
     {
         public override string Name => "Gen5事件修改器";
         public override int Priority => 2;

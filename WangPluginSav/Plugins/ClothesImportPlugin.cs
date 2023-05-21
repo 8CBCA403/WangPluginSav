@@ -9,7 +9,7 @@ using WangPluginSav.GUI;
 
 namespace WangPluginSav.Plugins
 {
-    internal class ClothesImportPlugin:WangPluginSav
+    public class ClothesImportPlugin:WangPluginSav
     {
         public override string Name => "服装导入器";
         public override int Priority => 4;
