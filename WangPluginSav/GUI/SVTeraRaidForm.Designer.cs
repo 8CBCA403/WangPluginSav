@@ -49,7 +49,7 @@
             CopyAll_BTN.Name = "CopyAll_BTN";
             CopyAll_BTN.Size = new Size(94, 26);
             CopyAll_BTN.TabIndex = 72;
-            CopyAll_BTN.Text = "CopyAll";
+            CopyAll_BTN.Text = "全部复制";
             CopyAll_BTN.UseVisualStyleBackColor = true;
             CopyAll_BTN.Click += ModifySav_Click;
             // 
@@ -76,7 +76,7 @@
             ImportSeed_BTN.Name = "ImportSeed_BTN";
             ImportSeed_BTN.Size = new Size(109, 26);
             ImportSeed_BTN.TabIndex = 75;
-            ImportSeed_BTN.Text = "ImportSeed";
+            ImportSeed_BTN.Text = "导入Seed";
             ImportSeed_BTN.UseVisualStyleBackColor = true;
             ImportSeed_BTN.Click += ImportSeed_BTN_Click;
             // 
@@ -105,7 +105,7 @@
             ModSav_BTN.Name = "ModSav_BTN";
             ModSav_BTN.Size = new Size(109, 26);
             ModSav_BTN.TabIndex = 78;
-            ModSav_BTN.Text = "ModifySav";
+            ModSav_BTN.Text = "修改保存";
             ModSav_BTN.UseVisualStyleBackColor = true;
             ModSav_BTN.Click += ModSav_BTN_Click;
             // 
@@ -115,7 +115,7 @@
             CloseAll_BTN.Name = "CloseAll_BTN";
             CloseAll_BTN.Size = new Size(94, 26);
             CloseAll_BTN.TabIndex = 79;
-            CloseAll_BTN.Text = "CloseAll";
+            CloseAll_BTN.Text = "全部清空";
             CloseAll_BTN.UseVisualStyleBackColor = true;
             CloseAll_BTN.Click += CloseAll_BTN_Click;
             // 
@@ -125,7 +125,7 @@
             ImportDIS_BTN.Name = "ImportDIS_BTN";
             ImportDIS_BTN.Size = new Size(109, 26);
             ImportDIS_BTN.TabIndex = 89;
-            ImportDIS_BTN.Text = "ImportDis";
+            ImportDIS_BTN.Text = "导回DIS";
             ImportDIS_BTN.UseVisualStyleBackColor = true;
             ImportDIS_BTN.Click += ImportDIS_BTN_Click;
             // 
@@ -146,7 +146,7 @@
             groupBox2.Size = new Size(233, 328);
             groupBox2.TabIndex = 91;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Editor";
+            groupBox2.Text = "编辑";
             // 
             // ShinyCar_BTN
             // 
