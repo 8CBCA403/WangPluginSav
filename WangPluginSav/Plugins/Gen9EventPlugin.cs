@@ -19,7 +19,11 @@ namespace WangPluginSav.Plugins
             {
                 Image = Properties.Resources.SV
             };
-            var SVTera = new ToolStripMenuItem("太晶坑修改器")
+            var SVTeraPaldea = new ToolStripMenuItem("帕底亚洞窟修改器")
+            {
+                Image = Properties.Resources.Tera
+            };
+            var SVTeraKitakami = new ToolStripMenuItem("北上乡洞窟修改器")
             {
                 Image = Properties.Resources.Tera
             };
@@ -28,17 +32,20 @@ namespace WangPluginSav.Plugins
                 Image = Properties.Resources.F18_Fancy
             };
 #pragma warning disable CS8622
-            SVTera.Click += SVTeraOpenForm;
-            SVTera.Name = "太晶坑修改器";
+            SVTeraPaldea.Click += SVPaldeaRaidForm;
+            SVTeraPaldea.Name = "帕底亚洞窟修改器";
+            SVTeraKitakami.Click += SVKitakamiRaidForm;
+            SVTeraKitakami.Name = "北上乡洞窟修改器";
             Vivillon.Click += VivillonOpenForm;
             Vivillon.Name = "彩粉蝶修改器";
-            ctrl.DropDownItems.Add(SVTera);
+            ctrl.DropDownItems.Add(SVTeraPaldea);
+            ctrl.DropDownItems.Add(SVTeraKitakami);
             ctrl.DropDownItems.Add(Vivillon);
             modmenu.DropDownItems.Add(ctrl);
 
         }
 
-        private void SVTeraOpenForm(object sender, EventArgs e)
+        private void SVPaldeaRaidForm(object sender, EventArgs e)
         {
             if (SaveFileEditor.SAV.Version != GameVersion.SL
               && SaveFileEditor.SAV.Version != GameVersion.SV && SaveFileEditor.SAV.Version != GameVersion.VL)
@@ -51,7 +58,24 @@ namespace WangPluginSav.Plugins
                 MessageBox.Show("检测到空档，请导入有效存档");
                 return;
             }
-            var form = new SVTeraRaidForm(SaveFileEditor, PKMEditor);
+            var form = new SVPaldeaRaidForm(SaveFileEditor, PKMEditor);
+
+            form.Show();
+        }
+        private void SVKitakamiRaidForm(object sender, EventArgs e)
+        {
+            if (SaveFileEditor.SAV.Version != GameVersion.SL
+              && SaveFileEditor.SAV.Version != GameVersion.SV && SaveFileEditor.SAV.Version != GameVersion.VL)
+            {
+                MessageBox.Show("此工具只适用于朱紫！");
+                return;
+            }
+            if (SaveFileEditor.SAV.OT == "PKHeX")
+            {
+                MessageBox.Show("检测到空档，请导入有效存档");
+                return;
+            }
+            var form = new SVKitakamiRaidForm(SaveFileEditor, PKMEditor);
 
             form.Show();
         }
