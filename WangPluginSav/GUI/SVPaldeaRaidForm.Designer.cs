@@ -37,7 +37,6 @@
             LoopBox = new CheckBox();
             ModSav_BTN = new Button();
             CloseAll_BTN = new Button();
-            ImportDIS_BTN = new Button();
             groupBox2 = new GroupBox();
             ShinyCarPaldea_BTN = new Button();
             groupBox2.SuspendLayout();
@@ -101,7 +100,7 @@
             // 
             // ModSav_BTN
             // 
-            ModSav_BTN.Location = new Point(112, 105);
+            ModSav_BTN.Location = new Point(112, 79);
             ModSav_BTN.Name = "ModSav_BTN";
             ModSav_BTN.Size = new Size(109, 26);
             ModSav_BTN.TabIndex = 78;
@@ -119,20 +118,9 @@
             CloseAll_BTN.UseVisualStyleBackColor = true;
             CloseAll_BTN.Click += CloseAll_BTN_Click;
             // 
-            // ImportDIS_BTN
-            // 
-            ImportDIS_BTN.Location = new Point(112, 79);
-            ImportDIS_BTN.Name = "ImportDIS_BTN";
-            ImportDIS_BTN.Size = new Size(109, 26);
-            ImportDIS_BTN.TabIndex = 89;
-            ImportDIS_BTN.Text = "导回DIS";
-            ImportDIS_BTN.UseVisualStyleBackColor = true;
-            ImportDIS_BTN.Click += ImportDIS_BTN_Click;
-            // 
             // groupBox2
             // 
             groupBox2.Controls.Add(ShinyCarPaldea_BTN);
-            groupBox2.Controls.Add(ImportDIS_BTN);
             groupBox2.Controls.Add(CloseAll_BTN);
             groupBox2.Controls.Add(ModSav_BTN);
             groupBox2.Controls.Add(LoopBox);
@@ -150,7 +138,7 @@
             // 
             // ShinyCarPaldea_BTN
             // 
-            ShinyCarPaldea_BTN.Location = new Point(12, 136);
+            ShinyCarPaldea_BTN.Location = new Point(12, 131);
             ShinyCarPaldea_BTN.Name = "ShinyCarPaldea_BTN";
             ShinyCarPaldea_BTN.Size = new Size(209, 26);
             ShinyCarPaldea_BTN.TabIndex = 90;
@@ -186,7 +174,6 @@
         private CheckBox LoopBox;
         private Button ModSav_BTN;
         private Button CloseAll_BTN;
-        private Button ImportDIS_BTN;
         private GroupBox groupBox2;
         private Button ShinyCarPaldea_BTN;
     }

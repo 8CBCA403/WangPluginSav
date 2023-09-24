@@ -10,7 +10,6 @@ namespace WangPluginSav.GUI
         private const string SeedFilter = "Trainer Info |*.txt|All Files|*.*";
         private const string DisFilter = "Trainer Info |*.DIS|All Files|*.*";
         private string[]? lines;
-        private TeraRaidDisplayType[] a = new TeraRaidDisplayType[72];
         private byte[] b = new byte[72];
         private static Random random = new Random();
 
@@ -38,11 +37,12 @@ namespace WangPluginSav.GUI
         {
             if (SAV.SAV is SAV9SV sv)
             {
-                SAV_Raid9(sv, sv.RaidPaldea);
+                    SAV_Raid9(sv, sv.RaidPaldea);
             }
+        MessageBox.Show("已复制Seed到所有洞窟");
+        SystemSounds.Asterisk.Play();
         }
-
-        private void ImportSeed_BTN_Click(object sender, EventArgs e)
+    private void ImportSeed_BTN_Click(object sender, EventArgs e)
         {
             using var sfd = new OpenFileDialog
             {
@@ -63,9 +63,10 @@ namespace WangPluginSav.GUI
         {
             if (SAV.SAV is SAV9SV sv)
             {
-                SetRaid9(sv.RaidPaldea);
-
-            }
+                    SetRaid9(sv.RaidPaldea);
+                }
+            MessageBox.Show("保存成功");
+            SystemSounds.Asterisk.Play();
         }
         public void SetRaid9(RaidSpawnList9 raid)
         {
@@ -91,15 +92,6 @@ namespace WangPluginSav.GUI
                         r1.IsEnabled = true;
                         r1.Seed = Convert.ToUInt32(lines[i], 16);
                         r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
-                        if (b[0] != 4)
-                        {
-                            if (b[i] == 0)
-                                a[i] = TeraRaidDisplayType.无;
-                            else if (b[i] == 1)
-                                a[i] = TeraRaidDisplayType.无限制;
-                            else if (b[i] == 2)
-                                a[i] = TeraRaidDisplayType.需要坐骑;
-                            r1.DisplayType = a[i];
                         }
                     }
                 }
@@ -113,17 +105,7 @@ namespace WangPluginSav.GUI
                             r1.IsEnabled = true;
                             r1.Seed = Convert.ToUInt32(lines[j], 16);
                             r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
-                            if (b[0] != 4)
-                            {
-                                if (b[i * n + j] == 0)
-                                    a[i * n + j] = TeraRaidDisplayType.无;
-                                else if (b[i * n + j] == 1)
-                                    a[i * n + j] = TeraRaidDisplayType.无限制;
-                                else if (b[i * n + j] == 2)
-                                    a[i * n + j] = TeraRaidDisplayType.需要坐骑;
-                                r1.DisplayType = a[i];
-                            }
-                        }
+
                     }
                 }
             }
@@ -135,32 +117,9 @@ namespace WangPluginSav.GUI
             for (int i = 0; i < 69; i++)
             {
                 var r1 = raid.GetRaid(i);
-                a[i] = r1.DisplayType;
-                if (a[i] == TeraRaidDisplayType.无)
-                    b[i] = 0;
-                else if (a[i] == TeraRaidDisplayType.无限制)
-                    b[i] = 1;
-                else if (a[i] == TeraRaidDisplayType.需要坐骑)
-                    b[i] = 2;
-            }
-            using var sfd = new SaveFileDialog
-            {
-                FileName = "DisplayBackup",
-                Filter = DisFilter,
-                FilterIndex = 0,
-                RestoreDirectory = true,
-            };
-
-            if (sfd.ShowDialog() != DialogResult.OK)
-                return;
-            File.WriteAllBytes(sfd.FileName, b);
-            for (int i = 0; i < 69; i++)
-            {
-                var r1 = raid.GetRaid(i);
                 r1.IsEnabled = false;
                 r1.Seed = 0;
                 r1.IsClaimedLeaguePoints = false;
-                r1.DisplayType = TeraRaidDisplayType.无;
                 r1.Content = TeraRaidContentType.一至五星;
             }
             Validate();
@@ -175,17 +134,6 @@ namespace WangPluginSav.GUI
                 r1.IsEnabled = true;
                 r1.Seed = Convert.ToUInt32(ModSeedText.Text, 16);
                 r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
-                if (b[0] != 4)
-                {
-                    if (b[i] == 0)
-                        a[i] = TeraRaidDisplayType.无;
-                    else if (b[i] == 1)
-                        a[i] = TeraRaidDisplayType.无限制;
-                    else if (b[i] == 2)
-                        a[i] = TeraRaidDisplayType.需要坐骑;
-                    r1.DisplayType = a[i];
-                }
-
             }
             Validate();
 
@@ -196,22 +144,9 @@ namespace WangPluginSav.GUI
             {
                 CloseAllRaid(sv.RaidPaldea);
             }
+            MessageBox.Show("已清除全部洞窟Seed");
+            SystemSounds.Asterisk.Play();
         }
-        private void ImportDIS_BTN_Click(object sender, EventArgs e)
-        {
-            using var sfd = new OpenFileDialog
-            {
-                Filter = DisFilter,
-                FilterIndex = 0,
-                RestoreDirectory = true,
-            };
-            if (sfd.ShowDialog() != DialogResult.OK)
-                return;
-            string path = sfd.FileName;
-            b = File.ReadAllBytes(path);
-        }
-
-
         private static int Raidshiny(uint Seed)
         {
             Xoroshiro128Plus xoroshiro128Plus = new Xoroshiro128Plus(Seed);
