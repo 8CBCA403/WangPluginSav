@@ -45,10 +45,10 @@
             main_gpikachu_PB = new GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC();
             tabPage2 = new TabPage();
             groupBox2 = new GroupBox();
-            pokemonBaseUC7 = new GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC();
+            armor_gift_squirtle_PB = new GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC();
             label2 = new Label();
             numericUpDown1 = new NumericUpDown();
-            pokemonBaseUC8 = new GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC();
+            armor_gift_bulbasaur_PB = new GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC();
             tabPage3 = new TabPage();
             SOJForm_BTN = new Button();
             RegiForm_BTN = new Button();
@@ -302,10 +302,10 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(pokemonBaseUC7);
+            groupBox2.Controls.Add(armor_gift_squirtle_PB);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(numericUpDown1);
-            groupBox2.Controls.Add(pokemonBaseUC8);
+            groupBox2.Controls.Add(armor_gift_bulbasaur_PB);
             groupBox2.Location = new Point(11, 7);
             groupBox2.Margin = new Padding(4);
             groupBox2.Name = "groupBox2";
@@ -315,22 +315,22 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "武馆";
             // 
-            // pokemonBaseUC7
+            // armor_gift_squirtle_PB
             // 
-            pokemonBaseUC7.Caught = false;
-            pokemonBaseUC7.DrawDynaxMaxIcon = true;
-            pokemonBaseUC7.Legalility = GUI.SWSHEventEditorGUI.Controls.PokemonRenderUC.LegalStatus.Illegal;
-            pokemonBaseUC7.Location = new Point(8, 143);
-            pokemonBaseUC7.Margin = new Padding(5, 6, 5, 6);
-            pokemonBaseUC7.MaximumSize = new Size(173, 83);
-            pokemonBaseUC7.MinimumSize = new Size(173, 83);
-            pokemonBaseUC7.Name = "pokemonBaseUC7";
-            pokemonBaseUC7.Pokemon = 7;
-            pokemonBaseUC7.PokemonName = "超级巨杰尼龟礼物";
-            pokemonBaseUC7.PokemonSubform = "";
-            pokemonBaseUC7.Size = new Size(173, 83);
-            pokemonBaseUC7.TabIndex = 24;
-            pokemonBaseUC7.ToolTip = "";
+            armor_gift_squirtle_PB.Caught = false;
+            armor_gift_squirtle_PB.DrawDynaxMaxIcon = true;
+            armor_gift_squirtle_PB.Legalility = GUI.SWSHEventEditorGUI.Controls.PokemonRenderUC.LegalStatus.Illegal;
+            armor_gift_squirtle_PB.Location = new Point(8, 143);
+            armor_gift_squirtle_PB.Margin = new Padding(5, 6, 5, 6);
+            armor_gift_squirtle_PB.MaximumSize = new Size(173, 83);
+            armor_gift_squirtle_PB.MinimumSize = new Size(173, 83);
+            armor_gift_squirtle_PB.Name = "armor_gift_squirtle_PB";
+            armor_gift_squirtle_PB.Pokemon = 7;
+            armor_gift_squirtle_PB.PokemonName = "超级巨杰尼龟礼物";
+            armor_gift_squirtle_PB.PokemonSubform = "";
+            armor_gift_squirtle_PB.Size = new Size(173, 83);
+            armor_gift_squirtle_PB.TabIndex = 24;
+            armor_gift_squirtle_PB.ToolTip = "";
             // 
             // label2
             // 
@@ -351,22 +351,22 @@
             numericUpDown1.Size = new Size(148, 25);
             numericUpDown1.TabIndex = 12;
             // 
-            // pokemonBaseUC8
+            // armor_gift_bulbasaur_PB
             // 
-            pokemonBaseUC8.Caught = false;
-            pokemonBaseUC8.DrawDynaxMaxIcon = true;
-            pokemonBaseUC8.Legalility = GUI.SWSHEventEditorGUI.Controls.PokemonRenderUC.LegalStatus.Illegal;
-            pokemonBaseUC8.Location = new Point(8, 22);
-            pokemonBaseUC8.Margin = new Padding(5, 6, 5, 6);
-            pokemonBaseUC8.MaximumSize = new Size(173, 83);
-            pokemonBaseUC8.MinimumSize = new Size(173, 83);
-            pokemonBaseUC8.Name = "pokemonBaseUC8";
-            pokemonBaseUC8.Pokemon = 1;
-            pokemonBaseUC8.PokemonName = "超极巨妙蛙种子礼物";
-            pokemonBaseUC8.PokemonSubform = "";
-            pokemonBaseUC8.Size = new Size(173, 83);
-            pokemonBaseUC8.TabIndex = 23;
-            pokemonBaseUC8.ToolTip = "";
+            armor_gift_bulbasaur_PB.Caught = false;
+            armor_gift_bulbasaur_PB.DrawDynaxMaxIcon = true;
+            armor_gift_bulbasaur_PB.Legalility = GUI.SWSHEventEditorGUI.Controls.PokemonRenderUC.LegalStatus.Illegal;
+            armor_gift_bulbasaur_PB.Location = new Point(8, 22);
+            armor_gift_bulbasaur_PB.Margin = new Padding(5, 6, 5, 6);
+            armor_gift_bulbasaur_PB.MaximumSize = new Size(173, 83);
+            armor_gift_bulbasaur_PB.MinimumSize = new Size(173, 83);
+            armor_gift_bulbasaur_PB.Name = "armor_gift_bulbasaur_PB";
+            armor_gift_bulbasaur_PB.Pokemon = 1;
+            armor_gift_bulbasaur_PB.PokemonName = "超极巨妙蛙种子礼物";
+            armor_gift_bulbasaur_PB.PokemonSubform = "";
+            armor_gift_bulbasaur_PB.Size = new Size(173, 83);
+            armor_gift_bulbasaur_PB.TabIndex = 23;
+            armor_gift_bulbasaur_PB.ToolTip = "";
             // 
             // tabPage3
             // 
@@ -711,8 +711,8 @@
         private GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC ct_gift_poipole_PB;
         private GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC main_gift_toxel_PB;
         private System.Windows.Forms.GroupBox groupBox5;
-        private GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC pokemonBaseUC7;
-        private GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC pokemonBaseUC8;
+        private GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC armor_gift_squirtle_PB;
+        private GUI.SWSHEventEditorGUI.Controls.PokemonBaseUC armor_gift_bulbasaur_PB;
         private Button WonderCard_BTN;
         private Button CurryDex_BTN;
         private Button SOJForm_BTN;
