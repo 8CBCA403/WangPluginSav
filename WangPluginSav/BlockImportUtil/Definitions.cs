@@ -61,7 +61,9 @@ namespace WangPluginSav
             { "z_d0901_BEBENOM", 0x4B3C9063},
             { "z_bt0101_POKE_NUL", 0x2AB6CECC},
             { "z_wr0301_i0401_COSMOG", 0x52F6F77F},
-            { "z_t0101_i0202_MONSBALL", 0x178159E5}
+            { "z_t0101_i0202_MONSBALL", 0x178159E5},
+            { "FE_R1_HUSHIGIDANE_GET", 0x4F240749},
+            { "FE_R1_ZENIGAME_GET", 0x08F829F8}
         };
 
         public static readonly Dictionary<string, uint> memkeys_PokeCamp = new Dictionary<string, uint>()

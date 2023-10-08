@@ -41,6 +41,7 @@ namespace WangPluginSav
         {
             loading = true;
             SetupMain();
+            SetupIsleOfArmor();
             SetupCrownTundra();
             loading = false;
         }
@@ -174,6 +175,27 @@ namespace WangPluginSav
 
 
 
+        #endregion
+
+        #region Isle Of Armor
+        void SetupIsleOfArmor()
+        {
+
+            armor_gift_bulbasaur_PB.Caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_HUSHIGIDANE_GET"]).Type == SCTypeCode.Bool2;
+            armor_gift_squirtle_PB.Caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_ZENIGAME_GET"]).Type == SCTypeCode.Bool2;
+
+        }
+
+        void SaveIsleOfArmor()
+        {
+            var b_gift_bulbasaur_caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_HUSHIGIDANE_GET"]);
+            var b_gift_squirtle_caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_ZENIGAME_GET"]);
+
+            b_gift_bulbasaur_caught?.ChangeBooleanType(armor_gift_bulbasaur_PB.Caught ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            b_gift_squirtle_caught?.ChangeBooleanType(armor_gift_squirtle_PB.Caught ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+
+
+        }
         #endregion
 
         #region Crown Tundra
@@ -337,6 +359,7 @@ namespace WangPluginSav
         private void ts_applyBTN_Click(object sender, EventArgs e)
         {
             SaveMain();
+            SaveIsleOfArmor();
             SaveCrownTundra();
 
             this.Close();
