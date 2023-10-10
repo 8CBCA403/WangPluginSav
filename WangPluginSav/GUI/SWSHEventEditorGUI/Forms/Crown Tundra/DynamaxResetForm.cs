@@ -29,81 +29,81 @@ namespace WangPluginSav
 
 
         public uint[] Gen1Keys = new uint[]
-            {
-                0xF75E52CF, //Articuno
-                0xF75E5635, //Zapdos
-                0xF75E511C, //Moltres
-                0xF75E4DB6 //Mewtwo
-            };
+        {
+            0xF75E52CF, //急冻鸟
+            0xF75E5635, //闪电鸟
+            0xF75E511C, //火焰鸟
+            0xF75E4DB6 //超梦
+        };
 
         public uint[] Gen2Keys = new uint[]
         {
-            0xF75E4C03, //Raikou
-            0xF75E4A50, //Entei
-            0xF75E4F69, //Suicune
-            0xF75E621A, //Lugia
-            0xF75E63CD //Ho-Oh
+            0xF75E4C03, //雷公
+            0xF75E4A50, //炎帝
+            0xF75E4F69, //水君
+            0xF75E621A, //洛奇亚
+            0xF75E63CD //凤王
         };
 
         public uint[] Gen3Keys = new uint[]
         {
-            0xF760963E, //Kyogre
-            0xF76097F1, //Groudon
-            0xF7609B57, //Rayquaza
-            0xF760948B, //Latias
-            0xF76092D8, //Latios
+            0xF760963E, //盖欧卡
+            0xF76097F1, //固拉多
+            0xF7609B57, //烈空坐
+            0xF760948B, //拉帝亚斯
+            0xF76092D8, //拉帝欧斯
         };
 
         public uint[] Gen4Keys = new uint[]
         {
-            0xF76086F3, //Dialga
-            0xF7608540, //Palkia
-            0xF7582170, //Giratina
-            0xF76099A4, //Uxie
-            0xF7609D0A, //Mesprit
-            0xF7609EBD, //Azelf
-            0xF7582323, //Heatran
-            0xF75824D6, //Cresselia
+            0xF76086F3, //帝牙卢卡
+            0xF7608540, //帕路奇亚
+            0xF7582170, //骑拉帝纳
+            0xF76099A4, //由克希
+            0xF7609D0A, //艾姆利多
+            0xF7609EBD, //亚克诺姆
+            0xF7582323, //席多蓝恩
+            0xF75824D6, //克雷色利亚
         };
 
         public uint[] Gen5Keys = new uint[]
         {
-            0xF7582BA2, //Reshiram
-            0xF7582D55, //Zekrom
-            0xF7582F08, //Kyurem
-            0xF7582689, //Tornadus
-            0xF758283C, //Thundurus
-            0xF75829EF, //Landorus
+            0xF7582BA2, //莱希拉姆
+            0xF7582D55, //捷克罗姆
+            0xF7582F08, //酋雷姆
+            0xF7582689, //龙卷云
+            0xF758283C, //雷电云
+            0xF75829EF, //土地云
         };
 
         public uint[] Gen6Keys = new uint[]
         {
-            0xF75830BB, //Xerneas
-            0xF75B3AF9, //Yveltal
-            0xF75B3946, //Zygarde
+            0xF75830BB, //哲尔尼亚斯
+            0xF75B3AF9, //伊裴尔塔尔
+            0xF75B3946, //基格尔德
         };
 
         public uint[] Gen7Keys = new uint[]
         {
-            0xF75B3E5F, //Solgaleo
-            0xF75B3CAC, //Lunala
-            0xF75B3793, //Tapu Koko
-            0xF75B35E0, //Tapu Lele
-            0xF75B41C5, //Tapu Bulu
-            0xF75B4012, //Tapu Fini
+            0xF75B3E5F, //索尔迦雷欧
+            0xF75B3CAC, //露奈雅拉
+            0xF75B3793, //卡璞・鸣鸣
+            0xF75B35E0, //卡璞・蝶蝶
+            0xF75B41C5, //卡璞・哞哞
+            0xF75B4012, //卡璞・鳍鳍
         };
         public uint[] Gen7UBKeys = new uint[]
         {
-            0xF75B46DE, //Nihilego
-            0xF769AAC6, //Buzzwole
-            0xF769AC79, //Pheromosa
-            0xF769A760, //Xurkitree
-            0xF769B192, //Celesteela
-            0xF769A913, //Kartana
-            0xF769B345, //Guzzlord
-            0xF75B4891, //Necrozma
-            0xF769B85E, //Stakataka
-            0xF769AFDF, //Blacephalon
+            0xF75B46DE, //虚吾伊德
+            0xF769AAC6, //爆肌蚊
+            0xF769AC79, //费洛美螂
+            0xF769A760, //电束木
+            0xF769B192, //铁火辉夜
+            0xF769A913, //纸御剑
+            0xF769B345, //恶食大王
+            0xF75B4891, //奈克洛兹玛
+            0xF769B85E, //垒磊石
+            0xF769AFDF, //砰头小丑
         };
 
 

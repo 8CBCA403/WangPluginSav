@@ -21,27 +21,27 @@ namespace WangPluginSav
 
         public static readonly Dictionary<string, uint> memkeys_FootprintPercentage = new Dictionary<string, uint>()
         {
-                { "Cobalion", 0x4D50B655},
-                { "Terrakion", 0x771E4c88},
-                { "Virizion", 0xAD67A297}
+                { "勾帕路翁", 0x4D50B655},
+                { "代拉基翁", 0x771E4c88},
+                { "毕力吉翁", 0xAD67A297}
         };
 
         public static readonly Dictionary<string, uint> memkeys_SwordsofJustice = new Dictionary<string, uint>()
         {
-                { "Cobalion", 0xBB305227},
-                { "Terrakion", 0x750C83A4},
-                { "Virizion", 0x1A27DF2C},
-                { "Keldeo", 0xA097DE31}
+                { "勾帕路翁", 0xBB305227},
+                { "代拉基翁", 0x750C83A4},
+                { "毕力吉翁", 0x1A27DF2C},
+                { "凯路迪欧", 0xA097DE31}
         };
 
         public static readonly Dictionary<string, uint> memkeys_Regis = new Dictionary<string, uint>()
         {
-                { "Regirock", 0xEE3F84E6},
-                { "Regice", 0xDAB3DD3A},
-                { "Registeel", 0xEE1FD86E},
-                { "Regigigas", 0xC4308A93},
-                { "Regieleki", 0x4F4AEC32},
-                { "Regidrago", 0x4F30F174}
+                { "雷吉洛克", 0xEE3F84E6},
+                { "雷吉艾斯", 0xDAB3DD3A},
+                { "雷吉斯奇鲁", 0xEE1FD86E},
+                { "雷吉奇卡斯", 0xC4308A93},
+                { "雷吉艾勒奇", 0x4F4AEC32},
+                { "雷吉铎拉戈", 0x4F30F174}
         };
 
         public static readonly Dictionary<string, uint> memkeys_Birds = new Dictionary<string, uint>()
@@ -106,24 +106,24 @@ namespace WangPluginSav
         {
             public static readonly List<string> Sword = new List<string>()
             {
-                "Ho-oh",
-                "Latios",
-                "Groudon",
-                "Dialga",
-                "Tornadus",
-                "Reshiram",
-                "Xerneas"
+                "凤王",
+                "拉帝欧斯",
+                "固拉多",
+                "帝牙卢卡",
+                "龙卷云",
+                "莱希拉姆",
+                "哲尔尼亚斯"
             };
 
             public static readonly List<string> Shield = new List<string>()
             {
-                "Lugia",
-                "Latias",
-                "Kyogre",
-                "Palkia",
-                "Thundurus",
-                "Zekrom",
-                "Yveltal"
+                "洛奇亚",
+                "拉帝亚斯",
+                "盖欧卡",
+                "帕路奇亚",
+                "雷电云",
+                "捷克罗姆",
+                "伊裴尔塔尔"
             };
         }
 
@@ -131,54 +131,54 @@ namespace WangPluginSav
         {
             private static readonly Dictionary<string, int> s_nationalDex = new Dictionary<string, int>()
         {
-            { "None", 0 },
-            { "Articuno", 144},
-            { "Zapdos", 145},
-            { "Moltres", 156},
-            { "Mewtwo", 150},
-            { "Raikou", 243},
-            { "Entei", 244},
-            { "Suicune", 245},
-            { "Lugia", 249},
-            { "Ho-oh", 250},
-            { "Latias", 380},
-            { "Latios", 381},
-            { "Kyogre", 382},
-            { "Groudon", 383},
-            { "Rayquaza", 384},
-            { "Uxie", 480},
-            { "Mesprit", 481},
-            { "Azelf", 482},
-            { "Dialga", 483},
-            { "Palkia", 484},
-            { "Heatran", 485},
-            { "Giratina", 487},
-            { "Cresselia", 488},
-            { "Tornadus", 641},
-            { "Thundurus", 642},
-            { "Reshiram", 643},
-            { "Zekrom", 644},
-            { "Landorus", 645},
-            { "Kryurem", 646},
-            { "Xerneas", 716},
-            { "Yveltal", 717},
-            { "Zygarde", 718},
-            { "Tapu Koko", 785},
-            { "Tapu Lele", 786},
-            { "Tapu Bulu", 787},
-            { "Tapu Fini", 788},
-            { "Solgaleo", 791},
-            { "Lunala", 792},
-            { "Nihilego", 793},
-            { "Buzzwole", 794 },
-            { "Pheromosa", 795 },
-            { "Xurkitree", 796 },
-            { "Celesteela", 797 },
-            { "Kartana", 798 },
-            { "Guzzlord", 799 },
-            { "Necrozma", 800 },
-            { "Stakataka", 805 },
-            { "Blacephalon", 806 }
+            { "无", 0 },
+            { "急冻鸟", 144},
+            { "闪电鸟", 145},
+            { "火焰鸟", 156},
+            { "超梦", 150},
+            { "雷公", 243},
+            { "炎帝", 244},
+            { "水君", 245},
+            { "洛奇亚", 249},
+            { "凤王", 250},
+            { "拉帝亚斯", 380},
+            { "拉帝欧斯", 381},
+            { "盖欧卡", 382},
+            { "固拉多", 383},
+            { "烈空坐", 384},
+            { "由克希", 480},
+            { "艾姆利多", 481},
+            { "亚克诺姆", 482},
+            { "帝牙卢卡", 483},
+            { "帕路奇亚", 484},
+            { "席多蓝恩", 485},
+            { "骑拉帝纳", 487},
+            { "克雷色利亚", 488},
+            { "龙卷云", 641},
+            { "雷电云", 642},
+            { "莱希拉姆", 643},
+            { "捷克罗姆", 644},
+            { "土地云", 645},
+            { "酋雷姆", 646},
+            { "哲尔尼亚斯", 716},
+            { "伊裴尔塔尔", 717},
+            { "基格尔德", 718},
+            { "卡璞・鸣鸣", 785},
+            { "卡璞・蝶蝶", 786},
+            { "卡璞・哞哞", 787},
+            { "卡璞・鳍鳍", 788},
+            { "索尔迦雷欧", 791},
+            { "露奈雅拉", 792},
+            { "虚吾伊德", 793},
+            { "爆肌蚊", 794 },
+            { "费洛美螂", 795 },
+            { "电束木", 796 },
+            { "铁火辉夜", 797 },
+            { "纸御剑", 798 },
+            { "恶食大王", 799 },
+            { "奈克洛兹玛", 800 },
+            { "垒磊石", 805 },
+            { "砰头小丑", 806 }
         };
             public static int GetNameIndex(string name) => s_nationalDex.ToList().IndexOf(s_nationalDex.First(x => x.Key == name));
             public static int GetIDIndex(int id) => s_nationalDex.ToList().IndexOf(s_nationalDex.First(x => x.Value == id));
