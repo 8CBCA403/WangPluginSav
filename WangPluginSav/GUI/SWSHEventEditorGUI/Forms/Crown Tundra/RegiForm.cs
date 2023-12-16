@@ -34,8 +34,8 @@ namespace WangPluginSav
             legailty_CB.Checked = true;
 
 
-            var eleki = SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["Regieleki"]);
-            var drago = SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["Regidrago"]);
+            var eleki = SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["雷吉艾勒奇"]);
+            var drago = SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["雷吉铎拉戈"]);
             var pattern = SAV?.Blocks.GetBlock(Definitions.KRegielekiOrRegidragoPattern);
 
 
@@ -186,8 +186,8 @@ namespace WangPluginSav
                 SAV?.Blocks.GetBlock(Definitions.memkeys_Regis.ElementAt(i).Value).ChangeBooleanType(regi_clistbox.GetItemChecked(i) ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
             }
 
-            SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["Regieleki"]).ChangeBooleanType(regieleki_RBTN.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
-            SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["Regidrago"]).ChangeBooleanType(regidrago_RBTN.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["雷吉艾勒奇"]).ChangeBooleanType(regieleki_RBTN.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SAV?.Blocks.GetBlock(Definitions.memkeys_Regis["雷吉铎拉戈"]).ChangeBooleanType(regidrago_RBTN.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
 
             //If you don't cast the int, you will get an exeception that will crash the plugin.
             if (regieleki_patrBTN.Checked) SAV?.Blocks.GetBlock(Definitions.KRegielekiOrRegidragoPattern).SetValue((uint)1);

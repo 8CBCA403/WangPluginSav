@@ -25,15 +25,15 @@ namespace WangPluginSav
         private void SOJForm_Load(object sender, EventArgs e)
         {
 
-            var b_cobalion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Cobalion"]);
-            var b_terrakion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Terrakion"]);
-            var b_virizion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Virizion"]);
+            var b_cobalion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["勾帕路翁"]);
+            var b_terrakion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["代拉基翁"]);
+            var b_virizion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["毕力吉翁"]);
 
-            var b_keldeo = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Keldeo"]);
+            var b_keldeo = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["凯路迪欧"]);
 
-            var b_cobalionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["Cobalion"]);
-            var b_terrakionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["Terrakion"]);
-            var b_virizionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["Virizion"]);
+            var b_cobalionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["勾帕路翁"]);
+            var b_terrakionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["代拉基翁"]);
+            var b_virizionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["毕力吉翁"]);
 
             if (b_cobalion?.Type == SCTypeCode.Bool2 && Convert.ToInt32(b_cobalionf?.GetValue()) != 100 || Convert.ToInt32(b_cobalionf?.GetValue()) % 2 != 0) //illegal!
             {
@@ -240,15 +240,15 @@ namespace WangPluginSav
 
         private void apply_BTN_Click(object sender, EventArgs e)
         {
-            var b_cobalion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Cobalion"]);
-            var b_terrakion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Terrakion"]);
-            var b_virizion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Virizion"]);
+            var b_cobalion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["勾帕路翁"]);
+            var b_terrakion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["代拉基翁"]);
+            var b_virizion = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["毕力吉翁"]);
 
-            var b_keldeo = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["Keldeo"]);
+            var b_keldeo = SAV?.Blocks.GetBlock(Definitions.memkeys_SwordsofJustice["凯路迪欧"]);
 
-            var b_cobalionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["Cobalion"]);
-            var b_terrakionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["Terrakion"]);
-            var b_virizonf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["Virizion"]);
+            var b_cobalionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["勾帕路翁"]);
+            var b_terrakionf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["代拉基翁"]);
+            var b_virizonf = SAV?.Blocks.GetBlock(Definitions.memkeys_FootprintPercentage["毕力吉翁"]);
 
             b_cobalion?.ChangeBooleanType(cobalion_CB.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
             b_terrakion?.ChangeBooleanType(terrakion_CB.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
