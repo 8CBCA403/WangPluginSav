@@ -38,7 +38,7 @@
             ModSav_BTN = new Button();
             CloseAll_BTN = new Button();
             groupBox2 = new GroupBox();
-            ShinyCarPaldea_BTN = new Button();
+            ShinyCarBlueberry_BTN = new Button();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -120,7 +120,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(ShinyCarPaldea_BTN);
+            groupBox2.Controls.Add(ShinyCarBlueberry_BTN);
             groupBox2.Controls.Add(CloseAll_BTN);
             groupBox2.Controls.Add(ModSav_BTN);
             groupBox2.Controls.Add(LoopBox);
@@ -136,17 +136,17 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "编辑";
             // 
-            // ShinyCarPaldea_BTN
+            // ShinyCarBlueberry_BTN
             // 
-            ShinyCarPaldea_BTN.Location = new Point(12, 131);
-            ShinyCarPaldea_BTN.Name = "ShinyCarPaldea_BTN";
-            ShinyCarPaldea_BTN.Size = new Size(209, 26);
-            ShinyCarPaldea_BTN.TabIndex = 90;
-            ShinyCarPaldea_BTN.Text = "蓝莓学院随机闪车";
-            ShinyCarPaldea_BTN.UseVisualStyleBackColor = true;
-            ShinyCarPaldea_BTN.Click += ShinyCarPaldea_BTN_Click;
+            ShinyCarBlueberry_BTN.Location = new Point(12, 131);
+            ShinyCarBlueberry_BTN.Name = "ShinyCarPaldea_BTN";
+            ShinyCarBlueberry_BTN.Size = new Size(209, 26);
+            ShinyCarBlueberry_BTN.TabIndex = 90;
+            ShinyCarBlueberry_BTN.Text = "蓝莓学院随机闪车";
+            ShinyCarBlueberry_BTN.UseVisualStyleBackColor = true;
+            ShinyCarBlueberry_BTN.Click += ShinyCarBlueberry_BTN_Click;
             // 
-            // SVPaldeaRaidForm
+            // SVBlueberryRaidForm
             // 
             AutoScaleDimensions = new SizeF(6F, 12F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -156,7 +156,7 @@
             Font = new Font("黑体", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "SVPaldeaRaidForm";
+            Name = "SVBlueberryRaidForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "蓝莓学院洞窟编辑器";
             groupBox2.ResumeLayout(false);
@@ -175,6 +175,6 @@
         private Button ModSav_BTN;
         private Button CloseAll_BTN;
         private GroupBox groupBox2;
-        private Button ShinyCarPaldea_BTN;
+        private Button ShinyCarBlueberry_BTN;
     }
 }
