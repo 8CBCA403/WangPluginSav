@@ -27,6 +27,10 @@ namespace WangPluginSav.Plugins
             {
                 Image = Properties.Resources.Tera
             };
+            var SVTeraBlueberry = new ToolStripMenuItem("蓝莓学院洞窟修改器")
+            {
+                Image = Properties.Resources.Tera
+            };
             var Vivillon = new ToolStripMenuItem("彩粉蝶修改器")
             {
                 Image = Properties.Resources.F18_Fancy
@@ -36,10 +40,13 @@ namespace WangPluginSav.Plugins
             SVTeraPaldea.Name = "帕底亚洞窟修改器";
             SVTeraKitakami.Click += SVKitakamiRaidForm;
             SVTeraKitakami.Name = "北上乡洞窟修改器";
+            SVTeraBlueberry.Click += SVBlueberryRaidForm;
+            SVTeraBlueberry.Name = "蓝莓学院洞窟修改器";
             Vivillon.Click += VivillonOpenForm;
             Vivillon.Name = "彩粉蝶修改器";
             ctrl.DropDownItems.Add(SVTeraPaldea);
             ctrl.DropDownItems.Add(SVTeraKitakami);
+            ctrl.DropDownItems.Add(SVTeraBlueberry);
             ctrl.DropDownItems.Add(Vivillon);
             modmenu.DropDownItems.Add(ctrl);
 
@@ -80,6 +87,23 @@ namespace WangPluginSav.Plugins
             form.Show();
         }
 
+        private void SVBlueberryRaidForm(object sender, EventArgs e)
+        {
+            if (SaveFileEditor.SAV.Version != GameVersion.SL
+              && SaveFileEditor.SAV.Version != GameVersion.SV && SaveFileEditor.SAV.Version != GameVersion.VL)
+            {
+                MessageBox.Show("此工具只适用于朱紫！");
+                return;
+            }
+            if (SaveFileEditor.SAV.OT == "PKHeX")
+            {
+                MessageBox.Show("检测到空档，请导入有效存档");
+                return;
+            }
+            var form = new SVBlueberryRaidForm(SaveFileEditor, PKMEditor);
+
+            form.Show();
+        }
         private void VivillonOpenForm(object sender, EventArgs e)
         {
             if (SaveFileEditor.SAV.Version != GameVersion.SL
