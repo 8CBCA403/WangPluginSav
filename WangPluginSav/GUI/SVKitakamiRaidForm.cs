@@ -119,7 +119,7 @@ namespace WangPluginSav.GUI
                 r1.IsEnabled = false;
                 r1.Seed = 0;
                 r1.IsClaimedLeaguePoints = false;
-                r1.Content = TeraRaidContentType.一至五星;
+                r1.Content = TeraRaidContentType.Base05;
             }
             Validate();
 
@@ -162,7 +162,7 @@ namespace WangPluginSav.GUI
 
                     foreach (TeraRaidDetail teraRaidDetail in allRaids)
                     {
-                        if (teraRaidDetail.AreaID != 0 && (teraRaidDetail.Content == TeraRaidContentType.一至五星 || teraRaidDetail.Content == TeraRaidContentType.六星))
+                        if (teraRaidDetail.AreaID != 0 && (teraRaidDetail.Content == TeraRaidContentType.Base05 || teraRaidDetail.Content == TeraRaidContentType.Black6))
                         {
                             teraRaidDetail.IsEnabled = true;
                             uint seed;
