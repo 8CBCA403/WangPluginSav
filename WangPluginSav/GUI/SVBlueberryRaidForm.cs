@@ -80,8 +80,8 @@ namespace WangPluginSav.GUI
                 MessageBox.Show("没导入有效Seed");
                 return;
             }
-            var r = 80 / n;
-            var s = 80 % n;
+            var r = 24 / n;
+            var s = 24 % n;
             if (n != 0)
             {
                 if (!LoopBox.Checked)
