@@ -155,7 +155,7 @@ namespace WangPluginSav.GUI
             uint num3 = (uint)xoroshiro128Plus.NextInt(4294967295uL);
             return (((num3 >> 16) ^ (num3 & 0xFFFF)) >> 4 == ((num2 >> 16) ^ (num2 & 0xFFFF)) >> 4) ? 1 : 0;
         }
-        private void ShinyCarPaldea_BTN_Click(object sender, EventArgs e)
+        private void ShinyCarBlueberry_BTN_Click(object sender, EventArgs e)
         {
             if (SAV.SAV is SAV9SV sv)
             {
