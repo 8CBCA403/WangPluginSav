@@ -5,9 +5,11 @@ using System.Text;
 
 namespace WangPluginSav;
 
-internal record Block(uint Location, string Path)
+public record class Block(uint Location, string Path)
 {
-	[CompilerGenerated]
+    public static implicit operator Block(uint l) => new Block(l, string.Empty);
+    public static implicit operator uint(Block b) => b.Location;
+    [CompilerGenerated]
 	protected virtual Type EqualityContract
 	{
 		[CompilerGenerated]
