@@ -25,13 +25,13 @@ namespace WangPluginSav
             switch (StartingPage)
             {
                 case (Pages.Main):
-                    tabControl1.SelectedIndex = 0;
+                    tabControl.SelectedIndex = 0;
                     break;
                 case (Pages.IsleOfArmor):
-                    tabControl1.SelectedIndex = 1;
+                    tabControl.SelectedIndex = 1;
                     break;
                 case (Pages.CrownTundra):
-                    tabControl1.SelectedIndex = 2;
+                    tabControl.SelectedIndex = 2;
                     break;
             }
 
@@ -180,14 +180,58 @@ namespace WangPluginSav
         #region Isle Of Armor
         void SetupIsleOfArmor()
         {
-
+            if (SAV.SaveRevision < 1)
+            {
+                tabControl.Controls[1].Enabled = false;
+                return;
+            }
+            //Setup Birds
             armor_gift_bulbasaur_PB.Caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_HUSHIGIDANE_GET"]).Type == SCTypeCode.Bool2;
             armor_gift_squirtle_PB.Caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_ZENIGAME_GET"]).Type == SCTypeCode.Bool2;
+
+            ioaWattDonationProgress.Items.AddRange(Language.DojoWattDonationQuestProgress);
+            ioaWattDonationProgress.SelectedIndex = (int)SAV.Blocks.GetBlockValue<uint>(Definitions.DojoWattDonationProgress);
+            ioaWattDonationTotal.Value = SAV.Blocks.GetBlockValue<uint>(Definitions.DojoWattDonationTotal);
+            SCBlock hairStylistAvailableBlock = SAV.Blocks.GetBlock(Definitions.DojoHairStylistAvailable);
+            hairStylistAvailable.Checked = hairStylistAvailableBlock.Type == SCTypeCode.Bool2;
+            SCBlock brokenRotomiDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoBrokenRotomiDisappeared);
+            brokenRotomiDisappared.Checked = brokenRotomiDisappearedBlock.Type == SCTypeCode.Bool2;
+            SCBlock fixedRotomiDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoRotomiDisappeared);
+            fixedRotomiDisappeared.Checked = fixedRotomiDisappearedBlock.Type == SCTypeCode.Bool2;
+            SCBlock tableDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoTableDisappeared);
+            tableDisappeared.Checked = tableDisappearedBlock.Type == SCTypeCode.Bool2;
+            SCBlock drinksVendingMachineDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoDrinksVendingMachineDisappeared);
+            drinksVendingMachineDisappeared.Checked = drinksVendingMachineDisappearedBlock.Type == SCTypeCode.Bool2;
+            SCBlock vitaminsVendingMachineDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoVitaminsVendingMachineDisappeared);
+            vitaminsVendingMachineDisappeared.Checked = vitaminsVendingMachineDisappearedBlock.Type == SCTypeCode.Bool2;
+            SCBlock canBattleHoneyBlock = SAV.Blocks.GetBlock(Definitions.CanBattleHoney);
+            canBattleHoney.Checked = canBattleHoneyBlock.Type == SCTypeCode.Bool2;
+            SCBlock battledHoneyTodayBlock = SAV.Blocks.GetBlock(Definitions.BattledHoneyToday);
+            battledHoneyToday.Checked = battledHoneyTodayBlock.Type == SCTypeCode.Bool2;
 
         }
 
         void SaveIsleOfArmor()
         {
+            SAV.Blocks.SetBlockValue(Definitions.DojoWattDonationProgress, (uint)ioaWattDonationProgress.SelectedIndex);
+            SAV.Blocks.SetBlockValue(Definitions.DojoWattDonationTotal, (uint)ioaWattDonationTotal.Value);
+            SCBlock hairStylistAvailableBlock = SAV.Blocks.GetBlock(Definitions.DojoHairStylistAvailable);
+            hairStylistAvailableBlock.ChangeBooleanType(hairStylistAvailable.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SCBlock brokenRotomiDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoBrokenRotomiDisappeared);
+            brokenRotomiDisappearedBlock.ChangeBooleanType(brokenRotomiDisappared.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SCBlock fixedRotomiDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoRotomiDisappeared);
+            fixedRotomiDisappearedBlock.ChangeBooleanType(fixedRotomiDisappeared.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SCBlock tableDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoTableDisappeared);
+            tableDisappearedBlock.ChangeBooleanType(tableDisappeared.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SCBlock drinksVendingMachineDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoDrinksVendingMachineDisappeared);
+            drinksVendingMachineDisappearedBlock.ChangeBooleanType(drinksVendingMachineDisappeared.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SCBlock vitaminsVendingMachineDisappearedBlock = SAV.Blocks.GetBlock(Definitions.DojoVitaminsVendingMachineDisappeared);
+            vitaminsVendingMachineDisappearedBlock.ChangeBooleanType(vitaminsVendingMachineDisappeared.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SCBlock canBattleHoneyBlock = SAV.Blocks.GetBlock(Definitions.CanBattleHoney);
+            canBattleHoneyBlock.ChangeBooleanType(canBattleHoney.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+            SCBlock battledHoneyTodayBlock = SAV.Blocks.GetBlock(Definitions.BattledHoneyToday);
+            battledHoneyTodayBlock.ChangeBooleanType(battledHoneyToday.Checked ? SCTypeCode.Bool2 : SCTypeCode.Bool1);
+
             var b_gift_bulbasaur_caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_HUSHIGIDANE_GET"]);
             var b_gift_squirtle_caught = SAV?.Blocks.GetBlock(Definitions.memkeys_Gifts["FE_R1_ZENIGAME_GET"]);
 
@@ -361,8 +405,8 @@ namespace WangPluginSav
             SaveMain();
             SaveIsleOfArmor();
             SaveCrownTundra();
-
-            this.Close();
+            SAV.State.Edited = true;
+            Close();
         }
 
         private void CurryDex_BTN_Click(object sender, EventArgs e)
@@ -429,6 +473,20 @@ namespace WangPluginSav
 
                 form.Show();
             }
+        }
+        internal class Language
+        {
+            public static string[] DojoWattDonationQuestProgress
+            {
+                get
+                {
+                    return GameInfo.CurrentLanguage switch
+                    {
+                        "zh" or _ => ["未激活", "和蜜叶谈过了", "可改变发型", "洛托米安装", "洛托米功能", "自动贩卖机可购买美味之水", "自动贩卖机可购买劲爽汽水", "自动贩卖机可购买果汁牛奶", "食材定期配送服务", "自动贩卖机可购买攻击/防御增强剂", "自动贩卖机可购买特攻/特防增强剂", "自动贩卖机可购买HP/速度增强剂", "联盟卡背景", "收到蜜叶的联盟卡", "可与蜜叶对战", "收到蜜叶的稀有联盟卡"],
+                    };
+                }
+            }
+
         }
     }
 }
