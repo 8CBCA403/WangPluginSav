@@ -33,20 +33,25 @@ namespace WangPluginSav
         public static readonly Block SwordsOfJusticeQuestProgress = 0xCB135C68;
 
 
-        public static readonly Dictionary<string, uint> memkeys_FootprintPercentage = new Dictionary<string, uint>()
-        {
-                { "勾帕路翁", 0x4D50B655},
-                { "代拉基翁", 0x771E4c88},
-                { "毕力吉翁", 0xAD67A297}
-        };
+        public static readonly Dictionary<Species, uint> memkeys_SwordsOfJusticeProgress = new Dictionary<Species, uint>() {
+              {Species.Cobalion, 0xC35F6291},
+              {Species.Terrakion, 0x03C69A96},
+              {Species.Virizion, 0xB98F962B},
+              {Species.Keldeo, 0x9A39C8FC}
+  };
 
-        public static readonly Dictionary<string, uint> memkeys_SwordsofJustice = new Dictionary<string, uint>()
-        {
-                { "勾帕路翁", 0xBB305227},
-                { "代拉基翁", 0x750C83A4},
-                { "毕力吉翁", 0x1A27DF2C},
-                { "凯路迪欧", 0xA097DE31}
-        };
+        public static readonly Dictionary<Species, uint> memkeys_SwordsOfJusticeDisappeared = new Dictionary<Species, uint>() {
+               {Species.Cobalion, 0xBB305227},
+               {Species.Terrakion, 0x750C83A4},
+               {Species.Virizion, 0x1A27DF2C},
+               {Species.Keldeo, 0xA097DE31}
+  };
+
+        public static readonly Dictionary<Species, uint> memkeys_SwordsOfJusticeFootprintPercentage = new Dictionary<Species, uint>() {
+               {Species.Cobalion, 0x4D50B655},
+               {Species.Terrakion, 0x771E4c88},
+               {Species.Virizion, 0xAD67A297}
+  };
 
         public static readonly Dictionary<string, uint> memkeys_Regis = new Dictionary<string, uint>()
         {
