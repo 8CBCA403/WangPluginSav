@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace WangPluginSav.Util.Pikaedit;
+﻿namespace WangPluginSav.Util.Pikaedit;
 
 public static class Func
 {

@@ -1,11 +1,7 @@
-﻿using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BW_tool;
-using WangPluginSav.GUI;
+﻿using BW_tool;
 using LTDCE;
+using PKHeX.Core;
+using WangPluginSav.GUI;
 
 namespace WangPluginSav.Plugins
 {
@@ -13,7 +9,9 @@ namespace WangPluginSav.Plugins
     {
         public override string Name => "Gen5事件修改器";
         public override int Priority => 2;
-
+        public override void NotifySaveLoaded()
+        {
+        }
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {
             var ctrl = new ToolStripMenuItem(Name)

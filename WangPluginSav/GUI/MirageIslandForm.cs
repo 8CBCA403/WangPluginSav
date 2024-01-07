@@ -1,7 +1,4 @@
-﻿using System;
-using PKHeX.Core;
-using System.Windows.Forms;
-using System.Collections.Generic;
+﻿using PKHeX.Core;
 
 namespace WangPluginSav;
 

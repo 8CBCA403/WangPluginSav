@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BW_tool
+﻿namespace BW_tool
 {
     public class DRKEY
     {

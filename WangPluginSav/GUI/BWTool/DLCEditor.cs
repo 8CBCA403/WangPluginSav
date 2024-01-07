@@ -10,9 +10,9 @@ partial class DLCEditor : Form
 
     private SaveFile.Version version;
 
-    private OpenFileDialog ?loadDialog;
+    private OpenFileDialog? loadDialog;
 
-    private SaveFileDialog ?saveDialog;
+    private SaveFileDialog? saveDialog;
     public DLCEditor()
     {
         InitializeComponent();
@@ -95,7 +95,7 @@ partial class DLCEditor : Form
             return;
         }
         Button button = (Button)sender;
-        if (button.Equals(changeCGear)&&loadDialog!=null)
+        if (button.Equals(changeCGear) && loadDialog != null)
         {
             if (version == SaveFile.Version.BW2)
             {
@@ -171,18 +171,18 @@ partial class DLCEditor : Form
         }
         DialogResult dialogResult = DialogResult.Yes;
         if (saveDialog != null)
-        dialogResult = saveDialog.ShowDialog();
+            dialogResult = saveDialog.ShowDialog();
         if (dialogResult == DialogResult.OK && saveDialog != null)
         {
             if (button.Equals(extractCGear) && cgear != null)
             {
                 File.WriteAllBytes(saveDialog.FileName, cgear.data);
             }
-            if (button.Equals(extractPokedex)&&pokedex!=null)
+            if (button.Equals(extractPokedex) && pokedex != null)
             {
                 File.WriteAllBytes(saveDialog.FileName, pokedex.data);
             }
-            if (button.Equals(extractMusical)&&musical!=null)
+            if (button.Equals(extractMusical) && musical != null)
             {
                 File.WriteAllBytes(saveDialog.FileName, musical.data);
             }
@@ -211,8 +211,8 @@ partial class DLCEditor : Form
 
     private void musicalTitle_TextChanged(object sender, EventArgs e)
     {
-        if(musical != null)
-        musical.title = musicalTitle.Text;
+        if (musical != null)
+            musical.title = musicalTitle.Text;
     }
 
 

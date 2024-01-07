@@ -1,10 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PKHeX.Core;
 using WangPluginSav.BlockImportUtil;
 
 namespace WangPluginSav.Plugins
@@ -13,7 +7,9 @@ namespace WangPluginSav.Plugins
     {
         public override string Name => "Raid导入器";
         public override int Priority => 5;
-
+        public override void NotifySaveLoaded()
+        {
+        }
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {
             var ctrl = new ToolStripMenuItem(Name)

@@ -1,6 +1,3 @@
-using System;
-using System.ComponentModel;
-using System.Drawing;
 namespace XYORAS_Safari_Mirage_Tool;
 partial class SafariMirageForm : Form
 {
@@ -18,7 +15,7 @@ partial class SafariMirageForm : Form
 
     private int pss_slot;
 
-   
+
 
     public SafariMirageForm()
     {
@@ -473,5 +470,5 @@ partial class SafariMirageForm : Form
         update_radio();
     }
 
-   
+
 }

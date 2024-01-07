@@ -1,11 +1,6 @@
 ﻿using NPCmonEditor;
-using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NXWonderRecord;
+using PKHeX.Core;
 
 namespace WangPluginSav.Plugins
 {
@@ -13,7 +8,9 @@ namespace WangPluginSav.Plugins
     {
         public override string Name => "Gen8事件修改器";
         public override int Priority => 6;
-
+        public override void NotifySaveLoaded()
+        {
+        }
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {
             var ctrl = new ToolStripMenuItem(Name)
@@ -97,13 +94,13 @@ namespace WangPluginSav.Plugins
                 return;
             }
 
-           else if (version == GameVersion.GP || version == GameVersion.GE)
+            else if (version == GameVersion.GP || version == GameVersion.GE)
             {
                 new WonderRecordLGPE(SaveFileEditor.SAV).Show();
                 return;
             }
 
-           else if (version == GameVersion.BD || version == GameVersion.SP)
+            else if (version == GameVersion.BD || version == GameVersion.SP)
             {
                 new WonderRecordBDSP(SaveFileEditor.SAV).Show();
             }
@@ -113,9 +110,9 @@ namespace WangPluginSav.Plugins
             }
             else
             {
-                    MessageBox.Show("此工具只适用于第八世代！");
-                    return;
-                
+                MessageBox.Show("此工具只适用于第八世代！");
+                return;
+
             }
         }
     }

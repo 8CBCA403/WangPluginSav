@@ -1,15 +1,9 @@
 ﻿using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WangPluginSav.BlockImportUtil;
-using WangPluginSav.GUI;
 
 namespace WangPluginSav.Plugins
 {
-    public class ClothesImportPlugin:WangPluginSav
+    public class ClothesImportPlugin : WangPluginSav
     {
         public override string Name => "服装导入器";
         public override int Priority => 4;
@@ -24,7 +18,7 @@ namespace WangPluginSav.Plugins
             {
                 if (SaveFileEditor.SAV.Version != GameVersion.PLA
               && SaveFileEditor.SAV.Version != GameVersion.VL
-              && SaveFileEditor.SAV.Version != GameVersion.SL 
+              && SaveFileEditor.SAV.Version != GameVersion.SL
               && SaveFileEditor.SAV.Version != GameVersion.SV
                 && SaveFileEditor.SAV.Version != GameVersion.SW
               && SaveFileEditor.SAV.Version != GameVersion.SH
@@ -62,11 +56,11 @@ namespace WangPluginSav.Plugins
                 }
                 else if (SaveFileEditor.SAV is SAV8SWSH)
                 {
-                    if(SaveFileEditor.SAV.Version==GameVersion.SW&& SaveFileEditor.SAV.Gender==0)
+                    if (SaveFileEditor.SAV.Version == GameVersion.SW && SaveFileEditor.SAV.Gender == 0)
                     {
                         readOnlyList = SWSHClothesConstants.SWMan.ClothesBlocks;
                     }
-                   else if (SaveFileEditor.SAV.Version == GameVersion.SH && SaveFileEditor.SAV.Gender == 0)
+                    else if (SaveFileEditor.SAV.Version == GameVersion.SH && SaveFileEditor.SAV.Gender == 0)
                     {
                         readOnlyList = SWSHClothesConstants.SHMan.ClothesBlocks;
                     }
@@ -83,7 +77,9 @@ namespace WangPluginSav.Plugins
                 ImportClothes(selectedPath, (dynamic)SaveFileEditor.SAV, readOnlyList);
             }
         }
-
+        public override void NotifySaveLoaded()
+        {
+        }
         private static void ImportClothes<S>(string ClothesPath, S sav, IReadOnlyList<Block> blocks) where S : SaveFile, ISCBlockArray, ISaveFileRevision
         {
             string ClothesPath2 = ClothesPath;

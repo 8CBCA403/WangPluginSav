@@ -6,15 +6,9 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
-using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Linq;
-using System.Text;
-using WangPluginSav.Properties;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Resources;
+using System.Text;
 
 namespace BW_tool
 {

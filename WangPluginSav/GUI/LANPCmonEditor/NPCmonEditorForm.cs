@@ -1,13 +1,8 @@
-using System;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Threading;
-using System.Windows.Forms;
 using PKHeX.Core;
 using PKHeX.Drawing;
 using PKHeX.Drawing.PokeSprite;
 using PKHeX.Drawing.PokeSprite.Properties;
+using System.Data;
 
 namespace NPCmonEditor;
 
@@ -39,7 +34,7 @@ partial class NPCmonEditorForm : Form
 
     private static AutoResetEvent resetEvent = new AutoResetEvent(initialState: false);
 
-   
+
 
     public NPCmonEditorForm(SaveFile sav, IPKMView pKMEditor)
     {
@@ -157,5 +152,5 @@ partial class NPCmonEditorForm : Form
         }
     }
 
-   
+
 }

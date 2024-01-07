@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PKHeX.Core;
-using System.Windows.Forms;
-
-using static PKHeX.Core.SCBlockUtil;
-using System.Reflection;
+﻿using PKHeX.Core;
 
 namespace WangPluginSav
 {
@@ -24,7 +12,7 @@ namespace WangPluginSav
             InitializeComponent();
         }
 
-       
+
 
 
 

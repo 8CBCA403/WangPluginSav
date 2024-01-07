@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-
 namespace WangPluginSav.Util.Pikaedit;
 
 public class SaveFile
@@ -25,11 +21,11 @@ public class SaveFile
 
     public byte[] data;
 
-  
+
 
     public Version version;
 
-   
+
 
     public CgearSkin cgearSkin;
 
@@ -76,9 +72,9 @@ public class SaveFile
     {
         filename = "";
         data = null;
-      
+
         version = Version.Unknown;
-      
+
     }
 
     public SaveFile(string filename)
@@ -228,10 +224,10 @@ public class SaveFile
         fs = new FileStream(filename, FileMode.Open);
         bw = new BinaryWriter(fs);
         br = new BinaryReader(fs);
-       
-    
-      
-        
+
+
+
+
         switch (version)
         {
             case Version.BW2:
@@ -474,13 +470,13 @@ public class SaveFile
             array[m] = (ushort)(br.ReadUInt16() ^ rand());
         }
         fs.Seek(116992L, SeekOrigin.Begin);
-       
+
         for (int num2 = 0; num2 < 1352; num2++)
         {
             bw.Write((ushort)(array[num2] ^ rand()));
         }
         fs.Seek(116736L, SeekOrigin.Begin);
-      
+
         if (version == Version.BW2)
         {
             fs.Seek(134238L, SeekOrigin.Begin);
@@ -489,7 +485,7 @@ public class SaveFile
         {
             fs.Seek(134494L, SeekOrigin.Begin);
         }
-       
+
         writeFinalChecksums(dictionary);
         br.Close();
         bw.Close();
@@ -561,5 +557,5 @@ public class SaveFile
         return result;
     }
 
-   
+
 }

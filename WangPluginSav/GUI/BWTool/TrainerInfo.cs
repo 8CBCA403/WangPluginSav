@@ -6,10 +6,6 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
-using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Linq;
 using System.Text;
 
 namespace BW_tool
@@ -92,20 +88,20 @@ namespace BW_tool
                     "幼儿园小朋友"});
                 tnr_class.SelectedIndex = ash.trainer_class;
             }
-      /*      else
-            {
-                tnr_class.Items.Clear();
-                tnr_class.Items.AddRange(new object[] {
-                    "迷你裙",
-                    "精英训练家",
-                    "宝可梦巡护员",
-                    "宝可梦培育家",
-                    "研究员",
-                    "阳伞姐姐",
-                    "护士",
-                    "幼儿园小朋友"});
-                tnr_class.SelectedIndex = ash.trainer_class;
-            }*/
+            /*      else
+                  {
+                      tnr_class.Items.Clear();
+                      tnr_class.Items.AddRange(new object[] {
+                          "迷你裙",
+                          "精英训练家",
+                          "宝可梦巡护员",
+                          "宝可梦培育家",
+                          "研究员",
+                          "阳伞姐姐",
+                          "护士",
+                          "幼儿园小朋友"});
+                      tnr_class.SelectedIndex = ash.trainer_class;
+                  }*/
             gender.SelectedIndex = ash.gender;
 
             hours.Value = ash.hours;

@@ -1,18 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.IO;
-using System.Linq;
-using System.Resources;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Windows.Forms;
 using PKHeX.Core;
 using PKHeX.Drawing;
 using PKHeX.Drawing.PokeSprite;
 using PKHeX.Drawing.PokeSprite.Properties;
+using System.Drawing.Drawing2D;
+using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace NXWonderRecord;
 

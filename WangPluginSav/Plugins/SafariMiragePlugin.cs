@@ -1,9 +1,4 @@
 ﻿using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using XYORAS_Safari_Mirage_Tool;
 
 namespace WangPluginSav.Plugins
@@ -12,7 +7,9 @@ namespace WangPluginSav.Plugins
     {
         public override string Name => "XYORAS幻岛修改器";
         public override int Priority => 3;
-
+        public override void NotifySaveLoaded()
+        {
+        }
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {
             var ctrl = new ToolStripMenuItem(Name)
@@ -28,7 +25,7 @@ namespace WangPluginSav.Plugins
 
         private void OpenForm(object sender, EventArgs e)
         {
-            if (!(SaveFileEditor.SAV is SAV6XY or SAV6AO ))
+            if (!(SaveFileEditor.SAV is SAV6XY or SAV6AO))
             {
                 MessageBox.Show("此工具只适用于第六世代版本！");
                 return;

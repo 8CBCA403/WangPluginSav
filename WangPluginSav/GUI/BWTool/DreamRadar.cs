@@ -2,7 +2,7 @@
 {
     public partial class DreamRadar : Form
     {
-        DRKEY ?drkey;
+        DRKEY? drkey;
         DRA? dra;
         DRB? drb;
         int drkeyblock = 72;
@@ -10,7 +10,7 @@
         {
             InitializeComponent();
             if (BWToolMainForm.save != null)
-            {         
+            {
                 drkey = new DRKEY(BWToolMainForm.save.getBlock(drkeyblock));
                 dra = new DRA(BWToolMainForm.save.dslinkA_get());
                 drb = new DRB(PKX5.cryptoXor32Array(BWToolMainForm.save.dslinkB_get(), 0, 0x7C, 0x7C)); //Get 3DS link data decrypted
@@ -41,7 +41,7 @@
         void Saveexit_butClick(object sender, EventArgs e)
         {
             set_data();
-            if (BWToolMainForm.save != null&&drkey != null && dra != null && drb != null)
+            if (BWToolMainForm.save != null && drkey != null && dra != null && drb != null)
             {
                 BWToolMainForm.save.setBlock(drkey.Data, 72);
                 BWToolMainForm.save.dslinkA_set(dra.Data);
@@ -124,7 +124,7 @@
         }
         int poke2legit(int species)
         {
-            if (legitmode.Checked == true&&drb!=null)
+            if (legitmode.Checked == true && drb != null)
             {
                 int i = 0;
                 for (i = 0; i < 19; i++)

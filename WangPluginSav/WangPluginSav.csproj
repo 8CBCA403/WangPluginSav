@@ -13,6 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Properties\file\**" />
+    <EmbeddedResource Remove="Properties\file\**" />
+    <None Remove="Properties\file\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Properties\img\SWSHEventEditor\armor.png" />
     <None Remove="Properties\img\SWSHEventEditor\ball_champion.png" />
     <None Remove="Properties\img\SWSHEventEditor\ball_fresh.png" />
@@ -72,6 +78,30 @@
     <None Remove="Properties\img\SWSHEventEditor\valid.png" />
     <None Remove="Properties\img\SWSHEventEditor\warn.png" />
     <None Remove="Properties\img\SWSHEventEditor\_ball4.png" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen1jbu_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen1jgn_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen1rb_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen1y_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen2c_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen2gs_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen3e_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen3frlg_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen3rs_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen4dp_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen4hgss_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen4pt_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen5b2w2_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen5bw_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen6oras_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen6xy_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen7blgpe_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen7sm_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen7usum_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen8bdsp_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen8la_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen8swsh_en.txt" />
+    <None Remove="Util\EventFlags\FlagResFiles\flags_gen9sv_en.txt" />
+    <None Remove="Util\EventFlags\lang_en.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -128,6 +158,32 @@
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\valid.png" />
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\warn.png" />
     <EmbeddedResource Include="Properties\img\SWSHEventEditor\_ball4.png" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen1jbu_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen1jgn_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen1rb_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen1y_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen2c_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen2gs_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen3e_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen3frlg_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen3rs_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen4dp_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen4hgss_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen4pt_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen5b2w2_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen5bw_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen6oras_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen6xy_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen7blgpe_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen7sm_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen7usum_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen8bdsp_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen8la_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen8swsh_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\FlagResFiles\flags_gen9sv_en.txt" />
+    <EmbeddedResource Include="Util\EventFlags\lang_en.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -145,7 +201,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Deps\" />
-    <Folder Include="Properties\file\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="5.7.0">

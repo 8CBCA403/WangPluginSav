@@ -1,7 +1,3 @@
-using System;
-using System.Linq;
-using System.Windows.Forms;
-
 namespace WangPluginSav.Util.WC3;
 
 public class SAV3

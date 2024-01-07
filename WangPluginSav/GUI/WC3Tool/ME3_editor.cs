@@ -1,8 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Drawing;
-using System.Windows.Forms;
-using WangPluginSav.Util.WC3;
+﻿using WangPluginSav.Util.WC3;
 
 namespace WC3Tool;
 

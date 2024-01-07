@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using WangPluginSav.Util.WC3.PKHeX;
 
 namespace WangPluginSav.Util.WC3;

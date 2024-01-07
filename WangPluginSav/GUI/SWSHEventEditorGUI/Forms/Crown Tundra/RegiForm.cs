@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PKHeX.Core;
+﻿using PKHeX.Core;
 
 namespace WangPluginSav
 {
@@ -20,7 +11,7 @@ namespace WangPluginSav
             InitializeComponent();
         }
 
-        
+
 
         private void RegiForm_Load(object sender, EventArgs e)
         {

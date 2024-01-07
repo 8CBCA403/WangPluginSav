@@ -1,5 +1,5 @@
-﻿using WangPluginSav.Util.Pikaedit;
-using Pikaedit;
+﻿using Pikaedit;
+using WangPluginSav.Util.Pikaedit;
 namespace BW_tool
 {
     public partial class BWToolMainForm : Form
@@ -7,7 +7,7 @@ namespace BW_tool
         private byte[] saveFile { get; set; }
         public BWToolMainForm(byte[] SAV)
         {
-           
+
             InitializeComponent();
             saveFile = SAV;
             int filesize = saveFile.Length;
@@ -82,7 +82,7 @@ namespace BW_tool
             }
         }
         public string dsfilter = "NDS存档文件|*.sav;*.dsv|所有文件(*.*)|*.*";
-        public byte[] ?savebuffer;
+        public byte[]? savebuffer;
         public static SAV5? save;
         void Loadsave_butClick(object sender, EventArgs e)
         {
@@ -90,10 +90,10 @@ namespace BW_tool
         }
         void load_savegame(string? filepath)
         {
-            string ?path = filepath;
+            string? path = filepath;
             int filesize = 0;
-            if(savebuffer!=null&&path!=null)
-            filesize = FileIO.load_file(ref savebuffer, ref path, dsfilter);
+            if (savebuffer != null && path != null)
+                filesize = FileIO.load_file(ref savebuffer, ref path, dsfilter);
             versiontext.Text = "";
 
             if (filesize == SAV5.SIZERAW || filesize == SAV5.SIZERAW + 122)
@@ -103,50 +103,50 @@ namespace BW_tool
                     Array.Resize(ref savebuffer, SAV5.SIZERAW);
 
                 savegamename.Text = path;
-                if(savebuffer!=null)
-                save = new SAV5(savebuffer);
-             if(save!=null)
-                if (save.B2W2)
-                {
-                    versiontext.Text = "黑2/白2";
+                if (savebuffer != null)
+                    save = new SAV5(savebuffer);
+                if (save != null)
+                    if (save.B2W2)
+                    {
+                        versiontext.Text = "黑2/白2";
 
-                    dumper_but.Enabled = true;
-                    chk_but.Enabled = true;
-                    chk_updt_but.Enabled = true;
-                    save_but.Enabled = true;
-                    grotto_but.Enabled = true;
-                    trainer_records_but.Enabled = true;
-                    medal_but.Enabled = true;
-                    forest_but.Enabled = true;
-                    key_but.Enabled = true;
-                    join_but.Enabled = true;
-                    trainer_but.Enabled = true;
-                    memory_but.Enabled = true;
-                    dlc_but.Enabled = true;
-                    dr_but.Enabled = true;
-                    prop_but.Enabled = true;
-                }
-                else if (save.BW)
-                {
-                    versiontext.Text = "黑/白";
+                        dumper_but.Enabled = true;
+                        chk_but.Enabled = true;
+                        chk_updt_but.Enabled = true;
+                        save_but.Enabled = true;
+                        grotto_but.Enabled = true;
+                        trainer_records_but.Enabled = true;
+                        medal_but.Enabled = true;
+                        forest_but.Enabled = true;
+                        key_but.Enabled = true;
+                        join_but.Enabled = true;
+                        trainer_but.Enabled = true;
+                        memory_but.Enabled = true;
+                        dlc_but.Enabled = true;
+                        dr_but.Enabled = true;
+                        prop_but.Enabled = true;
+                    }
+                    else if (save.BW)
+                    {
+                        versiontext.Text = "黑/白";
 
-                    dumper_but.Enabled = true;
-                    chk_but.Enabled = true;
-                    chk_updt_but.Enabled = true;
-                    save_but.Enabled = true;
-                    grotto_but.Enabled = false;
-                    trainer_records_but.Enabled = false;
-                    medal_but.Enabled = false;
-                    forest_but.Enabled = true;
-                    key_but.Enabled = false;
-                    join_but.Enabled = false;
-                    trainer_but.Enabled = true;
-                    memory_but.Enabled = false;
-                    dlc_but.Enabled = true;
-                    dr_but.Enabled = false;
-                    prop_but.Enabled = true;
-                }
-                else versiontext.Text = "无效文件";
+                        dumper_but.Enabled = true;
+                        chk_but.Enabled = true;
+                        chk_updt_but.Enabled = true;
+                        save_but.Enabled = true;
+                        grotto_but.Enabled = false;
+                        trainer_records_but.Enabled = false;
+                        medal_but.Enabled = false;
+                        forest_but.Enabled = true;
+                        key_but.Enabled = false;
+                        join_but.Enabled = false;
+                        trainer_but.Enabled = true;
+                        memory_but.Enabled = false;
+                        dlc_but.Enabled = true;
+                        dr_but.Enabled = false;
+                        prop_but.Enabled = true;
+                    }
+                    else versiontext.Text = "无效文件";
 
 
             }
@@ -236,7 +236,7 @@ namespace BW_tool
         }
         void Dlc_butClick(object sender, EventArgs e)
         {
-            var sav =new SaveFile(saveFile);
+            var sav = new SaveFile(saveFile);
             var dLCEditor = new DLCEditor();
             dLCEditor.cgearSkin = sav.cgearSkin;
             dLCEditor.pokedexSkin = sav.pokedexSkin;

@@ -63,8 +63,8 @@ namespace WangPluginSav.GUI
         {
             if (SAV.SAV is SAV9SV sv)
             {
-                    SetRaid9(sv.RaidKitakami);
-                }
+                SetRaid9(sv.RaidKitakami);
+            }
             MessageBox.Show("保存成功");
             SystemSounds.Asterisk.Play();
         }
@@ -92,19 +92,19 @@ namespace WangPluginSav.GUI
                         r1.IsEnabled = true;
                         r1.Seed = Convert.ToUInt32(lines[i], 16);
                         r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
-                        }
                     }
                 }
-                else
+            }
+            else
+            {
+                for (int i = 0; i < r; i++)
                 {
-                    for (int i = 0; i < r; i++)
+                    for (int j = 0; j < n; j++)
                     {
-                        for (int j = 0; j < n; j++)
-                        {
-                            var r1 = raid.GetRaid(i * n + j);
-                            r1.IsEnabled = true;
-                            r1.Seed = Convert.ToUInt32(lines[j], 16);
-                            r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
+                        var r1 = raid.GetRaid(i * n + j);
+                        r1.IsEnabled = true;
+                        r1.Seed = Convert.ToUInt32(lines[j], 16);
+                        r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
                     }
                 }
             }
@@ -155,29 +155,29 @@ namespace WangPluginSav.GUI
             return (((num3 >> 16) ^ (num3 & 0xFFFF)) >> 4 == ((num2 >> 16) ^ (num2 & 0xFFFF)) >> 4) ? 1 : 0;
         }
         private void ShinyCarKitakami_BTN_Click(object sender, EventArgs e)
+        {
+            if (SAV.SAV is SAV9SV sv)
             {
-                if (SAV.SAV is SAV9SV sv)
-                {
-                    TeraRaidDetail[] allRaids = sv.RaidKitakami.GetAllRaids();
+                TeraRaidDetail[] allRaids = sv.RaidKitakami.GetAllRaids();
 
-                    foreach (TeraRaidDetail teraRaidDetail in allRaids)
+                foreach (TeraRaidDetail teraRaidDetail in allRaids)
+                {
+                    if (teraRaidDetail.AreaID != 0 && (teraRaidDetail.Content == TeraRaidContentType.Base05 || teraRaidDetail.Content == TeraRaidContentType.Black6))
                     {
-                        if (teraRaidDetail.AreaID != 0 && (teraRaidDetail.Content == TeraRaidContentType.Base05 || teraRaidDetail.Content == TeraRaidContentType.Black6))
+                        teraRaidDetail.IsEnabled = true;
+                        uint seed;
+                        do
                         {
-                            teraRaidDetail.IsEnabled = true;
-                            uint seed;
-                            do
-                            {
-                                seed = (uint)random.Next();
-                            }
-                            while (Raidshiny(seed) == 0);
-                            teraRaidDetail.Seed = seed;
-                            teraRaidDetail.IsClaimedLeaguePoints = false;
+                            seed = (uint)random.Next();
                         }
+                        while (Raidshiny(seed) == 0);
+                        teraRaidDetail.Seed = seed;
+                        teraRaidDetail.IsClaimedLeaguePoints = false;
                     }
-                    MessageBox.Show("北上乡全非活动坑随机闪车已生成");
-                    SystemSounds.Asterisk.Play();
                 }
+                MessageBox.Show("北上乡全非活动坑随机闪车已生成");
+                SystemSounds.Asterisk.Play();
             }
         }
     }
+}

@@ -1,9 +1,5 @@
-using System;
-using System.ComponentModel;
-using System.Drawing;
 using System.Reflection;
 using System.Resources;
-using System.Windows.Forms;
 using WangPluginSav.Util.WC3;
 using WangPluginSav.Util.WC3.PKHeX;
 
@@ -239,7 +235,7 @@ partial class WC3_editor : Form
     {
         FileIO.save_data(wc3file.get_script(), scriptfilter);
     }
-  private  void Import_script_butClick(object sender, EventArgs e)
+    private void Import_script_butClick(object sender, EventArgs e)
     {
         string path = null;
         int filesize = FileIO.load_file(ref wc3script_new, ref path, scriptfilter);
@@ -367,11 +363,11 @@ partial class WC3_editor : Form
         drawCard();
     }
 
-   private void Map_helpClick(object sender, EventArgs e)
+    private void Map_helpClick(object sender, EventArgs e)
     {
         MessageBox.Show("这些数值用于关联游戏中NPC的脚本。\n\n你可以使用Advance Map去确定游戏里所有NPC的对应数值。\n\n在绿宝石，橙华道馆父亲的数值为 Bank 08, Map 01, NPC 01.\n\n 对于神秘礼物邮递员则全为255.");
     }
-   private void Xse_helpClick(object sender, EventArgs e)
+    private void Xse_helpClick(object sender, EventArgs e)
     {
         MessageBox.Show("XSE导出：使用与脚本的基地址和*.gba 扩展名相对应的填充导出脚本。 您可以在 XSE 中直接加载（和编辑）脚本，使用导出按钮时将显示脚本偏移量。\nXSE 导入：使用 XSE 编辑（或未编辑）后导入此工具生成的 *.gba 脚本（导入其他任何内容将无法正常工作）\n\n这些选项只是为了方便，这些脚本绝不是 gba rom，它只是为了能在 XSE 中更方便地进行编辑。");
     }
@@ -381,7 +377,7 @@ partial class WC3_editor : Form
         FileIO.save_data(wc3file.get_script_XSE(), xsescriptfilter);
     }
 
-   private void Xse_importClick(object sender, EventArgs e)
+    private void Xse_importClick(object sender, EventArgs e)
     {
         string path = null;
         int filesize = FileIO.load_file(ref wc3script_new, ref path, xsescriptfilter);
@@ -397,7 +393,7 @@ partial class WC3_editor : Form
             MessageBox.Show("无效文件大小。");
         }
     }
-   private  void GiveEggExt_butClick(object sender, EventArgs e)
+    private void GiveEggExt_butClick(object sender, EventArgs e)
     {
         Form giveEegExt = new WC3_editor_giveggExt();
         giveEegExt.ShowDialog();

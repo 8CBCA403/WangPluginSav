@@ -37,12 +37,12 @@ namespace WangPluginSav.GUI
         {
             if (SAV.SAV is SAV9SV sv)
             {
-                    SAV_Raid9(sv, sv.RaidPaldea);
+                SAV_Raid9(sv, sv.RaidPaldea);
             }
-        MessageBox.Show("已复制Seed到所有洞窟");
-        SystemSounds.Asterisk.Play();
+            MessageBox.Show("已复制Seed到所有洞窟");
+            SystemSounds.Asterisk.Play();
         }
-    private void ImportSeed_BTN_Click(object sender, EventArgs e)
+        private void ImportSeed_BTN_Click(object sender, EventArgs e)
         {
             using var sfd = new OpenFileDialog
             {
@@ -63,8 +63,8 @@ namespace WangPluginSav.GUI
         {
             if (SAV.SAV is SAV9SV sv)
             {
-                    SetRaid9(sv.RaidPaldea);
-                }
+                SetRaid9(sv.RaidPaldea);
+            }
             MessageBox.Show("保存成功");
             SystemSounds.Asterisk.Play();
         }
@@ -92,19 +92,19 @@ namespace WangPluginSav.GUI
                         r1.IsEnabled = true;
                         r1.Seed = Convert.ToUInt32(lines[i], 16);
                         r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
-                        }
                     }
                 }
-                else
+            }
+            else
+            {
+                for (int i = 0; i < r; i++)
                 {
-                    for (int i = 0; i < r; i++)
+                    for (int j = 0; j < n; j++)
                     {
-                        for (int j = 0; j < n; j++)
-                        {
-                            var r1 = raid.GetRaid(i * n + j);
-                            r1.IsEnabled = true;
-                            r1.Seed = Convert.ToUInt32(lines[j], 16);
-                            r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
+                        var r1 = raid.GetRaid(i * n + j);
+                        r1.IsEnabled = true;
+                        r1.Seed = Convert.ToUInt32(lines[j], 16);
+                        r1.Content = (TeraRaidContentType)RaidTypeBox.SelectedIndex;
 
                     }
                 }
@@ -178,7 +178,7 @@ namespace WangPluginSav.GUI
                 }
                 MessageBox.Show("帕底亚全非活动坑随机闪车已生成");
                 SystemSounds.Asterisk.Play();
-                }
             }
         }
     }
+}

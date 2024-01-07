@@ -1,6 +1,3 @@
-using System;
-using System.Linq;
-
 namespace WangPluginSav.Util.WC3.PKHeX;
 
 public class PKM

@@ -1,10 +1,5 @@
-﻿using PKHeX.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BerryPlot;
+﻿using BerryPlot;
+using PKHeX.Core;
 using WC3Tool;
 
 namespace WangPluginSav.Plugins
@@ -13,7 +8,9 @@ namespace WangPluginSav.Plugins
     {
         public override string Name => "Gen3事件修改器";
         public override int Priority => 0;
-
+        public override void NotifySaveLoaded()
+        {
+        }
         protected override void AddPluginControl(ToolStripDropDownItem modmenu)
         {
             var ctrl = new ToolStripMenuItem(Name)
@@ -47,7 +44,7 @@ namespace WangPluginSav.Plugins
         private void OpenFormMirageIsland(object sender, EventArgs e)
         {
             if (SaveFileEditor.SAV.Version != GameVersion.E
-              && SaveFileEditor.SAV.Version != GameVersion.R 
+              && SaveFileEditor.SAV.Version != GameVersion.R
               && SaveFileEditor.SAV.Version != GameVersion.S
                && SaveFileEditor.SAV.Version != GameVersion.RSE
                && SaveFileEditor.SAV.Version != GameVersion.RS)

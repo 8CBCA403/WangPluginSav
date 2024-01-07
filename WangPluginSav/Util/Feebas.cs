@@ -7,7 +7,7 @@ public static class Feebas3
         ushort[] tiles = new ushort[6] { 0, 0, 0, 0, 0, 0 };
         ushort tile;
 
-        for(short i = 0; i < 6; i++)
+        for (short i = 0; i < 6; i++)
         {
             seed = (0x41C64E6D * seed) + 0x3039;
             tile = (ushort)((seed >> 16) % 0x1BF);
@@ -33,7 +33,7 @@ public static class Feebas4
     {
         ushort[] tiles = new ushort[4] { 0, 0, 0, 0 };
 
-        for(short i = 0; i < 4; i++)
+        for (short i = 0; i < 4; i++)
         {
             tiles[i] = (ushort)((((seed >> (24 - 8 * i)) & 0xFF) % 0x84) + (0x84 * i));
         }

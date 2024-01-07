@@ -1,10 +1,6 @@
-using System;
-using System.ComponentModel;
-using System.Drawing;
+using PKHeX.Core;
 using System.Media;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using PKHeX.Core;
 //using Test.Properties;
 
 namespace BerryPlot;
