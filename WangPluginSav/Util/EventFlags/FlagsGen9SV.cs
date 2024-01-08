@@ -55,10 +55,10 @@ namespace WangPluginSav.Util.EventFlags
             int idxTrainerFlagsSection = s_flagsList_res.IndexOf("//\tTrainer Flags");
             int idxEventWorkSection = s_flagsList_res.IndexOf("//\tEvent Work");
 
-            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "Event Flags", []);
-            AssembleList(s_flagsList_res[idxFieldItemFlagsSection..], Src_FieldItemFlags, "Field Item Flags", []);
+            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "事件旗标", []);
+            AssembleList(s_flagsList_res[idxFieldItemFlagsSection..], Src_FieldItemFlags, "道具旗标", []);
             //AssembleList(s_flagsList_res[idxHiddenItemsFlagsSection..], Src_HiddenItemFlags, "Hidden Item Flags", []);
-            AssembleList(s_flagsList_res[idxTrainerFlagsSection..], Src_TrainerFlags, "Regular Trainer Flags", []);
+            AssembleList(s_flagsList_res[idxTrainerFlagsSection..], Src_TrainerFlags, "常规训练家旗帜", []);
 
             AssembleWorkList(s_flagsList_res[idxEventWorkSection..], Array.Empty<uint>());
         }
@@ -347,8 +347,8 @@ namespace WangPluginSav.Util.EventFlags
             int idx = 0;
             return
             [
-                new EditableEventInfo(idx++, LocalizedStrings.Find($"SpecialEditsGenSV.specialEvtBtn_{idx}", "Unlock Kitakami map access")) { IsAvailable = ((SAV9SV)m_savFile!).SaveRevision > 0 }, // DLC1
-                new EditableEventInfo(idx++, LocalizedStrings.Find($"SpecialEditsGenSV.specialEvtBtn_{idx}", "Unlock Blueberry map access")) { IsAvailable = ((SAV9SV)m_savFile!).SaveRevision > 1 }, // DLC2
+                new EditableEventInfo(idx++, LocalizedStrings.Find($"SpecialEditsGenSV.specialEvtBtn_{idx}", "解锁北上地图访问权限")) { IsAvailable = ((SAV9SV)m_savFile!).SaveRevision > 0 }, // DLC1
+                new EditableEventInfo(idx++, LocalizedStrings.Find($"SpecialEditsGenSV.specialEvtBtn_{idx}", "解锁蓝莓地图访问权限")) { IsAvailable = ((SAV9SV)m_savFile!).SaveRevision > 1 }, // DLC2
             ];
         }
 
@@ -492,7 +492,7 @@ namespace WangPluginSav.Util.EventFlags
             int idx = 0;
             return
             [
-                new EditableEventInfo(idx++, LocalizedStrings.Find($"MiscEditsSV.miscEvtBtn_{idx}", "Daily Hidden Items Editor"), typeof(DailyHiddenItemsEditorSV)),
+                new EditableEventInfo(idx++, LocalizedStrings.Find($"MiscEditsSV.miscEvtBtn_{idx}", "每日隐藏道具编辑器"), typeof(DailyHiddenItemsEditorSV)),
             ];
         }
 

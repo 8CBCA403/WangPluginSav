@@ -214,10 +214,10 @@ namespace WangPluginSav.Util.EventFlags
             int idxEventWorkSection = s_flagsList_res.IndexOf("//\tEvent Work");
 
 
-            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "Event Flags", ((IEventFlagArray)m_savFile!).GetEventFlags());
-            AssembleList(s_flagsList_res[idxSysFlagsSection..], Src_SysFlags, "Sys Flags", sysFlags);
-            AssembleList(s_flagsList_res[idxTradeFlagsSection..], Src_TradeFlags, "Trade Flags", completedInGameTradeFlags);
-            AssembleList(s_flagsList_res[idxBerryTreesSection..], Src_BerryTreeFlags, "Berry Trees Flags", berryTreesFlags);
+            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "事件旗标", ((IEventFlagArray)m_savFile!).GetEventFlags());
+            AssembleList(s_flagsList_res[idxSysFlagsSection..], Src_SysFlags, "系统旗标", sysFlags);
+            AssembleList(s_flagsList_res[idxTradeFlagsSection..], Src_TradeFlags, "交换旗标", completedInGameTradeFlags);
+            AssembleList(s_flagsList_res[idxBerryTreesSection..], Src_BerryTreeFlags, "果树旗标", berryTreesFlags);
 
             AssembleWorkList(s_flagsList_res[idxEventWorkSection..], ((IEventWorkArray<byte>)m_savFile!).GetAllEventWork());
         }

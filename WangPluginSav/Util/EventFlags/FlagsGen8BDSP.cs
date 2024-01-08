@@ -44,9 +44,9 @@ namespace WangPluginSav.Util.EventFlags
 
             bool[] eventFlags = ((IEventFlagArray)m_savFile!).GetEventFlags();
 
-            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "Event Flags", eventFlags);
-            AssembleList(s_flagsList_res[idxSysFlagsSection..], Src_SysFlags, "Sys Flags", sysFlagsVals);
-            AssembleList(s_flagsList_res[idxTrainerFlagsSection..], Src_TrainerFlags, "Trainer Flags", battleTrainerVals);
+            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "事件旗标", eventFlags);
+            AssembleList(s_flagsList_res[idxSysFlagsSection..], Src_SysFlags, "系统标志", sysFlagsVals);
+            AssembleList(s_flagsList_res[idxTrainerFlagsSection..], Src_TrainerFlags, "训练家旗标", battleTrainerVals);
 
             AssembleWorkList(s_flagsList_res[idxEventWorkSection..], ((IEventWorkArray<int>)m_savFile).GetAllEventWork());
         }
