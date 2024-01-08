@@ -222,8 +222,8 @@ namespace WangPluginSav.Util.EventFlags
             int idxMisc_wd72e_Section = s_flagsList_res.IndexOf("//\tMisc-wd72e");
             int idxEventWorkSection = s_flagsList_res.IndexOf("//\tEvent Work");
 
-            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "Event Flags", eventFlags);
-            AssembleList(s_flagsList_res[idxHideShowSection..], Src_HideShowFlags, "Hide-Show Flags", missableObjectFlags);
+            AssembleList(s_flagsList_res[idxEventFlagsSection..], Src_EventFlags, "事件旗标", eventFlags);
+            AssembleList(s_flagsList_res[idxHideShowSection..], Src_HideShowFlags, "隐藏-显示旗标", missableObjectFlags);
 
             int idxTradesSection = 0;
             int idxHiddenItemsSection = 0;
@@ -235,9 +235,9 @@ namespace WangPluginSav.Util.EventFlags
                 idxHiddenCoinsSection = flagsList_res_jp_redgreen!.IndexOf("//\tHidden Coins Flags");
                 idxTradesSection = s_flagsList_res.IndexOf("//\tIn-Game Trades Flags");
 
-                AssembleList(flagsList_res_jp_redgreen[idxHiddenItemsSection..], Src_HiddenItemFlags, "Hidden Items Flags", obtainedHiddenItemsFlags);
-                AssembleList(flagsList_res_jp_redgreen[idxHiddenCoinsSection..], Src_HiddenCoinsFlags, "Hidden Coins Flags", obtainedHiddenCoinsFlags);
-                AssembleList(s_flagsList_res[idxTradesSection..], Src_TradeFlags, "Trade Flags", completedInGameTradeFlags);
+                AssembleList(flagsList_res_jp_redgreen[idxHiddenItemsSection..], Src_HiddenItemFlags, "隐藏道具旗标", obtainedHiddenItemsFlags);
+                AssembleList(flagsList_res_jp_redgreen[idxHiddenCoinsSection..], Src_HiddenCoinsFlags, "隐藏硬币旗标", obtainedHiddenCoinsFlags);
+                AssembleList(s_flagsList_res[idxTradesSection..], Src_TradeFlags, "徽章旗标", completedInGameTradeFlags);
             }
             else if (gameVer == GameVer_JapBlue)
             {
@@ -245,9 +245,9 @@ namespace WangPluginSav.Util.EventFlags
                 idxHiddenCoinsSection = s_flagsList_res.IndexOf("//\tHidden Coins Flags");
                 idxTradesSection = flagsList_res_jp_blue!.IndexOf("//\tIn-Game Trades Flags");
 
-                AssembleList(s_flagsList_res[idxHiddenItemsSection..], Src_HiddenItemFlags, "Hidden Items Flags", obtainedHiddenItemsFlags);
-                AssembleList(s_flagsList_res[idxHiddenCoinsSection..], Src_HiddenCoinsFlags, "Hidden Coins Flags", obtainedHiddenCoinsFlags);
-                AssembleList(flagsList_res_jp_blue[idxTradesSection..], Src_TradeFlags, "Trade Flags", completedInGameTradeFlags);
+                AssembleList(s_flagsList_res[idxHiddenItemsSection..], Src_HiddenItemFlags, "隐藏道具旗标", obtainedHiddenItemsFlags);
+                AssembleList(s_flagsList_res[idxHiddenCoinsSection..], Src_HiddenCoinsFlags, "隐藏硬币旗标", obtainedHiddenCoinsFlags);
+                AssembleList(flagsList_res_jp_blue[idxTradesSection..], Src_TradeFlags, "交换旗标", completedInGameTradeFlags);
             }
             else
             {
@@ -255,15 +255,15 @@ namespace WangPluginSav.Util.EventFlags
                 idxHiddenCoinsSection = s_flagsList_res.IndexOf("//\tHidden Coins Flags");
                 idxTradesSection = s_flagsList_res.IndexOf("//\tIn-Game Trades Flags");
 
-                AssembleList(s_flagsList_res[idxHiddenItemsSection..], Src_HiddenItemFlags, "Hidden Items Flags", obtainedHiddenItemsFlags);
-                AssembleList(s_flagsList_res[idxHiddenCoinsSection..], Src_HiddenCoinsFlags, "Hidden Coins Flags", obtainedHiddenCoinsFlags);
-                AssembleList(s_flagsList_res[idxTradesSection..], Src_TradeFlags, "Trade Flags", completedInGameTradeFlags);
+                AssembleList(s_flagsList_res[idxHiddenItemsSection..], Src_HiddenItemFlags, "隐藏道具旗标", obtainedHiddenItemsFlags);
+                AssembleList(s_flagsList_res[idxHiddenCoinsSection..], Src_HiddenCoinsFlags, "隐藏硬币旗标", obtainedHiddenCoinsFlags);
+                AssembleList(s_flagsList_res[idxTradesSection..], Src_TradeFlags, "交换旗标", completedInGameTradeFlags);
             }
 
-            AssembleList(s_flagsList_res[idxFlySpotSection..], Src_FlySpotFlags, "Fly Spot Flags", flySpotFlags);
-            AssembleList(s_flagsList_res[idxBadgesSection..], Src_BadgesFlags, "Badges Flags", badgeFlags);
-            AssembleList(s_flagsList_res[idxMisc_wd728_Section..], Src_Misc_wd728, "Misc-wd728 Flags", miscFlags_wd728);
-            AssembleList(s_flagsList_res[idxMisc_wd72e_Section..], Src_Misc_wd72e, "Misc-wd72e Flags", miscFlags_wd72e);
+            AssembleList(s_flagsList_res[idxFlySpotSection..], Src_FlySpotFlags, "飞行点旗标", flySpotFlags);
+            AssembleList(s_flagsList_res[idxBadgesSection..], Src_BadgesFlags, "徽章旗标", badgeFlags);
+            AssembleList(s_flagsList_res[idxMisc_wd728_Section..], Src_Misc_wd728, "其他-wd728旗标", miscFlags_wd728);
+            AssembleList(s_flagsList_res[idxMisc_wd72e_Section..], Src_Misc_wd72e, "其他-wd72e旗标", miscFlags_wd72e);
 
             AssembleWorkList(s_flagsList_res[idxEventWorkSection..], ((IEventWorkArray<byte>)m_savFile!).GetAllEventWork());
         }
