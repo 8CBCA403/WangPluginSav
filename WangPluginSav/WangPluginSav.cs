@@ -1,4 +1,5 @@
 ﻿using PKHeX.Core;
+using WangPluginSav.Util.EventFlags;
 namespace WangPluginSav
 {
     public abstract class WangPluginSav : IPlugin
@@ -15,6 +16,7 @@ namespace WangPluginSav
         public void Initialize(params object[] args)
         {
             globalArgs = args;
+            LocalizedStrings.Initialize(GameInfo.CurrentLanguage);
 #pragma warning disable CS8601 // Converting null literal or possible null value to non-nullable type.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             SaveFileEditor = (ISaveFileProvider)Array.Find(args, z => z is ISaveFileProvider);

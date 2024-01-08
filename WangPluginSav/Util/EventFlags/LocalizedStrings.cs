@@ -3,7 +3,7 @@
     public static class LocalizedStrings
     {
         readonly static Dictionary<string, string> s_localizedStrings = [];
-        readonly static string s_langCode = "en";
+        readonly static string s_langCode = "zh";
 
         public static void Initialize(string langCode)
         {

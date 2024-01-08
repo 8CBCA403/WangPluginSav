@@ -102,6 +102,7 @@
     <None Remove="Util\EventFlags\FlagResFiles\flags_gen8swsh_en.txt" />
     <None Remove="Util\EventFlags\FlagResFiles\flags_gen9sv_en.txt" />
     <None Remove="Util\EventFlags\lang_en.txt" />
+    <None Remove="Util\EventFlags\lang_zh.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -184,6 +185,7 @@
     <EmbeddedResource Include="Util\EventFlags\lang_en.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Util\EventFlags\lang_zh.txt" />
   </ItemGroup>
 
   <ItemGroup>
