@@ -1111,7 +1111,7 @@ partial class WonderRecordPLA : Form
             case 0:
                 return null;
             case 1:
-                image = SpriteUtil.GetSprite(num2, b, num6, 0u, num5, flag, shiny, EntityContext.None);
+                image = SpriteUtil.GetSprite(num2, b, (byte)num6, 0u, num5, flag, shiny, EntityContext.None);
                 if (flag2)
                 {
                     Bitmap dyna = PKHeX.Drawing.PokeSprite.Properties.Resources.dyna;
